@@ -1,0 +1,3424 @@
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"SD_routines.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.SD_sendCommand,"ax",%progbits
+  18              		.align	2
+  19              		.global	SD_sendCommand
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	SD_sendCommand, %function
+  23              	SD_sendCommand:
+  24              	.LFB34:
+  25              		.file 1 ".\\sd\\SD_routines.c"
+   1:.\sd/SD_routines.c **** //**************************************************************
+   2:.\sd/SD_routines.c **** // ****** FUNCTIONS FOR SD RAW DATA TRANSFER *******
+   3:.\sd/SD_routines.c **** //**************************************************************
+   4:.\sd/SD_routines.c **** //Controller: ATmega32 (Clock: 8 Mhz-internal)
+   5:.\sd/SD_routines.c **** //Compiler	: AVR-GCC (winAVR with AVRStudio)
+   6:.\sd/SD_routines.c **** //Version 	: 2.3
+   7:.\sd/SD_routines.c **** //Author	: CC Dharmani, Chennai (India)
+   8:.\sd/SD_routines.c **** //			  www.dharmanitech.com
+   9:.\sd/SD_routines.c **** //Date		: 08 May 2010
+  10:.\sd/SD_routines.c **** //**************************************************************
+  11:.\sd/SD_routines.c **** 
+  12:.\sd/SD_routines.c **** //**************************************************
+  13:.\sd/SD_routines.c **** // ***** SOURCE FILE : SD_routines.c ******
+  14:.\sd/SD_routines.c **** //**************************************************
+  15:.\sd/SD_routines.c **** //#include <avr/io.h>
+  16:.\sd/SD_routines.c **** //#include <avr/pgmspace.h>
+  17:.\sd/SD_routines.c **** #include <project.h>
+  18:.\sd/SD_routines.c **** #include "sd/SPI_routines.h"
+  19:.\sd/SD_routines.c **** #include "sd/SD_routines.h"
+  20:.\sd/SD_routines.c **** //#include "UART_routines.h"
+  21:.\sd/SD_routines.c **** #define TX_NEWLINE 
+  22:.\sd/SD_routines.c **** 
+  23:.\sd/SD_routines.c **** //******************************************************************
+  24:.\sd/SD_routines.c **** //Function	: to initialize the SD/SDHC card in SPI mode
+  25:.\sd/SD_routines.c **** //Arguments	: none
+  26:.\sd/SD_routines.c **** //return	: unsigned char; will be 0 if no error,
+  27:.\sd/SD_routines.c **** // 			  otherwise the response byte will be sent
+  28:.\sd/SD_routines.c **** //******************************************************************
+  29:.\sd/SD_routines.c **** unsigned char SD_init(void)
+  30:.\sd/SD_routines.c **** {
+  31:.\sd/SD_routines.c **** unsigned char i, response, SD_version;
+  32:.\sd/SD_routines.c **** unsigned int retry=0 ;
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 2
+
+
+  33:.\sd/SD_routines.c **** //transmitString_F(PSTR("SD card init..\n"));
+  34:.\sd/SD_routines.c ****  for(i=0;i<20;i++)
+  35:.\sd/SD_routines.c ****       SPI_transmit(0xff);   //80 clock pulses spent before sending the first command
+  36:.\sd/SD_routines.c **** 
+  37:.\sd/SD_routines.c **** SD_CS_ASSERT;
+  38:.\sd/SD_routines.c **** //transmitString_F(PSTR("CS down\n"));
+  39:.\sd/SD_routines.c **** do
+  40:.\sd/SD_routines.c **** {
+  41:.\sd/SD_routines.c ****   
+  42:.\sd/SD_routines.c ****    response = SD_sendCommand(GO_IDLE_STATE, 0); //send 'reset & go idle' command
+  43:.\sd/SD_routines.c ****    retry++;
+  44:.\sd/SD_routines.c **** //   printf("send comand retry %d\n",retry);
+  45:.\sd/SD_routines.c ****    if(retry>0x40) 
+  46:.\sd/SD_routines.c ****    	  return 1;   //time out, card not detected
+  47:.\sd/SD_routines.c ****    
+  48:.\sd/SD_routines.c **** } while(response != 0x01);
+  49:.\sd/SD_routines.c **** //transmitString_F(PSTR("SD card respond \n"));
+  50:.\sd/SD_routines.c **** SD_CS_DEASSERT;
+  51:.\sd/SD_routines.c **** SPI_transmit (0xff);
+  52:.\sd/SD_routines.c **** SPI_transmit (0xff);
+  53:.\sd/SD_routines.c **** 
+  54:.\sd/SD_routines.c **** retry = 0;
+  55:.\sd/SD_routines.c **** 
+  56:.\sd/SD_routines.c **** SD_version = 2; //default set to SD compliance with ver2.x; 
+  57:.\sd/SD_routines.c **** 				//this may change after checking the next command
+  58:.\sd/SD_routines.c **** //transmitString_F(PSTR("send command \n"));
+  59:.\sd/SD_routines.c **** do
+  60:.\sd/SD_routines.c **** {
+  61:.\sd/SD_routines.c **** response = SD_sendCommand(SEND_IF_COND,0x000001AA); //Check power supply status, mendatory for SDHC
+  62:.\sd/SD_routines.c **** retry++;
+  63:.\sd/SD_routines.c **** if(retry>0xfe) 
+  64:.\sd/SD_routines.c ****    {
+  65:.\sd/SD_routines.c ****       TX_NEWLINE;
+  66:.\sd/SD_routines.c **** 	  SD_version = 1;
+  67:.\sd/SD_routines.c **** 	  cardType = 1;
+  68:.\sd/SD_routines.c **** 	  break;
+  69:.\sd/SD_routines.c ****    } //time out
+  70:.\sd/SD_routines.c **** 
+  71:.\sd/SD_routines.c **** }while(response != 0x01);
+  72:.\sd/SD_routines.c **** 
+  73:.\sd/SD_routines.c **** retry = 0;
+  74:.\sd/SD_routines.c **** 
+  75:.\sd/SD_routines.c **** do
+  76:.\sd/SD_routines.c **** {
+  77:.\sd/SD_routines.c **** response = SD_sendCommand(APP_CMD,0); //CMD55, must be sent before sending any ACMD command
+  78:.\sd/SD_routines.c **** response = SD_sendCommand(SD_SEND_OP_COND,0x40000000); //ACMD41
+  79:.\sd/SD_routines.c **** 
+  80:.\sd/SD_routines.c **** retry++;
+  81:.\sd/SD_routines.c **** if(retry>0xfe) 
+  82:.\sd/SD_routines.c ****    {
+  83:.\sd/SD_routines.c ****       TX_NEWLINE;
+  84:.\sd/SD_routines.c **** 	  return 2;  //time out, card initialization failed
+  85:.\sd/SD_routines.c ****    } 
+  86:.\sd/SD_routines.c **** 
+  87:.\sd/SD_routines.c **** }while(response != 0x00);
+  88:.\sd/SD_routines.c **** 
+  89:.\sd/SD_routines.c **** 
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 3
+
+
+  90:.\sd/SD_routines.c **** retry = 0;
+  91:.\sd/SD_routines.c **** SDHC_flag = 0;
+  92:.\sd/SD_routines.c **** 
+  93:.\sd/SD_routines.c **** if (SD_version == 2)
+  94:.\sd/SD_routines.c **** { 
+  95:.\sd/SD_routines.c ****    do
+  96:.\sd/SD_routines.c ****    {
+  97:.\sd/SD_routines.c **** 	 response = SD_sendCommand(READ_OCR,0);
+  98:.\sd/SD_routines.c **** 	 retry++;
+  99:.\sd/SD_routines.c **** 	 if(retry>0xfe) 
+ 100:.\sd/SD_routines.c ****      {
+ 101:.\sd/SD_routines.c ****        TX_NEWLINE;
+ 102:.\sd/SD_routines.c **** 	   cardType = 0;
+ 103:.\sd/SD_routines.c **** 	   break;
+ 104:.\sd/SD_routines.c ****      } //time out
+ 105:.\sd/SD_routines.c **** 
+ 106:.\sd/SD_routines.c ****    }while(response != 0x00);
+ 107:.\sd/SD_routines.c **** 
+ 108:.\sd/SD_routines.c ****    if(SDHC_flag == 1) cardType = 2;
+ 109:.\sd/SD_routines.c ****    else cardType = 3;
+ 110:.\sd/SD_routines.c **** }
+ 111:.\sd/SD_routines.c **** 
+ 112:.\sd/SD_routines.c **** //SD_sendCommand(CRC_ON_OFF, OFF); //disable CRC; deafault - CRC disabled in SPI mode
+ 113:.\sd/SD_routines.c **** //SD_sendCommand(SET_BLOCK_LEN, 512); //set block size to 512; default size is 512
+ 114:.\sd/SD_routines.c **** 
+ 115:.\sd/SD_routines.c **** 
+ 116:.\sd/SD_routines.c **** return 0; //successful return
+ 117:.\sd/SD_routines.c **** }
+ 118:.\sd/SD_routines.c **** 
+ 119:.\sd/SD_routines.c **** //******************************************************************
+ 120:.\sd/SD_routines.c **** //Function	: to send a command to SD card
+ 121:.\sd/SD_routines.c **** //Arguments	: unsigned char (8-bit command value)
+ 122:.\sd/SD_routines.c **** // 			  & unsigned long (32-bit command argument)
+ 123:.\sd/SD_routines.c **** //return	: unsigned char; response byte
+ 124:.\sd/SD_routines.c **** //******************************************************************
+ 125:.\sd/SD_routines.c **** unsigned char SD_sendCommand(unsigned char cmd, unsigned long arg)
+ 126:.\sd/SD_routines.c **** {
+  26              		.loc 1 126 0
+  27              		.cfi_startproc
+  28              	.LVL0:
+  29 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  30              		.cfi_def_cfa_offset 24
+  31              		.cfi_offset 3, -24
+  32              		.cfi_offset 4, -20
+  33              		.cfi_offset 5, -16
+  34              		.cfi_offset 6, -12
+  35              		.cfi_offset 7, -8
+  36              		.cfi_offset 14, -4
+  37 0002 071C     		mov	r7, r0
+  38 0004 0C1C     		mov	r4, r1
+  39              	.LVL1:
+ 127:.\sd/SD_routines.c **** unsigned char response, status;
+ 128:.\sd/SD_routines.c **** unsigned int  retry=0;
+ 129:.\sd/SD_routines.c **** 
+ 130:.\sd/SD_routines.c **** //SD card accepts byte address while SDHC accepts block address in multiples of 512
+ 131:.\sd/SD_routines.c **** //so, if it's SD card we need to convert block address into corresponding byte address by 
+ 132:.\sd/SD_routines.c **** //multipying it with 512. which is equivalent to shifting it left 9 times
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 4
+
+
+ 133:.\sd/SD_routines.c **** //following 'if' loop does that
+ 134:.\sd/SD_routines.c **** 
+ 135:.\sd/SD_routines.c **** if(SDHC_flag == 0)		
+  40              		.loc 1 135 0
+  41 0006 2C4B     		ldr	r3, .L12
+  42 0008 1B78     		ldrb	r3, [r3]
+  43 000a 002B     		cmp	r3, #0
+  44 000c 0CD1     		bne	.L2
+ 136:.\sd/SD_routines.c **** if(cmd == READ_SINGLE_BLOCK     ||
+  45              		.loc 1 136 0
+  46 000e 031C     		mov	r3, r0
+  47 0010 113B     		sub	r3, r3, #17
+  48 0012 012B     		cmp	r3, #1
+  49 0014 07D9     		bls	.L3
+ 137:.\sd/SD_routines.c ****    cmd == READ_MULTIPLE_BLOCKS  ||
+  50              		.loc 1 137 0
+  51 0016 1828     		cmp	r0, #24
+  52 0018 05D0     		beq	.L3
+ 138:.\sd/SD_routines.c ****    cmd == WRITE_SINGLE_BLOCK    ||
+  53              		.loc 1 138 0
+  54 001a 1928     		cmp	r0, #25
+  55 001c 03D0     		beq	.L3
+ 139:.\sd/SD_routines.c ****    cmd == WRITE_MULTIPLE_BLOCKS ||
+  56              		.loc 1 139 0
+  57 001e 2028     		cmp	r0, #32
+  58 0020 01D0     		beq	.L3
+ 140:.\sd/SD_routines.c ****    cmd == ERASE_BLOCK_START_ADDR|| 
+  59              		.loc 1 140 0
+  60 0022 2128     		cmp	r0, #33
+  61 0024 00D1     		bne	.L2
+  62              	.L3:
+ 141:.\sd/SD_routines.c ****    cmd == ERASE_BLOCK_END_ADDR ) 
+ 142:.\sd/SD_routines.c ****    {
+ 143:.\sd/SD_routines.c ****      arg = arg << 9;
+  63              		.loc 1 143 0
+  64 0026 6402     		lsl	r4, r4, #9
+  65              	.LVL2:
+  66              	.L2:
+ 144:.\sd/SD_routines.c ****    }	   
+ 145:.\sd/SD_routines.c **** 
+ 146:.\sd/SD_routines.c **** SD_CS_ASSERT;
+  67              		.loc 1 146 0
+  68 0028 0020     		mov	r0, #0
+  69              	.LVL3:
+  70 002a FFF7FEFF 		bl	SPI_CS_Write
+  71              	.LVL4:
+ 147:.\sd/SD_routines.c **** 
+ 148:.\sd/SD_routines.c **** SPI_transmit(cmd | 0x40); //send command, first two bits always '01'
+  72              		.loc 1 148 0
+  73 002e 4020     		mov	r0, #64
+  74 0030 3843     		orr	r0, r7
+  75 0032 FFF7FEFF 		bl	SPI_transmit
+  76              	.LVL5:
+ 149:.\sd/SD_routines.c **** SPI_transmit(arg>>24);
+  77              		.loc 1 149 0
+  78 0036 200E     		lsr	r0, r4, #24
+  79 0038 FFF7FEFF 		bl	SPI_transmit
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 5
+
+
+  80              	.LVL6:
+ 150:.\sd/SD_routines.c **** SPI_transmit(arg>>16);
+  81              		.loc 1 150 0
+  82 003c 200C     		lsr	r0, r4, #16
+  83 003e C0B2     		uxtb	r0, r0
+  84 0040 FFF7FEFF 		bl	SPI_transmit
+  85              	.LVL7:
+ 151:.\sd/SD_routines.c **** SPI_transmit(arg>>8);
+  86              		.loc 1 151 0
+  87 0044 200A     		lsr	r0, r4, #8
+  88 0046 C0B2     		uxtb	r0, r0
+  89 0048 FFF7FEFF 		bl	SPI_transmit
+  90              	.LVL8:
+ 152:.\sd/SD_routines.c **** SPI_transmit(arg);
+  91              		.loc 1 152 0
+  92 004c E0B2     		uxtb	r0, r4
+  93 004e FFF7FEFF 		bl	SPI_transmit
+  94              	.LVL9:
+ 153:.\sd/SD_routines.c **** 
+ 154:.\sd/SD_routines.c **** if(cmd == SEND_IF_COND)	 //it is compulsory to send correct CRC for CMD8 (CRC=0x87) & CMD0 (CRC=0x9
+  95              		.loc 1 154 0
+  96 0052 082F     		cmp	r7, #8
+  97 0054 03D1     		bne	.L4
+ 155:.\sd/SD_routines.c ****   SPI_transmit(0x87);    //for remaining commands, CRC is ignored in SPI mode
+  98              		.loc 1 155 0
+  99 0056 8720     		mov	r0, #135
+ 100 0058 FFF7FEFF 		bl	SPI_transmit
+ 101              	.LVL10:
+ 102 005c 08E0     		b	.L5
+ 103              	.L4:
+ 156:.\sd/SD_routines.c **** else 
+ 157:.\sd/SD_routines.c ****   SPI_transmit(0x95); 
+ 104              		.loc 1 157 0
+ 105 005e 9520     		mov	r0, #149
+ 106 0060 FFF7FEFF 		bl	SPI_transmit
+ 107              	.LVL11:
+ 108 0064 04E0     		b	.L5
+ 109              	.LVL12:
+ 110              	.L8:
+ 158:.\sd/SD_routines.c **** 
+ 159:.\sd/SD_routines.c **** while((response = SPI_receive()) == 0xff) //wait response
+ 160:.\sd/SD_routines.c ****    if(retry++ > 0x4ffff) break; //time out error
+ 111              		.loc 1 160 0
+ 112 0066 631C     		add	r3, r4, #1
+ 113              	.LVL13:
+ 114 0068 B442     		cmp	r4, r6
+ 115 006a 08D8     		bhi	.L6
+ 116 006c 1C1C     		mov	r4, r3
+ 117 006e 01E0     		b	.L7
+ 118              	.LVL14:
+ 119              	.L5:
+ 126:.\sd/SD_routines.c **** {
+ 120              		.loc 1 126 0 discriminator 1
+ 121 0070 0024     		mov	r4, #0
+ 122              	.LVL15:
+ 123              		.loc 1 160 0 discriminator 1
+ 124 0072 124E     		ldr	r6, .L12+4
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 6
+
+
+ 125              	.LVL16:
+ 126              	.L7:
+ 159:.\sd/SD_routines.c **** while((response = SPI_receive()) == 0xff) //wait response
+ 127              		.loc 1 159 0 discriminator 1
+ 128 0074 FFF7FEFF 		bl	SPI_receive
+ 129              	.LVL17:
+ 130 0078 051E     		sub	r5, r0, #0
+ 131              	.LVL18:
+ 132 007a FF2D     		cmp	r5, #255
+ 133 007c F3D0     		beq	.L8
+ 134              	.LVL19:
+ 135              	.L6:
+ 161:.\sd/SD_routines.c **** 
+ 162:.\sd/SD_routines.c **** if(response == 0x00 && cmd == 58)  //checking response of CMD58
+ 136              		.loc 1 162 0
+ 137 007e 002D     		cmp	r5, #0
+ 138 0080 12D1     		bne	.L9
+ 139              		.loc 1 162 0 is_stmt 0 discriminator 1
+ 140 0082 3A2F     		cmp	r7, #58
+ 141 0084 10D1     		bne	.L9
+ 163:.\sd/SD_routines.c **** {
+ 164:.\sd/SD_routines.c ****   status = SPI_receive() & 0x40;     //first byte of the OCR register (bit 31:24)
+ 142              		.loc 1 164 0 is_stmt 1
+ 143 0086 FFF7FEFF 		bl	SPI_receive
+ 144              	.LVL20:
+ 165:.\sd/SD_routines.c ****   if(status == 0x40) SDHC_flag = 1;  //we need it to verify SDHC card
+ 145              		.loc 1 165 0
+ 146 008a 4306     		lsl	r3, r0, #25
+ 147 008c 03D5     		bpl	.L10
+ 148              		.loc 1 165 0 is_stmt 0 discriminator 1
+ 149 008e 0122     		mov	r2, #1
+ 150 0090 094B     		ldr	r3, .L12
+ 151 0092 1A70     		strb	r2, [r3]
+ 152 0094 02E0     		b	.L11
+ 153              	.L10:
+ 166:.\sd/SD_routines.c ****   else SDHC_flag = 0;
+ 154              		.loc 1 166 0 is_stmt 1
+ 155 0096 0022     		mov	r2, #0
+ 156 0098 074B     		ldr	r3, .L12
+ 157 009a 1A70     		strb	r2, [r3]
+ 158              	.L11:
+ 167:.\sd/SD_routines.c **** 
+ 168:.\sd/SD_routines.c ****   SPI_receive(); //remaining 3 bytes of the OCR register are ignored here
+ 159              		.loc 1 168 0
+ 160 009c FFF7FEFF 		bl	SPI_receive
+ 161              	.LVL21:
+ 169:.\sd/SD_routines.c ****   SPI_receive(); //one can use these bytes to check power supply limits of SD
+ 162              		.loc 1 169 0
+ 163 00a0 FFF7FEFF 		bl	SPI_receive
+ 164              	.LVL22:
+ 170:.\sd/SD_routines.c ****   SPI_receive(); 
+ 165              		.loc 1 170 0
+ 166 00a4 FFF7FEFF 		bl	SPI_receive
+ 167              	.LVL23:
+ 168              	.L9:
+ 171:.\sd/SD_routines.c **** }
+ 172:.\sd/SD_routines.c **** 
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 7
+
+
+ 173:.\sd/SD_routines.c **** SPI_receive(); //extra 8 CLK
+ 169              		.loc 1 173 0
+ 170 00a8 FFF7FEFF 		bl	SPI_receive
+ 171              	.LVL24:
+ 174:.\sd/SD_routines.c **** SD_CS_DEASSERT;
+ 172              		.loc 1 174 0
+ 173 00ac 0120     		mov	r0, #1
+ 174 00ae FFF7FEFF 		bl	SPI_CS_Write
+ 175              	.LVL25:
+ 175:.\sd/SD_routines.c **** 
+ 176:.\sd/SD_routines.c **** return response; //return state
+ 177:.\sd/SD_routines.c **** }
+ 176              		.loc 1 177 0
+ 177 00b2 281C     		mov	r0, r5
+ 178              		@ sp needed
+ 179              	.LVL26:
+ 180 00b4 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 181              	.L13:
+ 182 00b6 C046     		.align	2
+ 183              	.L12:
+ 184 00b8 00000000 		.word	SDHC_flag
+ 185 00bc FFFF0400 		.word	327679
+ 186              		.cfi_endproc
+ 187              	.LFE34:
+ 188              		.size	SD_sendCommand, .-SD_sendCommand
+ 189              		.section	.text.SD_init,"ax",%progbits
+ 190              		.align	2
+ 191              		.global	SD_init
+ 192              		.code	16
+ 193              		.thumb_func
+ 194              		.type	SD_init, %function
+ 195              	SD_init:
+ 196              	.LFB33:
+  30:.\sd/SD_routines.c **** {
+ 197              		.loc 1 30 0
+ 198              		.cfi_startproc
+ 199 0000 70B5     		push	{r4, r5, r6, lr}
+ 200              		.cfi_def_cfa_offset 16
+ 201              		.cfi_offset 4, -16
+ 202              		.cfi_offset 5, -12
+ 203              		.cfi_offset 6, -8
+ 204              		.cfi_offset 14, -4
+ 205              	.LVL27:
+  34:.\sd/SD_routines.c ****  for(i=0;i<20;i++)
+ 206              		.loc 1 34 0
+ 207 0002 0024     		mov	r4, #0
+ 208 0004 04E0     		b	.L15
+ 209              	.LVL28:
+ 210              	.L16:
+  35:.\sd/SD_routines.c ****       SPI_transmit(0xff);   //80 clock pulses spent before sending the first command
+ 211              		.loc 1 35 0 discriminator 2
+ 212 0006 FF20     		mov	r0, #255
+ 213 0008 FFF7FEFF 		bl	SPI_transmit
+ 214              	.LVL29:
+  34:.\sd/SD_routines.c ****  for(i=0;i<20;i++)
+ 215              		.loc 1 34 0 discriminator 2
+ 216 000c 0134     		add	r4, r4, #1
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 8
+
+
+ 217              	.LVL30:
+ 218 000e E4B2     		uxtb	r4, r4
+ 219              	.LVL31:
+ 220              	.L15:
+  34:.\sd/SD_routines.c ****  for(i=0;i<20;i++)
+ 221              		.loc 1 34 0 is_stmt 0 discriminator 1
+ 222 0010 132C     		cmp	r4, #19
+ 223 0012 F8D9     		bls	.L16
+  37:.\sd/SD_routines.c **** SD_CS_ASSERT;
+ 224              		.loc 1 37 0 is_stmt 1
+ 225 0014 0020     		mov	r0, #0
+ 226 0016 FFF7FEFF 		bl	SPI_CS_Write
+ 227              	.LVL32:
+  32:.\sd/SD_routines.c **** unsigned int retry=0 ;
+ 228              		.loc 1 32 0
+ 229 001a 0024     		mov	r4, #0
+ 230              	.LVL33:
+ 231              	.L18:
+  42:.\sd/SD_routines.c ****    response = SD_sendCommand(GO_IDLE_STATE, 0); //send 'reset & go idle' command
+ 232              		.loc 1 42 0
+ 233 001c 0020     		mov	r0, #0
+ 234 001e 0021     		mov	r1, #0
+ 235 0020 FFF7FEFF 		bl	SD_sendCommand
+ 236              	.LVL34:
+  43:.\sd/SD_routines.c ****    retry++;
+ 237              		.loc 1 43 0
+ 238 0024 0134     		add	r4, r4, #1
+ 239              	.LVL35:
+  45:.\sd/SD_routines.c ****    if(retry>0x40) 
+ 240              		.loc 1 45 0
+ 241 0026 402C     		cmp	r4, #64
+ 242 0028 4CD8     		bhi	.L27
+  48:.\sd/SD_routines.c **** } while(response != 0x01);
+ 243              		.loc 1 48 0
+ 244 002a 0128     		cmp	r0, #1
+ 245 002c F6D1     		bne	.L18
+  50:.\sd/SD_routines.c **** SD_CS_DEASSERT;
+ 246              		.loc 1 50 0
+ 247 002e FFF7FEFF 		bl	SPI_CS_Write
+ 248              	.LVL36:
+  51:.\sd/SD_routines.c **** SPI_transmit (0xff);
+ 249              		.loc 1 51 0
+ 250 0032 FF20     		mov	r0, #255
+ 251 0034 FFF7FEFF 		bl	SPI_transmit
+ 252              	.LVL37:
+  52:.\sd/SD_routines.c **** SPI_transmit (0xff);
+ 253              		.loc 1 52 0
+ 254 0038 FF20     		mov	r0, #255
+ 255 003a FFF7FEFF 		bl	SPI_transmit
+ 256              	.LVL38:
+  54:.\sd/SD_routines.c **** retry = 0;
+ 257              		.loc 1 54 0
+ 258 003e 0024     		mov	r4, #0
+  61:.\sd/SD_routines.c **** response = SD_sendCommand(SEND_IF_COND,0x000001AA); //Check power supply status, mendatory for SDHC
+ 259              		.loc 1 61 0
+ 260 0040 D525     		mov	r5, #213
+ 261 0042 6D00     		lsl	r5, r5, #1
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 9
+
+
+ 262              	.LVL39:
+ 263              	.L21:
+ 264 0044 0820     		mov	r0, #8
+ 265 0046 291C     		mov	r1, r5
+ 266 0048 FFF7FEFF 		bl	SD_sendCommand
+ 267              	.LVL40:
+  62:.\sd/SD_routines.c **** retry++;
+ 268              		.loc 1 62 0
+ 269 004c 0134     		add	r4, r4, #1
+ 270              	.LVL41:
+  63:.\sd/SD_routines.c **** if(retry>0xfe) 
+ 271              		.loc 1 63 0
+ 272 004e FE2C     		cmp	r4, #254
+ 273 0050 04D9     		bls	.L19
+ 274              	.LVL42:
+  67:.\sd/SD_routines.c **** 	  cardType = 1;
+ 275              		.loc 1 67 0
+ 276 0052 0122     		mov	r2, #1
+ 277 0054 1E4B     		ldr	r3, .L34
+ 278 0056 1A70     		strb	r2, [r3]
+  66:.\sd/SD_routines.c **** 	  SD_version = 1;
+ 279              		.loc 1 66 0
+ 280 0058 0126     		mov	r6, #1
+  68:.\sd/SD_routines.c **** 	  break;
+ 281              		.loc 1 68 0
+ 282 005a 02E0     		b	.L20
+ 283              	.LVL43:
+ 284              	.L19:
+  71:.\sd/SD_routines.c **** }while(response != 0x01);
+ 285              		.loc 1 71 0
+ 286 005c 0128     		cmp	r0, #1
+ 287 005e F1D1     		bne	.L21
+  56:.\sd/SD_routines.c **** SD_version = 2; //default set to SD compliance with ver2.x; 
+ 288              		.loc 1 56 0
+ 289 0060 0226     		mov	r6, #2
+ 290              	.LVL44:
+ 291              	.L20:
+  73:.\sd/SD_routines.c **** retry = 0;
+ 292              		.loc 1 73 0
+ 293 0062 0024     		mov	r4, #0
+  78:.\sd/SD_routines.c **** response = SD_sendCommand(SD_SEND_OP_COND,0x40000000); //ACMD41
+ 294              		.loc 1 78 0
+ 295 0064 8025     		mov	r5, #128
+ 296 0066 ED05     		lsl	r5, r5, #23
+ 297              	.LVL45:
+ 298              	.L22:
+  77:.\sd/SD_routines.c **** response = SD_sendCommand(APP_CMD,0); //CMD55, must be sent before sending any ACMD command
+ 299              		.loc 1 77 0
+ 300 0068 3720     		mov	r0, #55
+ 301 006a 0021     		mov	r1, #0
+ 302 006c FFF7FEFF 		bl	SD_sendCommand
+ 303              	.LVL46:
+  78:.\sd/SD_routines.c **** response = SD_sendCommand(SD_SEND_OP_COND,0x40000000); //ACMD41
+ 304              		.loc 1 78 0
+ 305 0070 2920     		mov	r0, #41
+ 306 0072 291C     		mov	r1, r5
+ 307 0074 FFF7FEFF 		bl	SD_sendCommand
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 10
+
+
+ 308              	.LVL47:
+  80:.\sd/SD_routines.c **** retry++;
+ 309              		.loc 1 80 0
+ 310 0078 0134     		add	r4, r4, #1
+ 311              	.LVL48:
+  81:.\sd/SD_routines.c **** if(retry>0xfe) 
+ 312              		.loc 1 81 0
+ 313 007a FE2C     		cmp	r4, #254
+ 314 007c 24D8     		bhi	.L28
+  87:.\sd/SD_routines.c **** }while(response != 0x00);
+ 315              		.loc 1 87 0
+ 316 007e 0028     		cmp	r0, #0
+ 317 0080 F2D1     		bne	.L22
+ 318              	.LVL49:
+  91:.\sd/SD_routines.c **** SDHC_flag = 0;
+ 319              		.loc 1 91 0
+ 320 0082 0022     		mov	r2, #0
+ 321 0084 134B     		ldr	r3, .L34+4
+ 322 0086 1A70     		strb	r2, [r3]
+  93:.\sd/SD_routines.c **** if (SD_version == 2)
+ 323              		.loc 1 93 0
+ 324 0088 022E     		cmp	r6, #2
+ 325 008a 1FD1     		bne	.L29
+ 326 008c 0024     		mov	r4, #0
+ 327              	.LVL50:
+ 328              	.L25:
+  97:.\sd/SD_routines.c **** 	 response = SD_sendCommand(READ_OCR,0);
+ 329              		.loc 1 97 0
+ 330 008e 3A20     		mov	r0, #58
+ 331 0090 0021     		mov	r1, #0
+ 332 0092 FFF7FEFF 		bl	SD_sendCommand
+ 333              	.LVL51:
+  98:.\sd/SD_routines.c **** 	 retry++;
+ 334              		.loc 1 98 0
+ 335 0096 0134     		add	r4, r4, #1
+ 336              	.LVL52:
+  99:.\sd/SD_routines.c **** 	 if(retry>0xfe) 
+ 337              		.loc 1 99 0
+ 338 0098 FE2C     		cmp	r4, #254
+ 339 009a 03D9     		bls	.L23
+ 102:.\sd/SD_routines.c **** 	   cardType = 0;
+ 340              		.loc 1 102 0
+ 341 009c 0022     		mov	r2, #0
+ 342 009e 0C4B     		ldr	r3, .L34
+ 343 00a0 1A70     		strb	r2, [r3]
+ 103:.\sd/SD_routines.c **** 	   break;
+ 344              		.loc 1 103 0
+ 345 00a2 01E0     		b	.L24
+ 346              	.L23:
+ 106:.\sd/SD_routines.c ****    }while(response != 0x00);
+ 347              		.loc 1 106 0
+ 348 00a4 0028     		cmp	r0, #0
+ 349 00a6 F2D1     		bne	.L25
+ 350              	.L24:
+ 108:.\sd/SD_routines.c ****    if(SDHC_flag == 1) cardType = 2;
+ 351              		.loc 1 108 0
+ 352 00a8 0A4B     		ldr	r3, .L34+4
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 11
+
+
+ 353 00aa 1B78     		ldrb	r3, [r3]
+ 354 00ac 012B     		cmp	r3, #1
+ 355 00ae 04D1     		bne	.L26
+ 108:.\sd/SD_routines.c ****    if(SDHC_flag == 1) cardType = 2;
+ 356              		.loc 1 108 0 is_stmt 0 discriminator 1
+ 357 00b0 0222     		mov	r2, #2
+ 358 00b2 074B     		ldr	r3, .L34
+ 359 00b4 1A70     		strb	r2, [r3]
+ 116:.\sd/SD_routines.c **** return 0; //successful return
+ 360              		.loc 1 116 0 is_stmt 1 discriminator 1
+ 361 00b6 0020     		mov	r0, #0
+ 362              	.LVL53:
+ 363 00b8 09E0     		b	.L17
+ 364              	.LVL54:
+ 365              	.L26:
+ 109:.\sd/SD_routines.c ****    else cardType = 3;
+ 366              		.loc 1 109 0
+ 367 00ba 0322     		mov	r2, #3
+ 368 00bc 044B     		ldr	r3, .L34
+ 369 00be 1A70     		strb	r2, [r3]
+ 116:.\sd/SD_routines.c **** return 0; //successful return
+ 370              		.loc 1 116 0
+ 371 00c0 0020     		mov	r0, #0
+ 372              	.LVL55:
+ 373 00c2 04E0     		b	.L17
+ 374              	.LVL56:
+ 375              	.L27:
+  46:.\sd/SD_routines.c ****    	  return 1;   //time out, card not detected
+ 376              		.loc 1 46 0
+ 377 00c4 0120     		mov	r0, #1
+ 378              	.LVL57:
+ 379 00c6 02E0     		b	.L17
+ 380              	.LVL58:
+ 381              	.L28:
+  84:.\sd/SD_routines.c **** 	  return 2;  //time out, card initialization failed
+ 382              		.loc 1 84 0
+ 383 00c8 0220     		mov	r0, #2
+ 384              	.LVL59:
+ 385 00ca 00E0     		b	.L17
+ 386              	.LVL60:
+ 387              	.L29:
+ 116:.\sd/SD_routines.c **** return 0; //successful return
+ 388              		.loc 1 116 0
+ 389 00cc 0020     		mov	r0, #0
+ 390              	.LVL61:
+ 391              	.L17:
+ 117:.\sd/SD_routines.c **** }
+ 392              		.loc 1 117 0
+ 393              		@ sp needed
+ 394 00ce 70BD     		pop	{r4, r5, r6, pc}
+ 395              	.L35:
+ 396              		.align	2
+ 397              	.L34:
+ 398 00d0 00000000 		.word	cardType
+ 399 00d4 00000000 		.word	SDHC_flag
+ 400              		.cfi_endproc
+ 401              	.LFE33:
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 12
+
+
+ 402              		.size	SD_init, .-SD_init
+ 403              		.section	.text.SD_erase,"ax",%progbits
+ 404              		.align	2
+ 405              		.global	SD_erase
+ 406              		.code	16
+ 407              		.thumb_func
+ 408              		.type	SD_erase, %function
+ 409              	SD_erase:
+ 410              	.LFB35:
+ 178:.\sd/SD_routines.c **** 
+ 179:.\sd/SD_routines.c **** //*****************************************************************
+ 180:.\sd/SD_routines.c **** //Function	: to erase specified no. of blocks of SD card
+ 181:.\sd/SD_routines.c **** //Arguments	: none
+ 182:.\sd/SD_routines.c **** //return	: unsigned char; will be 0 if no error,
+ 183:.\sd/SD_routines.c **** // 			  otherwise the response byte will be sent
+ 184:.\sd/SD_routines.c **** //*****************************************************************
+ 185:.\sd/SD_routines.c **** unsigned char SD_erase (unsigned long startBlock, unsigned long totalBlocks)
+ 186:.\sd/SD_routines.c **** {
+ 411              		.loc 1 186 0
+ 412              		.cfi_startproc
+ 413              	.LVL62:
+ 414 0000 38B5     		push	{r3, r4, r5, lr}
+ 415              		.cfi_def_cfa_offset 16
+ 416              		.cfi_offset 3, -16
+ 417              		.cfi_offset 4, -12
+ 418              		.cfi_offset 5, -8
+ 419              		.cfi_offset 14, -4
+ 420 0002 041C     		mov	r4, r0
+ 421 0004 0D1C     		mov	r5, r1
+ 187:.\sd/SD_routines.c **** unsigned char response;
+ 188:.\sd/SD_routines.c **** 
+ 189:.\sd/SD_routines.c **** response = SD_sendCommand(ERASE_BLOCK_START_ADDR, startBlock); //send starting block address
+ 422              		.loc 1 189 0
+ 423 0006 2020     		mov	r0, #32
+ 424              	.LVL63:
+ 425 0008 211C     		mov	r1, r4
+ 426              	.LVL64:
+ 427 000a FFF7FEFF 		bl	SD_sendCommand
+ 428              	.LVL65:
+ 190:.\sd/SD_routines.c **** if(response != 0x00) //check for SD status: 0x00 - OK (No flags set)
+ 429              		.loc 1 190 0
+ 430 000e 0028     		cmp	r0, #0
+ 431 0010 0AD1     		bne	.L37
+ 191:.\sd/SD_routines.c ****   return response;
+ 192:.\sd/SD_routines.c **** 
+ 193:.\sd/SD_routines.c **** response = SD_sendCommand(ERASE_BLOCK_END_ADDR,(startBlock + totalBlocks - 1)); //send end block ad
+ 432              		.loc 1 193 0
+ 433 0012 6419     		add	r4, r4, r5
+ 434              	.LVL66:
+ 435 0014 611E     		sub	r1, r4, #1
+ 436 0016 2120     		mov	r0, #33
+ 437              	.LVL67:
+ 438 0018 FFF7FEFF 		bl	SD_sendCommand
+ 439              	.LVL68:
+ 194:.\sd/SD_routines.c **** if(response != 0x00)
+ 440              		.loc 1 194 0
+ 441 001c 0028     		cmp	r0, #0
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 13
+
+
+ 442 001e 03D1     		bne	.L37
+ 195:.\sd/SD_routines.c ****   return response;
+ 196:.\sd/SD_routines.c **** 
+ 197:.\sd/SD_routines.c **** response = SD_sendCommand(ERASE_SELECTED_BLOCKS, 0); //erase all selected blocks
+ 443              		.loc 1 197 0
+ 444 0020 2620     		mov	r0, #38
+ 445              	.LVL69:
+ 446 0022 0021     		mov	r1, #0
+ 447 0024 FFF7FEFF 		bl	SD_sendCommand
+ 448              	.LVL70:
+ 449              	.L37:
+ 198:.\sd/SD_routines.c **** if(response != 0x00)
+ 199:.\sd/SD_routines.c ****   return response;
+ 200:.\sd/SD_routines.c **** 
+ 201:.\sd/SD_routines.c **** return 0; //normal return
+ 202:.\sd/SD_routines.c **** }
+ 450              		.loc 1 202 0
+ 451              		@ sp needed
+ 452              	.LVL71:
+ 453 0028 38BD     		pop	{r3, r4, r5, pc}
+ 454              		.cfi_endproc
+ 455              	.LFE35:
+ 456              		.size	SD_erase, .-SD_erase
+ 457 002a C046     		.section	.text.SD_readMultipleBlock,"ax",%progbits
+ 458              		.align	2
+ 459              		.global	SD_readMultipleBlock
+ 460              		.code	16
+ 461              		.thumb_func
+ 462              		.type	SD_readMultipleBlock, %function
+ 463              	SD_readMultipleBlock:
+ 464              	.LFB36:
+ 203:.\sd/SD_routines.c **** 
+ 204:.\sd/SD_routines.c **** 
+ 205:.\sd/SD_routines.c **** 
+ 206:.\sd/SD_routines.c **** //***************************************************************************
+ 207:.\sd/SD_routines.c **** //Function	: to read multiple blocks from SD card & send every block to UART
+ 208:.\sd/SD_routines.c **** //Arguments	: none
+ 209:.\sd/SD_routines.c **** //return	: unsigned char; will be 0 if no error,
+ 210:.\sd/SD_routines.c **** // 			  otherwise the response byte will be sent
+ 211:.\sd/SD_routines.c **** //****************************************************************************
+ 212:.\sd/SD_routines.c **** unsigned char SD_readMultipleBlock (unsigned long startBlock, unsigned long totalBlocks, uint8_t *d
+ 213:.\sd/SD_routines.c **** {
+ 465              		.loc 1 213 0
+ 466              		.cfi_startproc
+ 467              	.LVL72:
+ 468 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 469              		.cfi_def_cfa_offset 20
+ 470              		.cfi_offset 4, -20
+ 471              		.cfi_offset 5, -16
+ 472              		.cfi_offset 6, -12
+ 473              		.cfi_offset 7, -8
+ 474              		.cfi_offset 14, -4
+ 475 0002 5746     		mov	r7, r10
+ 476 0004 4E46     		mov	r6, r9
+ 477 0006 4546     		mov	r5, r8
+ 478 0008 E0B4     		push	{r5, r6, r7}
+ 479              		.cfi_def_cfa_offset 32
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 14
+
+
+ 480              		.cfi_offset 8, -32
+ 481              		.cfi_offset 9, -28
+ 482              		.cfi_offset 10, -24
+ 483 000a 031C     		mov	r3, r0
+ 484 000c 8946     		mov	r9, r1
+ 485 000e 171C     		mov	r7, r2
+ 486              	.LVL73:
+ 214:.\sd/SD_routines.c **** unsigned char response;
+ 215:.\sd/SD_routines.c **** unsigned int i, retry=0;
+ 216:.\sd/SD_routines.c **** 
+ 217:.\sd/SD_routines.c **** retry = 0;
+ 218:.\sd/SD_routines.c **** 
+ 219:.\sd/SD_routines.c **** response = SD_sendCommand(READ_MULTIPLE_BLOCKS, startBlock); //write a Block command
+ 487              		.loc 1 219 0
+ 488 0010 1220     		mov	r0, #18
+ 489              	.LVL74:
+ 490 0012 191C     		mov	r1, r3
+ 491              	.LVL75:
+ 492 0014 FFF7FEFF 		bl	SD_sendCommand
+ 493              	.LVL76:
+ 220:.\sd/SD_routines.c ****   
+ 221:.\sd/SD_routines.c **** if(response != 0x00) return response; //check for SD status: 0x00 - OK (No flags set)
+ 494              		.loc 1 221 0
+ 495 0018 0028     		cmp	r0, #0
+ 496 001a 3CD1     		bne	.L42
+ 222:.\sd/SD_routines.c **** 
+ 223:.\sd/SD_routines.c **** SD_CS_ASSERT;
+ 497              		.loc 1 223 0
+ 498 001c FFF7FEFF 		bl	SPI_CS_Write
+ 499              	.LVL77:
+ 500 0020 0023     		mov	r3, #0
+ 501 0022 9A46     		mov	r10, r3
+ 224:.\sd/SD_routines.c **** 
+ 225:.\sd/SD_routines.c **** while( totalBlocks )
+ 226:.\sd/SD_routines.c **** {
+ 227:.\sd/SD_routines.c ****   retry = 0;
+ 228:.\sd/SD_routines.c ****   while(SPI_receive() != 0xfe) //wait for start block token 0xfe (0x11111110)
+ 229:.\sd/SD_routines.c ****   if(retry++ > 0xfffe){SD_CS_DEASSERT; return 1;} //return if time-out
+ 502              		.loc 1 229 0
+ 503 0024 1E4B     		ldr	r3, .L52
+ 504 0026 9846     		mov	r8, r3
+ 230:.\sd/SD_routines.c ****   if(retry++ > 0xfffe){SD_CS_DEASSERT; return 1;} //return if time-out
+ 231:.\sd/SD_routines.c **** 
+ 232:.\sd/SD_routines.c ****   for(i=0; i<512; i++) //read 512 bytes
+ 505              		.loc 1 232 0
+ 506 0028 1E4E     		ldr	r6, .L52+4
+ 225:.\sd/SD_routines.c **** while( totalBlocks )
+ 507              		.loc 1 225 0
+ 508 002a 27E0     		b	.L43
+ 509              	.LVL78:
+ 510              	.L45:
+ 229:.\sd/SD_routines.c ****   if(retry++ > 0xfffe){SD_CS_DEASSERT; return 1;} //return if time-out
+ 511              		.loc 1 229 0
+ 512 002c 631C     		add	r3, r4, #1
+ 513              	.LVL79:
+ 514 002e 4445     		cmp	r4, r8
+ 515 0030 04D9     		bls	.L49
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 15
+
+
+ 229:.\sd/SD_routines.c ****   if(retry++ > 0xfffe){SD_CS_DEASSERT; return 1;} //return if time-out
+ 516              		.loc 1 229 0 is_stmt 0 discriminator 1
+ 517 0032 0120     		mov	r0, #1
+ 518 0034 FFF7FEFF 		bl	SPI_CS_Write
+ 519              	.LVL80:
+ 520 0038 0120     		mov	r0, #1
+ 521 003a 2CE0     		b	.L42
+ 522              	.LVL81:
+ 523              	.L49:
+ 229:.\sd/SD_routines.c ****   if(retry++ > 0xfffe){SD_CS_DEASSERT; return 1;} //return if time-out
+ 524              		.loc 1 229 0
+ 525 003c 1C1C     		mov	r4, r3
+ 526 003e 00E0     		b	.L44
+ 527              	.LVL82:
+ 528              	.L51:
+ 529 0040 5446     		mov	r4, r10
+ 530              	.LVL83:
+ 531              	.L44:
+ 228:.\sd/SD_routines.c ****   while(SPI_receive() != 0xfe) //wait for start block token 0xfe (0x11111110)
+ 532              		.loc 1 228 0 is_stmt 1 discriminator 1
+ 533 0042 FFF7FEFF 		bl	SPI_receive
+ 534              	.LVL84:
+ 535 0046 FE28     		cmp	r0, #254
+ 536 0048 F0D1     		bne	.L45
+ 537              	.LVL85:
+ 230:.\sd/SD_routines.c ****   if(retry++ > 0xfffe){SD_CS_DEASSERT; return 1;} //return if time-out
+ 538              		.loc 1 230 0
+ 539 004a 4445     		cmp	r4, r8
+ 540 004c 0AD9     		bls	.L50
+ 230:.\sd/SD_routines.c ****   if(retry++ > 0xfffe){SD_CS_DEASSERT; return 1;} //return if time-out
+ 541              		.loc 1 230 0 is_stmt 0 discriminator 1
+ 542 004e 0120     		mov	r0, #1
+ 543 0050 FFF7FEFF 		bl	SPI_CS_Write
+ 544              	.LVL86:
+ 545 0054 0120     		mov	r0, #1
+ 546 0056 1EE0     		b	.L42
+ 547              	.LVL87:
+ 548              	.L47:
+ 233:.\sd/SD_routines.c ****     data[i] = SPI_receive();
+ 549              		.loc 1 233 0 is_stmt 1 discriminator 2
+ 550 0058 3D19     		add	r5, r7, r4
+ 551 005a FFF7FEFF 		bl	SPI_receive
+ 552              	.LVL88:
+ 553 005e 2870     		strb	r0, [r5]
+ 232:.\sd/SD_routines.c ****   for(i=0; i<512; i++) //read 512 bytes
+ 554              		.loc 1 232 0 discriminator 2
+ 555 0060 0134     		add	r4, r4, #1
+ 556              	.LVL89:
+ 557 0062 00E0     		b	.L46
+ 558              	.LVL90:
+ 559              	.L50:
+ 560 0064 5446     		mov	r4, r10
+ 561              	.LVL91:
+ 562              	.L46:
+ 232:.\sd/SD_routines.c ****   for(i=0; i<512; i++) //read 512 bytes
+ 563              		.loc 1 232 0 is_stmt 0 discriminator 1
+ 564 0066 B442     		cmp	r4, r6
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 16
+
+
+ 565 0068 F6D9     		bls	.L47
+ 234:.\sd/SD_routines.c **** 
+ 235:.\sd/SD_routines.c ****   SPI_receive(); //receive incoming CRC (16-bit), CRC is ignored here
+ 566              		.loc 1 235 0 is_stmt 1
+ 567 006a FFF7FEFF 		bl	SPI_receive
+ 568              	.LVL92:
+ 236:.\sd/SD_routines.c ****   SPI_receive();
+ 569              		.loc 1 236 0
+ 570 006e FFF7FEFF 		bl	SPI_receive
+ 571              	.LVL93:
+ 237:.\sd/SD_routines.c **** 
+ 238:.\sd/SD_routines.c ****   SPI_receive(); //extra 8 cycles
+ 572              		.loc 1 238 0
+ 573 0072 FFF7FEFF 		bl	SPI_receive
+ 574              	.LVL94:
+ 239:.\sd/SD_routines.c ****    totalBlocks--;
+ 575              		.loc 1 239 0
+ 576 0076 0123     		mov	r3, #1
+ 577 0078 5B42     		neg	r3, r3
+ 578 007a 9944     		add	r9, r9, r3
+ 579              	.LVL95:
+ 580              	.L43:
+ 225:.\sd/SD_routines.c **** while( totalBlocks )
+ 581              		.loc 1 225 0 discriminator 1
+ 582 007c 4B46     		mov	r3, r9
+ 583 007e 002B     		cmp	r3, #0
+ 584 0080 DED1     		bne	.L51
+ 585              	.LVL96:
+ 240:.\sd/SD_routines.c **** }
+ 241:.\sd/SD_routines.c **** 
+ 242:.\sd/SD_routines.c **** SD_sendCommand(STOP_TRANSMISSION, 0); //command to stop transmission
+ 586              		.loc 1 242 0
+ 587 0082 0C20     		mov	r0, #12
+ 588 0084 0021     		mov	r1, #0
+ 589 0086 FFF7FEFF 		bl	SD_sendCommand
+ 590              	.LVL97:
+ 243:.\sd/SD_routines.c **** SD_CS_DEASSERT;
+ 591              		.loc 1 243 0
+ 592 008a 0120     		mov	r0, #1
+ 593 008c FFF7FEFF 		bl	SPI_CS_Write
+ 594              	.LVL98:
+ 244:.\sd/SD_routines.c **** SPI_receive(); //extra 8 clock pulses
+ 595              		.loc 1 244 0
+ 596 0090 FFF7FEFF 		bl	SPI_receive
+ 597              	.LVL99:
+ 245:.\sd/SD_routines.c **** 
+ 246:.\sd/SD_routines.c **** return 0;
+ 598              		.loc 1 246 0
+ 599 0094 0020     		mov	r0, #0
+ 600              	.L42:
+ 247:.\sd/SD_routines.c **** }
+ 601              		.loc 1 247 0
+ 602              		@ sp needed
+ 603              	.LVL100:
+ 604              	.LVL101:
+ 605 0096 1CBC     		pop	{r2, r3, r4}
+ 606 0098 9046     		mov	r8, r2
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 17
+
+
+ 607 009a 9946     		mov	r9, r3
+ 608 009c A246     		mov	r10, r4
+ 609 009e F0BD     		pop	{r4, r5, r6, r7, pc}
+ 610              	.L53:
+ 611              		.align	2
+ 612              	.L52:
+ 613 00a0 FEFF0000 		.word	65534
+ 614 00a4 FF010000 		.word	511
+ 615              		.cfi_endproc
+ 616              	.LFE36:
+ 617              		.size	SD_readMultipleBlock, .-SD_readMultipleBlock
+ 618              		.section	.text.SD_writeMultipleBlock,"ax",%progbits
+ 619              		.align	2
+ 620              		.global	SD_writeMultipleBlock
+ 621              		.code	16
+ 622              		.thumb_func
+ 623              		.type	SD_writeMultipleBlock, %function
+ 624              	SD_writeMultipleBlock:
+ 625              	.LFB37:
+ 248:.\sd/SD_routines.c **** 
+ 249:.\sd/SD_routines.c **** //***************************************************************************
+ 250:.\sd/SD_routines.c **** //Function: to receive data from UART and write to multiple blocks of SD card
+ 251:.\sd/SD_routines.c **** //Arguments: none
+ 252:.\sd/SD_routines.c **** //return: unsigned char; will be 0 if no error,
+ 253:.\sd/SD_routines.c **** // otherwise the response byte will be sent
+ 254:.\sd/SD_routines.c **** //****************************************************************************
+ 255:.\sd/SD_routines.c **** unsigned char SD_writeMultipleBlock(unsigned long startBlock, unsigned long totalBlocks, const uint
+ 256:.\sd/SD_routines.c **** {
+ 626              		.loc 1 256 0
+ 627              		.cfi_startproc
+ 628              	.LVL102:
+ 629 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 630              		.cfi_def_cfa_offset 24
+ 631              		.cfi_offset 3, -24
+ 632              		.cfi_offset 4, -20
+ 633              		.cfi_offset 5, -16
+ 634              		.cfi_offset 6, -12
+ 635              		.cfi_offset 7, -8
+ 636              		.cfi_offset 14, -4
+ 637 0002 5F46     		mov	r7, fp
+ 638 0004 5646     		mov	r6, r10
+ 639 0006 4D46     		mov	r5, r9
+ 640 0008 4446     		mov	r4, r8
+ 641 000a F0B4     		push	{r4, r5, r6, r7}
+ 642              		.cfi_def_cfa_offset 40
+ 643              		.cfi_offset 8, -40
+ 644              		.cfi_offset 9, -36
+ 645              		.cfi_offset 10, -32
+ 646              		.cfi_offset 11, -28
+ 647 000c 031C     		mov	r3, r0
+ 648 000e 8946     		mov	r9, r1
+ 649 0010 161C     		mov	r6, r2
+ 650              	.LVL103:
+ 257:.\sd/SD_routines.c **** unsigned char response;
+ 258:.\sd/SD_routines.c **** unsigned int i, retry=0;
+ 259:.\sd/SD_routines.c **** unsigned long blockCounter=0;
+ 260:.\sd/SD_routines.c **** 
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 18
+
+
+ 261:.\sd/SD_routines.c **** response = SD_sendCommand(WRITE_MULTIPLE_BLOCKS, startBlock); //write a Block command
+ 651              		.loc 1 261 0
+ 652 0012 1920     		mov	r0, #25
+ 653              	.LVL104:
+ 654 0014 191C     		mov	r1, r3
+ 655              	.LVL105:
+ 656 0016 FFF7FEFF 		bl	SD_sendCommand
+ 657              	.LVL106:
+ 262:.\sd/SD_routines.c **** 
+ 263:.\sd/SD_routines.c **** if(response != 0x00) return response; //check for SD status: 0x00 - OK (No flags set)
+ 658              		.loc 1 263 0
+ 659 001a 0028     		cmp	r0, #0
+ 660 001c 6AD1     		bne	.L55
+ 264:.\sd/SD_routines.c **** 
+ 265:.\sd/SD_routines.c **** SD_CS_ASSERT;
+ 661              		.loc 1 265 0
+ 662 001e FFF7FEFF 		bl	SPI_CS_Write
+ 663              	.LVL107:
+ 259:.\sd/SD_routines.c **** unsigned long blockCounter=0;
+ 664              		.loc 1 259 0
+ 665 0022 0023     		mov	r3, #0
+ 666 0024 9846     		mov	r8, r3
+ 258:.\sd/SD_routines.c **** unsigned int i, retry=0;
+ 667              		.loc 1 258 0
+ 668 0026 0027     		mov	r7, #0
+ 266:.\sd/SD_routines.c **** 
+ 267:.\sd/SD_routines.c **** while( blockCounter < totalBlocks )
+ 268:.\sd/SD_routines.c **** {
+ 269:.\sd/SD_routines.c **** 
+ 270:.\sd/SD_routines.c ****    SPI_transmit(0xfc); //Send start block token 0xfc (0x11111100)
+ 271:.\sd/SD_routines.c **** 
+ 272:.\sd/SD_routines.c ****    for(i=0; i<512; i++) //send 512 bytes data
+ 669              		.loc 1 272 0
+ 670 0028 BB46     		mov	fp, r7
+ 671 002a 354D     		ldr	r5, .L71
+ 273:.\sd/SD_routines.c ****      SPI_transmit( data[i] );
+ 274:.\sd/SD_routines.c **** 
+ 275:.\sd/SD_routines.c ****    SPI_transmit(0xff); //transmit dummy CRC (16-bit), CRC is ignored here
+ 276:.\sd/SD_routines.c ****    SPI_transmit(0xff);
+ 277:.\sd/SD_routines.c **** 
+ 278:.\sd/SD_routines.c ****    response = SPI_receive();
+ 279:.\sd/SD_routines.c ****    if( (response & 0x1f) != 0x05) //response= 0xXXX0AAA1 ; AAA='010' - data accepted
+ 672              		.loc 1 279 0
+ 673 002c 1F23     		mov	r3, #31
+ 674 002e 9A46     		mov	r10, r3
+ 267:.\sd/SD_routines.c **** while( blockCounter < totalBlocks )
+ 675              		.loc 1 267 0
+ 676 0030 2FE0     		b	.L56
+ 677              	.LVL108:
+ 678              	.L61:
+ 270:.\sd/SD_routines.c ****    SPI_transmit(0xfc); //Send start block token 0xfc (0x11111100)
+ 679              		.loc 1 270 0
+ 680 0032 FC20     		mov	r0, #252
+ 681 0034 FFF7FEFF 		bl	SPI_transmit
+ 682              	.LVL109:
+ 272:.\sd/SD_routines.c ****    for(i=0; i<512; i++) //send 512 bytes data
+ 683              		.loc 1 272 0
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 19
+
+
+ 684 0038 5C46     		mov	r4, fp
+ 685 003a 03E0     		b	.L57
+ 686              	.LVL110:
+ 687              	.L58:
+ 273:.\sd/SD_routines.c ****      SPI_transmit( data[i] );
+ 688              		.loc 1 273 0 discriminator 2
+ 689 003c 305D     		ldrb	r0, [r6, r4]
+ 690 003e FFF7FEFF 		bl	SPI_transmit
+ 691              	.LVL111:
+ 272:.\sd/SD_routines.c ****    for(i=0; i<512; i++) //send 512 bytes data
+ 692              		.loc 1 272 0 discriminator 2
+ 693 0042 0134     		add	r4, r4, #1
+ 694              	.LVL112:
+ 695              	.L57:
+ 272:.\sd/SD_routines.c ****    for(i=0; i<512; i++) //send 512 bytes data
+ 696              		.loc 1 272 0 is_stmt 0 discriminator 1
+ 697 0044 AC42     		cmp	r4, r5
+ 698 0046 F9D9     		bls	.L58
+ 275:.\sd/SD_routines.c ****    SPI_transmit(0xff); //transmit dummy CRC (16-bit), CRC is ignored here
+ 699              		.loc 1 275 0 is_stmt 1
+ 700 0048 FF20     		mov	r0, #255
+ 701 004a FFF7FEFF 		bl	SPI_transmit
+ 702              	.LVL113:
+ 276:.\sd/SD_routines.c ****    SPI_transmit(0xff);
+ 703              		.loc 1 276 0
+ 704 004e FF20     		mov	r0, #255
+ 705 0050 FFF7FEFF 		bl	SPI_transmit
+ 706              	.LVL114:
+ 278:.\sd/SD_routines.c ****    response = SPI_receive();
+ 707              		.loc 1 278 0
+ 708 0054 FFF7FEFF 		bl	SPI_receive
+ 709              	.LVL115:
+ 710 0058 041C     		mov	r4, r0
+ 711              	.LVL116:
+ 712              		.loc 1 279 0
+ 713 005a 5346     		mov	r3, r10
+ 714 005c 1840     		and	r0, r3
+ 715              	.LVL117:
+ 716 005e 0528     		cmp	r0, #5
+ 717 0060 0ED0     		beq	.L59
+ 280:.\sd/SD_routines.c ****    {                              //AAA='101'-data rejected due to CRC error
+ 281:.\sd/SD_routines.c ****       SD_CS_DEASSERT;             //AAA='110'-data rejected due to write error
+ 718              		.loc 1 281 0
+ 719 0062 0120     		mov	r0, #1
+ 720 0064 FFF7FEFF 		bl	SPI_CS_Write
+ 721              	.LVL118:
+ 282:.\sd/SD_routines.c ****       return response;
+ 722              		.loc 1 282 0
+ 723 0068 201C     		mov	r0, r4
+ 724 006a 43E0     		b	.L55
+ 725              	.LVL119:
+ 726              	.L60:
+ 283:.\sd/SD_routines.c ****    }
+ 284:.\sd/SD_routines.c **** 
+ 285:.\sd/SD_routines.c ****    while(!SPI_receive()) //wait for SD card to complete writing and get idle
+ 286:.\sd/SD_routines.c ****      if(retry++ > 0xfffe){SD_CS_DEASSERT; return 1;}
+ 727              		.loc 1 286 0
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 20
+
+
+ 728 006c 7B1C     		add	r3, r7, #1
+ 729              	.LVL120:
+ 730 006e A742     		cmp	r7, r4
+ 731 0070 04D9     		bls	.L67
+ 732              		.loc 1 286 0 is_stmt 0 discriminator 1
+ 733 0072 0120     		mov	r0, #1
+ 734 0074 FFF7FEFF 		bl	SPI_CS_Write
+ 735              	.LVL121:
+ 736 0078 0120     		mov	r0, #1
+ 737 007a 3BE0     		b	.L55
+ 738              	.LVL122:
+ 739              	.L67:
+ 740              		.loc 1 286 0
+ 741 007c 1F1C     		mov	r7, r3
+ 742 007e 00E0     		b	.L70
+ 743              	.LVL123:
+ 744              	.L59:
+ 745              		.loc 1 286 0 discriminator 1
+ 746 0080 204C     		ldr	r4, .L71+4
+ 747              	.LVL124:
+ 748              	.L70:
+ 285:.\sd/SD_routines.c ****    while(!SPI_receive()) //wait for SD card to complete writing and get idle
+ 749              		.loc 1 285 0 is_stmt 1 discriminator 1
+ 750 0082 FFF7FEFF 		bl	SPI_receive
+ 751              	.LVL125:
+ 752 0086 0028     		cmp	r0, #0
+ 753 0088 F0D0     		beq	.L60
+ 287:.\sd/SD_routines.c **** 
+ 288:.\sd/SD_routines.c ****    SPI_receive(); //extra 8 bits
+ 754              		.loc 1 288 0
+ 755 008a FFF7FEFF 		bl	SPI_receive
+ 756              	.LVL126:
+ 289:.\sd/SD_routines.c ****    blockCounter++;
+ 757              		.loc 1 289 0
+ 758 008e 0123     		mov	r3, #1
+ 759 0090 9844     		add	r8, r8, r3
+ 760              	.LVL127:
+ 761              	.L56:
+ 267:.\sd/SD_routines.c **** while( blockCounter < totalBlocks )
+ 762              		.loc 1 267 0 discriminator 1
+ 763 0092 C845     		cmp	r8, r9
+ 764 0094 CDD3     		bcc	.L61
+ 290:.\sd/SD_routines.c **** }
+ 291:.\sd/SD_routines.c **** 
+ 292:.\sd/SD_routines.c **** SPI_transmit(0xfd); //send 'stop transmission token'
+ 765              		.loc 1 292 0
+ 766 0096 FD20     		mov	r0, #253
+ 767 0098 FFF7FEFF 		bl	SPI_transmit
+ 768              	.LVL128:
+ 293:.\sd/SD_routines.c **** 
+ 294:.\sd/SD_routines.c **** retry = 0;
+ 769              		.loc 1 294 0
+ 770 009c 0024     		mov	r4, #0
+ 295:.\sd/SD_routines.c **** 
+ 296:.\sd/SD_routines.c **** while(!SPI_receive()) //wait for SD card to complete writing and get idle
+ 297:.\sd/SD_routines.c ****    if(retry++ > 0xfffe){SD_CS_DEASSERT; return 1;}
+ 771              		.loc 1 297 0
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 21
+
+
+ 772 009e 194D     		ldr	r5, .L71+4
+ 296:.\sd/SD_routines.c **** while(!SPI_receive()) //wait for SD card to complete writing and get idle
+ 773              		.loc 1 296 0
+ 774 00a0 08E0     		b	.L62
+ 775              	.LVL129:
+ 776              	.L63:
+ 777              		.loc 1 297 0
+ 778 00a2 631C     		add	r3, r4, #1
+ 779              	.LVL130:
+ 780 00a4 AC42     		cmp	r4, r5
+ 781 00a6 04D9     		bls	.L68
+ 782              		.loc 1 297 0 is_stmt 0 discriminator 1
+ 783 00a8 0120     		mov	r0, #1
+ 784 00aa FFF7FEFF 		bl	SPI_CS_Write
+ 785              	.LVL131:
+ 786 00ae 0120     		mov	r0, #1
+ 787 00b0 20E0     		b	.L55
+ 788              	.LVL132:
+ 789              	.L68:
+ 790              		.loc 1 297 0
+ 791 00b2 1C1C     		mov	r4, r3
+ 792              	.LVL133:
+ 793              	.L62:
+ 296:.\sd/SD_routines.c **** while(!SPI_receive()) //wait for SD card to complete writing and get idle
+ 794              		.loc 1 296 0 is_stmt 1 discriminator 1
+ 795 00b4 FFF7FEFF 		bl	SPI_receive
+ 796              	.LVL134:
+ 797 00b8 0028     		cmp	r0, #0
+ 798 00ba F2D0     		beq	.L63
+ 298:.\sd/SD_routines.c **** 
+ 299:.\sd/SD_routines.c **** SD_CS_DEASSERT;
+ 799              		.loc 1 299 0
+ 800 00bc 0120     		mov	r0, #1
+ 801 00be FFF7FEFF 		bl	SPI_CS_Write
+ 802              	.LVL135:
+ 300:.\sd/SD_routines.c **** SPI_transmit(0xff); //just spend 8 clock cycle delay before reasserting the CS signal
+ 803              		.loc 1 300 0
+ 804 00c2 FF20     		mov	r0, #255
+ 805 00c4 FFF7FEFF 		bl	SPI_transmit
+ 806              	.LVL136:
+ 301:.\sd/SD_routines.c **** SD_CS_ASSERT; //re assertion of the CS signal is required to verify if card is still busy
+ 807              		.loc 1 301 0
+ 808 00c8 0020     		mov	r0, #0
+ 809 00ca FFF7FEFF 		bl	SPI_CS_Write
+ 810              	.LVL137:
+ 302:.\sd/SD_routines.c **** 
+ 303:.\sd/SD_routines.c **** while(!SPI_receive()) //wait for SD card to complete writing and get idle
+ 304:.\sd/SD_routines.c ****    if(retry++ > 0xfffe){SD_CS_DEASSERT; return 1;}
+ 811              		.loc 1 304 0
+ 812 00ce 0D4D     		ldr	r5, .L71+4
+ 303:.\sd/SD_routines.c **** while(!SPI_receive()) //wait for SD card to complete writing and get idle
+ 813              		.loc 1 303 0
+ 814 00d0 08E0     		b	.L64
+ 815              	.L65:
+ 816              		.loc 1 304 0
+ 817 00d2 631C     		add	r3, r4, #1
+ 818              	.LVL138:
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 22
+
+
+ 819 00d4 AC42     		cmp	r4, r5
+ 820 00d6 04D9     		bls	.L69
+ 821              		.loc 1 304 0 is_stmt 0 discriminator 1
+ 822 00d8 0120     		mov	r0, #1
+ 823 00da FFF7FEFF 		bl	SPI_CS_Write
+ 824              	.LVL139:
+ 825 00de 0120     		mov	r0, #1
+ 826 00e0 08E0     		b	.L55
+ 827              	.LVL140:
+ 828              	.L69:
+ 829              		.loc 1 304 0
+ 830 00e2 1C1C     		mov	r4, r3
+ 831              	.LVL141:
+ 832              	.L64:
+ 303:.\sd/SD_routines.c **** while(!SPI_receive()) //wait for SD card to complete writing and get idle
+ 833              		.loc 1 303 0 is_stmt 1 discriminator 1
+ 834 00e4 FFF7FEFF 		bl	SPI_receive
+ 835              	.LVL142:
+ 836 00e8 0028     		cmp	r0, #0
+ 837 00ea F2D0     		beq	.L65
+ 305:.\sd/SD_routines.c **** SD_CS_DEASSERT;
+ 838              		.loc 1 305 0
+ 839 00ec 0120     		mov	r0, #1
+ 840 00ee FFF7FEFF 		bl	SPI_CS_Write
+ 841              	.LVL143:
+ 306:.\sd/SD_routines.c **** 
+ 307:.\sd/SD_routines.c **** return 0;
+ 842              		.loc 1 307 0
+ 843 00f2 0020     		mov	r0, #0
+ 844              	.LVL144:
+ 845              	.L55:
+ 308:.\sd/SD_routines.c **** }
+ 846              		.loc 1 308 0
+ 847              		@ sp needed
+ 848              	.LVL145:
+ 849              	.LVL146:
+ 850 00f4 3CBC     		pop	{r2, r3, r4, r5}
+ 851 00f6 9046     		mov	r8, r2
+ 852 00f8 9946     		mov	r9, r3
+ 853 00fa A246     		mov	r10, r4
+ 854 00fc AB46     		mov	fp, r5
+ 855 00fe F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 856              	.L72:
+ 857              		.align	2
+ 858              	.L71:
+ 859 0100 FF010000 		.word	511
+ 860 0104 FEFF0000 		.word	65534
+ 861              		.cfi_endproc
+ 862              	.LFE37:
+ 863              		.size	SD_writeMultipleBlock, .-SD_writeMultipleBlock
+ 864              		.comm	cardType,1,1
+ 865              		.comm	SDHC_flag,1,1
+ 866              		.comm	totalBlocks,4,4
+ 867              		.comm	startBlock,4,4
+ 868              		.text
+ 869              	.Letext0:
+ 870              		.file 2 "c:\\program files\\cypress\\psoc creator\\3.2\\psoc creator\\import\\gnu\\arm\\4.8.4\\arm
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 23
+
+
+ 871              		.file 3 "c:\\program files\\cypress\\psoc creator\\3.2\\psoc creator\\import\\gnu\\arm\\4.8.4\\arm
+ 872              		.file 4 "Generated_Source\\PSoC4/cytypes.h"
+ 873              		.file 5 "./sd/SD_routines.h"
+ 874              		.file 6 "Generated_Source\\PSoC4/SPI_CS.h"
+ 875              		.file 7 "./sd/SPI_routines.h"
+ 876              		.section	.debug_info,"",%progbits
+ 877              	.Ldebug_info0:
+ 878 0000 1D070000 		.4byte	0x71d
+ 879 0004 0400     		.2byte	0x4
+ 880 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 881 000a 04       		.byte	0x4
+ 882 000b 01       		.uleb128 0x1
+ 883 000c FF000000 		.4byte	.LASF31
+ 884 0010 01       		.byte	0x1
+ 885 0011 AB000000 		.4byte	.LASF32
+ 886 0015 D3010000 		.4byte	.LASF33
+ 887 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 888 001d 00000000 		.4byte	0
+ 889 0021 00000000 		.4byte	.Ldebug_line0
+ 890 0025 02       		.uleb128 0x2
+ 891 0026 01       		.byte	0x1
+ 892 0027 06       		.byte	0x6
+ 893 0028 27020000 		.4byte	.LASF0
+ 894 002c 03       		.uleb128 0x3
+ 895 002d 00000000 		.4byte	.LASF9
+ 896 0031 02       		.byte	0x2
+ 897 0032 1C       		.byte	0x1c
+ 898 0033 37000000 		.4byte	0x37
+ 899 0037 02       		.uleb128 0x2
+ 900 0038 01       		.byte	0x1
+ 901 0039 08       		.byte	0x8
+ 902 003a 60000000 		.4byte	.LASF1
+ 903 003e 02       		.uleb128 0x2
+ 904 003f 02       		.byte	0x2
+ 905 0040 05       		.byte	0x5
+ 906 0041 C0010000 		.4byte	.LASF2
+ 907 0045 02       		.uleb128 0x2
+ 908 0046 02       		.byte	0x2
+ 909 0047 07       		.byte	0x7
+ 910 0048 33000000 		.4byte	.LASF3
+ 911 004c 02       		.uleb128 0x2
+ 912 004d 04       		.byte	0x4
+ 913 004e 05       		.byte	0x5
+ 914 004f CA010000 		.4byte	.LASF4
+ 915 0053 02       		.uleb128 0x2
+ 916 0054 04       		.byte	0x4
+ 917 0055 07       		.byte	0x7
+ 918 0056 74000000 		.4byte	.LASF5
+ 919 005a 02       		.uleb128 0x2
+ 920 005b 08       		.byte	0x8
+ 921 005c 05       		.byte	0x5
+ 922 005d 99010000 		.4byte	.LASF6
+ 923 0061 02       		.uleb128 0x2
+ 924 0062 08       		.byte	0x8
+ 925 0063 07       		.byte	0x7
+ 926 0064 E0000000 		.4byte	.LASF7
+ 927 0068 04       		.uleb128 0x4
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 24
+
+
+ 928 0069 04       		.byte	0x4
+ 929 006a 05       		.byte	0x5
+ 930 006b 696E7400 		.ascii	"int\000"
+ 931 006f 02       		.uleb128 0x2
+ 932 0070 04       		.byte	0x4
+ 933 0071 07       		.byte	0x7
+ 934 0072 D3000000 		.4byte	.LASF8
+ 935 0076 03       		.uleb128 0x3
+ 936 0077 F7000000 		.4byte	.LASF10
+ 937 007b 03       		.byte	0x3
+ 938 007c 2A       		.byte	0x2a
+ 939 007d 2C000000 		.4byte	0x2c
+ 940 0081 03       		.uleb128 0x3
+ 941 0082 86000000 		.4byte	.LASF11
+ 942 0086 04       		.byte	0x4
+ 943 0087 A1       		.byte	0xa1
+ 944 0088 37000000 		.4byte	0x37
+ 945 008c 02       		.uleb128 0x2
+ 946 008d 04       		.byte	0x4
+ 947 008e 04       		.byte	0x4
+ 948 008f 4D000000 		.4byte	.LASF12
+ 949 0093 02       		.uleb128 0x2
+ 950 0094 08       		.byte	0x8
+ 951 0095 04       		.byte	0x4
+ 952 0096 A4000000 		.4byte	.LASF13
+ 953 009a 02       		.uleb128 0x2
+ 954 009b 01       		.byte	0x1
+ 955 009c 08       		.byte	0x8
+ 956 009d A7010000 		.4byte	.LASF14
+ 957 00a1 02       		.uleb128 0x2
+ 958 00a2 04       		.byte	0x4
+ 959 00a3 07       		.byte	0x7
+ 960 00a4 90010000 		.4byte	.LASF15
+ 961 00a8 05       		.uleb128 0x5
+ 962 00a9 0A000000 		.4byte	.LASF19
+ 963 00ad 01       		.byte	0x1
+ 964 00ae 7D       		.byte	0x7d
+ 965 00af 37000000 		.4byte	0x37
+ 966 00b3 00000000 		.4byte	.LFB34
+ 967 00b7 C0000000 		.4byte	.LFE34-.LFB34
+ 968 00bb 01       		.uleb128 0x1
+ 969 00bc 9C       		.byte	0x9c
+ 970 00bd FA010000 		.4byte	0x1fa
+ 971 00c1 06       		.uleb128 0x6
+ 972 00c2 636D6400 		.ascii	"cmd\000"
+ 973 00c6 01       		.byte	0x1
+ 974 00c7 7D       		.byte	0x7d
+ 975 00c8 37000000 		.4byte	0x37
+ 976 00cc 00000000 		.4byte	.LLST0
+ 977 00d0 06       		.uleb128 0x6
+ 978 00d1 61726700 		.ascii	"arg\000"
+ 979 00d5 01       		.byte	0x1
+ 980 00d6 7D       		.byte	0x7d
+ 981 00d7 53000000 		.4byte	0x53
+ 982 00db 21000000 		.4byte	.LLST1
+ 983 00df 07       		.uleb128 0x7
+ 984 00e0 7B010000 		.4byte	.LASF16
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 25
+
+
+ 985 00e4 01       		.byte	0x1
+ 986 00e5 7F       		.byte	0x7f
+ 987 00e6 37000000 		.4byte	0x37
+ 988 00ea 4A000000 		.4byte	.LLST2
+ 989 00ee 07       		.uleb128 0x7
+ 990 00ef 46000000 		.4byte	.LASF17
+ 991 00f3 01       		.byte	0x1
+ 992 00f4 7F       		.byte	0x7f
+ 993 00f5 37000000 		.4byte	0x37
+ 994 00f9 7E000000 		.4byte	.LLST3
+ 995 00fd 07       		.uleb128 0x7
+ 996 00fe 6E000000 		.4byte	.LASF18
+ 997 0102 01       		.byte	0x1
+ 998 0103 80       		.byte	0x80
+ 999 0104 6F000000 		.4byte	0x6f
+ 1000 0108 96000000 		.4byte	.LLST4
+ 1001 010c 08       		.uleb128 0x8
+ 1002 010d 2E000000 		.4byte	.LVL4
+ 1003 0111 EF060000 		.4byte	0x6ef
+ 1004 0115 1F010000 		.4byte	0x11f
+ 1005 0119 09       		.uleb128 0x9
+ 1006 011a 01       		.uleb128 0x1
+ 1007 011b 50       		.byte	0x50
+ 1008 011c 01       		.uleb128 0x1
+ 1009 011d 30       		.byte	0x30
+ 1010 011e 00       		.byte	0
+ 1011 011f 08       		.uleb128 0x8
+ 1012 0120 36000000 		.4byte	.LVL5
+ 1013 0124 00070000 		.4byte	0x700
+ 1014 0128 36010000 		.4byte	0x136
+ 1015 012c 09       		.uleb128 0x9
+ 1016 012d 01       		.uleb128 0x1
+ 1017 012e 50       		.byte	0x50
+ 1018 012f 05       		.uleb128 0x5
+ 1019 0130 77       		.byte	0x77
+ 1020 0131 00       		.sleb128 0
+ 1021 0132 08       		.byte	0x8
+ 1022 0133 40       		.byte	0x40
+ 1023 0134 21       		.byte	0x21
+ 1024 0135 00       		.byte	0
+ 1025 0136 08       		.uleb128 0x8
+ 1026 0137 3C000000 		.4byte	.LVL6
+ 1027 013b 00070000 		.4byte	0x700
+ 1028 013f 4C010000 		.4byte	0x14c
+ 1029 0143 09       		.uleb128 0x9
+ 1030 0144 01       		.uleb128 0x1
+ 1031 0145 50       		.byte	0x50
+ 1032 0146 04       		.uleb128 0x4
+ 1033 0147 74       		.byte	0x74
+ 1034 0148 00       		.sleb128 0
+ 1035 0149 48       		.byte	0x48
+ 1036 014a 25       		.byte	0x25
+ 1037 014b 00       		.byte	0
+ 1038 014c 08       		.uleb128 0x8
+ 1039 014d 44000000 		.4byte	.LVL7
+ 1040 0151 00070000 		.4byte	0x700
+ 1041 0155 62010000 		.4byte	0x162
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 26
+
+
+ 1042 0159 09       		.uleb128 0x9
+ 1043 015a 01       		.uleb128 0x1
+ 1044 015b 50       		.byte	0x50
+ 1045 015c 04       		.uleb128 0x4
+ 1046 015d 74       		.byte	0x74
+ 1047 015e 00       		.sleb128 0
+ 1048 015f 40       		.byte	0x40
+ 1049 0160 25       		.byte	0x25
+ 1050 0161 00       		.byte	0
+ 1051 0162 08       		.uleb128 0x8
+ 1052 0163 4C000000 		.4byte	.LVL8
+ 1053 0167 00070000 		.4byte	0x700
+ 1054 016b 78010000 		.4byte	0x178
+ 1055 016f 09       		.uleb128 0x9
+ 1056 0170 01       		.uleb128 0x1
+ 1057 0171 50       		.byte	0x50
+ 1058 0172 04       		.uleb128 0x4
+ 1059 0173 74       		.byte	0x74
+ 1060 0174 00       		.sleb128 0
+ 1061 0175 38       		.byte	0x38
+ 1062 0176 25       		.byte	0x25
+ 1063 0177 00       		.byte	0
+ 1064 0178 08       		.uleb128 0x8
+ 1065 0179 52000000 		.4byte	.LVL9
+ 1066 017d 00070000 		.4byte	0x700
+ 1067 0181 8C010000 		.4byte	0x18c
+ 1068 0185 09       		.uleb128 0x9
+ 1069 0186 01       		.uleb128 0x1
+ 1070 0187 50       		.byte	0x50
+ 1071 0188 02       		.uleb128 0x2
+ 1072 0189 74       		.byte	0x74
+ 1073 018a 00       		.sleb128 0
+ 1074 018b 00       		.byte	0
+ 1075 018c 08       		.uleb128 0x8
+ 1076 018d 5C000000 		.4byte	.LVL10
+ 1077 0191 00070000 		.4byte	0x700
+ 1078 0195 A0010000 		.4byte	0x1a0
+ 1079 0199 09       		.uleb128 0x9
+ 1080 019a 01       		.uleb128 0x1
+ 1081 019b 50       		.byte	0x50
+ 1082 019c 02       		.uleb128 0x2
+ 1083 019d 09       		.byte	0x9
+ 1084 019e 87       		.byte	0x87
+ 1085 019f 00       		.byte	0
+ 1086 01a0 08       		.uleb128 0x8
+ 1087 01a1 64000000 		.4byte	.LVL11
+ 1088 01a5 00070000 		.4byte	0x700
+ 1089 01a9 B4010000 		.4byte	0x1b4
+ 1090 01ad 09       		.uleb128 0x9
+ 1091 01ae 01       		.uleb128 0x1
+ 1092 01af 50       		.byte	0x50
+ 1093 01b0 02       		.uleb128 0x2
+ 1094 01b1 09       		.byte	0x9
+ 1095 01b2 95       		.byte	0x95
+ 1096 01b3 00       		.byte	0
+ 1097 01b4 0A       		.uleb128 0xa
+ 1098 01b5 78000000 		.4byte	.LVL17
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 27
+
+
+ 1099 01b9 15070000 		.4byte	0x715
+ 1100 01bd 0A       		.uleb128 0xa
+ 1101 01be 8A000000 		.4byte	.LVL20
+ 1102 01c2 15070000 		.4byte	0x715
+ 1103 01c6 0A       		.uleb128 0xa
+ 1104 01c7 A0000000 		.4byte	.LVL21
+ 1105 01cb 15070000 		.4byte	0x715
+ 1106 01cf 0A       		.uleb128 0xa
+ 1107 01d0 A4000000 		.4byte	.LVL22
+ 1108 01d4 15070000 		.4byte	0x715
+ 1109 01d8 0A       		.uleb128 0xa
+ 1110 01d9 A8000000 		.4byte	.LVL23
+ 1111 01dd 15070000 		.4byte	0x715
+ 1112 01e1 0A       		.uleb128 0xa
+ 1113 01e2 AC000000 		.4byte	.LVL24
+ 1114 01e6 15070000 		.4byte	0x715
+ 1115 01ea 0B       		.uleb128 0xb
+ 1116 01eb B2000000 		.4byte	.LVL25
+ 1117 01ef EF060000 		.4byte	0x6ef
+ 1118 01f3 09       		.uleb128 0x9
+ 1119 01f4 01       		.uleb128 0x1
+ 1120 01f5 50       		.byte	0x50
+ 1121 01f6 01       		.uleb128 0x1
+ 1122 01f7 31       		.byte	0x31
+ 1123 01f8 00       		.byte	0
+ 1124 01f9 00       		.byte	0
+ 1125 01fa 05       		.uleb128 0x5
+ 1126 01fb 58000000 		.4byte	.LASF20
+ 1127 01ff 01       		.byte	0x1
+ 1128 0200 1D       		.byte	0x1d
+ 1129 0201 37000000 		.4byte	0x37
+ 1130 0205 00000000 		.4byte	.LFB33
+ 1131 0209 D8000000 		.4byte	.LFE33-.LFB33
+ 1132 020d 01       		.uleb128 0x1
+ 1133 020e 9C       		.byte	0x9c
+ 1134 020f 1F030000 		.4byte	0x31f
+ 1135 0213 0C       		.uleb128 0xc
+ 1136 0214 6900     		.ascii	"i\000"
+ 1137 0216 01       		.byte	0x1
+ 1138 0217 1F       		.byte	0x1f
+ 1139 0218 37000000 		.4byte	0x37
+ 1140 021c D7000000 		.4byte	.LLST5
+ 1141 0220 07       		.uleb128 0x7
+ 1142 0221 7B010000 		.4byte	.LASF16
+ 1143 0225 01       		.byte	0x1
+ 1144 0226 1F       		.byte	0x1f
+ 1145 0227 37000000 		.4byte	0x37
+ 1146 022b 0E010000 		.4byte	.LLST6
+ 1147 022f 07       		.uleb128 0x7
+ 1148 0230 AC010000 		.4byte	.LASF21
+ 1149 0234 01       		.byte	0x1
+ 1150 0235 1F       		.byte	0x1f
+ 1151 0236 37000000 		.4byte	0x37
+ 1152 023a 6E010000 		.4byte	.LLST7
+ 1153 023e 07       		.uleb128 0x7
+ 1154 023f 6E000000 		.4byte	.LASF18
+ 1155 0243 01       		.byte	0x1
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 28
+
+
+ 1156 0244 20       		.byte	0x20
+ 1157 0245 6F000000 		.4byte	0x6f
+ 1158 0249 B0010000 		.4byte	.LLST8
+ 1159 024d 08       		.uleb128 0x8
+ 1160 024e 0C000000 		.4byte	.LVL29
+ 1161 0252 00070000 		.4byte	0x700
+ 1162 0256 61020000 		.4byte	0x261
+ 1163 025a 09       		.uleb128 0x9
+ 1164 025b 01       		.uleb128 0x1
+ 1165 025c 50       		.byte	0x50
+ 1166 025d 02       		.uleb128 0x2
+ 1167 025e 09       		.byte	0x9
+ 1168 025f FF       		.byte	0xff
+ 1169 0260 00       		.byte	0
+ 1170 0261 08       		.uleb128 0x8
+ 1171 0262 1A000000 		.4byte	.LVL32
+ 1172 0266 EF060000 		.4byte	0x6ef
+ 1173 026a 74020000 		.4byte	0x274
+ 1174 026e 09       		.uleb128 0x9
+ 1175 026f 01       		.uleb128 0x1
+ 1176 0270 50       		.byte	0x50
+ 1177 0271 01       		.uleb128 0x1
+ 1178 0272 30       		.byte	0x30
+ 1179 0273 00       		.byte	0
+ 1180 0274 08       		.uleb128 0x8
+ 1181 0275 24000000 		.4byte	.LVL34
+ 1182 0279 A8000000 		.4byte	0xa8
+ 1183 027d 8C020000 		.4byte	0x28c
+ 1184 0281 09       		.uleb128 0x9
+ 1185 0282 01       		.uleb128 0x1
+ 1186 0283 51       		.byte	0x51
+ 1187 0284 01       		.uleb128 0x1
+ 1188 0285 30       		.byte	0x30
+ 1189 0286 09       		.uleb128 0x9
+ 1190 0287 01       		.uleb128 0x1
+ 1191 0288 50       		.byte	0x50
+ 1192 0289 01       		.uleb128 0x1
+ 1193 028a 30       		.byte	0x30
+ 1194 028b 00       		.byte	0
+ 1195 028c 0A       		.uleb128 0xa
+ 1196 028d 32000000 		.4byte	.LVL36
+ 1197 0291 EF060000 		.4byte	0x6ef
+ 1198 0295 08       		.uleb128 0x8
+ 1199 0296 38000000 		.4byte	.LVL37
+ 1200 029a 00070000 		.4byte	0x700
+ 1201 029e A9020000 		.4byte	0x2a9
+ 1202 02a2 09       		.uleb128 0x9
+ 1203 02a3 01       		.uleb128 0x1
+ 1204 02a4 50       		.byte	0x50
+ 1205 02a5 02       		.uleb128 0x2
+ 1206 02a6 09       		.byte	0x9
+ 1207 02a7 FF       		.byte	0xff
+ 1208 02a8 00       		.byte	0
+ 1209 02a9 08       		.uleb128 0x8
+ 1210 02aa 3E000000 		.4byte	.LVL38
+ 1211 02ae 00070000 		.4byte	0x700
+ 1212 02b2 BD020000 		.4byte	0x2bd
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 29
+
+
+ 1213 02b6 09       		.uleb128 0x9
+ 1214 02b7 01       		.uleb128 0x1
+ 1215 02b8 50       		.byte	0x50
+ 1216 02b9 02       		.uleb128 0x2
+ 1217 02ba 09       		.byte	0x9
+ 1218 02bb FF       		.byte	0xff
+ 1219 02bc 00       		.byte	0
+ 1220 02bd 08       		.uleb128 0x8
+ 1221 02be 4C000000 		.4byte	.LVL40
+ 1222 02c2 A8000000 		.4byte	0xa8
+ 1223 02c6 D6020000 		.4byte	0x2d6
+ 1224 02ca 09       		.uleb128 0x9
+ 1225 02cb 01       		.uleb128 0x1
+ 1226 02cc 51       		.byte	0x51
+ 1227 02cd 02       		.uleb128 0x2
+ 1228 02ce 75       		.byte	0x75
+ 1229 02cf 00       		.sleb128 0
+ 1230 02d0 09       		.uleb128 0x9
+ 1231 02d1 01       		.uleb128 0x1
+ 1232 02d2 50       		.byte	0x50
+ 1233 02d3 01       		.uleb128 0x1
+ 1234 02d4 38       		.byte	0x38
+ 1235 02d5 00       		.byte	0
+ 1236 02d6 08       		.uleb128 0x8
+ 1237 02d7 70000000 		.4byte	.LVL46
+ 1238 02db A8000000 		.4byte	0xa8
+ 1239 02df EF020000 		.4byte	0x2ef
+ 1240 02e3 09       		.uleb128 0x9
+ 1241 02e4 01       		.uleb128 0x1
+ 1242 02e5 51       		.byte	0x51
+ 1243 02e6 01       		.uleb128 0x1
+ 1244 02e7 30       		.byte	0x30
+ 1245 02e8 09       		.uleb128 0x9
+ 1246 02e9 01       		.uleb128 0x1
+ 1247 02ea 50       		.byte	0x50
+ 1248 02eb 02       		.uleb128 0x2
+ 1249 02ec 08       		.byte	0x8
+ 1250 02ed 37       		.byte	0x37
+ 1251 02ee 00       		.byte	0
+ 1252 02ef 08       		.uleb128 0x8
+ 1253 02f0 78000000 		.4byte	.LVL47
+ 1254 02f4 A8000000 		.4byte	0xa8
+ 1255 02f8 09030000 		.4byte	0x309
+ 1256 02fc 09       		.uleb128 0x9
+ 1257 02fd 01       		.uleb128 0x1
+ 1258 02fe 51       		.byte	0x51
+ 1259 02ff 02       		.uleb128 0x2
+ 1260 0300 75       		.byte	0x75
+ 1261 0301 00       		.sleb128 0
+ 1262 0302 09       		.uleb128 0x9
+ 1263 0303 01       		.uleb128 0x1
+ 1264 0304 50       		.byte	0x50
+ 1265 0305 02       		.uleb128 0x2
+ 1266 0306 08       		.byte	0x8
+ 1267 0307 29       		.byte	0x29
+ 1268 0308 00       		.byte	0
+ 1269 0309 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 30
+
+
+ 1270 030a 96000000 		.4byte	.LVL51
+ 1271 030e A8000000 		.4byte	0xa8
+ 1272 0312 09       		.uleb128 0x9
+ 1273 0313 01       		.uleb128 0x1
+ 1274 0314 51       		.byte	0x51
+ 1275 0315 01       		.uleb128 0x1
+ 1276 0316 30       		.byte	0x30
+ 1277 0317 09       		.uleb128 0x9
+ 1278 0318 01       		.uleb128 0x1
+ 1279 0319 50       		.byte	0x50
+ 1280 031a 02       		.uleb128 0x2
+ 1281 031b 08       		.byte	0x8
+ 1282 031c 3A       		.byte	0x3a
+ 1283 031d 00       		.byte	0
+ 1284 031e 00       		.byte	0
+ 1285 031f 05       		.uleb128 0x5
+ 1286 0320 1E020000 		.4byte	.LASF22
+ 1287 0324 01       		.byte	0x1
+ 1288 0325 B9       		.byte	0xb9
+ 1289 0326 37000000 		.4byte	0x37
+ 1290 032a 00000000 		.4byte	.LFB35
+ 1291 032e 2A000000 		.4byte	.LFE35-.LFB35
+ 1292 0332 01       		.uleb128 0x1
+ 1293 0333 9C       		.byte	0x9c
+ 1294 0334 AF030000 		.4byte	0x3af
+ 1295 0338 0D       		.uleb128 0xd
+ 1296 0339 8C000000 		.4byte	.LASF23
+ 1297 033d 01       		.byte	0x1
+ 1298 033e B9       		.byte	0xb9
+ 1299 033f 53000000 		.4byte	0x53
+ 1300 0343 20020000 		.4byte	.LLST9
+ 1301 0347 0D       		.uleb128 0xd
+ 1302 0348 84010000 		.4byte	.LASF24
+ 1303 034c 01       		.byte	0x1
+ 1304 034d B9       		.byte	0xb9
+ 1305 034e 53000000 		.4byte	0x53
+ 1306 0352 4C020000 		.4byte	.LLST10
+ 1307 0356 07       		.uleb128 0x7
+ 1308 0357 7B010000 		.4byte	.LASF16
+ 1309 035b 01       		.byte	0x1
+ 1310 035c BB       		.byte	0xbb
+ 1311 035d 37000000 		.4byte	0x37
+ 1312 0361 78020000 		.4byte	.LLST11
+ 1313 0365 08       		.uleb128 0x8
+ 1314 0366 0E000000 		.4byte	.LVL65
+ 1315 036a A8000000 		.4byte	0xa8
+ 1316 036e 7F030000 		.4byte	0x37f
+ 1317 0372 09       		.uleb128 0x9
+ 1318 0373 01       		.uleb128 0x1
+ 1319 0374 51       		.byte	0x51
+ 1320 0375 02       		.uleb128 0x2
+ 1321 0376 74       		.byte	0x74
+ 1322 0377 00       		.sleb128 0
+ 1323 0378 09       		.uleb128 0x9
+ 1324 0379 01       		.uleb128 0x1
+ 1325 037a 50       		.byte	0x50
+ 1326 037b 02       		.uleb128 0x2
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 31
+
+
+ 1327 037c 08       		.byte	0x8
+ 1328 037d 20       		.byte	0x20
+ 1329 037e 00       		.byte	0
+ 1330 037f 08       		.uleb128 0x8
+ 1331 0380 1C000000 		.4byte	.LVL68
+ 1332 0384 A8000000 		.4byte	0xa8
+ 1333 0388 99030000 		.4byte	0x399
+ 1334 038c 09       		.uleb128 0x9
+ 1335 038d 01       		.uleb128 0x1
+ 1336 038e 51       		.byte	0x51
+ 1337 038f 02       		.uleb128 0x2
+ 1338 0390 74       		.byte	0x74
+ 1339 0391 7F       		.sleb128 -1
+ 1340 0392 09       		.uleb128 0x9
+ 1341 0393 01       		.uleb128 0x1
+ 1342 0394 50       		.byte	0x50
+ 1343 0395 02       		.uleb128 0x2
+ 1344 0396 08       		.byte	0x8
+ 1345 0397 21       		.byte	0x21
+ 1346 0398 00       		.byte	0
+ 1347 0399 0B       		.uleb128 0xb
+ 1348 039a 28000000 		.4byte	.LVL70
+ 1349 039e A8000000 		.4byte	0xa8
+ 1350 03a2 09       		.uleb128 0x9
+ 1351 03a3 01       		.uleb128 0x1
+ 1352 03a4 51       		.byte	0x51
+ 1353 03a5 01       		.uleb128 0x1
+ 1354 03a6 30       		.byte	0x30
+ 1355 03a7 09       		.uleb128 0x9
+ 1356 03a8 01       		.uleb128 0x1
+ 1357 03a9 50       		.byte	0x50
+ 1358 03aa 02       		.uleb128 0x2
+ 1359 03ab 08       		.byte	0x8
+ 1360 03ac 26       		.byte	0x26
+ 1361 03ad 00       		.byte	0
+ 1362 03ae 00       		.byte	0
+ 1363 03af 05       		.uleb128 0x5
+ 1364 03b0 BE000000 		.4byte	.LASF25
+ 1365 03b4 01       		.byte	0x1
+ 1366 03b5 D4       		.byte	0xd4
+ 1367 03b6 37000000 		.4byte	0x37
+ 1368 03ba 00000000 		.4byte	.LFB36
+ 1369 03be A8000000 		.4byte	.LFE36-.LFB36
+ 1370 03c2 01       		.uleb128 0x1
+ 1371 03c3 9C       		.byte	0x9c
+ 1372 03c4 CC040000 		.4byte	0x4cc
+ 1373 03c8 0D       		.uleb128 0xd
+ 1374 03c9 8C000000 		.4byte	.LASF23
+ 1375 03cd 01       		.byte	0x1
+ 1376 03ce D4       		.byte	0xd4
+ 1377 03cf 53000000 		.4byte	0x53
+ 1378 03d3 96020000 		.4byte	.LLST12
+ 1379 03d7 0D       		.uleb128 0xd
+ 1380 03d8 84010000 		.4byte	.LASF24
+ 1381 03dc 01       		.byte	0x1
+ 1382 03dd D4       		.byte	0xd4
+ 1383 03de 53000000 		.4byte	0x53
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 32
+
+
+ 1384 03e2 C2020000 		.4byte	.LLST13
+ 1385 03e6 0D       		.uleb128 0xd
+ 1386 03e7 53000000 		.4byte	.LASF26
+ 1387 03eb 01       		.byte	0x1
+ 1388 03ec D4       		.byte	0xd4
+ 1389 03ed CC040000 		.4byte	0x4cc
+ 1390 03f1 0C030000 		.4byte	.LLST14
+ 1391 03f5 07       		.uleb128 0x7
+ 1392 03f6 7B010000 		.4byte	.LASF16
+ 1393 03fa 01       		.byte	0x1
+ 1394 03fb D6       		.byte	0xd6
+ 1395 03fc 37000000 		.4byte	0x37
+ 1396 0400 38030000 		.4byte	.LLST15
+ 1397 0404 0C       		.uleb128 0xc
+ 1398 0405 6900     		.ascii	"i\000"
+ 1399 0407 01       		.byte	0x1
+ 1400 0408 D7       		.byte	0xd7
+ 1401 0409 6F000000 		.4byte	0x6f
+ 1402 040d 4B030000 		.4byte	.LLST16
+ 1403 0411 07       		.uleb128 0x7
+ 1404 0412 6E000000 		.4byte	.LASF18
+ 1405 0416 01       		.byte	0x1
+ 1406 0417 D7       		.byte	0xd7
+ 1407 0418 6F000000 		.4byte	0x6f
+ 1408 041c 69030000 		.4byte	.LLST17
+ 1409 0420 08       		.uleb128 0x8
+ 1410 0421 18000000 		.4byte	.LVL76
+ 1411 0425 A8000000 		.4byte	0xa8
+ 1412 0429 3A040000 		.4byte	0x43a
+ 1413 042d 09       		.uleb128 0x9
+ 1414 042e 01       		.uleb128 0x1
+ 1415 042f 51       		.byte	0x51
+ 1416 0430 03       		.uleb128 0x3
+ 1417 0431 F3       		.byte	0xf3
+ 1418 0432 01       		.uleb128 0x1
+ 1419 0433 50       		.byte	0x50
+ 1420 0434 09       		.uleb128 0x9
+ 1421 0435 01       		.uleb128 0x1
+ 1422 0436 50       		.byte	0x50
+ 1423 0437 01       		.uleb128 0x1
+ 1424 0438 42       		.byte	0x42
+ 1425 0439 00       		.byte	0
+ 1426 043a 0A       		.uleb128 0xa
+ 1427 043b 20000000 		.4byte	.LVL77
+ 1428 043f EF060000 		.4byte	0x6ef
+ 1429 0443 08       		.uleb128 0x8
+ 1430 0444 38000000 		.4byte	.LVL80
+ 1431 0448 EF060000 		.4byte	0x6ef
+ 1432 044c 56040000 		.4byte	0x456
+ 1433 0450 09       		.uleb128 0x9
+ 1434 0451 01       		.uleb128 0x1
+ 1435 0452 50       		.byte	0x50
+ 1436 0453 01       		.uleb128 0x1
+ 1437 0454 31       		.byte	0x31
+ 1438 0455 00       		.byte	0
+ 1439 0456 0A       		.uleb128 0xa
+ 1440 0457 46000000 		.4byte	.LVL84
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 33
+
+
+ 1441 045b 15070000 		.4byte	0x715
+ 1442 045f 08       		.uleb128 0x8
+ 1443 0460 54000000 		.4byte	.LVL86
+ 1444 0464 EF060000 		.4byte	0x6ef
+ 1445 0468 72040000 		.4byte	0x472
+ 1446 046c 09       		.uleb128 0x9
+ 1447 046d 01       		.uleb128 0x1
+ 1448 046e 50       		.byte	0x50
+ 1449 046f 01       		.uleb128 0x1
+ 1450 0470 31       		.byte	0x31
+ 1451 0471 00       		.byte	0
+ 1452 0472 0A       		.uleb128 0xa
+ 1453 0473 5E000000 		.4byte	.LVL88
+ 1454 0477 15070000 		.4byte	0x715
+ 1455 047b 0A       		.uleb128 0xa
+ 1456 047c 6E000000 		.4byte	.LVL92
+ 1457 0480 15070000 		.4byte	0x715
+ 1458 0484 0A       		.uleb128 0xa
+ 1459 0485 72000000 		.4byte	.LVL93
+ 1460 0489 15070000 		.4byte	0x715
+ 1461 048d 0A       		.uleb128 0xa
+ 1462 048e 76000000 		.4byte	.LVL94
+ 1463 0492 15070000 		.4byte	0x715
+ 1464 0496 08       		.uleb128 0x8
+ 1465 0497 8A000000 		.4byte	.LVL97
+ 1466 049b A8000000 		.4byte	0xa8
+ 1467 049f AF040000 		.4byte	0x4af
+ 1468 04a3 09       		.uleb128 0x9
+ 1469 04a4 01       		.uleb128 0x1
+ 1470 04a5 51       		.byte	0x51
+ 1471 04a6 02       		.uleb128 0x2
+ 1472 04a7 7A       		.byte	0x7a
+ 1473 04a8 00       		.sleb128 0
+ 1474 04a9 09       		.uleb128 0x9
+ 1475 04aa 01       		.uleb128 0x1
+ 1476 04ab 50       		.byte	0x50
+ 1477 04ac 01       		.uleb128 0x1
+ 1478 04ad 3C       		.byte	0x3c
+ 1479 04ae 00       		.byte	0
+ 1480 04af 08       		.uleb128 0x8
+ 1481 04b0 90000000 		.4byte	.LVL98
+ 1482 04b4 EF060000 		.4byte	0x6ef
+ 1483 04b8 C2040000 		.4byte	0x4c2
+ 1484 04bc 09       		.uleb128 0x9
+ 1485 04bd 01       		.uleb128 0x1
+ 1486 04be 50       		.byte	0x50
+ 1487 04bf 01       		.uleb128 0x1
+ 1488 04c0 31       		.byte	0x31
+ 1489 04c1 00       		.byte	0
+ 1490 04c2 0A       		.uleb128 0xa
+ 1491 04c3 94000000 		.4byte	.LVL99
+ 1492 04c7 15070000 		.4byte	0x715
+ 1493 04cb 00       		.byte	0
+ 1494 04cc 0E       		.uleb128 0xe
+ 1495 04cd 04       		.byte	0x4
+ 1496 04ce 76000000 		.4byte	0x76
+ 1497 04d2 05       		.uleb128 0x5
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 34
+
+
+ 1498 04d3 08020000 		.4byte	.LASF27
+ 1499 04d7 01       		.byte	0x1
+ 1500 04d8 FF       		.byte	0xff
+ 1501 04d9 37000000 		.4byte	0x37
+ 1502 04dd 00000000 		.4byte	.LFB37
+ 1503 04e1 08010000 		.4byte	.LFE37-.LFB37
+ 1504 04e5 01       		.uleb128 0x1
+ 1505 04e6 9C       		.byte	0x9c
+ 1506 04e7 96060000 		.4byte	0x696
+ 1507 04eb 0D       		.uleb128 0xd
+ 1508 04ec 8C000000 		.4byte	.LASF23
+ 1509 04f0 01       		.byte	0x1
+ 1510 04f1 FF       		.byte	0xff
+ 1511 04f2 53000000 		.4byte	0x53
+ 1512 04f6 D0030000 		.4byte	.LLST18
+ 1513 04fa 0D       		.uleb128 0xd
+ 1514 04fb 84010000 		.4byte	.LASF24
+ 1515 04ff 01       		.byte	0x1
+ 1516 0500 FF       		.byte	0xff
+ 1517 0501 53000000 		.4byte	0x53
+ 1518 0505 FC030000 		.4byte	.LLST19
+ 1519 0509 0D       		.uleb128 0xd
+ 1520 050a 53000000 		.4byte	.LASF26
+ 1521 050e 01       		.byte	0x1
+ 1522 050f FF       		.byte	0xff
+ 1523 0510 96060000 		.4byte	0x696
+ 1524 0514 28040000 		.4byte	.LLST20
+ 1525 0518 0F       		.uleb128 0xf
+ 1526 0519 7B010000 		.4byte	.LASF16
+ 1527 051d 01       		.byte	0x1
+ 1528 051e 0101     		.2byte	0x101
+ 1529 0520 37000000 		.4byte	0x37
+ 1530 0524 54040000 		.4byte	.LLST21
+ 1531 0528 10       		.uleb128 0x10
+ 1532 0529 6900     		.ascii	"i\000"
+ 1533 052b 01       		.byte	0x1
+ 1534 052c 0201     		.2byte	0x102
+ 1535 052e 6F000000 		.4byte	0x6f
+ 1536 0532 88040000 		.4byte	.LLST22
+ 1537 0536 0F       		.uleb128 0xf
+ 1538 0537 6E000000 		.4byte	.LASF18
+ 1539 053b 01       		.byte	0x1
+ 1540 053c 0201     		.2byte	0x102
+ 1541 053e 6F000000 		.4byte	0x6f
+ 1542 0542 A7040000 		.4byte	.LLST23
+ 1543 0546 0F       		.uleb128 0xf
+ 1544 0547 97000000 		.4byte	.LASF28
+ 1545 054b 01       		.byte	0x1
+ 1546 054c 0301     		.2byte	0x103
+ 1547 054e 53000000 		.4byte	0x53
+ 1548 0552 67050000 		.4byte	.LLST24
+ 1549 0556 08       		.uleb128 0x8
+ 1550 0557 1A000000 		.4byte	.LVL106
+ 1551 055b A8000000 		.4byte	0xa8
+ 1552 055f 70050000 		.4byte	0x570
+ 1553 0563 09       		.uleb128 0x9
+ 1554 0564 01       		.uleb128 0x1
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 35
+
+
+ 1555 0565 51       		.byte	0x51
+ 1556 0566 03       		.uleb128 0x3
+ 1557 0567 F3       		.byte	0xf3
+ 1558 0568 01       		.uleb128 0x1
+ 1559 0569 50       		.byte	0x50
+ 1560 056a 09       		.uleb128 0x9
+ 1561 056b 01       		.uleb128 0x1
+ 1562 056c 50       		.byte	0x50
+ 1563 056d 01       		.uleb128 0x1
+ 1564 056e 49       		.byte	0x49
+ 1565 056f 00       		.byte	0
+ 1566 0570 0A       		.uleb128 0xa
+ 1567 0571 22000000 		.4byte	.LVL107
+ 1568 0575 EF060000 		.4byte	0x6ef
+ 1569 0579 08       		.uleb128 0x8
+ 1570 057a 38000000 		.4byte	.LVL109
+ 1571 057e 00070000 		.4byte	0x700
+ 1572 0582 8D050000 		.4byte	0x58d
+ 1573 0586 09       		.uleb128 0x9
+ 1574 0587 01       		.uleb128 0x1
+ 1575 0588 50       		.byte	0x50
+ 1576 0589 02       		.uleb128 0x2
+ 1577 058a 09       		.byte	0x9
+ 1578 058b FC       		.byte	0xfc
+ 1579 058c 00       		.byte	0
+ 1580 058d 0A       		.uleb128 0xa
+ 1581 058e 42000000 		.4byte	.LVL111
+ 1582 0592 00070000 		.4byte	0x700
+ 1583 0596 08       		.uleb128 0x8
+ 1584 0597 4E000000 		.4byte	.LVL113
+ 1585 059b 00070000 		.4byte	0x700
+ 1586 059f AA050000 		.4byte	0x5aa
+ 1587 05a3 09       		.uleb128 0x9
+ 1588 05a4 01       		.uleb128 0x1
+ 1589 05a5 50       		.byte	0x50
+ 1590 05a6 02       		.uleb128 0x2
+ 1591 05a7 09       		.byte	0x9
+ 1592 05a8 FF       		.byte	0xff
+ 1593 05a9 00       		.byte	0
+ 1594 05aa 08       		.uleb128 0x8
+ 1595 05ab 54000000 		.4byte	.LVL114
+ 1596 05af 00070000 		.4byte	0x700
+ 1597 05b3 BE050000 		.4byte	0x5be
+ 1598 05b7 09       		.uleb128 0x9
+ 1599 05b8 01       		.uleb128 0x1
+ 1600 05b9 50       		.byte	0x50
+ 1601 05ba 02       		.uleb128 0x2
+ 1602 05bb 09       		.byte	0x9
+ 1603 05bc FF       		.byte	0xff
+ 1604 05bd 00       		.byte	0
+ 1605 05be 0A       		.uleb128 0xa
+ 1606 05bf 58000000 		.4byte	.LVL115
+ 1607 05c3 15070000 		.4byte	0x715
+ 1608 05c7 08       		.uleb128 0x8
+ 1609 05c8 68000000 		.4byte	.LVL118
+ 1610 05cc EF060000 		.4byte	0x6ef
+ 1611 05d0 DA050000 		.4byte	0x5da
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 36
+
+
+ 1612 05d4 09       		.uleb128 0x9
+ 1613 05d5 01       		.uleb128 0x1
+ 1614 05d6 50       		.byte	0x50
+ 1615 05d7 01       		.uleb128 0x1
+ 1616 05d8 31       		.byte	0x31
+ 1617 05d9 00       		.byte	0
+ 1618 05da 08       		.uleb128 0x8
+ 1619 05db 78000000 		.4byte	.LVL121
+ 1620 05df EF060000 		.4byte	0x6ef
+ 1621 05e3 ED050000 		.4byte	0x5ed
+ 1622 05e7 09       		.uleb128 0x9
+ 1623 05e8 01       		.uleb128 0x1
+ 1624 05e9 50       		.byte	0x50
+ 1625 05ea 01       		.uleb128 0x1
+ 1626 05eb 31       		.byte	0x31
+ 1627 05ec 00       		.byte	0
+ 1628 05ed 0A       		.uleb128 0xa
+ 1629 05ee 86000000 		.4byte	.LVL125
+ 1630 05f2 15070000 		.4byte	0x715
+ 1631 05f6 0A       		.uleb128 0xa
+ 1632 05f7 8E000000 		.4byte	.LVL126
+ 1633 05fb 15070000 		.4byte	0x715
+ 1634 05ff 08       		.uleb128 0x8
+ 1635 0600 9C000000 		.4byte	.LVL128
+ 1636 0604 00070000 		.4byte	0x700
+ 1637 0608 13060000 		.4byte	0x613
+ 1638 060c 09       		.uleb128 0x9
+ 1639 060d 01       		.uleb128 0x1
+ 1640 060e 50       		.byte	0x50
+ 1641 060f 02       		.uleb128 0x2
+ 1642 0610 09       		.byte	0x9
+ 1643 0611 FD       		.byte	0xfd
+ 1644 0612 00       		.byte	0
+ 1645 0613 08       		.uleb128 0x8
+ 1646 0614 AE000000 		.4byte	.LVL131
+ 1647 0618 EF060000 		.4byte	0x6ef
+ 1648 061c 26060000 		.4byte	0x626
+ 1649 0620 09       		.uleb128 0x9
+ 1650 0621 01       		.uleb128 0x1
+ 1651 0622 50       		.byte	0x50
+ 1652 0623 01       		.uleb128 0x1
+ 1653 0624 31       		.byte	0x31
+ 1654 0625 00       		.byte	0
+ 1655 0626 0A       		.uleb128 0xa
+ 1656 0627 B8000000 		.4byte	.LVL134
+ 1657 062b 15070000 		.4byte	0x715
+ 1658 062f 08       		.uleb128 0x8
+ 1659 0630 C2000000 		.4byte	.LVL135
+ 1660 0634 EF060000 		.4byte	0x6ef
+ 1661 0638 42060000 		.4byte	0x642
+ 1662 063c 09       		.uleb128 0x9
+ 1663 063d 01       		.uleb128 0x1
+ 1664 063e 50       		.byte	0x50
+ 1665 063f 01       		.uleb128 0x1
+ 1666 0640 31       		.byte	0x31
+ 1667 0641 00       		.byte	0
+ 1668 0642 08       		.uleb128 0x8
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 37
+
+
+ 1669 0643 C8000000 		.4byte	.LVL136
+ 1670 0647 00070000 		.4byte	0x700
+ 1671 064b 56060000 		.4byte	0x656
+ 1672 064f 09       		.uleb128 0x9
+ 1673 0650 01       		.uleb128 0x1
+ 1674 0651 50       		.byte	0x50
+ 1675 0652 02       		.uleb128 0x2
+ 1676 0653 09       		.byte	0x9
+ 1677 0654 FF       		.byte	0xff
+ 1678 0655 00       		.byte	0
+ 1679 0656 08       		.uleb128 0x8
+ 1680 0657 CE000000 		.4byte	.LVL137
+ 1681 065b EF060000 		.4byte	0x6ef
+ 1682 065f 6A060000 		.4byte	0x66a
+ 1683 0663 09       		.uleb128 0x9
+ 1684 0664 01       		.uleb128 0x1
+ 1685 0665 50       		.byte	0x50
+ 1686 0666 02       		.uleb128 0x2
+ 1687 0667 7B       		.byte	0x7b
+ 1688 0668 00       		.sleb128 0
+ 1689 0669 00       		.byte	0
+ 1690 066a 08       		.uleb128 0x8
+ 1691 066b DE000000 		.4byte	.LVL139
+ 1692 066f EF060000 		.4byte	0x6ef
+ 1693 0673 7D060000 		.4byte	0x67d
+ 1694 0677 09       		.uleb128 0x9
+ 1695 0678 01       		.uleb128 0x1
+ 1696 0679 50       		.byte	0x50
+ 1697 067a 01       		.uleb128 0x1
+ 1698 067b 31       		.byte	0x31
+ 1699 067c 00       		.byte	0
+ 1700 067d 0A       		.uleb128 0xa
+ 1701 067e E8000000 		.4byte	.LVL142
+ 1702 0682 15070000 		.4byte	0x715
+ 1703 0686 0B       		.uleb128 0xb
+ 1704 0687 F2000000 		.4byte	.LVL143
+ 1705 068b EF060000 		.4byte	0x6ef
+ 1706 068f 09       		.uleb128 0x9
+ 1707 0690 01       		.uleb128 0x1
+ 1708 0691 50       		.byte	0x50
+ 1709 0692 01       		.uleb128 0x1
+ 1710 0693 31       		.byte	0x31
+ 1711 0694 00       		.byte	0
+ 1712 0695 00       		.byte	0
+ 1713 0696 0E       		.uleb128 0xe
+ 1714 0697 04       		.byte	0x4
+ 1715 0698 9C060000 		.4byte	0x69c
+ 1716 069c 11       		.uleb128 0x11
+ 1717 069d 76000000 		.4byte	0x76
+ 1718 06a1 12       		.uleb128 0x12
+ 1719 06a2 8C000000 		.4byte	.LASF23
+ 1720 06a6 05       		.byte	0x5
+ 1721 06a7 37       		.byte	0x37
+ 1722 06a8 B2060000 		.4byte	0x6b2
+ 1723 06ac 05       		.uleb128 0x5
+ 1724 06ad 03       		.byte	0x3
+ 1725 06ae 00000000 		.4byte	startBlock
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 38
+
+
+ 1726 06b2 13       		.uleb128 0x13
+ 1727 06b3 53000000 		.4byte	0x53
+ 1728 06b7 12       		.uleb128 0x12
+ 1729 06b8 84010000 		.4byte	.LASF24
+ 1730 06bc 05       		.byte	0x5
+ 1731 06bd 37       		.byte	0x37
+ 1732 06be B2060000 		.4byte	0x6b2
+ 1733 06c2 05       		.uleb128 0x5
+ 1734 06c3 03       		.byte	0x3
+ 1735 06c4 00000000 		.4byte	totalBlocks
+ 1736 06c8 12       		.uleb128 0x12
+ 1737 06c9 3F020000 		.4byte	.LASF29
+ 1738 06cd 05       		.byte	0x5
+ 1739 06ce 38       		.byte	0x38
+ 1740 06cf D9060000 		.4byte	0x6d9
+ 1741 06d3 05       		.uleb128 0x5
+ 1742 06d4 03       		.byte	0x3
+ 1743 06d5 00000000 		.4byte	SDHC_flag
+ 1744 06d9 13       		.uleb128 0x13
+ 1745 06da 37000000 		.4byte	0x37
+ 1746 06de 12       		.uleb128 0x12
+ 1747 06df B7010000 		.4byte	.LASF30
+ 1748 06e3 05       		.byte	0x5
+ 1749 06e4 38       		.byte	0x38
+ 1750 06e5 D9060000 		.4byte	0x6d9
+ 1751 06e9 05       		.uleb128 0x5
+ 1752 06ea 03       		.byte	0x3
+ 1753 06eb 00000000 		.4byte	cardType
+ 1754 06ef 14       		.uleb128 0x14
+ 1755 06f0 19000000 		.4byte	.LASF34
+ 1756 06f4 06       		.byte	0x6
+ 1757 06f5 1D       		.byte	0x1d
+ 1758 06f6 00070000 		.4byte	0x700
+ 1759 06fa 15       		.uleb128 0x15
+ 1760 06fb 81000000 		.4byte	0x81
+ 1761 06ff 00       		.byte	0
+ 1762 0700 16       		.uleb128 0x16
+ 1763 0701 26000000 		.4byte	.LASF35
+ 1764 0705 07       		.byte	0x7
+ 1765 0706 18       		.byte	0x18
+ 1766 0707 37000000 		.4byte	0x37
+ 1767 070b 15070000 		.4byte	0x715
+ 1768 070f 15       		.uleb128 0x15
+ 1769 0710 37000000 		.4byte	0x37
+ 1770 0714 00       		.byte	0
+ 1771 0715 17       		.uleb128 0x17
+ 1772 0716 33020000 		.4byte	.LASF36
+ 1773 071a 07       		.byte	0x7
+ 1774 071b 19       		.byte	0x19
+ 1775 071c 37000000 		.4byte	0x37
+ 1776 0720 00       		.byte	0
+ 1777              		.section	.debug_abbrev,"",%progbits
+ 1778              	.Ldebug_abbrev0:
+ 1779 0000 01       		.uleb128 0x1
+ 1780 0001 11       		.uleb128 0x11
+ 1781 0002 01       		.byte	0x1
+ 1782 0003 25       		.uleb128 0x25
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 39
+
+
+ 1783 0004 0E       		.uleb128 0xe
+ 1784 0005 13       		.uleb128 0x13
+ 1785 0006 0B       		.uleb128 0xb
+ 1786 0007 03       		.uleb128 0x3
+ 1787 0008 0E       		.uleb128 0xe
+ 1788 0009 1B       		.uleb128 0x1b
+ 1789 000a 0E       		.uleb128 0xe
+ 1790 000b 55       		.uleb128 0x55
+ 1791 000c 17       		.uleb128 0x17
+ 1792 000d 11       		.uleb128 0x11
+ 1793 000e 01       		.uleb128 0x1
+ 1794 000f 10       		.uleb128 0x10
+ 1795 0010 17       		.uleb128 0x17
+ 1796 0011 00       		.byte	0
+ 1797 0012 00       		.byte	0
+ 1798 0013 02       		.uleb128 0x2
+ 1799 0014 24       		.uleb128 0x24
+ 1800 0015 00       		.byte	0
+ 1801 0016 0B       		.uleb128 0xb
+ 1802 0017 0B       		.uleb128 0xb
+ 1803 0018 3E       		.uleb128 0x3e
+ 1804 0019 0B       		.uleb128 0xb
+ 1805 001a 03       		.uleb128 0x3
+ 1806 001b 0E       		.uleb128 0xe
+ 1807 001c 00       		.byte	0
+ 1808 001d 00       		.byte	0
+ 1809 001e 03       		.uleb128 0x3
+ 1810 001f 16       		.uleb128 0x16
+ 1811 0020 00       		.byte	0
+ 1812 0021 03       		.uleb128 0x3
+ 1813 0022 0E       		.uleb128 0xe
+ 1814 0023 3A       		.uleb128 0x3a
+ 1815 0024 0B       		.uleb128 0xb
+ 1816 0025 3B       		.uleb128 0x3b
+ 1817 0026 0B       		.uleb128 0xb
+ 1818 0027 49       		.uleb128 0x49
+ 1819 0028 13       		.uleb128 0x13
+ 1820 0029 00       		.byte	0
+ 1821 002a 00       		.byte	0
+ 1822 002b 04       		.uleb128 0x4
+ 1823 002c 24       		.uleb128 0x24
+ 1824 002d 00       		.byte	0
+ 1825 002e 0B       		.uleb128 0xb
+ 1826 002f 0B       		.uleb128 0xb
+ 1827 0030 3E       		.uleb128 0x3e
+ 1828 0031 0B       		.uleb128 0xb
+ 1829 0032 03       		.uleb128 0x3
+ 1830 0033 08       		.uleb128 0x8
+ 1831 0034 00       		.byte	0
+ 1832 0035 00       		.byte	0
+ 1833 0036 05       		.uleb128 0x5
+ 1834 0037 2E       		.uleb128 0x2e
+ 1835 0038 01       		.byte	0x1
+ 1836 0039 3F       		.uleb128 0x3f
+ 1837 003a 19       		.uleb128 0x19
+ 1838 003b 03       		.uleb128 0x3
+ 1839 003c 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 40
+
+
+ 1840 003d 3A       		.uleb128 0x3a
+ 1841 003e 0B       		.uleb128 0xb
+ 1842 003f 3B       		.uleb128 0x3b
+ 1843 0040 0B       		.uleb128 0xb
+ 1844 0041 27       		.uleb128 0x27
+ 1845 0042 19       		.uleb128 0x19
+ 1846 0043 49       		.uleb128 0x49
+ 1847 0044 13       		.uleb128 0x13
+ 1848 0045 11       		.uleb128 0x11
+ 1849 0046 01       		.uleb128 0x1
+ 1850 0047 12       		.uleb128 0x12
+ 1851 0048 06       		.uleb128 0x6
+ 1852 0049 40       		.uleb128 0x40
+ 1853 004a 18       		.uleb128 0x18
+ 1854 004b 9742     		.uleb128 0x2117
+ 1855 004d 19       		.uleb128 0x19
+ 1856 004e 01       		.uleb128 0x1
+ 1857 004f 13       		.uleb128 0x13
+ 1858 0050 00       		.byte	0
+ 1859 0051 00       		.byte	0
+ 1860 0052 06       		.uleb128 0x6
+ 1861 0053 05       		.uleb128 0x5
+ 1862 0054 00       		.byte	0
+ 1863 0055 03       		.uleb128 0x3
+ 1864 0056 08       		.uleb128 0x8
+ 1865 0057 3A       		.uleb128 0x3a
+ 1866 0058 0B       		.uleb128 0xb
+ 1867 0059 3B       		.uleb128 0x3b
+ 1868 005a 0B       		.uleb128 0xb
+ 1869 005b 49       		.uleb128 0x49
+ 1870 005c 13       		.uleb128 0x13
+ 1871 005d 02       		.uleb128 0x2
+ 1872 005e 17       		.uleb128 0x17
+ 1873 005f 00       		.byte	0
+ 1874 0060 00       		.byte	0
+ 1875 0061 07       		.uleb128 0x7
+ 1876 0062 34       		.uleb128 0x34
+ 1877 0063 00       		.byte	0
+ 1878 0064 03       		.uleb128 0x3
+ 1879 0065 0E       		.uleb128 0xe
+ 1880 0066 3A       		.uleb128 0x3a
+ 1881 0067 0B       		.uleb128 0xb
+ 1882 0068 3B       		.uleb128 0x3b
+ 1883 0069 0B       		.uleb128 0xb
+ 1884 006a 49       		.uleb128 0x49
+ 1885 006b 13       		.uleb128 0x13
+ 1886 006c 02       		.uleb128 0x2
+ 1887 006d 17       		.uleb128 0x17
+ 1888 006e 00       		.byte	0
+ 1889 006f 00       		.byte	0
+ 1890 0070 08       		.uleb128 0x8
+ 1891 0071 898201   		.uleb128 0x4109
+ 1892 0074 01       		.byte	0x1
+ 1893 0075 11       		.uleb128 0x11
+ 1894 0076 01       		.uleb128 0x1
+ 1895 0077 31       		.uleb128 0x31
+ 1896 0078 13       		.uleb128 0x13
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 41
+
+
+ 1897 0079 01       		.uleb128 0x1
+ 1898 007a 13       		.uleb128 0x13
+ 1899 007b 00       		.byte	0
+ 1900 007c 00       		.byte	0
+ 1901 007d 09       		.uleb128 0x9
+ 1902 007e 8A8201   		.uleb128 0x410a
+ 1903 0081 00       		.byte	0
+ 1904 0082 02       		.uleb128 0x2
+ 1905 0083 18       		.uleb128 0x18
+ 1906 0084 9142     		.uleb128 0x2111
+ 1907 0086 18       		.uleb128 0x18
+ 1908 0087 00       		.byte	0
+ 1909 0088 00       		.byte	0
+ 1910 0089 0A       		.uleb128 0xa
+ 1911 008a 898201   		.uleb128 0x4109
+ 1912 008d 00       		.byte	0
+ 1913 008e 11       		.uleb128 0x11
+ 1914 008f 01       		.uleb128 0x1
+ 1915 0090 31       		.uleb128 0x31
+ 1916 0091 13       		.uleb128 0x13
+ 1917 0092 00       		.byte	0
+ 1918 0093 00       		.byte	0
+ 1919 0094 0B       		.uleb128 0xb
+ 1920 0095 898201   		.uleb128 0x4109
+ 1921 0098 01       		.byte	0x1
+ 1922 0099 11       		.uleb128 0x11
+ 1923 009a 01       		.uleb128 0x1
+ 1924 009b 31       		.uleb128 0x31
+ 1925 009c 13       		.uleb128 0x13
+ 1926 009d 00       		.byte	0
+ 1927 009e 00       		.byte	0
+ 1928 009f 0C       		.uleb128 0xc
+ 1929 00a0 34       		.uleb128 0x34
+ 1930 00a1 00       		.byte	0
+ 1931 00a2 03       		.uleb128 0x3
+ 1932 00a3 08       		.uleb128 0x8
+ 1933 00a4 3A       		.uleb128 0x3a
+ 1934 00a5 0B       		.uleb128 0xb
+ 1935 00a6 3B       		.uleb128 0x3b
+ 1936 00a7 0B       		.uleb128 0xb
+ 1937 00a8 49       		.uleb128 0x49
+ 1938 00a9 13       		.uleb128 0x13
+ 1939 00aa 02       		.uleb128 0x2
+ 1940 00ab 17       		.uleb128 0x17
+ 1941 00ac 00       		.byte	0
+ 1942 00ad 00       		.byte	0
+ 1943 00ae 0D       		.uleb128 0xd
+ 1944 00af 05       		.uleb128 0x5
+ 1945 00b0 00       		.byte	0
+ 1946 00b1 03       		.uleb128 0x3
+ 1947 00b2 0E       		.uleb128 0xe
+ 1948 00b3 3A       		.uleb128 0x3a
+ 1949 00b4 0B       		.uleb128 0xb
+ 1950 00b5 3B       		.uleb128 0x3b
+ 1951 00b6 0B       		.uleb128 0xb
+ 1952 00b7 49       		.uleb128 0x49
+ 1953 00b8 13       		.uleb128 0x13
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 42
+
+
+ 1954 00b9 02       		.uleb128 0x2
+ 1955 00ba 17       		.uleb128 0x17
+ 1956 00bb 00       		.byte	0
+ 1957 00bc 00       		.byte	0
+ 1958 00bd 0E       		.uleb128 0xe
+ 1959 00be 0F       		.uleb128 0xf
+ 1960 00bf 00       		.byte	0
+ 1961 00c0 0B       		.uleb128 0xb
+ 1962 00c1 0B       		.uleb128 0xb
+ 1963 00c2 49       		.uleb128 0x49
+ 1964 00c3 13       		.uleb128 0x13
+ 1965 00c4 00       		.byte	0
+ 1966 00c5 00       		.byte	0
+ 1967 00c6 0F       		.uleb128 0xf
+ 1968 00c7 34       		.uleb128 0x34
+ 1969 00c8 00       		.byte	0
+ 1970 00c9 03       		.uleb128 0x3
+ 1971 00ca 0E       		.uleb128 0xe
+ 1972 00cb 3A       		.uleb128 0x3a
+ 1973 00cc 0B       		.uleb128 0xb
+ 1974 00cd 3B       		.uleb128 0x3b
+ 1975 00ce 05       		.uleb128 0x5
+ 1976 00cf 49       		.uleb128 0x49
+ 1977 00d0 13       		.uleb128 0x13
+ 1978 00d1 02       		.uleb128 0x2
+ 1979 00d2 17       		.uleb128 0x17
+ 1980 00d3 00       		.byte	0
+ 1981 00d4 00       		.byte	0
+ 1982 00d5 10       		.uleb128 0x10
+ 1983 00d6 34       		.uleb128 0x34
+ 1984 00d7 00       		.byte	0
+ 1985 00d8 03       		.uleb128 0x3
+ 1986 00d9 08       		.uleb128 0x8
+ 1987 00da 3A       		.uleb128 0x3a
+ 1988 00db 0B       		.uleb128 0xb
+ 1989 00dc 3B       		.uleb128 0x3b
+ 1990 00dd 05       		.uleb128 0x5
+ 1991 00de 49       		.uleb128 0x49
+ 1992 00df 13       		.uleb128 0x13
+ 1993 00e0 02       		.uleb128 0x2
+ 1994 00e1 17       		.uleb128 0x17
+ 1995 00e2 00       		.byte	0
+ 1996 00e3 00       		.byte	0
+ 1997 00e4 11       		.uleb128 0x11
+ 1998 00e5 26       		.uleb128 0x26
+ 1999 00e6 00       		.byte	0
+ 2000 00e7 49       		.uleb128 0x49
+ 2001 00e8 13       		.uleb128 0x13
+ 2002 00e9 00       		.byte	0
+ 2003 00ea 00       		.byte	0
+ 2004 00eb 12       		.uleb128 0x12
+ 2005 00ec 34       		.uleb128 0x34
+ 2006 00ed 00       		.byte	0
+ 2007 00ee 03       		.uleb128 0x3
+ 2008 00ef 0E       		.uleb128 0xe
+ 2009 00f0 3A       		.uleb128 0x3a
+ 2010 00f1 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 43
+
+
+ 2011 00f2 3B       		.uleb128 0x3b
+ 2012 00f3 0B       		.uleb128 0xb
+ 2013 00f4 49       		.uleb128 0x49
+ 2014 00f5 13       		.uleb128 0x13
+ 2015 00f6 3F       		.uleb128 0x3f
+ 2016 00f7 19       		.uleb128 0x19
+ 2017 00f8 02       		.uleb128 0x2
+ 2018 00f9 18       		.uleb128 0x18
+ 2019 00fa 00       		.byte	0
+ 2020 00fb 00       		.byte	0
+ 2021 00fc 13       		.uleb128 0x13
+ 2022 00fd 35       		.uleb128 0x35
+ 2023 00fe 00       		.byte	0
+ 2024 00ff 49       		.uleb128 0x49
+ 2025 0100 13       		.uleb128 0x13
+ 2026 0101 00       		.byte	0
+ 2027 0102 00       		.byte	0
+ 2028 0103 14       		.uleb128 0x14
+ 2029 0104 2E       		.uleb128 0x2e
+ 2030 0105 01       		.byte	0x1
+ 2031 0106 3F       		.uleb128 0x3f
+ 2032 0107 19       		.uleb128 0x19
+ 2033 0108 03       		.uleb128 0x3
+ 2034 0109 0E       		.uleb128 0xe
+ 2035 010a 3A       		.uleb128 0x3a
+ 2036 010b 0B       		.uleb128 0xb
+ 2037 010c 3B       		.uleb128 0x3b
+ 2038 010d 0B       		.uleb128 0xb
+ 2039 010e 27       		.uleb128 0x27
+ 2040 010f 19       		.uleb128 0x19
+ 2041 0110 3C       		.uleb128 0x3c
+ 2042 0111 19       		.uleb128 0x19
+ 2043 0112 01       		.uleb128 0x1
+ 2044 0113 13       		.uleb128 0x13
+ 2045 0114 00       		.byte	0
+ 2046 0115 00       		.byte	0
+ 2047 0116 15       		.uleb128 0x15
+ 2048 0117 05       		.uleb128 0x5
+ 2049 0118 00       		.byte	0
+ 2050 0119 49       		.uleb128 0x49
+ 2051 011a 13       		.uleb128 0x13
+ 2052 011b 00       		.byte	0
+ 2053 011c 00       		.byte	0
+ 2054 011d 16       		.uleb128 0x16
+ 2055 011e 2E       		.uleb128 0x2e
+ 2056 011f 01       		.byte	0x1
+ 2057 0120 3F       		.uleb128 0x3f
+ 2058 0121 19       		.uleb128 0x19
+ 2059 0122 03       		.uleb128 0x3
+ 2060 0123 0E       		.uleb128 0xe
+ 2061 0124 3A       		.uleb128 0x3a
+ 2062 0125 0B       		.uleb128 0xb
+ 2063 0126 3B       		.uleb128 0x3b
+ 2064 0127 0B       		.uleb128 0xb
+ 2065 0128 27       		.uleb128 0x27
+ 2066 0129 19       		.uleb128 0x19
+ 2067 012a 49       		.uleb128 0x49
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 44
+
+
+ 2068 012b 13       		.uleb128 0x13
+ 2069 012c 3C       		.uleb128 0x3c
+ 2070 012d 19       		.uleb128 0x19
+ 2071 012e 01       		.uleb128 0x1
+ 2072 012f 13       		.uleb128 0x13
+ 2073 0130 00       		.byte	0
+ 2074 0131 00       		.byte	0
+ 2075 0132 17       		.uleb128 0x17
+ 2076 0133 2E       		.uleb128 0x2e
+ 2077 0134 00       		.byte	0
+ 2078 0135 3F       		.uleb128 0x3f
+ 2079 0136 19       		.uleb128 0x19
+ 2080 0137 03       		.uleb128 0x3
+ 2081 0138 0E       		.uleb128 0xe
+ 2082 0139 3A       		.uleb128 0x3a
+ 2083 013a 0B       		.uleb128 0xb
+ 2084 013b 3B       		.uleb128 0x3b
+ 2085 013c 0B       		.uleb128 0xb
+ 2086 013d 27       		.uleb128 0x27
+ 2087 013e 19       		.uleb128 0x19
+ 2088 013f 49       		.uleb128 0x49
+ 2089 0140 13       		.uleb128 0x13
+ 2090 0141 3C       		.uleb128 0x3c
+ 2091 0142 19       		.uleb128 0x19
+ 2092 0143 00       		.byte	0
+ 2093 0144 00       		.byte	0
+ 2094 0145 00       		.byte	0
+ 2095              		.section	.debug_loc,"",%progbits
+ 2096              	.Ldebug_loc0:
+ 2097              	.LLST0:
+ 2098 0000 00000000 		.4byte	.LVL0
+ 2099 0004 2A000000 		.4byte	.LVL3
+ 2100 0008 0100     		.2byte	0x1
+ 2101 000a 50       		.byte	0x50
+ 2102 000b 2A000000 		.4byte	.LVL3
+ 2103 000f C0000000 		.4byte	.LFE34
+ 2104 0013 0400     		.2byte	0x4
+ 2105 0015 F3       		.byte	0xf3
+ 2106 0016 01       		.uleb128 0x1
+ 2107 0017 50       		.byte	0x50
+ 2108 0018 9F       		.byte	0x9f
+ 2109 0019 00000000 		.4byte	0
+ 2110 001d 00000000 		.4byte	0
+ 2111              	.LLST1:
+ 2112 0021 00000000 		.4byte	.LVL0
+ 2113 0025 28000000 		.4byte	.LVL2
+ 2114 0029 0100     		.2byte	0x1
+ 2115 002b 51       		.byte	0x51
+ 2116 002c 28000000 		.4byte	.LVL2
+ 2117 0030 66000000 		.4byte	.LVL12
+ 2118 0034 0100     		.2byte	0x1
+ 2119 0036 54       		.byte	0x54
+ 2120 0037 70000000 		.4byte	.LVL14
+ 2121 003b 72000000 		.4byte	.LVL15
+ 2122 003f 0100     		.2byte	0x1
+ 2123 0041 54       		.byte	0x54
+ 2124 0042 00000000 		.4byte	0
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 45
+
+
+ 2125 0046 00000000 		.4byte	0
+ 2126              	.LLST2:
+ 2127 004a 66000000 		.4byte	.LVL12
+ 2128 004e 70000000 		.4byte	.LVL14
+ 2129 0052 0100     		.2byte	0x1
+ 2130 0054 50       		.byte	0x50
+ 2131 0055 7A000000 		.4byte	.LVL18
+ 2132 0059 89000000 		.4byte	.LVL20-1
+ 2133 005d 0100     		.2byte	0x1
+ 2134 005f 50       		.byte	0x50
+ 2135 0060 89000000 		.4byte	.LVL20-1
+ 2136 0064 B4000000 		.4byte	.LVL26
+ 2137 0068 0100     		.2byte	0x1
+ 2138 006a 55       		.byte	0x55
+ 2139 006b B4000000 		.4byte	.LVL26
+ 2140 006f C0000000 		.4byte	.LFE34
+ 2141 0073 0100     		.2byte	0x1
+ 2142 0075 50       		.byte	0x50
+ 2143 0076 00000000 		.4byte	0
+ 2144 007a 00000000 		.4byte	0
+ 2145              	.LLST3:
+ 2146 007e 8A000000 		.4byte	.LVL20
+ 2147 0082 9F000000 		.4byte	.LVL21-1
+ 2148 0086 0600     		.2byte	0x6
+ 2149 0088 70       		.byte	0x70
+ 2150 0089 00       		.sleb128 0
+ 2151 008a 08       		.byte	0x8
+ 2152 008b 40       		.byte	0x40
+ 2153 008c 1A       		.byte	0x1a
+ 2154 008d 9F       		.byte	0x9f
+ 2155 008e 00000000 		.4byte	0
+ 2156 0092 00000000 		.4byte	0
+ 2157              	.LLST4:
+ 2158 0096 06000000 		.4byte	.LVL1
+ 2159 009a 66000000 		.4byte	.LVL12
+ 2160 009e 0200     		.2byte	0x2
+ 2161 00a0 30       		.byte	0x30
+ 2162 00a1 9F       		.byte	0x9f
+ 2163 00a2 66000000 		.4byte	.LVL12
+ 2164 00a6 68000000 		.4byte	.LVL13
+ 2165 00aa 0100     		.2byte	0x1
+ 2166 00ac 54       		.byte	0x54
+ 2167 00ad 68000000 		.4byte	.LVL13
+ 2168 00b1 70000000 		.4byte	.LVL14
+ 2169 00b5 0100     		.2byte	0x1
+ 2170 00b7 53       		.byte	0x53
+ 2171 00b8 70000000 		.4byte	.LVL14
+ 2172 00bc 74000000 		.4byte	.LVL16
+ 2173 00c0 0200     		.2byte	0x2
+ 2174 00c2 30       		.byte	0x30
+ 2175 00c3 9F       		.byte	0x9f
+ 2176 00c4 74000000 		.4byte	.LVL16
+ 2177 00c8 7E000000 		.4byte	.LVL19
+ 2178 00cc 0100     		.2byte	0x1
+ 2179 00ce 54       		.byte	0x54
+ 2180 00cf 00000000 		.4byte	0
+ 2181 00d3 00000000 		.4byte	0
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 46
+
+
+ 2182              	.LLST5:
+ 2183 00d7 02000000 		.4byte	.LVL27
+ 2184 00db 06000000 		.4byte	.LVL28
+ 2185 00df 0200     		.2byte	0x2
+ 2186 00e1 30       		.byte	0x30
+ 2187 00e2 9F       		.byte	0x9f
+ 2188 00e3 06000000 		.4byte	.LVL28
+ 2189 00e7 0E000000 		.4byte	.LVL30
+ 2190 00eb 0100     		.2byte	0x1
+ 2191 00ed 54       		.byte	0x54
+ 2192 00ee 0E000000 		.4byte	.LVL30
+ 2193 00f2 10000000 		.4byte	.LVL31
+ 2194 00f6 0300     		.2byte	0x3
+ 2195 00f8 74       		.byte	0x74
+ 2196 00f9 7F       		.sleb128 -1
+ 2197 00fa 9F       		.byte	0x9f
+ 2198 00fb 10000000 		.4byte	.LVL31
+ 2199 00ff 1C000000 		.4byte	.LVL33
+ 2200 0103 0100     		.2byte	0x1
+ 2201 0105 54       		.byte	0x54
+ 2202 0106 00000000 		.4byte	0
+ 2203 010a 00000000 		.4byte	0
+ 2204              	.LLST6:
+ 2205 010e 24000000 		.4byte	.LVL34
+ 2206 0112 31000000 		.4byte	.LVL36-1
+ 2207 0116 0100     		.2byte	0x1
+ 2208 0118 50       		.byte	0x50
+ 2209 0119 4C000000 		.4byte	.LVL40
+ 2210 011d 68000000 		.4byte	.LVL45
+ 2211 0121 0100     		.2byte	0x1
+ 2212 0123 50       		.byte	0x50
+ 2213 0124 78000000 		.4byte	.LVL47
+ 2214 0128 8E000000 		.4byte	.LVL50
+ 2215 012c 0100     		.2byte	0x1
+ 2216 012e 50       		.byte	0x50
+ 2217 012f 96000000 		.4byte	.LVL51
+ 2218 0133 B8000000 		.4byte	.LVL53
+ 2219 0137 0100     		.2byte	0x1
+ 2220 0139 50       		.byte	0x50
+ 2221 013a BA000000 		.4byte	.LVL54
+ 2222 013e C2000000 		.4byte	.LVL55
+ 2223 0142 0100     		.2byte	0x1
+ 2224 0144 50       		.byte	0x50
+ 2225 0145 C4000000 		.4byte	.LVL56
+ 2226 0149 C6000000 		.4byte	.LVL57
+ 2227 014d 0100     		.2byte	0x1
+ 2228 014f 50       		.byte	0x50
+ 2229 0150 C8000000 		.4byte	.LVL58
+ 2230 0154 CA000000 		.4byte	.LVL59
+ 2231 0158 0100     		.2byte	0x1
+ 2232 015a 50       		.byte	0x50
+ 2233 015b CC000000 		.4byte	.LVL60
+ 2234 015f CE000000 		.4byte	.LVL61
+ 2235 0163 0100     		.2byte	0x1
+ 2236 0165 50       		.byte	0x50
+ 2237 0166 00000000 		.4byte	0
+ 2238 016a 00000000 		.4byte	0
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 47
+
+
+ 2239              	.LLST7:
+ 2240 016e 3E000000 		.4byte	.LVL38
+ 2241 0172 52000000 		.4byte	.LVL42
+ 2242 0176 0200     		.2byte	0x2
+ 2243 0178 32       		.byte	0x32
+ 2244 0179 9F       		.byte	0x9f
+ 2245 017a 52000000 		.4byte	.LVL42
+ 2246 017e 5C000000 		.4byte	.LVL43
+ 2247 0182 0200     		.2byte	0x2
+ 2248 0184 31       		.byte	0x31
+ 2249 0185 9F       		.byte	0x9f
+ 2250 0186 5C000000 		.4byte	.LVL43
+ 2251 018a 62000000 		.4byte	.LVL44
+ 2252 018e 0200     		.2byte	0x2
+ 2253 0190 32       		.byte	0x32
+ 2254 0191 9F       		.byte	0x9f
+ 2255 0192 62000000 		.4byte	.LVL44
+ 2256 0196 C4000000 		.4byte	.LVL56
+ 2257 019a 0100     		.2byte	0x1
+ 2258 019c 56       		.byte	0x56
+ 2259 019d C8000000 		.4byte	.LVL58
+ 2260 01a1 CE000000 		.4byte	.LVL61
+ 2261 01a5 0100     		.2byte	0x1
+ 2262 01a7 56       		.byte	0x56
+ 2263 01a8 00000000 		.4byte	0
+ 2264 01ac 00000000 		.4byte	0
+ 2265              	.LLST8:
+ 2266 01b0 02000000 		.4byte	.LVL27
+ 2267 01b4 1C000000 		.4byte	.LVL33
+ 2268 01b8 0200     		.2byte	0x2
+ 2269 01ba 30       		.byte	0x30
+ 2270 01bb 9F       		.byte	0x9f
+ 2271 01bc 1C000000 		.4byte	.LVL33
+ 2272 01c0 3E000000 		.4byte	.LVL38
+ 2273 01c4 0100     		.2byte	0x1
+ 2274 01c6 54       		.byte	0x54
+ 2275 01c7 3E000000 		.4byte	.LVL38
+ 2276 01cb 44000000 		.4byte	.LVL39
+ 2277 01cf 0200     		.2byte	0x2
+ 2278 01d1 30       		.byte	0x30
+ 2279 01d2 9F       		.byte	0x9f
+ 2280 01d3 44000000 		.4byte	.LVL39
+ 2281 01d7 62000000 		.4byte	.LVL44
+ 2282 01db 0100     		.2byte	0x1
+ 2283 01dd 54       		.byte	0x54
+ 2284 01de 62000000 		.4byte	.LVL44
+ 2285 01e2 68000000 		.4byte	.LVL45
+ 2286 01e6 0200     		.2byte	0x2
+ 2287 01e8 30       		.byte	0x30
+ 2288 01e9 9F       		.byte	0x9f
+ 2289 01ea 68000000 		.4byte	.LVL45
+ 2290 01ee 82000000 		.4byte	.LVL49
+ 2291 01f2 0100     		.2byte	0x1
+ 2292 01f4 54       		.byte	0x54
+ 2293 01f5 82000000 		.4byte	.LVL49
+ 2294 01f9 8E000000 		.4byte	.LVL50
+ 2295 01fd 0200     		.2byte	0x2
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 48
+
+
+ 2296 01ff 30       		.byte	0x30
+ 2297 0200 9F       		.byte	0x9f
+ 2298 0201 8E000000 		.4byte	.LVL50
+ 2299 0205 CC000000 		.4byte	.LVL60
+ 2300 0209 0100     		.2byte	0x1
+ 2301 020b 54       		.byte	0x54
+ 2302 020c CC000000 		.4byte	.LVL60
+ 2303 0210 CE000000 		.4byte	.LVL61
+ 2304 0214 0200     		.2byte	0x2
+ 2305 0216 30       		.byte	0x30
+ 2306 0217 9F       		.byte	0x9f
+ 2307 0218 00000000 		.4byte	0
+ 2308 021c 00000000 		.4byte	0
+ 2309              	.LLST9:
+ 2310 0220 00000000 		.4byte	.LVL62
+ 2311 0224 08000000 		.4byte	.LVL63
+ 2312 0228 0100     		.2byte	0x1
+ 2313 022a 50       		.byte	0x50
+ 2314 022b 08000000 		.4byte	.LVL63
+ 2315 022f 14000000 		.4byte	.LVL66
+ 2316 0233 0100     		.2byte	0x1
+ 2317 0235 54       		.byte	0x54
+ 2318 0236 14000000 		.4byte	.LVL66
+ 2319 023a 2A000000 		.4byte	.LFE35
+ 2320 023e 0400     		.2byte	0x4
+ 2321 0240 F3       		.byte	0xf3
+ 2322 0241 01       		.uleb128 0x1
+ 2323 0242 50       		.byte	0x50
+ 2324 0243 9F       		.byte	0x9f
+ 2325 0244 00000000 		.4byte	0
+ 2326 0248 00000000 		.4byte	0
+ 2327              	.LLST10:
+ 2328 024c 00000000 		.4byte	.LVL62
+ 2329 0250 0A000000 		.4byte	.LVL64
+ 2330 0254 0100     		.2byte	0x1
+ 2331 0256 51       		.byte	0x51
+ 2332 0257 0A000000 		.4byte	.LVL64
+ 2333 025b 28000000 		.4byte	.LVL71
+ 2334 025f 0100     		.2byte	0x1
+ 2335 0261 55       		.byte	0x55
+ 2336 0262 28000000 		.4byte	.LVL71
+ 2337 0266 2A000000 		.4byte	.LFE35
+ 2338 026a 0400     		.2byte	0x4
+ 2339 026c F3       		.byte	0xf3
+ 2340 026d 01       		.uleb128 0x1
+ 2341 026e 51       		.byte	0x51
+ 2342 026f 9F       		.byte	0x9f
+ 2343 0270 00000000 		.4byte	0
+ 2344 0274 00000000 		.4byte	0
+ 2345              	.LLST11:
+ 2346 0278 0E000000 		.4byte	.LVL65
+ 2347 027c 18000000 		.4byte	.LVL67
+ 2348 0280 0100     		.2byte	0x1
+ 2349 0282 50       		.byte	0x50
+ 2350 0283 1C000000 		.4byte	.LVL68
+ 2351 0287 22000000 		.4byte	.LVL69
+ 2352 028b 0100     		.2byte	0x1
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 49
+
+
+ 2353 028d 50       		.byte	0x50
+ 2354 028e 00000000 		.4byte	0
+ 2355 0292 00000000 		.4byte	0
+ 2356              	.LLST12:
+ 2357 0296 00000000 		.4byte	.LVL72
+ 2358 029a 12000000 		.4byte	.LVL74
+ 2359 029e 0100     		.2byte	0x1
+ 2360 02a0 50       		.byte	0x50
+ 2361 02a1 12000000 		.4byte	.LVL74
+ 2362 02a5 17000000 		.4byte	.LVL76-1
+ 2363 02a9 0100     		.2byte	0x1
+ 2364 02ab 53       		.byte	0x53
+ 2365 02ac 17000000 		.4byte	.LVL76-1
+ 2366 02b0 A8000000 		.4byte	.LFE36
+ 2367 02b4 0400     		.2byte	0x4
+ 2368 02b6 F3       		.byte	0xf3
+ 2369 02b7 01       		.uleb128 0x1
+ 2370 02b8 50       		.byte	0x50
+ 2371 02b9 9F       		.byte	0x9f
+ 2372 02ba 00000000 		.4byte	0
+ 2373 02be 00000000 		.4byte	0
+ 2374              	.LLST13:
+ 2375 02c2 00000000 		.4byte	.LVL72
+ 2376 02c6 14000000 		.4byte	.LVL75
+ 2377 02ca 0100     		.2byte	0x1
+ 2378 02cc 51       		.byte	0x51
+ 2379 02cd 14000000 		.4byte	.LVL75
+ 2380 02d1 40000000 		.4byte	.LVL82
+ 2381 02d5 0100     		.2byte	0x1
+ 2382 02d7 59       		.byte	0x59
+ 2383 02d8 40000000 		.4byte	.LVL82
+ 2384 02dc 42000000 		.4byte	.LVL83
+ 2385 02e0 0100     		.2byte	0x1
+ 2386 02e2 53       		.byte	0x53
+ 2387 02e3 42000000 		.4byte	.LVL83
+ 2388 02e7 82000000 		.4byte	.LVL96
+ 2389 02eb 0100     		.2byte	0x1
+ 2390 02ed 59       		.byte	0x59
+ 2391 02ee 82000000 		.4byte	.LVL96
+ 2392 02f2 89000000 		.4byte	.LVL97-1
+ 2393 02f6 0100     		.2byte	0x1
+ 2394 02f8 53       		.byte	0x53
+ 2395 02f9 89000000 		.4byte	.LVL97-1
+ 2396 02fd 96000000 		.4byte	.LVL101
+ 2397 0301 0100     		.2byte	0x1
+ 2398 0303 59       		.byte	0x59
+ 2399 0304 00000000 		.4byte	0
+ 2400 0308 00000000 		.4byte	0
+ 2401              	.LLST14:
+ 2402 030c 00000000 		.4byte	.LVL72
+ 2403 0310 17000000 		.4byte	.LVL76-1
+ 2404 0314 0100     		.2byte	0x1
+ 2405 0316 52       		.byte	0x52
+ 2406 0317 17000000 		.4byte	.LVL76-1
+ 2407 031b 96000000 		.4byte	.LVL100
+ 2408 031f 0100     		.2byte	0x1
+ 2409 0321 57       		.byte	0x57
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 50
+
+
+ 2410 0322 96000000 		.4byte	.LVL100
+ 2411 0326 A8000000 		.4byte	.LFE36
+ 2412 032a 0400     		.2byte	0x4
+ 2413 032c F3       		.byte	0xf3
+ 2414 032d 01       		.uleb128 0x1
+ 2415 032e 52       		.byte	0x52
+ 2416 032f 9F       		.byte	0x9f
+ 2417 0330 00000000 		.4byte	0
+ 2418 0334 00000000 		.4byte	0
+ 2419              	.LLST15:
+ 2420 0338 18000000 		.4byte	.LVL76
+ 2421 033c 1F000000 		.4byte	.LVL77-1
+ 2422 0340 0100     		.2byte	0x1
+ 2423 0342 50       		.byte	0x50
+ 2424 0343 00000000 		.4byte	0
+ 2425 0347 00000000 		.4byte	0
+ 2426              	.LLST16:
+ 2427 034b 58000000 		.4byte	.LVL87
+ 2428 034f 64000000 		.4byte	.LVL90
+ 2429 0353 0100     		.2byte	0x1
+ 2430 0355 54       		.byte	0x54
+ 2431 0356 66000000 		.4byte	.LVL91
+ 2432 035a 7C000000 		.4byte	.LVL95
+ 2433 035e 0100     		.2byte	0x1
+ 2434 0360 54       		.byte	0x54
+ 2435 0361 00000000 		.4byte	0
+ 2436 0365 00000000 		.4byte	0
+ 2437              	.LLST17:
+ 2438 0369 10000000 		.4byte	.LVL73
+ 2439 036d 2C000000 		.4byte	.LVL78
+ 2440 0371 0200     		.2byte	0x2
+ 2441 0373 30       		.byte	0x30
+ 2442 0374 9F       		.byte	0x9f
+ 2443 0375 2C000000 		.4byte	.LVL78
+ 2444 0379 2E000000 		.4byte	.LVL79
+ 2445 037d 0100     		.2byte	0x1
+ 2446 037f 54       		.byte	0x54
+ 2447 0380 2E000000 		.4byte	.LVL79
+ 2448 0384 37000000 		.4byte	.LVL80-1
+ 2449 0388 0100     		.2byte	0x1
+ 2450 038a 53       		.byte	0x53
+ 2451 038b 37000000 		.4byte	.LVL80-1
+ 2452 038f 3C000000 		.4byte	.LVL81
+ 2453 0393 0300     		.2byte	0x3
+ 2454 0395 74       		.byte	0x74
+ 2455 0396 01       		.sleb128 1
+ 2456 0397 9F       		.byte	0x9f
+ 2457 0398 3C000000 		.4byte	.LVL81
+ 2458 039c 40000000 		.4byte	.LVL82
+ 2459 03a0 0100     		.2byte	0x1
+ 2460 03a2 53       		.byte	0x53
+ 2461 03a3 42000000 		.4byte	.LVL83
+ 2462 03a7 4A000000 		.4byte	.LVL85
+ 2463 03ab 0100     		.2byte	0x1
+ 2464 03ad 54       		.byte	0x54
+ 2465 03ae 4A000000 		.4byte	.LVL85
+ 2466 03b2 58000000 		.4byte	.LVL87
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 51
+
+
+ 2467 03b6 0300     		.2byte	0x3
+ 2468 03b8 74       		.byte	0x74
+ 2469 03b9 01       		.sleb128 1
+ 2470 03ba 9F       		.byte	0x9f
+ 2471 03bb 64000000 		.4byte	.LVL90
+ 2472 03bf 66000000 		.4byte	.LVL91
+ 2473 03c3 0300     		.2byte	0x3
+ 2474 03c5 74       		.byte	0x74
+ 2475 03c6 01       		.sleb128 1
+ 2476 03c7 9F       		.byte	0x9f
+ 2477 03c8 00000000 		.4byte	0
+ 2478 03cc 00000000 		.4byte	0
+ 2479              	.LLST18:
+ 2480 03d0 00000000 		.4byte	.LVL102
+ 2481 03d4 14000000 		.4byte	.LVL104
+ 2482 03d8 0100     		.2byte	0x1
+ 2483 03da 50       		.byte	0x50
+ 2484 03db 14000000 		.4byte	.LVL104
+ 2485 03df 19000000 		.4byte	.LVL106-1
+ 2486 03e3 0100     		.2byte	0x1
+ 2487 03e5 53       		.byte	0x53
+ 2488 03e6 19000000 		.4byte	.LVL106-1
+ 2489 03ea 08010000 		.4byte	.LFE37
+ 2490 03ee 0400     		.2byte	0x4
+ 2491 03f0 F3       		.byte	0xf3
+ 2492 03f1 01       		.uleb128 0x1
+ 2493 03f2 50       		.byte	0x50
+ 2494 03f3 9F       		.byte	0x9f
+ 2495 03f4 00000000 		.4byte	0
+ 2496 03f8 00000000 		.4byte	0
+ 2497              	.LLST19:
+ 2498 03fc 00000000 		.4byte	.LVL102
+ 2499 0400 16000000 		.4byte	.LVL105
+ 2500 0404 0100     		.2byte	0x1
+ 2501 0406 51       		.byte	0x51
+ 2502 0407 16000000 		.4byte	.LVL105
+ 2503 040b F4000000 		.4byte	.LVL146
+ 2504 040f 0100     		.2byte	0x1
+ 2505 0411 59       		.byte	0x59
+ 2506 0412 F4000000 		.4byte	.LVL146
+ 2507 0416 08010000 		.4byte	.LFE37
+ 2508 041a 0400     		.2byte	0x4
+ 2509 041c F3       		.byte	0xf3
+ 2510 041d 01       		.uleb128 0x1
+ 2511 041e 51       		.byte	0x51
+ 2512 041f 9F       		.byte	0x9f
+ 2513 0420 00000000 		.4byte	0
+ 2514 0424 00000000 		.4byte	0
+ 2515              	.LLST20:
+ 2516 0428 00000000 		.4byte	.LVL102
+ 2517 042c 19000000 		.4byte	.LVL106-1
+ 2518 0430 0100     		.2byte	0x1
+ 2519 0432 52       		.byte	0x52
+ 2520 0433 19000000 		.4byte	.LVL106-1
+ 2521 0437 F4000000 		.4byte	.LVL145
+ 2522 043b 0100     		.2byte	0x1
+ 2523 043d 56       		.byte	0x56
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 52
+
+
+ 2524 043e F4000000 		.4byte	.LVL145
+ 2525 0442 08010000 		.4byte	.LFE37
+ 2526 0446 0400     		.2byte	0x4
+ 2527 0448 F3       		.byte	0xf3
+ 2528 0449 01       		.uleb128 0x1
+ 2529 044a 52       		.byte	0x52
+ 2530 044b 9F       		.byte	0x9f
+ 2531 044c 00000000 		.4byte	0
+ 2532 0450 00000000 		.4byte	0
+ 2533              	.LLST21:
+ 2534 0454 1A000000 		.4byte	.LVL106
+ 2535 0458 21000000 		.4byte	.LVL107-1
+ 2536 045c 0100     		.2byte	0x1
+ 2537 045e 50       		.byte	0x50
+ 2538 045f 5A000000 		.4byte	.LVL116
+ 2539 0463 5E000000 		.4byte	.LVL117
+ 2540 0467 0100     		.2byte	0x1
+ 2541 0469 50       		.byte	0x50
+ 2542 046a 5E000000 		.4byte	.LVL117
+ 2543 046e 6C000000 		.4byte	.LVL119
+ 2544 0472 0100     		.2byte	0x1
+ 2545 0474 54       		.byte	0x54
+ 2546 0475 80000000 		.4byte	.LVL123
+ 2547 0479 82000000 		.4byte	.LVL124
+ 2548 047d 0100     		.2byte	0x1
+ 2549 047f 54       		.byte	0x54
+ 2550 0480 00000000 		.4byte	0
+ 2551 0484 00000000 		.4byte	0
+ 2552              	.LLST22:
+ 2553 0488 38000000 		.4byte	.LVL109
+ 2554 048c 3C000000 		.4byte	.LVL110
+ 2555 0490 0200     		.2byte	0x2
+ 2556 0492 30       		.byte	0x30
+ 2557 0493 9F       		.byte	0x9f
+ 2558 0494 3C000000 		.4byte	.LVL110
+ 2559 0498 5A000000 		.4byte	.LVL116
+ 2560 049c 0100     		.2byte	0x1
+ 2561 049e 54       		.byte	0x54
+ 2562 049f 00000000 		.4byte	0
+ 2563 04a3 00000000 		.4byte	0
+ 2564              	.LLST23:
+ 2565 04a7 12000000 		.4byte	.LVL103
+ 2566 04ab 32000000 		.4byte	.LVL108
+ 2567 04af 0200     		.2byte	0x2
+ 2568 04b1 30       		.byte	0x30
+ 2569 04b2 9F       		.byte	0x9f
+ 2570 04b3 32000000 		.4byte	.LVL108
+ 2571 04b7 6E000000 		.4byte	.LVL120
+ 2572 04bb 0100     		.2byte	0x1
+ 2573 04bd 57       		.byte	0x57
+ 2574 04be 6E000000 		.4byte	.LVL120
+ 2575 04c2 77000000 		.4byte	.LVL121-1
+ 2576 04c6 0100     		.2byte	0x1
+ 2577 04c8 53       		.byte	0x53
+ 2578 04c9 77000000 		.4byte	.LVL121-1
+ 2579 04cd 7C000000 		.4byte	.LVL122
+ 2580 04d1 0300     		.2byte	0x3
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 53
+
+
+ 2581 04d3 77       		.byte	0x77
+ 2582 04d4 01       		.sleb128 1
+ 2583 04d5 9F       		.byte	0x9f
+ 2584 04d6 7C000000 		.4byte	.LVL122
+ 2585 04da 80000000 		.4byte	.LVL123
+ 2586 04de 0100     		.2byte	0x1
+ 2587 04e0 53       		.byte	0x53
+ 2588 04e1 80000000 		.4byte	.LVL123
+ 2589 04e5 9C000000 		.4byte	.LVL128
+ 2590 04e9 0100     		.2byte	0x1
+ 2591 04eb 57       		.byte	0x57
+ 2592 04ec 9C000000 		.4byte	.LVL128
+ 2593 04f0 A2000000 		.4byte	.LVL129
+ 2594 04f4 0200     		.2byte	0x2
+ 2595 04f6 30       		.byte	0x30
+ 2596 04f7 9F       		.byte	0x9f
+ 2597 04f8 A2000000 		.4byte	.LVL129
+ 2598 04fc A4000000 		.4byte	.LVL130
+ 2599 0500 0100     		.2byte	0x1
+ 2600 0502 54       		.byte	0x54
+ 2601 0503 A4000000 		.4byte	.LVL130
+ 2602 0507 AD000000 		.4byte	.LVL131-1
+ 2603 050b 0100     		.2byte	0x1
+ 2604 050d 53       		.byte	0x53
+ 2605 050e AD000000 		.4byte	.LVL131-1
+ 2606 0512 B2000000 		.4byte	.LVL132
+ 2607 0516 0300     		.2byte	0x3
+ 2608 0518 74       		.byte	0x74
+ 2609 0519 01       		.sleb128 1
+ 2610 051a 9F       		.byte	0x9f
+ 2611 051b B2000000 		.4byte	.LVL132
+ 2612 051f B4000000 		.4byte	.LVL133
+ 2613 0523 0100     		.2byte	0x1
+ 2614 0525 53       		.byte	0x53
+ 2615 0526 B4000000 		.4byte	.LVL133
+ 2616 052a D4000000 		.4byte	.LVL138
+ 2617 052e 0100     		.2byte	0x1
+ 2618 0530 54       		.byte	0x54
+ 2619 0531 D4000000 		.4byte	.LVL138
+ 2620 0535 DD000000 		.4byte	.LVL139-1
+ 2621 0539 0100     		.2byte	0x1
+ 2622 053b 53       		.byte	0x53
+ 2623 053c DD000000 		.4byte	.LVL139-1
+ 2624 0540 E2000000 		.4byte	.LVL140
+ 2625 0544 0300     		.2byte	0x3
+ 2626 0546 74       		.byte	0x74
+ 2627 0547 01       		.sleb128 1
+ 2628 0548 9F       		.byte	0x9f
+ 2629 0549 E2000000 		.4byte	.LVL140
+ 2630 054d E4000000 		.4byte	.LVL141
+ 2631 0551 0100     		.2byte	0x1
+ 2632 0553 53       		.byte	0x53
+ 2633 0554 E4000000 		.4byte	.LVL141
+ 2634 0558 F4000000 		.4byte	.LVL144
+ 2635 055c 0100     		.2byte	0x1
+ 2636 055e 54       		.byte	0x54
+ 2637 055f 00000000 		.4byte	0
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 54
+
+
+ 2638 0563 00000000 		.4byte	0
+ 2639              	.LLST24:
+ 2640 0567 12000000 		.4byte	.LVL103
+ 2641 056b 32000000 		.4byte	.LVL108
+ 2642 056f 0200     		.2byte	0x2
+ 2643 0571 30       		.byte	0x30
+ 2644 0572 9F       		.byte	0x9f
+ 2645 0573 32000000 		.4byte	.LVL108
+ 2646 0577 F4000000 		.4byte	.LVL144
+ 2647 057b 0100     		.2byte	0x1
+ 2648 057d 58       		.byte	0x58
+ 2649 057e 00000000 		.4byte	0
+ 2650 0582 00000000 		.4byte	0
+ 2651              		.section	.debug_aranges,"",%progbits
+ 2652 0000 3C000000 		.4byte	0x3c
+ 2653 0004 0200     		.2byte	0x2
+ 2654 0006 00000000 		.4byte	.Ldebug_info0
+ 2655 000a 04       		.byte	0x4
+ 2656 000b 00       		.byte	0
+ 2657 000c 0000     		.2byte	0
+ 2658 000e 0000     		.2byte	0
+ 2659 0010 00000000 		.4byte	.LFB34
+ 2660 0014 C0000000 		.4byte	.LFE34-.LFB34
+ 2661 0018 00000000 		.4byte	.LFB33
+ 2662 001c D8000000 		.4byte	.LFE33-.LFB33
+ 2663 0020 00000000 		.4byte	.LFB35
+ 2664 0024 2A000000 		.4byte	.LFE35-.LFB35
+ 2665 0028 00000000 		.4byte	.LFB36
+ 2666 002c A8000000 		.4byte	.LFE36-.LFB36
+ 2667 0030 00000000 		.4byte	.LFB37
+ 2668 0034 08010000 		.4byte	.LFE37-.LFB37
+ 2669 0038 00000000 		.4byte	0
+ 2670 003c 00000000 		.4byte	0
+ 2671              		.section	.debug_ranges,"",%progbits
+ 2672              	.Ldebug_ranges0:
+ 2673 0000 00000000 		.4byte	.LFB34
+ 2674 0004 C0000000 		.4byte	.LFE34
+ 2675 0008 00000000 		.4byte	.LFB33
+ 2676 000c D8000000 		.4byte	.LFE33
+ 2677 0010 00000000 		.4byte	.LFB35
+ 2678 0014 2A000000 		.4byte	.LFE35
+ 2679 0018 00000000 		.4byte	.LFB36
+ 2680 001c A8000000 		.4byte	.LFE36
+ 2681 0020 00000000 		.4byte	.LFB37
+ 2682 0024 08010000 		.4byte	.LFE37
+ 2683 0028 00000000 		.4byte	0
+ 2684 002c 00000000 		.4byte	0
+ 2685              		.section	.debug_line,"",%progbits
+ 2686              	.Ldebug_line0:
+ 2687 0000 04030000 		.section	.debug_str,"MS",%progbits,1
+ 2687      02006801 
+ 2687      00000201 
+ 2687      FB0E0D00 
+ 2687      01010101 
+ 2688              	.LASF9:
+ 2689 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 2689      6E74385F 
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 55
+
+
+ 2689      7400
+ 2690              	.LASF19:
+ 2691 000a 53445F73 		.ascii	"SD_sendCommand\000"
+ 2691      656E6443 
+ 2691      6F6D6D61 
+ 2691      6E6400
+ 2692              	.LASF34:
+ 2693 0019 5350495F 		.ascii	"SPI_CS_Write\000"
+ 2693      43535F57 
+ 2693      72697465 
+ 2693      00
+ 2694              	.LASF35:
+ 2695 0026 5350495F 		.ascii	"SPI_transmit\000"
+ 2695      7472616E 
+ 2695      736D6974 
+ 2695      00
+ 2696              	.LASF3:
+ 2697 0033 73686F72 		.ascii	"short unsigned int\000"
+ 2697      7420756E 
+ 2697      7369676E 
+ 2697      65642069 
+ 2697      6E7400
+ 2698              	.LASF17:
+ 2699 0046 73746174 		.ascii	"status\000"
+ 2699      757300
+ 2700              	.LASF12:
+ 2701 004d 666C6F61 		.ascii	"float\000"
+ 2701      7400
+ 2702              	.LASF26:
+ 2703 0053 64617461 		.ascii	"data\000"
+ 2703      00
+ 2704              	.LASF20:
+ 2705 0058 53445F69 		.ascii	"SD_init\000"
+ 2705      6E697400 
+ 2706              	.LASF1:
+ 2707 0060 756E7369 		.ascii	"unsigned char\000"
+ 2707      676E6564 
+ 2707      20636861 
+ 2707      7200
+ 2708              	.LASF18:
+ 2709 006e 72657472 		.ascii	"retry\000"
+ 2709      7900
+ 2710              	.LASF5:
+ 2711 0074 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2711      20756E73 
+ 2711      69676E65 
+ 2711      6420696E 
+ 2711      7400
+ 2712              	.LASF11:
+ 2713 0086 75696E74 		.ascii	"uint8\000"
+ 2713      3800
+ 2714              	.LASF23:
+ 2715 008c 73746172 		.ascii	"startBlock\000"
+ 2715      74426C6F 
+ 2715      636B00
+ 2716              	.LASF28:
+ 2717 0097 626C6F63 		.ascii	"blockCounter\000"
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 56
+
+
+ 2717      6B436F75 
+ 2717      6E746572 
+ 2717      00
+ 2718              	.LASF13:
+ 2719 00a4 646F7562 		.ascii	"double\000"
+ 2719      6C6500
+ 2720              	.LASF32:
+ 2721 00ab 2E5C7364 		.ascii	".\\sd\\SD_routines.c\000"
+ 2721      5C53445F 
+ 2721      726F7574 
+ 2721      696E6573 
+ 2721      2E6300
+ 2722              	.LASF25:
+ 2723 00be 53445F72 		.ascii	"SD_readMultipleBlock\000"
+ 2723      6561644D 
+ 2723      756C7469 
+ 2723      706C6542 
+ 2723      6C6F636B 
+ 2724              	.LASF8:
+ 2725 00d3 756E7369 		.ascii	"unsigned int\000"
+ 2725      676E6564 
+ 2725      20696E74 
+ 2725      00
+ 2726              	.LASF7:
+ 2727 00e0 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2727      206C6F6E 
+ 2727      6720756E 
+ 2727      7369676E 
+ 2727      65642069 
+ 2728              	.LASF10:
+ 2729 00f7 75696E74 		.ascii	"uint8_t\000"
+ 2729      385F7400 
+ 2730              	.LASF31:
+ 2731 00ff 474E5520 		.ascii	"GNU C 4.8.4 20140526 (release) [ARM/embedded-4_8-br"
+ 2731      4320342E 
+ 2731      382E3420 
+ 2731      32303134 
+ 2731      30353236 
+ 2732 0132 616E6368 		.ascii	"anch revision 211358] -mcpu=cortex-m0 -mthumb -g -O"
+ 2732      20726576 
+ 2732      6973696F 
+ 2732      6E203231 
+ 2732      31333538 
+ 2733 0165 67202D66 		.ascii	"g -ffunction-sections\000"
+ 2733      66756E63 
+ 2733      74696F6E 
+ 2733      2D736563 
+ 2733      74696F6E 
+ 2734              	.LASF16:
+ 2735 017b 72657370 		.ascii	"response\000"
+ 2735      6F6E7365 
+ 2735      00
+ 2736              	.LASF24:
+ 2737 0184 746F7461 		.ascii	"totalBlocks\000"
+ 2737      6C426C6F 
+ 2737      636B7300 
+ 2738              	.LASF15:
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 57
+
+
+ 2739 0190 73697A65 		.ascii	"sizetype\000"
+ 2739      74797065 
+ 2739      00
+ 2740              	.LASF6:
+ 2741 0199 6C6F6E67 		.ascii	"long long int\000"
+ 2741      206C6F6E 
+ 2741      6720696E 
+ 2741      7400
+ 2742              	.LASF14:
+ 2743 01a7 63686172 		.ascii	"char\000"
+ 2743      00
+ 2744              	.LASF21:
+ 2745 01ac 53445F76 		.ascii	"SD_version\000"
+ 2745      65727369 
+ 2745      6F6E00
+ 2746              	.LASF30:
+ 2747 01b7 63617264 		.ascii	"cardType\000"
+ 2747      54797065 
+ 2747      00
+ 2748              	.LASF2:
+ 2749 01c0 73686F72 		.ascii	"short int\000"
+ 2749      7420696E 
+ 2749      7400
+ 2750              	.LASF4:
+ 2751 01ca 6C6F6E67 		.ascii	"long int\000"
+ 2751      20696E74 
+ 2751      00
+ 2752              	.LASF33:
+ 2753 01d3 453A5C68 		.ascii	"E:\\home\\jarik\\src\\psoc\\mpi_rom_emu\\mpi_rom_em"
+ 2753      6F6D655C 
+ 2753      6A617269 
+ 2753      6B5C7372 
+ 2753      635C7073 
+ 2754 0200 752E6379 		.ascii	"u.cydsn\000"
+ 2754      64736E00 
+ 2755              	.LASF27:
+ 2756 0208 53445F77 		.ascii	"SD_writeMultipleBlock\000"
+ 2756      72697465 
+ 2756      4D756C74 
+ 2756      69706C65 
+ 2756      426C6F63 
+ 2757              	.LASF22:
+ 2758 021e 53445F65 		.ascii	"SD_erase\000"
+ 2758      72617365 
+ 2758      00
+ 2759              	.LASF0:
+ 2760 0227 7369676E 		.ascii	"signed char\000"
+ 2760      65642063 
+ 2760      68617200 
+ 2761              	.LASF36:
+ 2762 0233 5350495F 		.ascii	"SPI_receive\000"
+ 2762      72656365 
+ 2762      69766500 
+ 2763              	.LASF29:
+ 2764 023f 53444843 		.ascii	"SDHC_flag\000"
+ 2764      5F666C61 
+ 2764      6700
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cctFZqzD.s 			page 58
+
+
+ 2765              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.4 20140526 (release) [ARM/embedded-4_8-br

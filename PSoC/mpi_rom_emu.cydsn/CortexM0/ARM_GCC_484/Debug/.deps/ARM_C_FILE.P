@@ -1,0 +1,248 @@
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/AD_H.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/AD_H.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/AD_H.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/AD_H_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/AD_H.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/AD_H.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/AD_H_aliases.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/AD_L.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/AD_L.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/AD_L.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/AD_L_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/AD_L.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/AD_L.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/AD_L_aliases.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/AH_reg.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/AH_reg.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/AH_reg.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/CyLib.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/AH_reg.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/AH_reg.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/CyLib.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/AL_reg.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/AL_reg.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/AL_reg.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/CyLib.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/AL_reg.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/AL_reg.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/BYTE.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/BYTE.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/BYTE.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/BYTE_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/BYTE.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/BYTE.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/BYTE_aliases.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/Cm0Start.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/Cm0Start.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/CyLib.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/Cm0Start.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/CyFlash.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/CyFlash.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/CyFlash.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/CyLib.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/CyFlash.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/CyFlash.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/CyLib.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/CyLib.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/CyLib.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/CyLib.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/IDX.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/IDX.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/IDX.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/IDX_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/IDX.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/IDX.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/IDX_aliases.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/LED1.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/LED1.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/LED1.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/LED1_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/LED1.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/LED1.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/LED1_aliases.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/RD.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/RD.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/RD.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/RD_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/RD.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/RD.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/RD_aliases.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/SE0.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE0.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE0.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE0_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE0.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE0.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE0_aliases.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/SE1.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE1.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE1.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE1_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE1.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE1.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE1_aliases.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/SE2.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE2.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE2.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE2_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE2.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE2.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE2_aliases.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/SE3.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE3.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE3.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE3_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE3.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE3.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SE3_aliases.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/SIA.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SIA.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SIA.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SIA_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SIA.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SIA.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SIA_aliases.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/SIP.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SIP.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SIP.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SIP_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SIP.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SIP.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SIP_aliases.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/SPI_1.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/CyLib.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_PINS.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_PVT.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SCBCLK.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SPI_UART.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SPI_UART_PVT.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_miso_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_miso_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_mosi_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_mosi_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_sclk_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_sclk_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_ss0_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_ss0_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_PINS.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_PVT.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SCBCLK.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SPI_UART.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SPI_UART_PVT.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_miso_m.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_miso_m_aliases.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_mosi_m.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_mosi_m_aliases.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_sclk_m.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_sclk_m_aliases.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_ss0_m.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_ss0_m_aliases.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/SPI_1_BOOT.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/CyLib.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_BOOT.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_BOOT.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_PINS.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_PVT.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SCBCLK.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SPI_UART.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_miso_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_miso_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_mosi_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_mosi_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_sclk_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_sclk_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_ss0_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_ss0_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_BOOT.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_BOOT.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/SPI_1_PM.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/CyLib.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_PINS.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_PM.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_PVT.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SCBCLK.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SPI_UART.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SPI_UART_PVT.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_miso_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_miso_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_mosi_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_mosi_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_sclk_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_sclk_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_ss0_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_ss0_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_PM.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/SPI_1_SCBCLK.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SCBCLK.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SCBCLK.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SCBCLK.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/SPI_1_SPI.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/CyLib.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_PINS.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_PVT.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SCBCLK.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SPI.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SPI_UART.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SPI_UART_PVT.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_miso_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_miso_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_mosi_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_mosi_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_sclk_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_sclk_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_ss0_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_ss0_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SPI.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/SPI_1_SPI_BOOT.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/CyLib.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_BOOT.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_PINS.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_PVT.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SCBCLK.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SPI_BOOT.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SPI_UART.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_miso_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_miso_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_mosi_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_mosi_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_sclk_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_sclk_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_ss0_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_ss0_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SPI_BOOT.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/SPI_1_SPI_UART.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/CyLib.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_PINS.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_PVT.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SCBCLK.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SPI_UART.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SPI_UART.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SPI_UART_PVT.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_miso_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_miso_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_mosi_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_mosi_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_sclk_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_sclk_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_ss0_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_ss0_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_SPI_UART.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/SPI_1_miso_m.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_miso_m.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_miso_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_miso_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_miso_m.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/SPI_1_mosi_m.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_mosi_m.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_mosi_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_mosi_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_mosi_m.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/SPI_1_sclk_m.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_sclk_m.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_sclk_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_sclk_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_sclk_m.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/SPI_1_ss0_m.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_ss0_m.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_ss0_m.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_ss0_m_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_1_ss0_m.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/SPI_CS.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_CS.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_CS.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_CS_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_CS.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_CS.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/SPI_CS_aliases.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/STATE.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/CyLib.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/STATE.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/STATE.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/STATE.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/STATE.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/WR.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/WR.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/WR.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/WR_aliases.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cypins.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/WR.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/WR.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/WR_aliases.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/cyPm.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/CyLib.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyPm.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyPm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyPm.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyPm.h : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/cyfitter_cfg.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/CyLib.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter_cfg.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter_cfg.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter_cfg.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/cymetadata.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cymetadata.c E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cymetadata.c : 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/CortexM0/ARM_GCC_484/Debug/cyutils.o : E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cydevice_trm.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyfitter.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cytypes.h E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyutils.c 
+
+E:/home/jarik/src/psoc/mpi_rom_emu/mpi_rom_emu.cydsn/Generated_Source/PSoC4/cyutils.c : 
+
