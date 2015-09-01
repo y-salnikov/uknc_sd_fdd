@@ -27,7 +27,7 @@ comments: true
 permalink: /:year/:month/:title
 paginate: 5
 
-highlighter: rouge
+highlighter: pygments
 #markdown: kramdown
 markdown: redcarpet
 redcarpet:
