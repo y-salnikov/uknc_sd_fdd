@@ -25,7 +25,7 @@ disqus: 'Jarik65535'
 comments: true
 
 permalink: /:year/:month/:title
-paginate: 5
+paginate: 3
 
 highlighter: pygments
 #markdown: kramdown
