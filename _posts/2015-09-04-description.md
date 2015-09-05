@@ -8,7 +8,7 @@ date: 2015-09-04
 #Аппаратная часть.  
 &nbsp;&nbsp;&nbsp;&nbsp;
 Схема электрическая принципиальная:  
-[![Схема устройства]({{site.baseurl}}/images/scheme.png)](https://github.com/y-salnikov/uknc_sd_fdd/blob/master/Hardware/uknc_sd_fdd_sch._pdf?raw=true)
+[![Схема устройства]({{site.baseurl}}/images/scheme.png)](https://github.com/y-salnikov/uknc_sd_fdd/blob/master/Hardware/uknc_sd_fdd_sch_.pdf?raw=true)
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 Устройство разработано на основе микросхемы серии
