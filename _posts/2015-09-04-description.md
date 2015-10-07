@@ -197,3 +197,7 @@ N:<filename>
 Для компиляции прошивки использовался мой [недо-ассемблер](https://github.com/y-salnikov/not-yet-assembler),
 в котором вместо мнемоники используются коды команд.
 
+Пришли платы. Заказывал на http://dirtyPCBs.com .
+
+![Плата]({{site.baseurl}}/images/w_boards_only_.jpg)
+
