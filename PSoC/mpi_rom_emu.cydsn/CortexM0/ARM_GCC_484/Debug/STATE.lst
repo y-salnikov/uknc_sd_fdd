@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 1
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccaqy0S0.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 1
   30:.\Generated_Source\PSoC4/STATE.c **** * Parameters:
   31:.\Generated_Source\PSoC4/STATE.c **** *  None.
   32:.\Generated_Source\PSoC4/STATE.c **** *
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 2
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccaqy0S0.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/STATE.c **** * Return:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 1
   54              		.cfi_offset 3, -8
   55              		.cfi_offset 14, -4
   59:.\Generated_Source\PSoC4/STATE.c ****     uint8 interruptState;
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 3
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccaqy0S0.s 			page 3
 
 
   60:.\Generated_Source\PSoC4/STATE.c ****     interruptState = CyEnterCriticalSection();
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 1
   88 0000 08B5     		push	{r3, lr}
   89              		.cfi_def_cfa_offset 8
   90              		.cfi_offset 3, -8
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 4
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccaqy0S0.s 			page 4
 
 
   91              		.cfi_offset 14, -4
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 1
  122              		.loc 1 104 0
  123              		.cfi_startproc
  124              	.LVL4:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 5
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccaqy0S0.s 			page 5
 
 
  105:.\Generated_Source\PSoC4/STATE.c ****     #if(STATE_INPUTS < 8u)
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 1
  155 0004 C0B2     		uxtb	r0, r0
  129:.\Generated_Source\PSoC4/STATE.c **** }
  156              		.loc 1 129 0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 6
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccaqy0S0.s 			page 6
 
 
  157              		@ sp needed
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 1
  211 0052 00000000 		.4byte	.LASF6
  212 0056 02       		.uleb128 0x2
  213 0057 08       		.byte	0x8
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 7
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccaqy0S0.s 			page 7
 
 
  214 0058 07       		.byte	0x7
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 1
  268 00c8 9C       		.byte	0x9c
  269 00c9 EF000000 		.4byte	0xef
  270 00cd 09       		.uleb128 0x9
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 8
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccaqy0S0.s 			page 8
 
 
  271 00ce 05020000 		.4byte	.LASF17
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 1
  325 0152 6B000000 		.4byte	0x6b
  326 0156 00000000 		.4byte	.LFB4
  327 015a 0C000000 		.4byte	.LFE4-.LFB4
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 9
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccaqy0S0.s 			page 9
 
 
  328 015e 01       		.uleb128 0x1
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 1
  382 0025 03       		.uleb128 0x3
  383 0026 08       		.uleb128 0x8
  384 0027 00       		.byte	0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 10
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccaqy0S0.s 			page 10
 
 
  385 0028 00       		.byte	0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 1
  439 005e 18       		.uleb128 0x18
  440 005f 9742     		.uleb128 0x2117
  441 0061 19       		.uleb128 0x19
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 11
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccaqy0S0.s 			page 11
 
 
  442 0062 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 1
  496 009b 03       		.uleb128 0x3
  497 009c 0E       		.uleb128 0xe
  498 009d 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 12
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccaqy0S0.s 			page 12
 
 
  499 009e 0B       		.uleb128 0xb
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 1
  553              	.Ldebug_loc0:
  554              	.LLST0:
  555 0000 06000000 		.4byte	.LVL0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 13
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccaqy0S0.s 			page 13
 
 
  556 0004 13000000 		.4byte	.LVL1-1
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 1
  610 0024 0C000000 		.4byte	.LFE4
  611 0028 00000000 		.4byte	0
  612 002c 00000000 		.4byte	0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 14
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccaqy0S0.s 			page 14
 
 
  613              		.section	.debug_line,"",%progbits
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 1
  633      635C7073 
  634 00c0 752E6379 		.ascii	"u.cydsn\000"
  634      64736E00 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 15
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccaqy0S0.s 			page 15
 
 
  635              	.LASF24:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 1
  660 0164 73686F72 		.ascii	"short int\000"
  660      7420696E 
  660      7400
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccriHshi.s 			page 16
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccaqy0S0.s 			page 16
 
 
  661              	.LASF13:

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 1
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccNLHgc6.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 1
   30:.\Generated_Source\PSoC4/SPI_1_SPI.c ****         SPI_1_SPI_SUB_MODE,
   31:.\Generated_Source\PSoC4/SPI_1_SPI.c ****         SPI_1_SPI_CLOCK_MODE,
   32:.\Generated_Source\PSoC4/SPI_1_SPI.c ****         SPI_1_SPI_OVS_FACTOR,
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 2
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccNLHgc6.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/SPI_1_SPI.c ****         SPI_1_SPI_MEDIAN_FILTER_ENABLE,
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 1
   87:.\Generated_Source\PSoC4/SPI_1_SPI.c ****             /* Set RX direction internal variables */
   88:.\Generated_Source\PSoC4/SPI_1_SPI.c ****             SPI_1_rxBuffer      =         config->rxBuffer;
   89:.\Generated_Source\PSoC4/SPI_1_SPI.c ****             SPI_1_rxDataBits    = (uint8) config->rxDataBits;
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 3
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccNLHgc6.s 			page 3
 
 
   90:.\Generated_Source\PSoC4/SPI_1_SPI.c ****             SPI_1_rxBufferSize  = (uint8) config->rxBufferSize;
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 1
  144:.\Generated_Source\PSoC4/SPI_1_SPI.c ****             /* Clear RX buffer indexes */
  145:.\Generated_Source\PSoC4/SPI_1_SPI.c ****             SPI_1_rxBufferHead     = 0u;
  146:.\Generated_Source\PSoC4/SPI_1_SPI.c ****             SPI_1_rxBufferTail     = 0u;
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 4
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccNLHgc6.s 			page 4
 
 
  147:.\Generated_Source\PSoC4/SPI_1_SPI.c ****             SPI_1_rxBufferOverflow = 0u;
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 1
  201:.\Generated_Source\PSoC4/SPI_1_SPI.c ****     #if (SPI_1_SPI_MASTER_CONST)
  202:.\Generated_Source\PSoC4/SPI_1_SPI.c ****         SPI_1_SpiSetActiveSlaveSelect(SPI_1_SPI_SLAVE_SELECT0);
  203:.\Generated_Source\PSoC4/SPI_1_SPI.c ****     #endif /* (SPI_1_SPI_MASTER_CONST) */
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 5
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccNLHgc6.s 			page 5
 
 
  204:.\Generated_Source\PSoC4/SPI_1_SPI.c **** 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 1
   30 0000 054B     		ldr	r3, .L2
   31 0002 1968     		ldr	r1, [r3]
   32              	.LVL1:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 6
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccNLHgc6.s 			page 6
 
 
  254:.\Generated_Source\PSoC4/SPI_1_SPI.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 1
   78 000a 114B     		ldr	r3, .L5+12
   79 000c 1A60     		str	r2, [r3]
  178:.\Generated_Source\PSoC4/SPI_1_SPI.c ****         SPI_1_RX_CTRL_REG      = SPI_1_SPI_DEFAULT_RX_CTRL;
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 7
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccNLHgc6.s 			page 7
 
 
   80              		.loc 1 178 0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 1
  123 0044 0F000001 		.word	16777231
  124 0048 00000640 		.word	1074135040
  125 004c 01000080 		.word	-2147483647
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 8
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccNLHgc6.s 			page 8
 
 
  126 0050 20000640 		.word	1074135072
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 1
  180 004a 07       		.byte	0x7
  181 004b 3C000000 		.4byte	.LASF5
  182 004f 02       		.uleb128 0x2
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 9
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccNLHgc6.s 			page 9
 
 
  183 0050 08       		.byte	0x8
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 1
  237 00bd 01       		.byte	0x1
  238 00be F9       		.byte	0xf9
  239 00bf 6B000000 		.4byte	0x6b
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 10
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccNLHgc6.s 			page 10
 
 
  240 00c3 00000000 		.4byte	.LLST0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 1
  294 0019 0B       		.uleb128 0xb
  295 001a 03       		.uleb128 0x3
  296 001b 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 11
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccNLHgc6.s 			page 11
 
 
  297 001c 00       		.byte	0
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 1
  351 0052 0B       		.uleb128 0xb
  352 0053 3B       		.uleb128 0x3b
  353 0054 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 12
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccNLHgc6.s 			page 12
 
 
  354 0055 27       		.uleb128 0x27
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 1
  408 008c 0B       		.uleb128 0xb
  409 008d 27       		.uleb128 0x27
  410 008e 19       		.uleb128 0x19
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 13
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccNLHgc6.s 			page 13
 
 
  411 008f 11       		.uleb128 0x11
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 1
  465 0037 12000000 		.4byte	.LVL4
  466 003b 20000000 		.4byte	.LFE1
  467 003f 0100     		.2byte	0x1
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 14
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccNLHgc6.s 			page 14
 
 
  468 0041 50       		.byte	0x50
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 1
  506              	.LASF5:
  507 003c 6C6F6E67 		.ascii	"long unsigned int\000"
  507      20756E73 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 15
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccNLHgc6.s 			page 15
 
 
  507      69676E65 
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 1
  531              	.LASF18:
  532 010d 5350495F 		.ascii	"SPI_1_SpiSetActiveSlaveSelect\000"
  532      315F5370 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cceLOeSw.s 			page 16
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccNLHgc6.s 			page 16
 
 
  532      69536574 

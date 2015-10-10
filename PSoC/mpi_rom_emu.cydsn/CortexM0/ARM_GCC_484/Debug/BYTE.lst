@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 1
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHbnvir.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 1
   30:.\Generated_Source\PSoC4/BYTE.c **** ********************************************************************************
   31:.\Generated_Source\PSoC4/BYTE.c **** *
   32:.\Generated_Source\PSoC4/BYTE.c **** * Summary:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 2
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHbnvir.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/BYTE.c **** *  Assign a new value to the digital port's data output register.  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 1
   51:.\Generated_Source\PSoC4/BYTE.c **** * Function Name: BYTE_SetDriveMode
   52:.\Generated_Source\PSoC4/BYTE.c **** ********************************************************************************
   53:.\Generated_Source\PSoC4/BYTE.c **** *
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 3
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHbnvir.s 			page 3
 
 
   54:.\Generated_Source\PSoC4/BYTE.c **** * Summary:
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 1
   93              	.LFB2:
   77:.\Generated_Source\PSoC4/BYTE.c **** 
   78:.\Generated_Source\PSoC4/BYTE.c **** 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 4
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHbnvir.s 			page 4
 
 
   79:.\Generated_Source\PSoC4/BYTE.c **** /*******************************************************************************
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 1
  108:.\Generated_Source\PSoC4/BYTE.c **** *  Read the current value assigned to a Digital Port's data output register
  109:.\Generated_Source\PSoC4/BYTE.c **** *
  110:.\Generated_Source\PSoC4/BYTE.c **** * Parameters:  
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 5
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHbnvir.s 			page 5
 
 
  111:.\Generated_Source\PSoC4/BYTE.c **** *  None 
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 1
  140:.\Generated_Source\PSoC4/BYTE.c ****     *******************************************************************************/
  141:.\Generated_Source\PSoC4/BYTE.c ****     uint8 BYTE_ClearInterrupt(void) 
  142:.\Generated_Source\PSoC4/BYTE.c ****     {
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 6
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHbnvir.s 			page 6
 
 
  144              		.loc 1 142 0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 1
  194 0034 02       		.byte	0x2
  195 0035 05       		.byte	0x5
  196 0036 7F010000 		.4byte	.LASF2
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 7
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHbnvir.s 			page 7
 
 
  197 003a 02       		.uleb128 0x2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 1
  251 009e A2000000 		.4byte	0xa2
  252 00a2 06       		.uleb128 0x6
  253 00a3 76000000 		.4byte	0x76
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 8
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHbnvir.s 			page 8
 
 
  254 00a7 07       		.uleb128 0x7
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 1
  308 0128 01       		.uleb128 0x1
  309 0129 9C       		.byte	0x9c
  310 012a 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 9
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHbnvir.s 			page 9
 
 
  311 012b 06000000 		.4byte	.LASF21
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 1
  365 0024 0B       		.uleb128 0xb
  366 0025 03       		.uleb128 0x3
  367 0026 08       		.uleb128 0x8
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 10
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHbnvir.s 			page 10
 
 
  368 0027 00       		.byte	0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 1
  422 005d 9742     		.uleb128 0x2117
  423 005f 19       		.uleb128 0x19
  424 0060 01       		.uleb128 0x1
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 11
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHbnvir.s 			page 11
 
 
  425 0061 13       		.uleb128 0x13
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 1
  479 0097 9742     		.uleb128 0x2117
  480 0099 19       		.uleb128 0x19
  481 009a 00       		.byte	0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 12
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHbnvir.s 			page 12
 
 
  482 009b 00       		.byte	0
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 1
  536              	.LLST2:
  537 003f 00000000 		.4byte	.LVL4
  538 0043 0C000000 		.4byte	.LVL5
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 13
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHbnvir.s 			page 13
 
 
  539 0047 0100     		.2byte	0x1
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 1
  593 001c 10000000 		.4byte	.LFE3
  594 0020 00000000 		.4byte	.LFB4
  595 0024 14000000 		.4byte	.LFE4
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 14
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHbnvir.s 			page 14
 
 
  596 0028 00000000 		.4byte	0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 1
  621              	.LASF12:
  622 007a 646F7562 		.ascii	"double\000"
  622      6C6500
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 15
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHbnvir.s 			page 15
 
 
  623              	.LASF16:
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 1
  642      00
  643              	.LASF13:
  644 017a 63686172 		.ascii	"char\000"
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccvvt4N2.s 			page 16
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHbnvir.s 			page 16
 
 
  644      00

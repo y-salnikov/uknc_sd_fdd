@@ -17,9 +17,14 @@ uint8_t buf[1024];
 char file_names[4][32];
 FATFS Fatfs;
 FIL map_file,log_file;
-
+uint8_t cd_flag=0;
 void disk_init(void);
+int main(void);
 
+CY_ISR(cd_isr)
+{
+    cd_flag=1;
+}
 
 FRESULT map_image(uint8_t disk_n, FIL *img_file)
 {
@@ -36,6 +41,11 @@ void fatal_error(void)
         LED1_Write(lst);
         lst=1-lst;
         CyDelay(250);
+        if(cd_flag)
+        {
+            cd_flag=0;
+            main(); // very ugly, mem leak!!!!
+        }
     }
 }
 void find_filename(int disk_n)
@@ -135,13 +145,14 @@ void reinit_fs(void)
 }
 
 
-int main()
+int main(void)
 {
     uint8_t st;
     uint16_t adr;
     uint8_t* rom=(void*)boot_rom;
     LED1_Write(1);
     IDX_Write(1);   
+    isr_1_StartEx(cd_isr);
     init_all();
     LED1_Write(0);
     IDX_Write(0);   
@@ -158,10 +169,15 @@ int main()
           buf[1022]=1;
 //          execute_cmd(buf);
     //debug
-    /* CyGlobalIntEnable; */ /* Uncomment this line to enable global interrupts. */
+    CyGlobalIntEnable; 
     for(;;)
     {
         /* Place your application code here. */
+        if(cd_flag)
+        {
+            cd_flag=0;
+            init_all();
+        }
         st=STATE_Read();
         while(st==7) st=STATE_Read();
         if(st>=4)

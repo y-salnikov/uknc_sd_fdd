@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc533OEg.s 			page 1
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1nWnIC.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc533OEg.s 			page 1
   51              		.file 1 ".\\Generated_Source\\PSoC4\\cymetadata.c"
   52              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
   53              		.section	.debug_info,"",%progbits
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc533OEg.s 			page 2
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1nWnIC.s 			page 2
 
 
   54              	.Ldebug_info0:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc533OEg.s 			page 1
  108 0069 A1       		.byte	0xa1
  109 006a 24000000 		.4byte	0x24
  110 006e 02       		.uleb128 0x2
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc533OEg.s 			page 3
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1nWnIC.s 			page 3
 
 
  111 006f 04       		.byte	0x4
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc533OEg.s 			page 1
  165 00e4 00       		.byte	0
  166 00e5 00       		.byte	0
  167 00e6 07       		.uleb128 0x7
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc533OEg.s 			page 4
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1nWnIC.s 			page 4
 
 
  168 00e7 00000000 		.4byte	.LASF15
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc533OEg.s 			page 1
  222 002a 3A       		.uleb128 0x3a
  223 002b 0B       		.uleb128 0xb
  224 002c 3B       		.uleb128 0x3b
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc533OEg.s 			page 5
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1nWnIC.s 			page 5
 
 
  225 002d 0B       		.uleb128 0xb
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc533OEg.s 			page 1
  279 000c 0000     		.2byte	0
  280 000e 0000     		.2byte	0
  281 0010 00000000 		.4byte	0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc533OEg.s 			page 6
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1nWnIC.s 			page 6
 
 
  282 0014 00000000 		.4byte	0
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc533OEg.s 			page 1
  305      206C6F6E 
  305      6720756E 
  305      7369676E 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc533OEg.s 			page 7
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1nWnIC.s 			page 7
 
 
  305      65642069 
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc533OEg.s 			page 1
  327              	.LASF0:
  328 01a5 7369676E 		.ascii	"signed char\000"
  328      65642063 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc533OEg.s 			page 8
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1nWnIC.s 			page 8
 
 
  328      68617200 

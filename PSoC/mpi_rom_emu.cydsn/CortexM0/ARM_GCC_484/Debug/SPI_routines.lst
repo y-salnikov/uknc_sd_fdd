@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 1
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKNQCxb.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 1
   39              	.LFE33:
   40              		.size	spi_init, .-spi_init
   41              		.section	.text.SPI_transmit,"ax",%progbits
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 2
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKNQCxb.s 			page 2
 
 
   42              		.align	2
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 1
   88              	.LFB35:
   25:.\sd/SPI_routines.c **** 
   26:.\sd/SPI_routines.c **** unsigned char SPI_receive(void)
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 3
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKNQCxb.s 			page 3
 
 
   27:.\sd/SPI_routines.c **** {
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 1
  140 0041 02       		.uleb128 0x2
  141 0042 04       		.byte	0x4
  142 0043 05       		.byte	0x5
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 4
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKNQCxb.s 			page 4
 
 
  143 0044 06010000 		.4byte	.LASF4
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 1
  197 00b0 00       		.byte	0
  198 00b1 07       		.uleb128 0x7
  199 00b2 16010000 		.4byte	.LASF13
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 5
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKNQCxb.s 			page 5
 
 
  200 00b6 01       		.byte	0x1
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 1
  254 0134 02       		.byte	0x2
  255 0135 7D01     		.2byte	0x17d
  256 0137 41010000 		.4byte	0x141
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 6
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKNQCxb.s 			page 6
 
 
  257 013b 0D       		.uleb128 0xd
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 1
  311 0021 0B       		.uleb128 0xb
  312 0022 0B       		.uleb128 0xb
  313 0023 3E       		.uleb128 0x3e
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 7
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKNQCxb.s 			page 7
 
 
  314 0024 0B       		.uleb128 0xb
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 1
  368 005d 01       		.byte	0x1
  369 005e 3F       		.uleb128 0x3f
  370 005f 19       		.uleb128 0x19
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 8
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKNQCxb.s 			page 8
 
 
  371 0060 03       		.uleb128 0x3
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 1
  425 009c 00       		.byte	0
  426 009d 0B       		.uleb128 0xb
  427 009e 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 9
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKNQCxb.s 			page 9
 
 
  428 009f 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 1
  482 00d5 49       		.uleb128 0x49
  483 00d6 13       		.uleb128 0x13
  484 00d7 3C       		.uleb128 0x3c
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 10
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKNQCxb.s 			page 10
 
 
  485 00d8 19       		.uleb128 0x19
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 1
  535 0000 6C6F6E67 		.ascii	"long long int\000"
  535      206C6F6E 
  535      6720696E 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 11
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKNQCxb.s 			page 11
 
 
  535      7400
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 1
  555      635C7073 
  556 00e6 752E6379 		.ascii	"u.cydsn\000"
  556      64736E00 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 12
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKNQCxb.s 			page 12
 
 
  557              	.LASF11:
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 1
  581      31333538 
  582 01c1 67202D66 		.ascii	"g -ffunction-sections\000"
  582      66756E63 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1sI7lU.s 			page 13
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKNQCxb.s 			page 13
 
 
  582      74696F6E 

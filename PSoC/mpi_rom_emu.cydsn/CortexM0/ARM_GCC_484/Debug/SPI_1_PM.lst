@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 1
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cczeSqKU.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 1
   30:.\Generated_Source\PSoC4/SPI_1_PM.c ****     #include "SPI_1_SPI_UART_PVT.h"
   31:.\Generated_Source\PSoC4/SPI_1_PM.c **** #endif /* (SPI_1_SCB_MODE_SPI_INC || SPI_1_SCB_MODE_UART_INC) */
   32:.\Generated_Source\PSoC4/SPI_1_PM.c **** 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 2
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cczeSqKU.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/SPI_1_PM.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 1
   81:.\Generated_Source\PSoC4/SPI_1_PM.c ****     #if(!SPI_1_CY_SCBIP_V1)
   82:.\Generated_Source\PSoC4/SPI_1_PM.c ****         else if(SPI_1_SCB_MODE_SPI_RUNTM_CFG)
   83:.\Generated_Source\PSoC4/SPI_1_PM.c ****         {
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 3
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cczeSqKU.s 			page 3
 
 
   84:.\Generated_Source\PSoC4/SPI_1_PM.c ****             SPI_1_SpiSaveConfig();
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 1
   43              	.L1:
  127:.\Generated_Source\PSoC4/SPI_1_PM.c ****         }
  128:.\Generated_Source\PSoC4/SPI_1_PM.c **** 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 4
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cczeSqKU.s 			page 4
 
 
  129:.\Generated_Source\PSoC4/SPI_1_PM.c ****     #endif /* defined (SPI_1_SCB_MODE_I2C_CONST_CFG) && (SPI_1_I2C_WAKE_ENABLE_CONST) */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 1
  158:.\Generated_Source\PSoC4/SPI_1_PM.c ****         if(SPI_1_SCB_MODE_I2C_RUNTM_CFG)
  159:.\Generated_Source\PSoC4/SPI_1_PM.c ****         {
  160:.\Generated_Source\PSoC4/SPI_1_PM.c ****             SPI_1_I2CRestoreConfig();
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 5
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cczeSqKU.s 			page 5
 
 
  161:.\Generated_Source\PSoC4/SPI_1_PM.c ****         }
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 1
   76              	.LVL1:
   77              	.L5:
  208:.\Generated_Source\PSoC4/SPI_1_PM.c ****         }
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 6
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cczeSqKU.s 			page 6
 
 
  209:.\Generated_Source\PSoC4/SPI_1_PM.c **** 
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 1
  127 003b 02       		.byte	0x2
  128 003c 07       		.byte	0x7
  129 003d F6000000 		.4byte	.LASF3
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 7
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cczeSqKU.s 			page 7
 
 
  130 0041 02       		.uleb128 0x2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 1
  184 00a8 04       		.byte	0x4
  185 00a9 07       		.byte	0x7
  186 00aa DC010000 		.4byte	.LASF15
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 8
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cczeSqKU.s 			page 8
 
 
  187 00ae 07       		.uleb128 0x7
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 1
  241 0123 66       		.byte	0x66
  242 0124 0C       		.uleb128 0xc
  243 0125 23010000 		.4byte	.LASF20
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 9
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cczeSqKU.s 			page 9
 
 
  244 0129 03       		.byte	0x3
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 1
  298 0031 0B       		.uleb128 0xb
  299 0032 49       		.uleb128 0x49
  300 0033 13       		.uleb128 0x13
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 10
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cczeSqKU.s 			page 10
 
 
  301 0034 00       		.byte	0
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 1
  355 006a 19       		.uleb128 0x19
  356 006b 03       		.uleb128 0x3
  357 006c 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 11
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cczeSqKU.s 			page 11
 
 
  358 006d 3A       		.uleb128 0x3a
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 1
  412 00a6 0B       		.uleb128 0xb
  413 00a7 27       		.uleb128 0x27
  414 00a8 19       		.uleb128 0x19
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 12
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cczeSqKU.s 			page 12
 
 
  415 00a9 3C       		.uleb128 0x3c
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 1
  454      636B7570 
  454      00
  455              	.LASF9:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 13
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cczeSqKU.s 			page 13
 
 
  456 003b 75696E74 		.ascii	"uint8\000"
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 1
  479      65642069 
  479      6E7400
  480              	.LASF0:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccswV31i.s 			page 14
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cczeSqKU.s 			page 14
 
 
  481 0109 7369676E 		.ascii	"signed char\000"

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 1
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc9Z7O5h.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 1
   30:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
   31:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Parameters:
   32:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  alignClkDiv:  The divider to which phase alignment is performed when the
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 2
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc9Z7O5h.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *    clock is started.
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 1
   38              	.L3:
   39 000e C046     		.align	2
   40              	.L2:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 3
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc9Z7O5h.s 			page 3
 
 
   41 0010 00000240 		.word	1073872896
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 1
   57 0002 1A68     		ldr	r2, [r3]
   58 0004 5200     		lsl	r2, r2, #1
   59 0006 5208     		lsr	r2, r2, #1
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 4
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc9Z7O5h.s 			page 4
 
 
   60 0008 1A60     		str	r2, [r3]
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 1
  145:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     regVal = maskVal |
  146:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****         ((uint32)((uint32)clkDivider <<  SPI_1_SCBCLK_DIV_INT_SHIFT) & SPI_1_SCBCLK_DIV_INT_MASK) |
  147:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****         ((uint32)((uint32)clkFractional << SPI_1_SCBCLK_DIV_FRAC_SHIFT) & SPI_1_SCBCLK_DIV_FRAC_MAS
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 5
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc9Z7O5h.s 			page 5
 
 
  148:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 1
  173:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  divide by 2, the return value will be 1.
  174:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
  175:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *******************************************************************************/
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 6
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc9Z7O5h.s 			page 6
 
 
  176:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** uint16 SPI_1_SCBCLK_GetDividerRegister(void)
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 1
  204:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** #else
  205:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     return 0u;
  206:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** #endif /* SPI_1_SCBCLK__FRAC_MASK */
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 7
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc9Z7O5h.s 			page 7
 
 
  207:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** }
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 1
  190 0057 08       		.byte	0x8
  191 0058 07       		.byte	0x7
  192 0059 D8000000 		.4byte	.LASF7
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 8
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc9Z7O5h.s 			page 8
 
 
  193 005d 03       		.uleb128 0x3
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 1
  247 00ca 00000000 		.4byte	.LFB1
  248 00ce 10000000 		.4byte	.LFE1-.LFB1
  249 00d2 01       		.uleb128 0x1
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 9
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc9Z7O5h.s 			page 9
 
 
  250 00d3 9C       		.byte	0x9c
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 1
  304 0148 01       		.uleb128 0x1
  305 0149 9C       		.byte	0x9c
  306 014a 00       		.byte	0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 10
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc9Z7O5h.s 			page 10
 
 
  307              		.section	.debug_abbrev,"",%progbits
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 1
  361 0034 00       		.byte	0
  362 0035 00       		.byte	0
  363 0036 05       		.uleb128 0x5
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 11
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc9Z7O5h.s 			page 11
 
 
  364 0037 16       		.uleb128 0x16
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 1
  418 006e 19       		.uleb128 0x19
  419 006f 11       		.uleb128 0x11
  420 0070 01       		.uleb128 0x1
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 12
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc9Z7O5h.s 			page 12
 
 
  421 0071 12       		.uleb128 0x12
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 1
  475 00a8 00       		.byte	0
  476 00a9 0C       		.uleb128 0xc
  477 00aa 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 13
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc9Z7O5h.s 			page 13
 
 
  478 00ab 00       		.byte	0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 1
  532 0028 00000000 		.4byte	.LFB3
  533 002c 0C000000 		.4byte	.LFE3-.LFB3
  534 0030 00000000 		.4byte	.LFB4
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 14
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc9Z7O5h.s 			page 14
 
 
  535 0034 04000000 		.4byte	.LFE4-.LFB4
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 1
  568      5F53746F 
  568      7000
  569              	.LASF5:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 15
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc9Z7O5h.s 			page 15
 
 
  570 0071 6C6F6E67 		.ascii	"long unsigned int\000"
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 1
  592 0155 67202D66 		.ascii	"g -ffunction-sections\000"
  592      66756E63 
  592      74696F6E 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc55H7lU.s 			page 16
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc9Z7O5h.s 			page 16
 
 
  592      2D736563 

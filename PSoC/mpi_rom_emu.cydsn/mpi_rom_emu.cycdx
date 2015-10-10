@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <blockRegMap version="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://cypress.com/xsd/cyblockregmap cyblockregmap.xsd" xmlns="http://cypress.com/xsd/cyblockregmap">
+  <block name="V_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="GND_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="U_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="C_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="D_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="D_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="C_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="not_8" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="or_4" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="and_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="or_5" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="SPI_1" BASE="0x0" SIZE="0x0" desc="Serial Communication Block" visible="true">
     <block name="clock_VM" BASE="0x0" SIZE="0x0" desc="" visible="true" />
     <block name="rx_wake_VM" BASE="0x0" SIZE="0x0" desc="" visible="true" />
@@ -353,30 +362,22 @@
       <field name="BREAK_DETECT" from="11" to="11" access="RW" resetVal="" desc="Logical and of corresponding request and mask bits" />
     </register>
   </block>
-  <block name="C_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="C_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="V_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="WR" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="or_4" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="and_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="IDX" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="or_6" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="or_5" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="not_8" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="D_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="R_4" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="D_4" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="SPI_CS" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="LED1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="BYTE" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="R_4" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="F_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="cy_boot" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="isr_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="CD" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="R_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="R_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="D_3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="D_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="R_3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="GND_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="R_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="LED1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="F_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="R_3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="AH_reg" BASE="0x0" SIZE="0x0" desc="" visible="true">
     <register name="AH_reg_STATUS_REG" address="0x400F0061" bitWidth="8" desc="" />
     <register name="AH_reg_MASK_REG" address="0x400F0081" bitWidth="8" desc="" />
@@ -409,8 +410,6 @@
   </block>
   <block name="or_3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="cydff_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="not_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="not_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="AL_reg" BASE="0x0" SIZE="0x0" desc="" visible="true">
     <register name="AL_reg_STATUS_REG" address="0x400F0062" bitWidth="8" desc="" />
     <register name="AL_reg_MASK_REG" address="0x400F0082" bitWidth="8" desc="" />
@@ -441,21 +440,23 @@
       </field>
     </register>
   </block>
-  <block name="cydff_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="or_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="not_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="not_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="SIA" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="AD_H" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="AD_L" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="RD" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="cydff_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="SE1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="SIP" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="RD" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="or_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="or_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="not_5" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="SE3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="not_6" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="IDX" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="not_7" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="SE0" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="not_6" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="SE2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="cy_constant_2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="cy_constant_1" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="STATE" BASE="0x0" SIZE="0x0" desc="" visible="true">
@@ -488,7 +489,8 @@
       </field>
     </register>
   </block>
+  <block name="cy_constant_3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
+  <block name="SE2" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="not_4" BASE="0x0" SIZE="0x0" desc="" visible="true" />
   <block name="not_3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
-  <block name="cy_constant_3" BASE="0x0" SIZE="0x0" desc="" visible="true" />
 </blockRegMap>

@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 1
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKt1MFR.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 1
   30:.\Generated_Source\PSoC4/SPI_1_mosi_m.c **** ********************************************************************************
   31:.\Generated_Source\PSoC4/SPI_1_mosi_m.c **** *
   32:.\Generated_Source\PSoC4/SPI_1_mosi_m.c **** * Summary:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 2
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKt1MFR.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/SPI_1_mosi_m.c **** *  Assign a new value to the digital port's data output register.  
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 1
   52:.\Generated_Source\PSoC4/SPI_1_mosi_m.c **** ********************************************************************************
   53:.\Generated_Source\PSoC4/SPI_1_mosi_m.c **** *
   54:.\Generated_Source\PSoC4/SPI_1_mosi_m.c **** * Summary:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 3
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKt1MFR.s 			page 3
 
 
   55:.\Generated_Source\PSoC4/SPI_1_mosi_m.c **** *  Change the drive mode on the pins of the port.
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 1
   80:.\Generated_Source\PSoC4/SPI_1_mosi_m.c **** * Function Name: SPI_1_mosi_m_Read
   81:.\Generated_Source\PSoC4/SPI_1_mosi_m.c **** ********************************************************************************
   82:.\Generated_Source\PSoC4/SPI_1_mosi_m.c **** *
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 4
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKt1MFR.s 			page 4
 
 
   83:.\Generated_Source\PSoC4/SPI_1_mosi_m.c **** * Summary:
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 1
  112:.\Generated_Source\PSoC4/SPI_1_mosi_m.c **** *
  113:.\Generated_Source\PSoC4/SPI_1_mosi_m.c **** * Return: 
  114:.\Generated_Source\PSoC4/SPI_1_mosi_m.c **** *  Returns the current value assigned to the Digital Port's data output register
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 5
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKt1MFR.s 			page 5
 
 
  115:.\Generated_Source\PSoC4/SPI_1_mosi_m.c **** *  
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 1
  141              		.cfi_startproc
  143:.\Generated_Source\PSoC4/SPI_1_mosi_m.c **** 		uint8 maskedStatus = (uint8)(SPI_1_mosi_m_INTSTAT & SPI_1_mosi_m_MASK);
  142              		.loc 1 143 0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 6
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKt1MFR.s 			page 6
 
 
  143 0000 024B     		ldr	r3, .L14
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 1
  194 0042 04       		.byte	0x4
  195 0043 05       		.byte	0x5
  196 0044 CA010000 		.4byte	.LASF4
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 7
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKt1MFR.s 			page 7
 
 
  197 0048 02       		.uleb128 0x2
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 1
  251 00b2 18000000 		.4byte	.LFE0-.LFB0
  252 00b6 01       		.uleb128 0x1
  253 00b7 9C       		.byte	0x9c
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 8
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKt1MFR.s 			page 8
 
 
  254 00b8 DB000000 		.4byte	0xdb
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 1
  308 0139 10000000 		.4byte	.LFE4-.LFB4
  309 013d 01       		.uleb128 0x1
  310 013e 9C       		.byte	0x9c
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 9
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKt1MFR.s 			page 9
 
 
  311 013f 0C       		.uleb128 0xc
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 1
  365 002b 00       		.byte	0
  366 002c 03       		.uleb128 0x3
  367 002d 0E       		.uleb128 0xe
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 10
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKt1MFR.s 			page 10
 
 
  368 002e 3A       		.uleb128 0x3a
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 1
  422 0065 05       		.uleb128 0x5
  423 0066 00       		.byte	0
  424 0067 03       		.uleb128 0x3
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 11
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKt1MFR.s 			page 11
 
 
  425 0068 0E       		.uleb128 0xe
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 1
  479 009f 3F       		.uleb128 0x3f
  480 00a0 19       		.uleb128 0x19
  481 00a1 03       		.uleb128 0x3
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 12
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKt1MFR.s 			page 12
 
 
  482 00a2 0E       		.uleb128 0xe
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 1
  536 0029 0100     		.2byte	0x1
  537 002b 52       		.byte	0x52
  538 002c 0E000000 		.4byte	.LVL3
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 13
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKt1MFR.s 			page 13
 
 
  539 0030 18000000 		.4byte	.LFE0
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 1
  593              	.Ldebug_line0:
  594 0000 AD000000 		.section	.debug_str,"MS",%progbits,1
  594      02004B00 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 14
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKt1MFR.s 			page 14
 
 
  594      00000201 
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 1
  618      333200
  619              	.LASF8:
  620 00a0 756E7369 		.ascii	"unsigned int\000"
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 15
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKt1MFR.s 			page 15
 
 
  620      676E6564 
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 1
  640      3800
  641              	.LASF20:
  642 019e 5350495F 		.ascii	"SPI_1_mosi_m_ReadDataReg\000"
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccliV31i.s 			page 16
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccKt1MFR.s 			page 16
 
 
  642      315F6D6F 
