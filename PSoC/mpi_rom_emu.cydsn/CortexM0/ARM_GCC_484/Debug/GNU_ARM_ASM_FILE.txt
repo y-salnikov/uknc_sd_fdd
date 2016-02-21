@@ -1,1 +1,0 @@
-'E:\home\jarik\src\psoc\mpi_rom_emu\mpi_rom_emu.cydsn\Generated_Source\PSoC4\CyBootAsmGnu.s' -o .o -T GNU_ARM_ASM_FILE -I 'E:\home\jarik\src\psoc\mpi_rom_emu\mpi_rom_emu.cydsn' -I 'E:\home\jarik\src\psoc\mpi_rom_emu\mpi_rom_emu.cydsn\Generated_Source\PSoC4' -f 'E:\home\jarik\src\psoc\mpi_rom_emu\mpi_rom_emu.cydsn\CortexM0\ARM_GCC_484\Debug\.deps\GNU_ARM_ASM_FILE.d'

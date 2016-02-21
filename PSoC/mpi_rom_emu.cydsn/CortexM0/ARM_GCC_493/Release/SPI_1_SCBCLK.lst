@@ -1,0 +1,999 @@
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccZ1DmgG.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"SPI_1_SCBCLK.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.SPI_1_SCBCLK_Start,"ax",%progbits
+  18              		.align	1
+  19              		.global	SPI_1_SCBCLK_Start
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	SPI_1_SCBCLK_Start, %function
+  23              	SPI_1_SCBCLK_Start:
+  24              	.LFB0:
+  25              		.file 1 ".\\Generated_Source\\PSoC4\\SPI_1_SCBCLK.c"
+   1:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * File Name: SPI_1_SCBCLK.c
+   3:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Version 2.20
+   4:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+   5:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  Description:
+   6:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *   Provides system API for the clocking, interrupts and watchdog timer.
+   7:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+   8:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  Note:
+   9:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *   Documentation of the API's in this file is located in the
+  10:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *   System Reference Guide provided with PSoC Creator.
+  11:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+  12:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** ********************************************************************************
+  13:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Copyright 2008-2012, Cypress Semiconductor Corporation.  All rights reserved.
+  14:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * You may use this file only in accordance with the license, terms, conditions,
+  15:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  16:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * the software package with which this file was provided.
+  17:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *******************************************************************************/
+  18:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** 
+  19:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** #include <cydevice_trm.h>
+  20:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** #include "SPI_1_SCBCLK.h"
+  21:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** 
+  22:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** #if defined CYREG_PERI_DIV_CMD
+  23:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** 
+  24:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** /*******************************************************************************
+  25:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Function Name: SPI_1_SCBCLK_StartEx
+  26:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** ********************************************************************************
+  27:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+  28:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Summary:
+  29:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  Starts the clock, aligned to the specified running clock.
+  30:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+  31:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Parameters:
+  32:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  alignClkDiv:  The divider to which phase alignment is performed when the
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccZ1DmgG.s 			page 2
+
+
+  33:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *    clock is started.
+  34:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+  35:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Returns:
+  36:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  None
+  37:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+  38:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *******************************************************************************/
+  39:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** void SPI_1_SCBCLK_StartEx(uint32 alignClkDiv)
+  40:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** {
+  41:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     /* Make sure any previous start command has finished. */
+  42:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     while((SPI_1_SCBCLK_CMD_REG & SPI_1_SCBCLK_CMD_ENABLE_MASK) != 0u)
+  43:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     {
+  44:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     }
+  45:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     
+  46:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     /* Specify the target divider and it's alignment divider, and enable. */
+  47:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     SPI_1_SCBCLK_CMD_REG =
+  48:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****         ((uint32)SPI_1_SCBCLK__DIV_ID << SPI_1_SCBCLK_CMD_DIV_SHIFT)|
+  49:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****         (alignClkDiv << SPI_1_SCBCLK_CMD_PA_DIV_SHIFT) |
+  50:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****         (uint32)SPI_1_SCBCLK_CMD_ENABLE_MASK;
+  51:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** }
+  52:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** 
+  53:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** #else
+  54:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** 
+  55:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** /*******************************************************************************
+  56:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Function Name: SPI_1_SCBCLK_Start
+  57:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** ********************************************************************************
+  58:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+  59:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Summary:
+  60:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  Starts the clock.
+  61:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+  62:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Parameters:
+  63:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  None
+  64:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+  65:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Returns:
+  66:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  None
+  67:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+  68:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *******************************************************************************/
+  69:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** 
+  70:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** void SPI_1_SCBCLK_Start(void)
+  71:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** {
+  26              		.loc 1 71 0
+  27              		.cfi_startproc
+  72:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     /* Set the bit to enable the clock. */
+  73:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     SPI_1_SCBCLK_ENABLE_REG |= SPI_1_SCBCLK__ENABLE_MASK;
+  28              		.loc 1 73 0
+  29 0000 8021     		mov	r1, #128
+  30 0002 034A     		ldr	r2, .L2
+  31 0004 0906     		lsl	r1, r1, #24
+  32 0006 1368     		ldr	r3, [r2]
+  74:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** }
+  33              		.loc 1 74 0
+  34              		@ sp needed
+  73:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** }
+  35              		.loc 1 73 0
+  36 0008 0B43     		orr	r3, r1
+  37 000a 1360     		str	r3, [r2]
+  38              		.loc 1 74 0
+  39 000c 7047     		bx	lr
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccZ1DmgG.s 			page 3
+
+
+  40              	.L3:
+  41 000e C046     		.align	2
+  42              	.L2:
+  43 0010 00000240 		.word	1073872896
+  44              		.cfi_endproc
+  45              	.LFE0:
+  46              		.size	SPI_1_SCBCLK_Start, .-SPI_1_SCBCLK_Start
+  47              		.section	.text.SPI_1_SCBCLK_Stop,"ax",%progbits
+  48              		.align	1
+  49              		.global	SPI_1_SCBCLK_Stop
+  50              		.code	16
+  51              		.thumb_func
+  52              		.type	SPI_1_SCBCLK_Stop, %function
+  53              	SPI_1_SCBCLK_Stop:
+  54              	.LFB1:
+  75:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** 
+  76:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** #endif /* CYREG_PERI_DIV_CMD */
+  77:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** 
+  78:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** 
+  79:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** /*******************************************************************************
+  80:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Function Name: SPI_1_SCBCLK_Stop
+  81:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** ********************************************************************************
+  82:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+  83:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Summary:
+  84:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  Stops the clock and returns immediately. This API does not require the
+  85:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  source clock to be running but may return before the hardware is actually
+  86:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  disabled.
+  87:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+  88:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Parameters:
+  89:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  None
+  90:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+  91:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Returns:
+  92:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  None
+  93:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+  94:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *******************************************************************************/
+  95:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** void SPI_1_SCBCLK_Stop(void)
+  96:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** {
+  55              		.loc 1 96 0
+  56              		.cfi_startproc
+  97:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** #if defined CYREG_PERI_DIV_CMD
+  98:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** 
+  99:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     /* Make sure any previous start command has finished. */
+ 100:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     while((SPI_1_SCBCLK_CMD_REG & SPI_1_SCBCLK_CMD_ENABLE_MASK) != 0u)
+ 101:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     {
+ 102:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     }
+ 103:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     
+ 104:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     /* Specify the target divider and it's alignment divider, and disable. */
+ 105:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     SPI_1_SCBCLK_CMD_REG =
+ 106:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****         ((uint32)SPI_1_SCBCLK__DIV_ID << SPI_1_SCBCLK_CMD_DIV_SHIFT)|
+ 107:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****         ((uint32)SPI_1_SCBCLK_CMD_DISABLE_MASK);
+ 108:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** 
+ 109:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** #else
+ 110:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** 
+ 111:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     /* Clear the bit to disable the clock. */
+ 112:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     SPI_1_SCBCLK_ENABLE_REG &= (uint32)(~SPI_1_SCBCLK__ENABLE_MASK);
+  57              		.loc 1 112 0
+  58 0000 024A     		ldr	r2, .L5
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccZ1DmgG.s 			page 4
+
+
+ 113:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     
+ 114:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** #endif /* CYREG_PERI_DIV_CMD */
+ 115:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** }
+  59              		.loc 1 115 0
+  60              		@ sp needed
+ 112:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     
+  61              		.loc 1 112 0
+  62 0002 1368     		ldr	r3, [r2]
+  63 0004 5B00     		lsl	r3, r3, #1
+  64 0006 5B08     		lsr	r3, r3, #1
+  65 0008 1360     		str	r3, [r2]
+  66              		.loc 1 115 0
+  67 000a 7047     		bx	lr
+  68              	.L6:
+  69              		.align	2
+  70              	.L5:
+  71 000c 00000240 		.word	1073872896
+  72              		.cfi_endproc
+  73              	.LFE1:
+  74              		.size	SPI_1_SCBCLK_Stop, .-SPI_1_SCBCLK_Stop
+  75              		.section	.text.SPI_1_SCBCLK_SetFractionalDividerRegister,"ax",%progbits
+  76              		.align	1
+  77              		.global	SPI_1_SCBCLK_SetFractionalDividerRegister
+  78              		.code	16
+  79              		.thumb_func
+  80              		.type	SPI_1_SCBCLK_SetFractionalDividerRegister, %function
+  81              	SPI_1_SCBCLK_SetFractionalDividerRegister:
+  82              	.LFB2:
+ 116:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** 
+ 117:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** 
+ 118:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** /*******************************************************************************
+ 119:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Function Name: SPI_1_SCBCLK_SetFractionalDividerRegister
+ 120:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** ********************************************************************************
+ 121:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+ 122:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Summary:
+ 123:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  Modifies the clock divider and the fractional divider.
+ 124:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+ 125:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Parameters:
+ 126:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  clkDivider:  Divider register value (0-65535). This value is NOT the
+ 127:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *    divider; the clock hardware divides by clkDivider plus one. For example,
+ 128:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *    to divide the clock by 2, this parameter should be set to 1.
+ 129:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  fracDivider:  Fractional Divider register value (0-31).
+ 130:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Returns:
+ 131:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  None
+ 132:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+ 133:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *******************************************************************************/
+ 134:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** void SPI_1_SCBCLK_SetFractionalDividerRegister(uint16 clkDivider, uint8 clkFractional)
+ 135:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** {
+  83              		.loc 1 135 0
+  84              		.cfi_startproc
+  85              	.LVL0:
+ 136:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     uint32 maskVal;
+ 137:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     uint32 regVal;
+ 138:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     
+ 139:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** #if defined (SPI_1_SCBCLK__FRAC_MASK) || defined (CYREG_PERI_DIV_CMD)
+ 140:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     
+ 141:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** 	/* get all but divider bits */
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccZ1DmgG.s 			page 5
+
+
+ 142:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     maskVal = SPI_1_SCBCLK_DIV_REG & 
+ 143:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****                     (uint32)(~(uint32)(SPI_1_SCBCLK_DIV_INT_MASK | SPI_1_SCBCLK_DIV_FRAC_MASK)); 
+ 144:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** 	/* combine mask and new divider vals into 32-bit value */
+ 145:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     regVal = maskVal |
+ 146:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****         ((uint32)((uint32)clkDivider <<  SPI_1_SCBCLK_DIV_INT_SHIFT) & SPI_1_SCBCLK_DIV_INT_MASK) |
+ 147:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****         ((uint32)((uint32)clkFractional << SPI_1_SCBCLK_DIV_FRAC_SHIFT) & SPI_1_SCBCLK_DIV_FRAC_MAS
+ 148:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     
+ 149:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** #else
+ 150:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     /* get all but integer divider bits */
+ 151:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     maskVal = SPI_1_SCBCLK_DIV_REG & (uint32)(~(uint32)SPI_1_SCBCLK__DIVIDER_MASK);
+  86              		.loc 1 151 0
+  87 0000 034A     		ldr	r2, .L8
+ 152:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     /* combine mask and new divider val into 32-bit value */
+ 153:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     regVal = clkDivider | maskVal;
+ 154:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     
+ 155:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** #endif /* SPI_1_SCBCLK__FRAC_MASK || CYREG_PERI_DIV_CMD */
+ 156:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** 
+ 157:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     SPI_1_SCBCLK_DIV_REG = regVal;
+ 158:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** }
+  88              		.loc 1 158 0
+  89              		@ sp needed
+ 151:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     /* combine mask and new divider val into 32-bit value */
+  90              		.loc 1 151 0
+  91 0002 1368     		ldr	r3, [r2]
+  92              	.LVL1:
+  93 0004 1B0C     		lsr	r3, r3, #16
+  94              	.LVL2:
+  95 0006 1B04     		lsl	r3, r3, #16
+ 153:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     
+  96              		.loc 1 153 0
+  97 0008 1843     		orr	r0, r3
+  98              	.LVL3:
+ 157:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** }
+  99              		.loc 1 157 0
+ 100 000a 1060     		str	r0, [r2]
+ 101              		.loc 1 158 0
+ 102 000c 7047     		bx	lr
+ 103              	.L9:
+ 104 000e C046     		.align	2
+ 105              	.L8:
+ 106 0010 00000240 		.word	1073872896
+ 107              		.cfi_endproc
+ 108              	.LFE2:
+ 109              		.size	SPI_1_SCBCLK_SetFractionalDividerRegister, .-SPI_1_SCBCLK_SetFractionalDividerRegister
+ 110              		.section	.text.SPI_1_SCBCLK_GetDividerRegister,"ax",%progbits
+ 111              		.align	1
+ 112              		.global	SPI_1_SCBCLK_GetDividerRegister
+ 113              		.code	16
+ 114              		.thumb_func
+ 115              		.type	SPI_1_SCBCLK_GetDividerRegister, %function
+ 116              	SPI_1_SCBCLK_GetDividerRegister:
+ 117              	.LFB3:
+ 159:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** 
+ 160:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** 
+ 161:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** /*******************************************************************************
+ 162:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Function Name: SPI_1_SCBCLK_GetDividerRegister
+ 163:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** ********************************************************************************
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccZ1DmgG.s 			page 6
+
+
+ 164:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+ 165:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Summary:
+ 166:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  Gets the clock divider register value.
+ 167:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+ 168:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Parameters:
+ 169:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  None
+ 170:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+ 171:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Returns:
+ 172:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  Divide value of the clock minus 1. For example, if the clock is set to
+ 173:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  divide by 2, the return value will be 1.
+ 174:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+ 175:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *******************************************************************************/
+ 176:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** uint16 SPI_1_SCBCLK_GetDividerRegister(void)
+ 177:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** {
+ 118              		.loc 1 177 0
+ 119              		.cfi_startproc
+ 178:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     return (uint16)((SPI_1_SCBCLK_DIV_REG & SPI_1_SCBCLK_DIV_INT_MASK)
+ 120              		.loc 1 178 0
+ 121 0000 014B     		ldr	r3, .L11
+ 179:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****         >> SPI_1_SCBCLK_DIV_INT_SHIFT);
+ 180:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** }
+ 122              		.loc 1 180 0
+ 123              		@ sp needed
+ 178:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     return (uint16)((SPI_1_SCBCLK_DIV_REG & SPI_1_SCBCLK_DIV_INT_MASK)
+ 124              		.loc 1 178 0
+ 125 0002 1868     		ldr	r0, [r3]
+ 126 0004 80B2     		uxth	r0, r0
+ 127              		.loc 1 180 0
+ 128 0006 7047     		bx	lr
+ 129              	.L12:
+ 130              		.align	2
+ 131              	.L11:
+ 132 0008 00000240 		.word	1073872896
+ 133              		.cfi_endproc
+ 134              	.LFE3:
+ 135              		.size	SPI_1_SCBCLK_GetDividerRegister, .-SPI_1_SCBCLK_GetDividerRegister
+ 136              		.section	.text.SPI_1_SCBCLK_GetFractionalDividerRegister,"ax",%progbits
+ 137              		.align	1
+ 138              		.global	SPI_1_SCBCLK_GetFractionalDividerRegister
+ 139              		.code	16
+ 140              		.thumb_func
+ 141              		.type	SPI_1_SCBCLK_GetFractionalDividerRegister, %function
+ 142              	SPI_1_SCBCLK_GetFractionalDividerRegister:
+ 143              	.LFB4:
+ 181:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** 
+ 182:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** 
+ 183:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** /*******************************************************************************
+ 184:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Function Name: SPI_1_SCBCLK_GetFractionalDividerRegister
+ 185:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** ********************************************************************************
+ 186:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+ 187:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Summary:
+ 188:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  Gets the clock fractional divider register value.
+ 189:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+ 190:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Parameters:
+ 191:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  None
+ 192:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+ 193:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** * Returns:
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccZ1DmgG.s 			page 7
+
+
+ 194:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  Fractional Divide value of the clock
+ 195:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *  0 if the fractional divider is not in use.
+ 196:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *
+ 197:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** *******************************************************************************/
+ 198:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** uint8 SPI_1_SCBCLK_GetFractionalDividerRegister(void)
+ 199:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** {
+ 144              		.loc 1 199 0
+ 145              		.cfi_startproc
+ 200:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** #if defined (SPI_1_SCBCLK__FRAC_MASK)
+ 201:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     /* return fractional divider bits */
+ 202:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     return (uint8)((SPI_1_SCBCLK_DIV_REG & SPI_1_SCBCLK_DIV_FRAC_MASK)
+ 203:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****         >> SPI_1_SCBCLK_DIV_FRAC_SHIFT);
+ 204:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** #else
+ 205:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c ****     return 0u;
+ 206:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** #endif /* SPI_1_SCBCLK__FRAC_MASK */
+ 207:.\Generated_Source\PSoC4/SPI_1_SCBCLK.c **** }
+ 146              		.loc 1 207 0
+ 147 0000 0020     		mov	r0, #0
+ 148              		@ sp needed
+ 149 0002 7047     		bx	lr
+ 150              		.cfi_endproc
+ 151              	.LFE4:
+ 152              		.size	SPI_1_SCBCLK_GetFractionalDividerRegister, .-SPI_1_SCBCLK_GetFractionalDividerRegister
+ 153              		.text
+ 154              	.Letext0:
+ 155              		.file 2 "Generated_Source\\PSoC4/cytypes.h"
+ 156              		.section	.debug_info,"",%progbits
+ 157              	.Ldebug_info0:
+ 158 0000 49010000 		.4byte	0x149
+ 159 0004 0400     		.2byte	0x4
+ 160 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 161 000a 04       		.byte	0x4
+ 162 000b 01       		.uleb128 0x1
+ 163 000c 06000000 		.4byte	.LASF24
+ 164 0010 01       		.byte	0x1
+ 165 0011 DA010000 		.4byte	.LASF25
+ 166 0015 1B020000 		.4byte	.LASF26
+ 167 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 168 001d 00000000 		.4byte	0
+ 169 0021 00000000 		.4byte	.Ldebug_line0
+ 170 0025 02       		.uleb128 0x2
+ 171 0026 01       		.byte	0x1
+ 172 0027 06       		.byte	0x6
+ 173 0028 50020000 		.4byte	.LASF0
+ 174 002c 02       		.uleb128 0x2
+ 175 002d 01       		.byte	0x1
+ 176 002e 08       		.byte	0x8
+ 177 002f DF000000 		.4byte	.LASF1
+ 178 0033 02       		.uleb128 0x2
+ 179 0034 02       		.byte	0x2
+ 180 0035 05       		.byte	0x5
+ 181 0036 02020000 		.4byte	.LASF2
+ 182 003a 02       		.uleb128 0x2
+ 183 003b 02       		.byte	0x2
+ 184 003c 07       		.byte	0x7
+ 185 003d 11010000 		.4byte	.LASF3
+ 186 0041 02       		.uleb128 0x2
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccZ1DmgG.s 			page 8
+
+
+ 187 0042 04       		.byte	0x4
+ 188 0043 05       		.byte	0x5
+ 189 0044 12020000 		.4byte	.LASF4
+ 190 0048 02       		.uleb128 0x2
+ 191 0049 04       		.byte	0x4
+ 192 004a 07       		.byte	0x7
+ 193 004b FF000000 		.4byte	.LASF5
+ 194 004f 02       		.uleb128 0x2
+ 195 0050 08       		.byte	0x8
+ 196 0051 05       		.byte	0x5
+ 197 0052 7D010000 		.4byte	.LASF6
+ 198 0056 02       		.uleb128 0x2
+ 199 0057 08       		.byte	0x8
+ 200 0058 07       		.byte	0x7
+ 201 0059 66010000 		.4byte	.LASF7
+ 202 005d 03       		.uleb128 0x3
+ 203 005e 04       		.byte	0x4
+ 204 005f 05       		.byte	0x5
+ 205 0060 696E7400 		.ascii	"int\000"
+ 206 0064 02       		.uleb128 0x2
+ 207 0065 04       		.byte	0x4
+ 208 0066 07       		.byte	0x7
+ 209 0067 59010000 		.4byte	.LASF8
+ 210 006b 04       		.uleb128 0x4
+ 211 006c 0C020000 		.4byte	.LASF9
+ 212 0070 02       		.byte	0x2
+ 213 0071 C2       		.byte	0xc2
+ 214 0072 2C000000 		.4byte	0x2c
+ 215 0076 04       		.uleb128 0x4
+ 216 0077 4B010000 		.4byte	.LASF10
+ 217 007b 02       		.byte	0x2
+ 218 007c C3       		.byte	0xc3
+ 219 007d 3A000000 		.4byte	0x3a
+ 220 0081 04       		.uleb128 0x4
+ 221 0082 52010000 		.4byte	.LASF11
+ 222 0086 02       		.byte	0x2
+ 223 0087 C4       		.byte	0xc4
+ 224 0088 48000000 		.4byte	0x48
+ 225 008c 02       		.uleb128 0x2
+ 226 008d 04       		.byte	0x4
+ 227 008e 04       		.byte	0x4
+ 228 008f C6000000 		.4byte	.LASF12
+ 229 0093 02       		.uleb128 0x2
+ 230 0094 08       		.byte	0x8
+ 231 0095 04       		.byte	0x4
+ 232 0096 2F010000 		.4byte	.LASF13
+ 233 009a 02       		.uleb128 0x2
+ 234 009b 01       		.byte	0x1
+ 235 009c 08       		.byte	0x8
+ 236 009d 8B010000 		.4byte	.LASF14
+ 237 00a1 05       		.uleb128 0x5
+ 238 00a2 00000000 		.4byte	.LASF15
+ 239 00a6 02       		.byte	0x2
+ 240 00a7 6E01     		.2byte	0x16e
+ 241 00a9 AD000000 		.4byte	0xad
+ 242 00ad 06       		.uleb128 0x6
+ 243 00ae 81000000 		.4byte	0x81
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccZ1DmgG.s 			page 9
+
+
+ 244 00b2 07       		.uleb128 0x7
+ 245 00b3 CC000000 		.4byte	.LASF16
+ 246 00b7 01       		.byte	0x1
+ 247 00b8 46       		.byte	0x46
+ 248 00b9 00000000 		.4byte	.LFB0
+ 249 00bd 14000000 		.4byte	.LFE0-.LFB0
+ 250 00c1 01       		.uleb128 0x1
+ 251 00c2 9C       		.byte	0x9c
+ 252 00c3 07       		.uleb128 0x7
+ 253 00c4 ED000000 		.4byte	.LASF17
+ 254 00c8 01       		.byte	0x1
+ 255 00c9 5F       		.byte	0x5f
+ 256 00ca 00000000 		.4byte	.LFB1
+ 257 00ce 10000000 		.4byte	.LFE1-.LFB1
+ 258 00d2 01       		.uleb128 0x1
+ 259 00d3 9C       		.byte	0x9c
+ 260 00d4 08       		.uleb128 0x8
+ 261 00d5 B0010000 		.4byte	.LASF27
+ 262 00d9 01       		.byte	0x1
+ 263 00da 86       		.byte	0x86
+ 264 00db 00000000 		.4byte	.LFB2
+ 265 00df 14000000 		.4byte	.LFE2-.LFB2
+ 266 00e3 01       		.uleb128 0x1
+ 267 00e4 9C       		.byte	0x9c
+ 268 00e5 22010000 		.4byte	0x122
+ 269 00e9 09       		.uleb128 0x9
+ 270 00ea 24010000 		.4byte	.LASF18
+ 271 00ee 01       		.byte	0x1
+ 272 00ef 86       		.byte	0x86
+ 273 00f0 76000000 		.4byte	0x76
+ 274 00f4 00000000 		.4byte	.LLST0
+ 275 00f8 0A       		.uleb128 0xa
+ 276 00f9 3D010000 		.4byte	.LASF19
+ 277 00fd 01       		.byte	0x1
+ 278 00fe 86       		.byte	0x86
+ 279 00ff 6B000000 		.4byte	0x6b
+ 280 0103 01       		.uleb128 0x1
+ 281 0104 51       		.byte	0x51
+ 282 0105 0B       		.uleb128 0xb
+ 283 0106 94000000 		.4byte	.LASF20
+ 284 010a 01       		.byte	0x1
+ 285 010b 88       		.byte	0x88
+ 286 010c 81000000 		.4byte	0x81
+ 287 0110 21000000 		.4byte	.LLST1
+ 288 0114 0C       		.uleb128 0xc
+ 289 0115 36010000 		.4byte	.LASF21
+ 290 0119 01       		.byte	0x1
+ 291 011a 89       		.byte	0x89
+ 292 011b 81000000 		.4byte	0x81
+ 293 011f 01       		.uleb128 0x1
+ 294 0120 50       		.byte	0x50
+ 295 0121 00       		.byte	0
+ 296 0122 0D       		.uleb128 0xd
+ 297 0123 90010000 		.4byte	.LASF22
+ 298 0127 01       		.byte	0x1
+ 299 0128 B0       		.byte	0xb0
+ 300 0129 76000000 		.4byte	0x76
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccZ1DmgG.s 			page 10
+
+
+ 301 012d 00000000 		.4byte	.LFB3
+ 302 0131 0C000000 		.4byte	.LFE3-.LFB3
+ 303 0135 01       		.uleb128 0x1
+ 304 0136 9C       		.byte	0x9c
+ 305 0137 0D       		.uleb128 0xd
+ 306 0138 9C000000 		.4byte	.LASF23
+ 307 013c 01       		.byte	0x1
+ 308 013d C6       		.byte	0xc6
+ 309 013e 6B000000 		.4byte	0x6b
+ 310 0142 00000000 		.4byte	.LFB4
+ 311 0146 04000000 		.4byte	.LFE4-.LFB4
+ 312 014a 01       		.uleb128 0x1
+ 313 014b 9C       		.byte	0x9c
+ 314 014c 00       		.byte	0
+ 315              		.section	.debug_abbrev,"",%progbits
+ 316              	.Ldebug_abbrev0:
+ 317 0000 01       		.uleb128 0x1
+ 318 0001 11       		.uleb128 0x11
+ 319 0002 01       		.byte	0x1
+ 320 0003 25       		.uleb128 0x25
+ 321 0004 0E       		.uleb128 0xe
+ 322 0005 13       		.uleb128 0x13
+ 323 0006 0B       		.uleb128 0xb
+ 324 0007 03       		.uleb128 0x3
+ 325 0008 0E       		.uleb128 0xe
+ 326 0009 1B       		.uleb128 0x1b
+ 327 000a 0E       		.uleb128 0xe
+ 328 000b 55       		.uleb128 0x55
+ 329 000c 17       		.uleb128 0x17
+ 330 000d 11       		.uleb128 0x11
+ 331 000e 01       		.uleb128 0x1
+ 332 000f 10       		.uleb128 0x10
+ 333 0010 17       		.uleb128 0x17
+ 334 0011 00       		.byte	0
+ 335 0012 00       		.byte	0
+ 336 0013 02       		.uleb128 0x2
+ 337 0014 24       		.uleb128 0x24
+ 338 0015 00       		.byte	0
+ 339 0016 0B       		.uleb128 0xb
+ 340 0017 0B       		.uleb128 0xb
+ 341 0018 3E       		.uleb128 0x3e
+ 342 0019 0B       		.uleb128 0xb
+ 343 001a 03       		.uleb128 0x3
+ 344 001b 0E       		.uleb128 0xe
+ 345 001c 00       		.byte	0
+ 346 001d 00       		.byte	0
+ 347 001e 03       		.uleb128 0x3
+ 348 001f 24       		.uleb128 0x24
+ 349 0020 00       		.byte	0
+ 350 0021 0B       		.uleb128 0xb
+ 351 0022 0B       		.uleb128 0xb
+ 352 0023 3E       		.uleb128 0x3e
+ 353 0024 0B       		.uleb128 0xb
+ 354 0025 03       		.uleb128 0x3
+ 355 0026 08       		.uleb128 0x8
+ 356 0027 00       		.byte	0
+ 357 0028 00       		.byte	0
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccZ1DmgG.s 			page 11
+
+
+ 358 0029 04       		.uleb128 0x4
+ 359 002a 16       		.uleb128 0x16
+ 360 002b 00       		.byte	0
+ 361 002c 03       		.uleb128 0x3
+ 362 002d 0E       		.uleb128 0xe
+ 363 002e 3A       		.uleb128 0x3a
+ 364 002f 0B       		.uleb128 0xb
+ 365 0030 3B       		.uleb128 0x3b
+ 366 0031 0B       		.uleb128 0xb
+ 367 0032 49       		.uleb128 0x49
+ 368 0033 13       		.uleb128 0x13
+ 369 0034 00       		.byte	0
+ 370 0035 00       		.byte	0
+ 371 0036 05       		.uleb128 0x5
+ 372 0037 16       		.uleb128 0x16
+ 373 0038 00       		.byte	0
+ 374 0039 03       		.uleb128 0x3
+ 375 003a 0E       		.uleb128 0xe
+ 376 003b 3A       		.uleb128 0x3a
+ 377 003c 0B       		.uleb128 0xb
+ 378 003d 3B       		.uleb128 0x3b
+ 379 003e 05       		.uleb128 0x5
+ 380 003f 49       		.uleb128 0x49
+ 381 0040 13       		.uleb128 0x13
+ 382 0041 00       		.byte	0
+ 383 0042 00       		.byte	0
+ 384 0043 06       		.uleb128 0x6
+ 385 0044 35       		.uleb128 0x35
+ 386 0045 00       		.byte	0
+ 387 0046 49       		.uleb128 0x49
+ 388 0047 13       		.uleb128 0x13
+ 389 0048 00       		.byte	0
+ 390 0049 00       		.byte	0
+ 391 004a 07       		.uleb128 0x7
+ 392 004b 2E       		.uleb128 0x2e
+ 393 004c 00       		.byte	0
+ 394 004d 3F       		.uleb128 0x3f
+ 395 004e 19       		.uleb128 0x19
+ 396 004f 03       		.uleb128 0x3
+ 397 0050 0E       		.uleb128 0xe
+ 398 0051 3A       		.uleb128 0x3a
+ 399 0052 0B       		.uleb128 0xb
+ 400 0053 3B       		.uleb128 0x3b
+ 401 0054 0B       		.uleb128 0xb
+ 402 0055 27       		.uleb128 0x27
+ 403 0056 19       		.uleb128 0x19
+ 404 0057 11       		.uleb128 0x11
+ 405 0058 01       		.uleb128 0x1
+ 406 0059 12       		.uleb128 0x12
+ 407 005a 06       		.uleb128 0x6
+ 408 005b 40       		.uleb128 0x40
+ 409 005c 18       		.uleb128 0x18
+ 410 005d 9742     		.uleb128 0x2117
+ 411 005f 19       		.uleb128 0x19
+ 412 0060 00       		.byte	0
+ 413 0061 00       		.byte	0
+ 414 0062 08       		.uleb128 0x8
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccZ1DmgG.s 			page 12
+
+
+ 415 0063 2E       		.uleb128 0x2e
+ 416 0064 01       		.byte	0x1
+ 417 0065 3F       		.uleb128 0x3f
+ 418 0066 19       		.uleb128 0x19
+ 419 0067 03       		.uleb128 0x3
+ 420 0068 0E       		.uleb128 0xe
+ 421 0069 3A       		.uleb128 0x3a
+ 422 006a 0B       		.uleb128 0xb
+ 423 006b 3B       		.uleb128 0x3b
+ 424 006c 0B       		.uleb128 0xb
+ 425 006d 27       		.uleb128 0x27
+ 426 006e 19       		.uleb128 0x19
+ 427 006f 11       		.uleb128 0x11
+ 428 0070 01       		.uleb128 0x1
+ 429 0071 12       		.uleb128 0x12
+ 430 0072 06       		.uleb128 0x6
+ 431 0073 40       		.uleb128 0x40
+ 432 0074 18       		.uleb128 0x18
+ 433 0075 9742     		.uleb128 0x2117
+ 434 0077 19       		.uleb128 0x19
+ 435 0078 01       		.uleb128 0x1
+ 436 0079 13       		.uleb128 0x13
+ 437 007a 00       		.byte	0
+ 438 007b 00       		.byte	0
+ 439 007c 09       		.uleb128 0x9
+ 440 007d 05       		.uleb128 0x5
+ 441 007e 00       		.byte	0
+ 442 007f 03       		.uleb128 0x3
+ 443 0080 0E       		.uleb128 0xe
+ 444 0081 3A       		.uleb128 0x3a
+ 445 0082 0B       		.uleb128 0xb
+ 446 0083 3B       		.uleb128 0x3b
+ 447 0084 0B       		.uleb128 0xb
+ 448 0085 49       		.uleb128 0x49
+ 449 0086 13       		.uleb128 0x13
+ 450 0087 02       		.uleb128 0x2
+ 451 0088 17       		.uleb128 0x17
+ 452 0089 00       		.byte	0
+ 453 008a 00       		.byte	0
+ 454 008b 0A       		.uleb128 0xa
+ 455 008c 05       		.uleb128 0x5
+ 456 008d 00       		.byte	0
+ 457 008e 03       		.uleb128 0x3
+ 458 008f 0E       		.uleb128 0xe
+ 459 0090 3A       		.uleb128 0x3a
+ 460 0091 0B       		.uleb128 0xb
+ 461 0092 3B       		.uleb128 0x3b
+ 462 0093 0B       		.uleb128 0xb
+ 463 0094 49       		.uleb128 0x49
+ 464 0095 13       		.uleb128 0x13
+ 465 0096 02       		.uleb128 0x2
+ 466 0097 18       		.uleb128 0x18
+ 467 0098 00       		.byte	0
+ 468 0099 00       		.byte	0
+ 469 009a 0B       		.uleb128 0xb
+ 470 009b 34       		.uleb128 0x34
+ 471 009c 00       		.byte	0
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccZ1DmgG.s 			page 13
+
+
+ 472 009d 03       		.uleb128 0x3
+ 473 009e 0E       		.uleb128 0xe
+ 474 009f 3A       		.uleb128 0x3a
+ 475 00a0 0B       		.uleb128 0xb
+ 476 00a1 3B       		.uleb128 0x3b
+ 477 00a2 0B       		.uleb128 0xb
+ 478 00a3 49       		.uleb128 0x49
+ 479 00a4 13       		.uleb128 0x13
+ 480 00a5 02       		.uleb128 0x2
+ 481 00a6 17       		.uleb128 0x17
+ 482 00a7 00       		.byte	0
+ 483 00a8 00       		.byte	0
+ 484 00a9 0C       		.uleb128 0xc
+ 485 00aa 34       		.uleb128 0x34
+ 486 00ab 00       		.byte	0
+ 487 00ac 03       		.uleb128 0x3
+ 488 00ad 0E       		.uleb128 0xe
+ 489 00ae 3A       		.uleb128 0x3a
+ 490 00af 0B       		.uleb128 0xb
+ 491 00b0 3B       		.uleb128 0x3b
+ 492 00b1 0B       		.uleb128 0xb
+ 493 00b2 49       		.uleb128 0x49
+ 494 00b3 13       		.uleb128 0x13
+ 495 00b4 02       		.uleb128 0x2
+ 496 00b5 18       		.uleb128 0x18
+ 497 00b6 00       		.byte	0
+ 498 00b7 00       		.byte	0
+ 499 00b8 0D       		.uleb128 0xd
+ 500 00b9 2E       		.uleb128 0x2e
+ 501 00ba 00       		.byte	0
+ 502 00bb 3F       		.uleb128 0x3f
+ 503 00bc 19       		.uleb128 0x19
+ 504 00bd 03       		.uleb128 0x3
+ 505 00be 0E       		.uleb128 0xe
+ 506 00bf 3A       		.uleb128 0x3a
+ 507 00c0 0B       		.uleb128 0xb
+ 508 00c1 3B       		.uleb128 0x3b
+ 509 00c2 0B       		.uleb128 0xb
+ 510 00c3 27       		.uleb128 0x27
+ 511 00c4 19       		.uleb128 0x19
+ 512 00c5 49       		.uleb128 0x49
+ 513 00c6 13       		.uleb128 0x13
+ 514 00c7 11       		.uleb128 0x11
+ 515 00c8 01       		.uleb128 0x1
+ 516 00c9 12       		.uleb128 0x12
+ 517 00ca 06       		.uleb128 0x6
+ 518 00cb 40       		.uleb128 0x40
+ 519 00cc 18       		.uleb128 0x18
+ 520 00cd 9742     		.uleb128 0x2117
+ 521 00cf 19       		.uleb128 0x19
+ 522 00d0 00       		.byte	0
+ 523 00d1 00       		.byte	0
+ 524 00d2 00       		.byte	0
+ 525              		.section	.debug_loc,"",%progbits
+ 526              	.Ldebug_loc0:
+ 527              	.LLST0:
+ 528 0000 00000000 		.4byte	.LVL0
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccZ1DmgG.s 			page 14
+
+
+ 529 0004 0A000000 		.4byte	.LVL3
+ 530 0008 0100     		.2byte	0x1
+ 531 000a 50       		.byte	0x50
+ 532 000b 0A000000 		.4byte	.LVL3
+ 533 000f 14000000 		.4byte	.LFE2
+ 534 0013 0400     		.2byte	0x4
+ 535 0015 F3       		.byte	0xf3
+ 536 0016 01       		.uleb128 0x1
+ 537 0017 50       		.byte	0x50
+ 538 0018 9F       		.byte	0x9f
+ 539 0019 00000000 		.4byte	0
+ 540 001d 00000000 		.4byte	0
+ 541              	.LLST1:
+ 542 0021 04000000 		.4byte	.LVL1
+ 543 0025 06000000 		.4byte	.LVL2
+ 544 0029 0800     		.2byte	0x8
+ 545 002b 73       		.byte	0x73
+ 546 002c 00       		.sleb128 0
+ 547 002d 11       		.byte	0x11
+ 548 002e 80807C   		.sleb128 -65536
+ 549 0031 1A       		.byte	0x1a
+ 550 0032 9F       		.byte	0x9f
+ 551 0033 00000000 		.4byte	0
+ 552 0037 00000000 		.4byte	0
+ 553              		.section	.debug_aranges,"",%progbits
+ 554 0000 3C000000 		.4byte	0x3c
+ 555 0004 0200     		.2byte	0x2
+ 556 0006 00000000 		.4byte	.Ldebug_info0
+ 557 000a 04       		.byte	0x4
+ 558 000b 00       		.byte	0
+ 559 000c 0000     		.2byte	0
+ 560 000e 0000     		.2byte	0
+ 561 0010 00000000 		.4byte	.LFB0
+ 562 0014 14000000 		.4byte	.LFE0-.LFB0
+ 563 0018 00000000 		.4byte	.LFB1
+ 564 001c 10000000 		.4byte	.LFE1-.LFB1
+ 565 0020 00000000 		.4byte	.LFB2
+ 566 0024 14000000 		.4byte	.LFE2-.LFB2
+ 567 0028 00000000 		.4byte	.LFB3
+ 568 002c 0C000000 		.4byte	.LFE3-.LFB3
+ 569 0030 00000000 		.4byte	.LFB4
+ 570 0034 04000000 		.4byte	.LFE4-.LFB4
+ 571 0038 00000000 		.4byte	0
+ 572 003c 00000000 		.4byte	0
+ 573              		.section	.debug_ranges,"",%progbits
+ 574              	.Ldebug_ranges0:
+ 575 0000 00000000 		.4byte	.LFB0
+ 576 0004 14000000 		.4byte	.LFE0
+ 577 0008 00000000 		.4byte	.LFB1
+ 578 000c 10000000 		.4byte	.LFE1
+ 579 0010 00000000 		.4byte	.LFB2
+ 580 0014 14000000 		.4byte	.LFE2
+ 581 0018 00000000 		.4byte	.LFB3
+ 582 001c 0C000000 		.4byte	.LFE3
+ 583 0020 00000000 		.4byte	.LFB4
+ 584 0024 04000000 		.4byte	.LFE4
+ 585 0028 00000000 		.4byte	0
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccZ1DmgG.s 			page 15
+
+
+ 586 002c 00000000 		.4byte	0
+ 587              		.section	.debug_line,"",%progbits
+ 588              	.Ldebug_line0:
+ 589 0000 D1000000 		.section	.debug_str,"MS",%progbits,1
+ 589      02006200 
+ 589      00000201 
+ 589      FB0E0D00 
+ 589      01010101 
+ 590              	.LASF15:
+ 591 0000 72656733 		.ascii	"reg32\000"
+ 591      3200
+ 592              	.LASF24:
+ 593 0006 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 593      4320342E 
+ 593      392E3320 
+ 593      32303135 
+ 593      30333033 
+ 594 0039 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 594      20726576 
+ 594      6973696F 
+ 594      6E203232 
+ 594      31323230 
+ 595 006c 73202D66 		.ascii	"s -ffunction-sections -ffat-lto-objects\000"
+ 595      66756E63 
+ 595      74696F6E 
+ 595      2D736563 
+ 595      74696F6E 
+ 596              	.LASF20:
+ 597 0094 6D61736B 		.ascii	"maskVal\000"
+ 597      56616C00 
+ 598              	.LASF23:
+ 599 009c 5350495F 		.ascii	"SPI_1_SCBCLK_GetFractionalDividerRegister\000"
+ 599      315F5343 
+ 599      42434C4B 
+ 599      5F476574 
+ 599      46726163 
+ 600              	.LASF12:
+ 601 00c6 666C6F61 		.ascii	"float\000"
+ 601      7400
+ 602              	.LASF16:
+ 603 00cc 5350495F 		.ascii	"SPI_1_SCBCLK_Start\000"
+ 603      315F5343 
+ 603      42434C4B 
+ 603      5F537461 
+ 603      727400
+ 604              	.LASF1:
+ 605 00df 756E7369 		.ascii	"unsigned char\000"
+ 605      676E6564 
+ 605      20636861 
+ 605      7200
+ 606              	.LASF17:
+ 607 00ed 5350495F 		.ascii	"SPI_1_SCBCLK_Stop\000"
+ 607      315F5343 
+ 607      42434C4B 
+ 607      5F53746F 
+ 607      7000
+ 608              	.LASF5:
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccZ1DmgG.s 			page 16
+
+
+ 609 00ff 6C6F6E67 		.ascii	"long unsigned int\000"
+ 609      20756E73 
+ 609      69676E65 
+ 609      6420696E 
+ 609      7400
+ 610              	.LASF3:
+ 611 0111 73686F72 		.ascii	"short unsigned int\000"
+ 611      7420756E 
+ 611      7369676E 
+ 611      65642069 
+ 611      6E7400
+ 612              	.LASF18:
+ 613 0124 636C6B44 		.ascii	"clkDivider\000"
+ 613      69766964 
+ 613      657200
+ 614              	.LASF13:
+ 615 012f 646F7562 		.ascii	"double\000"
+ 615      6C6500
+ 616              	.LASF21:
+ 617 0136 72656756 		.ascii	"regVal\000"
+ 617      616C00
+ 618              	.LASF19:
+ 619 013d 636C6B46 		.ascii	"clkFractional\000"
+ 619      72616374 
+ 619      696F6E61 
+ 619      6C00
+ 620              	.LASF10:
+ 621 014b 75696E74 		.ascii	"uint16\000"
+ 621      313600
+ 622              	.LASF11:
+ 623 0152 75696E74 		.ascii	"uint32\000"
+ 623      333200
+ 624              	.LASF8:
+ 625 0159 756E7369 		.ascii	"unsigned int\000"
+ 625      676E6564 
+ 625      20696E74 
+ 625      00
+ 626              	.LASF7:
+ 627 0166 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 627      206C6F6E 
+ 627      6720756E 
+ 627      7369676E 
+ 627      65642069 
+ 628              	.LASF6:
+ 629 017d 6C6F6E67 		.ascii	"long long int\000"
+ 629      206C6F6E 
+ 629      6720696E 
+ 629      7400
+ 630              	.LASF14:
+ 631 018b 63686172 		.ascii	"char\000"
+ 631      00
+ 632              	.LASF22:
+ 633 0190 5350495F 		.ascii	"SPI_1_SCBCLK_GetDividerRegister\000"
+ 633      315F5343 
+ 633      42434C4B 
+ 633      5F476574 
+ 633      44697669 
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccZ1DmgG.s 			page 17
+
+
+ 634              	.LASF27:
+ 635 01b0 5350495F 		.ascii	"SPI_1_SCBCLK_SetFractionalDividerRegister\000"
+ 635      315F5343 
+ 635      42434C4B 
+ 635      5F536574 
+ 635      46726163 
+ 636              	.LASF25:
+ 637 01da 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\SPI_1_SCBCLK.c\000"
+ 637      6E657261 
+ 637      7465645F 
+ 637      536F7572 
+ 637      63655C50 
+ 638              	.LASF2:
+ 639 0202 73686F72 		.ascii	"short int\000"
+ 639      7420696E 
+ 639      7400
+ 640              	.LASF9:
+ 641 020c 75696E74 		.ascii	"uint8\000"
+ 641      3800
+ 642              	.LASF4:
+ 643 0212 6C6F6E67 		.ascii	"long int\000"
+ 643      20696E74 
+ 643      00
+ 644              	.LASF26:
+ 645 021b 453A5C68 		.ascii	"E:\\home\\jarik\\src\\psoc\\mpi_rom_emu\\mpi_rom_em"
+ 645      6F6D655C 
+ 645      6A617269 
+ 645      6B5C7372 
+ 645      635C7073 
+ 646 0248 752E6379 		.ascii	"u.cydsn\000"
+ 646      64736E00 
+ 647              	.LASF0:
+ 648 0250 7369676E 		.ascii	"signed char\000"
+ 648      65642063 
+ 648      68617200 
+ 649              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

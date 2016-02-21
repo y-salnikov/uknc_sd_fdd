@@ -1,0 +1,956 @@
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccr31OFZ.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 1
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"AD_H.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.AD_H_Write,"ax",%progbits
+  18              		.align	2
+  19              		.global	AD_H_Write
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	AD_H_Write, %function
+  23              	AD_H_Write:
+  24              	.LFB0:
+  25              		.file 1 ".\\Generated_Source\\PSoC4\\AD_H.c"
+   1:.\Generated_Source\PSoC4/AD_H.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/AD_H.c **** * File Name: AD_H.c  
+   3:.\Generated_Source\PSoC4/AD_H.c **** * Version 2.10
+   4:.\Generated_Source\PSoC4/AD_H.c **** *
+   5:.\Generated_Source\PSoC4/AD_H.c **** * Description:
+   6:.\Generated_Source\PSoC4/AD_H.c **** *  This file contains API to enable firmware control of a Pins component.
+   7:.\Generated_Source\PSoC4/AD_H.c **** *
+   8:.\Generated_Source\PSoC4/AD_H.c **** * Note:
+   9:.\Generated_Source\PSoC4/AD_H.c **** *
+  10:.\Generated_Source\PSoC4/AD_H.c **** ********************************************************************************
+  11:.\Generated_Source\PSoC4/AD_H.c **** * Copyright 2008-2014, Cypress Semiconductor Corporation.  All rights reserved.
+  12:.\Generated_Source\PSoC4/AD_H.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  13:.\Generated_Source\PSoC4/AD_H.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  14:.\Generated_Source\PSoC4/AD_H.c **** * the software package with which this file was provided.
+  15:.\Generated_Source\PSoC4/AD_H.c **** *******************************************************************************/
+  16:.\Generated_Source\PSoC4/AD_H.c **** 
+  17:.\Generated_Source\PSoC4/AD_H.c **** #include "cytypes.h"
+  18:.\Generated_Source\PSoC4/AD_H.c **** #include "AD_H.h"
+  19:.\Generated_Source\PSoC4/AD_H.c **** 
+  20:.\Generated_Source\PSoC4/AD_H.c **** #define SetP4PinDriveMode(shift, mode)  \
+  21:.\Generated_Source\PSoC4/AD_H.c ****     do { \
+  22:.\Generated_Source\PSoC4/AD_H.c ****         AD_H_PC =   (AD_H_PC & \
+  23:.\Generated_Source\PSoC4/AD_H.c ****                                 (uint32)(~(uint32)(AD_H_DRIVE_MODE_IND_MASK << (AD_H_DRIVE_MODE_BIT
+  24:.\Generated_Source\PSoC4/AD_H.c ****                                 (uint32)((uint32)(mode) << (AD_H_DRIVE_MODE_BITS * (shift))); \
+  25:.\Generated_Source\PSoC4/AD_H.c ****     } while (0)
+  26:.\Generated_Source\PSoC4/AD_H.c **** 
+  27:.\Generated_Source\PSoC4/AD_H.c **** 
+  28:.\Generated_Source\PSoC4/AD_H.c **** /*******************************************************************************
+  29:.\Generated_Source\PSoC4/AD_H.c **** * Function Name: AD_H_Write
+  30:.\Generated_Source\PSoC4/AD_H.c **** ********************************************************************************
+  31:.\Generated_Source\PSoC4/AD_H.c **** *
+  32:.\Generated_Source\PSoC4/AD_H.c **** * Summary:
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccr31OFZ.s 			page 2
+
+
+  33:.\Generated_Source\PSoC4/AD_H.c **** *  Assign a new value to the digital port's data output register.  
+  34:.\Generated_Source\PSoC4/AD_H.c **** *
+  35:.\Generated_Source\PSoC4/AD_H.c **** * Parameters:  
+  36:.\Generated_Source\PSoC4/AD_H.c **** *  prtValue:  The value to be assigned to the Digital Port. 
+  37:.\Generated_Source\PSoC4/AD_H.c **** *
+  38:.\Generated_Source\PSoC4/AD_H.c **** * Return: 
+  39:.\Generated_Source\PSoC4/AD_H.c **** *  None 
+  40:.\Generated_Source\PSoC4/AD_H.c **** *  
+  41:.\Generated_Source\PSoC4/AD_H.c **** *******************************************************************************/
+  42:.\Generated_Source\PSoC4/AD_H.c **** void AD_H_Write(uint8 value) 
+  43:.\Generated_Source\PSoC4/AD_H.c **** {
+  26              		.loc 1 43 0
+  27              		.cfi_startproc
+  28              	.LVL0:
+  44:.\Generated_Source\PSoC4/AD_H.c ****     uint8 drVal = (uint8)(AD_H_DR & (uint8)(~AD_H_MASK));
+  29              		.loc 1 44 0
+  30 0000 014B     		ldr	r3, .L2
+  31 0002 1A68     		ldr	r2, [r3]
+  32              	.LVL1:
+  45:.\Generated_Source\PSoC4/AD_H.c ****     drVal = (drVal | ((uint8)(value << AD_H_SHIFT) & AD_H_MASK));
+  46:.\Generated_Source\PSoC4/AD_H.c ****     AD_H_DR = (uint32)drVal;
+  33              		.loc 1 46 0
+  34 0004 1860     		str	r0, [r3]
+  47:.\Generated_Source\PSoC4/AD_H.c **** }
+  35              		.loc 1 47 0
+  36              		@ sp needed
+  37 0006 7047     		bx	lr
+  38              	.L3:
+  39              		.align	2
+  40              	.L2:
+  41 0008 00000440 		.word	1074003968
+  42              		.cfi_endproc
+  43              	.LFE0:
+  44              		.size	AD_H_Write, .-AD_H_Write
+  45              		.section	.text.AD_H_SetDriveMode,"ax",%progbits
+  46              		.align	2
+  47              		.global	AD_H_SetDriveMode
+  48              		.code	16
+  49              		.thumb_func
+  50              		.type	AD_H_SetDriveMode, %function
+  51              	AD_H_SetDriveMode:
+  52              	.LFB1:
+  48:.\Generated_Source\PSoC4/AD_H.c **** 
+  49:.\Generated_Source\PSoC4/AD_H.c **** 
+  50:.\Generated_Source\PSoC4/AD_H.c **** /*******************************************************************************
+  51:.\Generated_Source\PSoC4/AD_H.c **** * Function Name: AD_H_SetDriveMode
+  52:.\Generated_Source\PSoC4/AD_H.c **** ********************************************************************************
+  53:.\Generated_Source\PSoC4/AD_H.c **** *
+  54:.\Generated_Source\PSoC4/AD_H.c **** * Summary:
+  55:.\Generated_Source\PSoC4/AD_H.c **** *  Change the drive mode on the pins of the port.
+  56:.\Generated_Source\PSoC4/AD_H.c **** * 
+  57:.\Generated_Source\PSoC4/AD_H.c **** * Parameters:  
+  58:.\Generated_Source\PSoC4/AD_H.c **** *  mode:  Change the pins to one of the following drive modes.
+  59:.\Generated_Source\PSoC4/AD_H.c **** *
+  60:.\Generated_Source\PSoC4/AD_H.c **** *  AD_H_DM_STRONG     Strong Drive 
+  61:.\Generated_Source\PSoC4/AD_H.c **** *  AD_H_DM_OD_HI      Open Drain, Drives High 
+  62:.\Generated_Source\PSoC4/AD_H.c **** *  AD_H_DM_OD_LO      Open Drain, Drives Low 
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccr31OFZ.s 			page 3
+
+
+  63:.\Generated_Source\PSoC4/AD_H.c **** *  AD_H_DM_RES_UP     Resistive Pull Up 
+  64:.\Generated_Source\PSoC4/AD_H.c **** *  AD_H_DM_RES_DWN    Resistive Pull Down 
+  65:.\Generated_Source\PSoC4/AD_H.c **** *  AD_H_DM_RES_UPDWN  Resistive Pull Up/Down 
+  66:.\Generated_Source\PSoC4/AD_H.c **** *  AD_H_DM_DIG_HIZ    High Impedance Digital 
+  67:.\Generated_Source\PSoC4/AD_H.c **** *  AD_H_DM_ALG_HIZ    High Impedance Analog 
+  68:.\Generated_Source\PSoC4/AD_H.c **** *
+  69:.\Generated_Source\PSoC4/AD_H.c **** * Return: 
+  70:.\Generated_Source\PSoC4/AD_H.c **** *  None
+  71:.\Generated_Source\PSoC4/AD_H.c **** *
+  72:.\Generated_Source\PSoC4/AD_H.c **** *******************************************************************************/
+  73:.\Generated_Source\PSoC4/AD_H.c **** void AD_H_SetDriveMode(uint8 mode) 
+  74:.\Generated_Source\PSoC4/AD_H.c **** {
+  53              		.loc 1 74 0
+  54              		.cfi_startproc
+  55              	.LVL2:
+  75:.\Generated_Source\PSoC4/AD_H.c **** 	SetP4PinDriveMode(AD_H__0__SHIFT, mode);
+  56              		.loc 1 75 0
+  57 0000 184B     		ldr	r3, .L5
+  58 0002 1A68     		ldr	r2, [r3]
+  59 0004 0721     		mov	r1, #7
+  60 0006 8A43     		bic	r2, r1
+  61 0008 0243     		orr	r2, r0
+  62 000a 1A60     		str	r2, [r3]
+  76:.\Generated_Source\PSoC4/AD_H.c **** 	SetP4PinDriveMode(AD_H__1__SHIFT, mode);
+  63              		.loc 1 76 0
+  64 000c 1A68     		ldr	r2, [r3]
+  65 000e 3131     		add	r1, r1, #49
+  66 0010 8A43     		bic	r2, r1
+  67 0012 C100     		lsl	r1, r0, #3
+  68 0014 0A43     		orr	r2, r1
+  69 0016 1A60     		str	r2, [r3]
+  77:.\Generated_Source\PSoC4/AD_H.c **** 	SetP4PinDriveMode(AD_H__2__SHIFT, mode);
+  70              		.loc 1 77 0
+  71 0018 1968     		ldr	r1, [r3]
+  72 001a 134A     		ldr	r2, .L5+4
+  73 001c 0A40     		and	r2, r1
+  74 001e 8101     		lsl	r1, r0, #6
+  75 0020 0A43     		orr	r2, r1
+  76 0022 1A60     		str	r2, [r3]
+  78:.\Generated_Source\PSoC4/AD_H.c **** 	SetP4PinDriveMode(AD_H__3__SHIFT, mode);
+  77              		.loc 1 78 0
+  78 0024 1968     		ldr	r1, [r3]
+  79 0026 114A     		ldr	r2, .L5+8
+  80 0028 0A40     		and	r2, r1
+  81 002a 4102     		lsl	r1, r0, #9
+  82 002c 0A43     		orr	r2, r1
+  83 002e 1A60     		str	r2, [r3]
+  79:.\Generated_Source\PSoC4/AD_H.c **** 	SetP4PinDriveMode(AD_H__4__SHIFT, mode);
+  84              		.loc 1 79 0
+  85 0030 1968     		ldr	r1, [r3]
+  86 0032 0F4A     		ldr	r2, .L5+12
+  87 0034 0A40     		and	r2, r1
+  88 0036 0103     		lsl	r1, r0, #12
+  89 0038 0A43     		orr	r2, r1
+  90 003a 1A60     		str	r2, [r3]
+  80:.\Generated_Source\PSoC4/AD_H.c **** 	SetP4PinDriveMode(AD_H__5__SHIFT, mode);
+  91              		.loc 1 80 0
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccr31OFZ.s 			page 4
+
+
+  92 003c 1968     		ldr	r1, [r3]
+  93 003e 0D4A     		ldr	r2, .L5+16
+  94 0040 0A40     		and	r2, r1
+  95 0042 C103     		lsl	r1, r0, #15
+  96 0044 0A43     		orr	r2, r1
+  97 0046 1A60     		str	r2, [r3]
+  81:.\Generated_Source\PSoC4/AD_H.c **** 	SetP4PinDriveMode(AD_H__6__SHIFT, mode);
+  98              		.loc 1 81 0
+  99 0048 1968     		ldr	r1, [r3]
+ 100 004a 0B4A     		ldr	r2, .L5+20
+ 101 004c 0A40     		and	r2, r1
+ 102 004e 8104     		lsl	r1, r0, #18
+ 103 0050 0A43     		orr	r2, r1
+ 104 0052 1A60     		str	r2, [r3]
+  82:.\Generated_Source\PSoC4/AD_H.c **** 	SetP4PinDriveMode(AD_H__7__SHIFT, mode);
+ 105              		.loc 1 82 0
+ 106 0054 1968     		ldr	r1, [r3]
+ 107 0056 094A     		ldr	r2, .L5+24
+ 108 0058 0A40     		and	r2, r1
+ 109 005a 4005     		lsl	r0, r0, #21
+ 110              	.LVL3:
+ 111 005c 1043     		orr	r0, r2
+ 112 005e 1860     		str	r0, [r3]
+  83:.\Generated_Source\PSoC4/AD_H.c **** }
+ 113              		.loc 1 83 0
+ 114              		@ sp needed
+ 115 0060 7047     		bx	lr
+ 116              	.L6:
+ 117 0062 C046     		.align	2
+ 118              	.L5:
+ 119 0064 08000440 		.word	1074003976
+ 120 0068 3FFEFFFF 		.word	-449
+ 121 006c FFF1FFFF 		.word	-3585
+ 122 0070 FF8FFFFF 		.word	-28673
+ 123 0074 FF7FFCFF 		.word	-229377
+ 124 0078 FFFFE3FF 		.word	-1835009
+ 125 007c FFFF1FFF 		.word	-14680065
+ 126              		.cfi_endproc
+ 127              	.LFE1:
+ 128              		.size	AD_H_SetDriveMode, .-AD_H_SetDriveMode
+ 129              		.section	.text.AD_H_Read,"ax",%progbits
+ 130              		.align	2
+ 131              		.global	AD_H_Read
+ 132              		.code	16
+ 133              		.thumb_func
+ 134              		.type	AD_H_Read, %function
+ 135              	AD_H_Read:
+ 136              	.LFB2:
+  84:.\Generated_Source\PSoC4/AD_H.c **** 
+  85:.\Generated_Source\PSoC4/AD_H.c **** 
+  86:.\Generated_Source\PSoC4/AD_H.c **** /*******************************************************************************
+  87:.\Generated_Source\PSoC4/AD_H.c **** * Function Name: AD_H_Read
+  88:.\Generated_Source\PSoC4/AD_H.c **** ********************************************************************************
+  89:.\Generated_Source\PSoC4/AD_H.c **** *
+  90:.\Generated_Source\PSoC4/AD_H.c **** * Summary:
+  91:.\Generated_Source\PSoC4/AD_H.c **** *  Read the current value on the pins of the Digital Port in right justified 
+  92:.\Generated_Source\PSoC4/AD_H.c **** *  form.
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccr31OFZ.s 			page 5
+
+
+  93:.\Generated_Source\PSoC4/AD_H.c **** *
+  94:.\Generated_Source\PSoC4/AD_H.c **** * Parameters:  
+  95:.\Generated_Source\PSoC4/AD_H.c **** *  None 
+  96:.\Generated_Source\PSoC4/AD_H.c **** *
+  97:.\Generated_Source\PSoC4/AD_H.c **** * Return: 
+  98:.\Generated_Source\PSoC4/AD_H.c **** *  Returns the current value of the Digital Port as a right justified number
+  99:.\Generated_Source\PSoC4/AD_H.c **** *  
+ 100:.\Generated_Source\PSoC4/AD_H.c **** * Note:
+ 101:.\Generated_Source\PSoC4/AD_H.c **** *  Macro AD_H_ReadPS calls this function. 
+ 102:.\Generated_Source\PSoC4/AD_H.c **** *  
+ 103:.\Generated_Source\PSoC4/AD_H.c **** *******************************************************************************/
+ 104:.\Generated_Source\PSoC4/AD_H.c **** uint8 AD_H_Read(void) 
+ 105:.\Generated_Source\PSoC4/AD_H.c **** {
+ 137              		.loc 1 105 0
+ 138              		.cfi_startproc
+ 106:.\Generated_Source\PSoC4/AD_H.c ****     return (uint8)((AD_H_PS & AD_H_MASK) >> AD_H_SHIFT);
+ 139              		.loc 1 106 0
+ 140 0000 014B     		ldr	r3, .L8
+ 141 0002 1868     		ldr	r0, [r3]
+ 142 0004 C0B2     		uxtb	r0, r0
+ 107:.\Generated_Source\PSoC4/AD_H.c **** }
+ 143              		.loc 1 107 0
+ 144              		@ sp needed
+ 145 0006 7047     		bx	lr
+ 146              	.L9:
+ 147              		.align	2
+ 148              	.L8:
+ 149 0008 04000440 		.word	1074003972
+ 150              		.cfi_endproc
+ 151              	.LFE2:
+ 152              		.size	AD_H_Read, .-AD_H_Read
+ 153              		.section	.text.AD_H_ReadDataReg,"ax",%progbits
+ 154              		.align	2
+ 155              		.global	AD_H_ReadDataReg
+ 156              		.code	16
+ 157              		.thumb_func
+ 158              		.type	AD_H_ReadDataReg, %function
+ 159              	AD_H_ReadDataReg:
+ 160              	.LFB3:
+ 108:.\Generated_Source\PSoC4/AD_H.c **** 
+ 109:.\Generated_Source\PSoC4/AD_H.c **** 
+ 110:.\Generated_Source\PSoC4/AD_H.c **** /*******************************************************************************
+ 111:.\Generated_Source\PSoC4/AD_H.c **** * Function Name: AD_H_ReadDataReg
+ 112:.\Generated_Source\PSoC4/AD_H.c **** ********************************************************************************
+ 113:.\Generated_Source\PSoC4/AD_H.c **** *
+ 114:.\Generated_Source\PSoC4/AD_H.c **** * Summary:
+ 115:.\Generated_Source\PSoC4/AD_H.c **** *  Read the current value assigned to a Digital Port's data output register
+ 116:.\Generated_Source\PSoC4/AD_H.c **** *
+ 117:.\Generated_Source\PSoC4/AD_H.c **** * Parameters:  
+ 118:.\Generated_Source\PSoC4/AD_H.c **** *  None 
+ 119:.\Generated_Source\PSoC4/AD_H.c **** *
+ 120:.\Generated_Source\PSoC4/AD_H.c **** * Return: 
+ 121:.\Generated_Source\PSoC4/AD_H.c **** *  Returns the current value assigned to the Digital Port's data output register
+ 122:.\Generated_Source\PSoC4/AD_H.c **** *  
+ 123:.\Generated_Source\PSoC4/AD_H.c **** *******************************************************************************/
+ 124:.\Generated_Source\PSoC4/AD_H.c **** uint8 AD_H_ReadDataReg(void) 
+ 125:.\Generated_Source\PSoC4/AD_H.c **** {
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccr31OFZ.s 			page 6
+
+
+ 161              		.loc 1 125 0
+ 162              		.cfi_startproc
+ 126:.\Generated_Source\PSoC4/AD_H.c ****     return (uint8)((AD_H_DR & AD_H_MASK) >> AD_H_SHIFT);
+ 163              		.loc 1 126 0
+ 164 0000 014B     		ldr	r3, .L11
+ 165 0002 1868     		ldr	r0, [r3]
+ 166 0004 C0B2     		uxtb	r0, r0
+ 127:.\Generated_Source\PSoC4/AD_H.c **** }
+ 167              		.loc 1 127 0
+ 168              		@ sp needed
+ 169 0006 7047     		bx	lr
+ 170              	.L12:
+ 171              		.align	2
+ 172              	.L11:
+ 173 0008 00000440 		.word	1074003968
+ 174              		.cfi_endproc
+ 175              	.LFE3:
+ 176              		.size	AD_H_ReadDataReg, .-AD_H_ReadDataReg
+ 177              		.section	.text.AD_H_ClearInterrupt,"ax",%progbits
+ 178              		.align	2
+ 179              		.global	AD_H_ClearInterrupt
+ 180              		.code	16
+ 181              		.thumb_func
+ 182              		.type	AD_H_ClearInterrupt, %function
+ 183              	AD_H_ClearInterrupt:
+ 184              	.LFB4:
+ 128:.\Generated_Source\PSoC4/AD_H.c **** 
+ 129:.\Generated_Source\PSoC4/AD_H.c **** 
+ 130:.\Generated_Source\PSoC4/AD_H.c **** /* If Interrupts Are Enabled for this Pins component */ 
+ 131:.\Generated_Source\PSoC4/AD_H.c **** #if defined(AD_H_INTSTAT) 
+ 132:.\Generated_Source\PSoC4/AD_H.c **** 
+ 133:.\Generated_Source\PSoC4/AD_H.c ****     /*******************************************************************************
+ 134:.\Generated_Source\PSoC4/AD_H.c ****     * Function Name: AD_H_ClearInterrupt
+ 135:.\Generated_Source\PSoC4/AD_H.c ****     ********************************************************************************
+ 136:.\Generated_Source\PSoC4/AD_H.c ****     *
+ 137:.\Generated_Source\PSoC4/AD_H.c ****     * Summary:
+ 138:.\Generated_Source\PSoC4/AD_H.c ****     *  Clears any active interrupts attached to port and returns the value of the 
+ 139:.\Generated_Source\PSoC4/AD_H.c ****     *  interrupt status register.
+ 140:.\Generated_Source\PSoC4/AD_H.c ****     *
+ 141:.\Generated_Source\PSoC4/AD_H.c ****     * Parameters:  
+ 142:.\Generated_Source\PSoC4/AD_H.c ****     *  None 
+ 143:.\Generated_Source\PSoC4/AD_H.c ****     *
+ 144:.\Generated_Source\PSoC4/AD_H.c ****     * Return: 
+ 145:.\Generated_Source\PSoC4/AD_H.c ****     *  Returns the value of the interrupt status register
+ 146:.\Generated_Source\PSoC4/AD_H.c ****     *  
+ 147:.\Generated_Source\PSoC4/AD_H.c ****     *******************************************************************************/
+ 148:.\Generated_Source\PSoC4/AD_H.c ****     uint8 AD_H_ClearInterrupt(void) 
+ 149:.\Generated_Source\PSoC4/AD_H.c ****     {
+ 185              		.loc 1 149 0
+ 186              		.cfi_startproc
+ 150:.\Generated_Source\PSoC4/AD_H.c **** 		uint8 maskedStatus = (uint8)(AD_H_INTSTAT & AD_H_MASK);
+ 187              		.loc 1 150 0
+ 188 0000 034A     		ldr	r2, .L14
+ 189 0002 1368     		ldr	r3, [r2]
+ 190 0004 D8B2     		uxtb	r0, r3
+ 191              	.LVL4:
+ 151:.\Generated_Source\PSoC4/AD_H.c **** 		AD_H_INTSTAT = maskedStatus;
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccr31OFZ.s 			page 7
+
+
+ 192              		.loc 1 151 0
+ 193 0006 FF21     		mov	r1, #255
+ 194 0008 0B40     		and	r3, r1
+ 195 000a 1360     		str	r3, [r2]
+ 152:.\Generated_Source\PSoC4/AD_H.c ****         return maskedStatus >> AD_H_SHIFT;
+ 153:.\Generated_Source\PSoC4/AD_H.c ****     }
+ 196              		.loc 1 153 0
+ 197              		@ sp needed
+ 198 000c 7047     		bx	lr
+ 199              	.L15:
+ 200 000e C046     		.align	2
+ 201              	.L14:
+ 202 0010 10000440 		.word	1074003984
+ 203              		.cfi_endproc
+ 204              	.LFE4:
+ 205              		.size	AD_H_ClearInterrupt, .-AD_H_ClearInterrupt
+ 206              		.text
+ 207              	.Letext0:
+ 208              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+ 209              		.section	.debug_info,"",%progbits
+ 210              	.Ldebug_info0:
+ 211 0000 46010000 		.4byte	0x146
+ 212 0004 0400     		.2byte	0x4
+ 213 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 214 000a 04       		.byte	0x4
+ 215 000b 01       		.uleb128 0x1
+ 216 000c FD000000 		.4byte	.LASF24
+ 217 0010 01       		.byte	0x1
+ 218 0011 94000000 		.4byte	.LASF25
+ 219 0015 B5010000 		.4byte	.LASF26
+ 220 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 221 001d 00000000 		.4byte	0
+ 222 0021 00000000 		.4byte	.Ldebug_line0
+ 223 0025 02       		.uleb128 0x2
+ 224 0026 01       		.byte	0x1
+ 225 0027 06       		.byte	0x6
+ 226 0028 EA010000 		.4byte	.LASF0
+ 227 002c 02       		.uleb128 0x2
+ 228 002d 01       		.byte	0x1
+ 229 002e 08       		.byte	0x8
+ 230 002f 27000000 		.4byte	.LASF1
+ 231 0033 02       		.uleb128 0x2
+ 232 0034 02       		.byte	0x2
+ 233 0035 05       		.byte	0x5
+ 234 0036 8B010000 		.4byte	.LASF2
+ 235 003a 02       		.uleb128 0x2
+ 236 003b 02       		.byte	0x2
+ 237 003c 07       		.byte	0x7
+ 238 003d 4D000000 		.4byte	.LASF3
+ 239 0041 02       		.uleb128 0x2
+ 240 0042 04       		.byte	0x4
+ 241 0043 05       		.byte	0x5
+ 242 0044 AC010000 		.4byte	.LASF4
+ 243 0048 02       		.uleb128 0x2
+ 244 0049 04       		.byte	0x4
+ 245 004a 07       		.byte	0x7
+ 246 004b 3B000000 		.4byte	.LASF5
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccr31OFZ.s 			page 8
+
+
+ 247 004f 02       		.uleb128 0x2
+ 248 0050 08       		.byte	0x8
+ 249 0051 05       		.byte	0x5
+ 250 0052 DD000000 		.4byte	.LASF6
+ 251 0056 02       		.uleb128 0x2
+ 252 0057 08       		.byte	0x8
+ 253 0058 07       		.byte	0x7
+ 254 0059 C1000000 		.4byte	.LASF7
+ 255 005d 03       		.uleb128 0x3
+ 256 005e 04       		.byte	0x4
+ 257 005f 05       		.byte	0x5
+ 258 0060 696E7400 		.ascii	"int\000"
+ 259 0064 02       		.uleb128 0x2
+ 260 0065 04       		.byte	0x4
+ 261 0066 07       		.byte	0x7
+ 262 0067 B4000000 		.4byte	.LASF8
+ 263 006b 04       		.uleb128 0x4
+ 264 006c 95010000 		.4byte	.LASF9
+ 265 0070 02       		.byte	0x2
+ 266 0071 A1       		.byte	0xa1
+ 267 0072 2C000000 		.4byte	0x2c
+ 268 0076 04       		.uleb128 0x4
+ 269 0077 8D000000 		.4byte	.LASF10
+ 270 007b 02       		.byte	0x2
+ 271 007c A3       		.byte	0xa3
+ 272 007d 48000000 		.4byte	0x48
+ 273 0081 02       		.uleb128 0x2
+ 274 0082 04       		.byte	0x4
+ 275 0083 04       		.byte	0x4
+ 276 0084 21000000 		.4byte	.LASF11
+ 277 0088 02       		.uleb128 0x2
+ 278 0089 08       		.byte	0x8
+ 279 008a 04       		.byte	0x4
+ 280 008b 74000000 		.4byte	.LASF12
+ 281 008f 02       		.uleb128 0x2
+ 282 0090 01       		.byte	0x1
+ 283 0091 08       		.byte	0x8
+ 284 0092 F8000000 		.4byte	.LASF13
+ 285 0096 05       		.uleb128 0x5
+ 286 0097 00000000 		.4byte	.LASF14
+ 287 009b 02       		.byte	0x2
+ 288 009c 4D01     		.2byte	0x14d
+ 289 009e A2000000 		.4byte	0xa2
+ 290 00a2 06       		.uleb128 0x6
+ 291 00a3 76000000 		.4byte	0x76
+ 292 00a7 07       		.uleb128 0x7
+ 293 00a8 0C000000 		.4byte	.LASF15
+ 294 00ac 01       		.byte	0x1
+ 295 00ad 2A       		.byte	0x2a
+ 296 00ae 00000000 		.4byte	.LFB0
+ 297 00b2 0C000000 		.4byte	.LFE0-.LFB0
+ 298 00b6 01       		.uleb128 0x1
+ 299 00b7 9C       		.byte	0x9c
+ 300 00b8 D7000000 		.4byte	0xd7
+ 301 00bc 08       		.uleb128 0x8
+ 302 00bd 06000000 		.4byte	.LASF17
+ 303 00c1 01       		.byte	0x1
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccr31OFZ.s 			page 9
+
+
+ 304 00c2 2A       		.byte	0x2a
+ 305 00c3 6B000000 		.4byte	0x6b
+ 306 00c7 01       		.uleb128 0x1
+ 307 00c8 50       		.byte	0x50
+ 308 00c9 09       		.uleb128 0x9
+ 309 00ca 35000000 		.4byte	.LASF22
+ 310 00ce 01       		.byte	0x1
+ 311 00cf 2C       		.byte	0x2c
+ 312 00d0 6B000000 		.4byte	0x6b
+ 313 00d4 01       		.uleb128 0x1
+ 314 00d5 50       		.byte	0x50
+ 315 00d6 00       		.byte	0
+ 316 00d7 07       		.uleb128 0x7
+ 317 00d8 7B000000 		.4byte	.LASF16
+ 318 00dc 01       		.byte	0x1
+ 319 00dd 49       		.byte	0x49
+ 320 00de 00000000 		.4byte	.LFB1
+ 321 00e2 80000000 		.4byte	.LFE1-.LFB1
+ 322 00e6 01       		.uleb128 0x1
+ 323 00e7 9C       		.byte	0x9c
+ 324 00e8 FC000000 		.4byte	0xfc
+ 325 00ec 0A       		.uleb128 0xa
+ 326 00ed D8000000 		.4byte	.LASF18
+ 327 00f1 01       		.byte	0x1
+ 328 00f2 49       		.byte	0x49
+ 329 00f3 6B000000 		.4byte	0x6b
+ 330 00f7 00000000 		.4byte	.LLST0
+ 331 00fb 00       		.byte	0
+ 332 00fc 0B       		.uleb128 0xb
+ 333 00fd 17000000 		.4byte	.LASF19
+ 334 0101 01       		.byte	0x1
+ 335 0102 68       		.byte	0x68
+ 336 0103 6B000000 		.4byte	0x6b
+ 337 0107 00000000 		.4byte	.LFB2
+ 338 010b 0C000000 		.4byte	.LFE2-.LFB2
+ 339 010f 01       		.uleb128 0x1
+ 340 0110 9C       		.byte	0x9c
+ 341 0111 0B       		.uleb128 0xb
+ 342 0112 9B010000 		.4byte	.LASF20
+ 343 0116 01       		.byte	0x1
+ 344 0117 7C       		.byte	0x7c
+ 345 0118 6B000000 		.4byte	0x6b
+ 346 011c 00000000 		.4byte	.LFB3
+ 347 0120 0C000000 		.4byte	.LFE3-.LFB3
+ 348 0124 01       		.uleb128 0x1
+ 349 0125 9C       		.byte	0x9c
+ 350 0126 0C       		.uleb128 0xc
+ 351 0127 60000000 		.4byte	.LASF21
+ 352 012b 01       		.byte	0x1
+ 353 012c 94       		.byte	0x94
+ 354 012d 6B000000 		.4byte	0x6b
+ 355 0131 00000000 		.4byte	.LFB4
+ 356 0135 14000000 		.4byte	.LFE4-.LFB4
+ 357 0139 01       		.uleb128 0x1
+ 358 013a 9C       		.byte	0x9c
+ 359 013b 09       		.uleb128 0x9
+ 360 013c EB000000 		.4byte	.LASF23
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccr31OFZ.s 			page 10
+
+
+ 361 0140 01       		.byte	0x1
+ 362 0141 96       		.byte	0x96
+ 363 0142 6B000000 		.4byte	0x6b
+ 364 0146 01       		.uleb128 0x1
+ 365 0147 50       		.byte	0x50
+ 366 0148 00       		.byte	0
+ 367 0149 00       		.byte	0
+ 368              		.section	.debug_abbrev,"",%progbits
+ 369              	.Ldebug_abbrev0:
+ 370 0000 01       		.uleb128 0x1
+ 371 0001 11       		.uleb128 0x11
+ 372 0002 01       		.byte	0x1
+ 373 0003 25       		.uleb128 0x25
+ 374 0004 0E       		.uleb128 0xe
+ 375 0005 13       		.uleb128 0x13
+ 376 0006 0B       		.uleb128 0xb
+ 377 0007 03       		.uleb128 0x3
+ 378 0008 0E       		.uleb128 0xe
+ 379 0009 1B       		.uleb128 0x1b
+ 380 000a 0E       		.uleb128 0xe
+ 381 000b 55       		.uleb128 0x55
+ 382 000c 17       		.uleb128 0x17
+ 383 000d 11       		.uleb128 0x11
+ 384 000e 01       		.uleb128 0x1
+ 385 000f 10       		.uleb128 0x10
+ 386 0010 17       		.uleb128 0x17
+ 387 0011 00       		.byte	0
+ 388 0012 00       		.byte	0
+ 389 0013 02       		.uleb128 0x2
+ 390 0014 24       		.uleb128 0x24
+ 391 0015 00       		.byte	0
+ 392 0016 0B       		.uleb128 0xb
+ 393 0017 0B       		.uleb128 0xb
+ 394 0018 3E       		.uleb128 0x3e
+ 395 0019 0B       		.uleb128 0xb
+ 396 001a 03       		.uleb128 0x3
+ 397 001b 0E       		.uleb128 0xe
+ 398 001c 00       		.byte	0
+ 399 001d 00       		.byte	0
+ 400 001e 03       		.uleb128 0x3
+ 401 001f 24       		.uleb128 0x24
+ 402 0020 00       		.byte	0
+ 403 0021 0B       		.uleb128 0xb
+ 404 0022 0B       		.uleb128 0xb
+ 405 0023 3E       		.uleb128 0x3e
+ 406 0024 0B       		.uleb128 0xb
+ 407 0025 03       		.uleb128 0x3
+ 408 0026 08       		.uleb128 0x8
+ 409 0027 00       		.byte	0
+ 410 0028 00       		.byte	0
+ 411 0029 04       		.uleb128 0x4
+ 412 002a 16       		.uleb128 0x16
+ 413 002b 00       		.byte	0
+ 414 002c 03       		.uleb128 0x3
+ 415 002d 0E       		.uleb128 0xe
+ 416 002e 3A       		.uleb128 0x3a
+ 417 002f 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccr31OFZ.s 			page 11
+
+
+ 418 0030 3B       		.uleb128 0x3b
+ 419 0031 0B       		.uleb128 0xb
+ 420 0032 49       		.uleb128 0x49
+ 421 0033 13       		.uleb128 0x13
+ 422 0034 00       		.byte	0
+ 423 0035 00       		.byte	0
+ 424 0036 05       		.uleb128 0x5
+ 425 0037 16       		.uleb128 0x16
+ 426 0038 00       		.byte	0
+ 427 0039 03       		.uleb128 0x3
+ 428 003a 0E       		.uleb128 0xe
+ 429 003b 3A       		.uleb128 0x3a
+ 430 003c 0B       		.uleb128 0xb
+ 431 003d 3B       		.uleb128 0x3b
+ 432 003e 05       		.uleb128 0x5
+ 433 003f 49       		.uleb128 0x49
+ 434 0040 13       		.uleb128 0x13
+ 435 0041 00       		.byte	0
+ 436 0042 00       		.byte	0
+ 437 0043 06       		.uleb128 0x6
+ 438 0044 35       		.uleb128 0x35
+ 439 0045 00       		.byte	0
+ 440 0046 49       		.uleb128 0x49
+ 441 0047 13       		.uleb128 0x13
+ 442 0048 00       		.byte	0
+ 443 0049 00       		.byte	0
+ 444 004a 07       		.uleb128 0x7
+ 445 004b 2E       		.uleb128 0x2e
+ 446 004c 01       		.byte	0x1
+ 447 004d 3F       		.uleb128 0x3f
+ 448 004e 19       		.uleb128 0x19
+ 449 004f 03       		.uleb128 0x3
+ 450 0050 0E       		.uleb128 0xe
+ 451 0051 3A       		.uleb128 0x3a
+ 452 0052 0B       		.uleb128 0xb
+ 453 0053 3B       		.uleb128 0x3b
+ 454 0054 0B       		.uleb128 0xb
+ 455 0055 27       		.uleb128 0x27
+ 456 0056 19       		.uleb128 0x19
+ 457 0057 11       		.uleb128 0x11
+ 458 0058 01       		.uleb128 0x1
+ 459 0059 12       		.uleb128 0x12
+ 460 005a 06       		.uleb128 0x6
+ 461 005b 40       		.uleb128 0x40
+ 462 005c 18       		.uleb128 0x18
+ 463 005d 9742     		.uleb128 0x2117
+ 464 005f 19       		.uleb128 0x19
+ 465 0060 01       		.uleb128 0x1
+ 466 0061 13       		.uleb128 0x13
+ 467 0062 00       		.byte	0
+ 468 0063 00       		.byte	0
+ 469 0064 08       		.uleb128 0x8
+ 470 0065 05       		.uleb128 0x5
+ 471 0066 00       		.byte	0
+ 472 0067 03       		.uleb128 0x3
+ 473 0068 0E       		.uleb128 0xe
+ 474 0069 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccr31OFZ.s 			page 12
+
+
+ 475 006a 0B       		.uleb128 0xb
+ 476 006b 3B       		.uleb128 0x3b
+ 477 006c 0B       		.uleb128 0xb
+ 478 006d 49       		.uleb128 0x49
+ 479 006e 13       		.uleb128 0x13
+ 480 006f 02       		.uleb128 0x2
+ 481 0070 18       		.uleb128 0x18
+ 482 0071 00       		.byte	0
+ 483 0072 00       		.byte	0
+ 484 0073 09       		.uleb128 0x9
+ 485 0074 34       		.uleb128 0x34
+ 486 0075 00       		.byte	0
+ 487 0076 03       		.uleb128 0x3
+ 488 0077 0E       		.uleb128 0xe
+ 489 0078 3A       		.uleb128 0x3a
+ 490 0079 0B       		.uleb128 0xb
+ 491 007a 3B       		.uleb128 0x3b
+ 492 007b 0B       		.uleb128 0xb
+ 493 007c 49       		.uleb128 0x49
+ 494 007d 13       		.uleb128 0x13
+ 495 007e 02       		.uleb128 0x2
+ 496 007f 18       		.uleb128 0x18
+ 497 0080 00       		.byte	0
+ 498 0081 00       		.byte	0
+ 499 0082 0A       		.uleb128 0xa
+ 500 0083 05       		.uleb128 0x5
+ 501 0084 00       		.byte	0
+ 502 0085 03       		.uleb128 0x3
+ 503 0086 0E       		.uleb128 0xe
+ 504 0087 3A       		.uleb128 0x3a
+ 505 0088 0B       		.uleb128 0xb
+ 506 0089 3B       		.uleb128 0x3b
+ 507 008a 0B       		.uleb128 0xb
+ 508 008b 49       		.uleb128 0x49
+ 509 008c 13       		.uleb128 0x13
+ 510 008d 02       		.uleb128 0x2
+ 511 008e 17       		.uleb128 0x17
+ 512 008f 00       		.byte	0
+ 513 0090 00       		.byte	0
+ 514 0091 0B       		.uleb128 0xb
+ 515 0092 2E       		.uleb128 0x2e
+ 516 0093 00       		.byte	0
+ 517 0094 3F       		.uleb128 0x3f
+ 518 0095 19       		.uleb128 0x19
+ 519 0096 03       		.uleb128 0x3
+ 520 0097 0E       		.uleb128 0xe
+ 521 0098 3A       		.uleb128 0x3a
+ 522 0099 0B       		.uleb128 0xb
+ 523 009a 3B       		.uleb128 0x3b
+ 524 009b 0B       		.uleb128 0xb
+ 525 009c 27       		.uleb128 0x27
+ 526 009d 19       		.uleb128 0x19
+ 527 009e 49       		.uleb128 0x49
+ 528 009f 13       		.uleb128 0x13
+ 529 00a0 11       		.uleb128 0x11
+ 530 00a1 01       		.uleb128 0x1
+ 531 00a2 12       		.uleb128 0x12
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccr31OFZ.s 			page 13
+
+
+ 532 00a3 06       		.uleb128 0x6
+ 533 00a4 40       		.uleb128 0x40
+ 534 00a5 18       		.uleb128 0x18
+ 535 00a6 9742     		.uleb128 0x2117
+ 536 00a8 19       		.uleb128 0x19
+ 537 00a9 00       		.byte	0
+ 538 00aa 00       		.byte	0
+ 539 00ab 0C       		.uleb128 0xc
+ 540 00ac 2E       		.uleb128 0x2e
+ 541 00ad 01       		.byte	0x1
+ 542 00ae 3F       		.uleb128 0x3f
+ 543 00af 19       		.uleb128 0x19
+ 544 00b0 03       		.uleb128 0x3
+ 545 00b1 0E       		.uleb128 0xe
+ 546 00b2 3A       		.uleb128 0x3a
+ 547 00b3 0B       		.uleb128 0xb
+ 548 00b4 3B       		.uleb128 0x3b
+ 549 00b5 0B       		.uleb128 0xb
+ 550 00b6 27       		.uleb128 0x27
+ 551 00b7 19       		.uleb128 0x19
+ 552 00b8 49       		.uleb128 0x49
+ 553 00b9 13       		.uleb128 0x13
+ 554 00ba 11       		.uleb128 0x11
+ 555 00bb 01       		.uleb128 0x1
+ 556 00bc 12       		.uleb128 0x12
+ 557 00bd 06       		.uleb128 0x6
+ 558 00be 40       		.uleb128 0x40
+ 559 00bf 18       		.uleb128 0x18
+ 560 00c0 9742     		.uleb128 0x2117
+ 561 00c2 19       		.uleb128 0x19
+ 562 00c3 00       		.byte	0
+ 563 00c4 00       		.byte	0
+ 564 00c5 00       		.byte	0
+ 565              		.section	.debug_loc,"",%progbits
+ 566              	.Ldebug_loc0:
+ 567              	.LLST0:
+ 568 0000 00000000 		.4byte	.LVL2
+ 569 0004 5C000000 		.4byte	.LVL3
+ 570 0008 0100     		.2byte	0x1
+ 571 000a 50       		.byte	0x50
+ 572 000b 5C000000 		.4byte	.LVL3
+ 573 000f 80000000 		.4byte	.LFE1
+ 574 0013 0400     		.2byte	0x4
+ 575 0015 F3       		.byte	0xf3
+ 576 0016 01       		.uleb128 0x1
+ 577 0017 50       		.byte	0x50
+ 578 0018 9F       		.byte	0x9f
+ 579 0019 00000000 		.4byte	0
+ 580 001d 00000000 		.4byte	0
+ 581              		.section	.debug_aranges,"",%progbits
+ 582 0000 3C000000 		.4byte	0x3c
+ 583 0004 0200     		.2byte	0x2
+ 584 0006 00000000 		.4byte	.Ldebug_info0
+ 585 000a 04       		.byte	0x4
+ 586 000b 00       		.byte	0
+ 587 000c 0000     		.2byte	0
+ 588 000e 0000     		.2byte	0
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccr31OFZ.s 			page 14
+
+
+ 589 0010 00000000 		.4byte	.LFB0
+ 590 0014 0C000000 		.4byte	.LFE0-.LFB0
+ 591 0018 00000000 		.4byte	.LFB1
+ 592 001c 80000000 		.4byte	.LFE1-.LFB1
+ 593 0020 00000000 		.4byte	.LFB2
+ 594 0024 0C000000 		.4byte	.LFE2-.LFB2
+ 595 0028 00000000 		.4byte	.LFB3
+ 596 002c 0C000000 		.4byte	.LFE3-.LFB3
+ 597 0030 00000000 		.4byte	.LFB4
+ 598 0034 14000000 		.4byte	.LFE4-.LFB4
+ 599 0038 00000000 		.4byte	0
+ 600 003c 00000000 		.4byte	0
+ 601              		.section	.debug_ranges,"",%progbits
+ 602              	.Ldebug_ranges0:
+ 603 0000 00000000 		.4byte	.LFB0
+ 604 0004 0C000000 		.4byte	.LFE0
+ 605 0008 00000000 		.4byte	.LFB1
+ 606 000c 80000000 		.4byte	.LFE1
+ 607 0010 00000000 		.4byte	.LFB2
+ 608 0014 0C000000 		.4byte	.LFE2
+ 609 0018 00000000 		.4byte	.LFB3
+ 610 001c 0C000000 		.4byte	.LFE3
+ 611 0020 00000000 		.4byte	.LFB4
+ 612 0024 14000000 		.4byte	.LFE4
+ 613 0028 00000000 		.4byte	0
+ 614 002c 00000000 		.4byte	0
+ 615              		.section	.debug_line,"",%progbits
+ 616              	.Ldebug_line0:
+ 617 0000 AB000000 		.section	.debug_str,"MS",%progbits,1
+ 617      02004300 
+ 617      00000201 
+ 617      FB0E0D00 
+ 617      01010101 
+ 618              	.LASF14:
+ 619 0000 72656733 		.ascii	"reg32\000"
+ 619      3200
+ 620              	.LASF17:
+ 621 0006 76616C75 		.ascii	"value\000"
+ 621      6500
+ 622              	.LASF15:
+ 623 000c 41445F48 		.ascii	"AD_H_Write\000"
+ 623      5F577269 
+ 623      746500
+ 624              	.LASF19:
+ 625 0017 41445F48 		.ascii	"AD_H_Read\000"
+ 625      5F526561 
+ 625      6400
+ 626              	.LASF11:
+ 627 0021 666C6F61 		.ascii	"float\000"
+ 627      7400
+ 628              	.LASF1:
+ 629 0027 756E7369 		.ascii	"unsigned char\000"
+ 629      676E6564 
+ 629      20636861 
+ 629      7200
+ 630              	.LASF22:
+ 631 0035 64725661 		.ascii	"drVal\000"
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccr31OFZ.s 			page 15
+
+
+ 631      6C00
+ 632              	.LASF5:
+ 633 003b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 633      20756E73 
+ 633      69676E65 
+ 633      6420696E 
+ 633      7400
+ 634              	.LASF3:
+ 635 004d 73686F72 		.ascii	"short unsigned int\000"
+ 635      7420756E 
+ 635      7369676E 
+ 635      65642069 
+ 635      6E7400
+ 636              	.LASF21:
+ 637 0060 41445F48 		.ascii	"AD_H_ClearInterrupt\000"
+ 637      5F436C65 
+ 637      6172496E 
+ 637      74657272 
+ 637      75707400 
+ 638              	.LASF12:
+ 639 0074 646F7562 		.ascii	"double\000"
+ 639      6C6500
+ 640              	.LASF16:
+ 641 007b 41445F48 		.ascii	"AD_H_SetDriveMode\000"
+ 641      5F536574 
+ 641      44726976 
+ 641      654D6F64 
+ 641      6500
+ 642              	.LASF10:
+ 643 008d 75696E74 		.ascii	"uint32\000"
+ 643      333200
+ 644              	.LASF25:
+ 645 0094 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\AD_H.c\000"
+ 645      6E657261 
+ 645      7465645F 
+ 645      536F7572 
+ 645      63655C50 
+ 646              	.LASF8:
+ 647 00b4 756E7369 		.ascii	"unsigned int\000"
+ 647      676E6564 
+ 647      20696E74 
+ 647      00
+ 648              	.LASF7:
+ 649 00c1 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 649      206C6F6E 
+ 649      6720756E 
+ 649      7369676E 
+ 649      65642069 
+ 650              	.LASF18:
+ 651 00d8 6D6F6465 		.ascii	"mode\000"
+ 651      00
+ 652              	.LASF6:
+ 653 00dd 6C6F6E67 		.ascii	"long long int\000"
+ 653      206C6F6E 
+ 653      6720696E 
+ 653      7400
+ 654              	.LASF23:
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccr31OFZ.s 			page 16
+
+
+ 655 00eb 6D61736B 		.ascii	"maskedStatus\000"
+ 655      65645374 
+ 655      61747573 
+ 655      00
+ 656              	.LASF13:
+ 657 00f8 63686172 		.ascii	"char\000"
+ 657      00
+ 658              	.LASF24:
+ 659 00fd 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 659      4320342E 
+ 659      392E3320 
+ 659      32303135 
+ 659      30333033 
+ 660 0130 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 660      20726576 
+ 660      6973696F 
+ 660      6E203232 
+ 660      31323230 
+ 661 0163 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 661      66756E63 
+ 661      74696F6E 
+ 661      2D736563 
+ 661      74696F6E 
+ 662              	.LASF2:
+ 663 018b 73686F72 		.ascii	"short int\000"
+ 663      7420696E 
+ 663      7400
+ 664              	.LASF9:
+ 665 0195 75696E74 		.ascii	"uint8\000"
+ 665      3800
+ 666              	.LASF20:
+ 667 019b 41445F48 		.ascii	"AD_H_ReadDataReg\000"
+ 667      5F526561 
+ 667      64446174 
+ 667      61526567 
+ 667      00
+ 668              	.LASF4:
+ 669 01ac 6C6F6E67 		.ascii	"long int\000"
+ 669      20696E74 
+ 669      00
+ 670              	.LASF26:
+ 671 01b5 453A5C68 		.ascii	"E:\\home\\jarik\\src\\psoc\\mpi_rom_emu\\mpi_rom_em"
+ 671      6F6D655C 
+ 671      6A617269 
+ 671      6B5C7372 
+ 671      635C7073 
+ 672 01e2 752E6379 		.ascii	"u.cydsn\000"
+ 672      64736E00 
+ 673              	.LASF0:
+ 674 01ea 7369676E 		.ascii	"signed char\000"
+ 674      65642063 
+ 674      68617200 
+ 675              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

@@ -1,0 +1,419 @@
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccF1DmgG.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"cymetadata.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.global	cy_meta_chipprotect
+  18              		.global	cy_metadata
+  19              		.global	cy_meta_flashprotect
+  20              		.section	.cychipprotect,"a",%progbits
+  21              		.type	cy_meta_chipprotect, %object
+  22              		.size	cy_meta_chipprotect, 1
+  23              	cy_meta_chipprotect:
+  24 0000 01       		.byte	1
+  25              		.section	.cymeta,"a",%progbits
+  26              		.type	cy_metadata, %object
+  27              		.size	cy_metadata, 12
+  28              	cy_metadata:
+  29 0000 00       		.byte	0
+  30 0001 02       		.byte	2
+  31 0002 04       		.byte	4
+  32 0003 C8       		.byte	-56
+  33 0004 11       		.byte	17
+  34 0005 93       		.byte	-109
+  35 0006 11       		.byte	17
+  36 0007 01       		.byte	1
+  37 0008 00       		.byte	0
+  38 0009 00       		.byte	0
+  39 000a 00       		.byte	0
+  40 000b 00       		.byte	0
+  41              		.section	.cyflashprotect,"a",%progbits
+  42              		.type	cy_meta_flashprotect, %object
+  43              		.size	cy_meta_flashprotect, 32
+  44              	cy_meta_flashprotect:
+  45 0000 00000000 		.space	32
+  45      00000000 
+  45      00000000 
+  45      00000000 
+  45      00000000 
+  46              		.text
+  47              	.Letext0:
+  48              		.file 1 ".\\Generated_Source\\PSoC4\\cymetadata.c"
+  49              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+  50              		.section	.debug_info,"",%progbits
+  51              	.Ldebug_info0:
+  52 0000 F9000000 		.4byte	0xf9
+  53 0004 0400     		.2byte	0x4
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccF1DmgG.s 			page 2
+
+
+  54 0006 00000000 		.4byte	.Ldebug_abbrev0
+  55 000a 04       		.byte	0x4
+  56 000b 01       		.uleb128 0x1
+  57 000c 14000000 		.4byte	.LASF16
+  58 0010 01       		.byte	0x1
+  59 0011 EE000000 		.4byte	.LASF17
+  60 0015 82010000 		.4byte	.LASF18
+  61 0019 00000000 		.4byte	.Ldebug_line0
+  62 001d 02       		.uleb128 0x2
+  63 001e 01       		.byte	0x1
+  64 001f 06       		.byte	0x6
+  65 0020 B7010000 		.4byte	.LASF0
+  66 0024 02       		.uleb128 0x2
+  67 0025 01       		.byte	0x1
+  68 0026 08       		.byte	0x8
+  69 0027 B4000000 		.4byte	.LASF1
+  70 002b 02       		.uleb128 0x2
+  71 002c 02       		.byte	0x2
+  72 002d 05       		.byte	0x5
+  73 002e 69010000 		.4byte	.LASF2
+  74 0032 02       		.uleb128 0x2
+  75 0033 02       		.byte	0x2
+  76 0034 07       		.byte	0x7
+  77 0035 D4000000 		.4byte	.LASF3
+  78 0039 02       		.uleb128 0x2
+  79 003a 04       		.byte	0x4
+  80 003b 05       		.byte	0x5
+  81 003c 79010000 		.4byte	.LASF4
+  82 0040 02       		.uleb128 0x2
+  83 0041 04       		.byte	0x4
+  84 0042 07       		.byte	0x7
+  85 0043 C2000000 		.4byte	.LASF5
+  86 0047 02       		.uleb128 0x2
+  87 0048 08       		.byte	0x8
+  88 0049 05       		.byte	0x5
+  89 004a 56010000 		.4byte	.LASF6
+  90 004e 02       		.uleb128 0x2
+  91 004f 08       		.byte	0x8
+  92 0050 07       		.byte	0x7
+  93 0051 21010000 		.4byte	.LASF7
+  94 0055 03       		.uleb128 0x3
+  95 0056 04       		.byte	0x4
+  96 0057 05       		.byte	0x5
+  97 0058 696E7400 		.ascii	"int\000"
+  98 005c 02       		.uleb128 0x2
+  99 005d 04       		.byte	0x4
+ 100 005e 07       		.byte	0x7
+ 101 005f 14010000 		.4byte	.LASF8
+ 102 0063 04       		.uleb128 0x4
+ 103 0064 73010000 		.4byte	.LASF19
+ 104 0068 02       		.byte	0x2
+ 105 0069 C2       		.byte	0xc2
+ 106 006a 24000000 		.4byte	0x24
+ 107 006e 02       		.uleb128 0x2
+ 108 006f 04       		.byte	0x4
+ 109 0070 04       		.byte	0x4
+ 110 0071 AE000000 		.4byte	.LASF9
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccF1DmgG.s 			page 3
+
+
+ 111 0075 02       		.uleb128 0x2
+ 112 0076 08       		.byte	0x8
+ 113 0077 04       		.byte	0x4
+ 114 0078 E7000000 		.4byte	.LASF10
+ 115 007c 02       		.uleb128 0x2
+ 116 007d 01       		.byte	0x1
+ 117 007e 08       		.byte	0x8
+ 118 007f 64010000 		.4byte	.LASF11
+ 119 0083 05       		.uleb128 0x5
+ 120 0084 63000000 		.4byte	0x63
+ 121 0088 93000000 		.4byte	0x93
+ 122 008c 06       		.uleb128 0x6
+ 123 008d 93000000 		.4byte	0x93
+ 124 0091 1F       		.byte	0x1f
+ 125 0092 00       		.byte	0
+ 126 0093 02       		.uleb128 0x2
+ 127 0094 04       		.byte	0x4
+ 128 0095 07       		.byte	0x7
+ 129 0096 4D010000 		.4byte	.LASF12
+ 130 009a 07       		.uleb128 0x7
+ 131 009b 38010000 		.4byte	.LASF13
+ 132 009f 01       		.byte	0x1
+ 133 00a0 1C       		.byte	0x1c
+ 134 00a1 AB000000 		.4byte	0xab
+ 135 00a5 05       		.uleb128 0x5
+ 136 00a6 03       		.byte	0x3
+ 137 00a7 00000000 		.4byte	cy_meta_flashprotect
+ 138 00ab 08       		.uleb128 0x8
+ 139 00ac 83000000 		.4byte	0x83
+ 140 00b0 05       		.uleb128 0x5
+ 141 00b1 63000000 		.4byte	0x63
+ 142 00b5 C0000000 		.4byte	0xc0
+ 143 00b9 06       		.uleb128 0x6
+ 144 00ba 93000000 		.4byte	0x93
+ 145 00be 0B       		.byte	0xb
+ 146 00bf 00       		.byte	0
+ 147 00c0 07       		.uleb128 0x7
+ 148 00c1 A2000000 		.4byte	.LASF14
+ 149 00c5 01       		.byte	0x1
+ 150 00c6 2A       		.byte	0x2a
+ 151 00c7 D1000000 		.4byte	0xd1
+ 152 00cb 05       		.uleb128 0x5
+ 153 00cc 03       		.byte	0x3
+ 154 00cd 00000000 		.4byte	cy_metadata
+ 155 00d1 08       		.uleb128 0x8
+ 156 00d2 B0000000 		.4byte	0xb0
+ 157 00d6 05       		.uleb128 0x5
+ 158 00d7 63000000 		.4byte	0x63
+ 159 00db E6000000 		.4byte	0xe6
+ 160 00df 06       		.uleb128 0x6
+ 161 00e0 93000000 		.4byte	0x93
+ 162 00e4 00       		.byte	0
+ 163 00e5 00       		.byte	0
+ 164 00e6 07       		.uleb128 0x7
+ 165 00e7 00000000 		.4byte	.LASF15
+ 166 00eb 01       		.byte	0x1
+ 167 00ec 36       		.byte	0x36
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccF1DmgG.s 			page 4
+
+
+ 168 00ed F7000000 		.4byte	0xf7
+ 169 00f1 05       		.uleb128 0x5
+ 170 00f2 03       		.byte	0x3
+ 171 00f3 00000000 		.4byte	cy_meta_chipprotect
+ 172 00f7 08       		.uleb128 0x8
+ 173 00f8 D6000000 		.4byte	0xd6
+ 174 00fc 00       		.byte	0
+ 175              		.section	.debug_abbrev,"",%progbits
+ 176              	.Ldebug_abbrev0:
+ 177 0000 01       		.uleb128 0x1
+ 178 0001 11       		.uleb128 0x11
+ 179 0002 01       		.byte	0x1
+ 180 0003 25       		.uleb128 0x25
+ 181 0004 0E       		.uleb128 0xe
+ 182 0005 13       		.uleb128 0x13
+ 183 0006 0B       		.uleb128 0xb
+ 184 0007 03       		.uleb128 0x3
+ 185 0008 0E       		.uleb128 0xe
+ 186 0009 1B       		.uleb128 0x1b
+ 187 000a 0E       		.uleb128 0xe
+ 188 000b 10       		.uleb128 0x10
+ 189 000c 17       		.uleb128 0x17
+ 190 000d 00       		.byte	0
+ 191 000e 00       		.byte	0
+ 192 000f 02       		.uleb128 0x2
+ 193 0010 24       		.uleb128 0x24
+ 194 0011 00       		.byte	0
+ 195 0012 0B       		.uleb128 0xb
+ 196 0013 0B       		.uleb128 0xb
+ 197 0014 3E       		.uleb128 0x3e
+ 198 0015 0B       		.uleb128 0xb
+ 199 0016 03       		.uleb128 0x3
+ 200 0017 0E       		.uleb128 0xe
+ 201 0018 00       		.byte	0
+ 202 0019 00       		.byte	0
+ 203 001a 03       		.uleb128 0x3
+ 204 001b 24       		.uleb128 0x24
+ 205 001c 00       		.byte	0
+ 206 001d 0B       		.uleb128 0xb
+ 207 001e 0B       		.uleb128 0xb
+ 208 001f 3E       		.uleb128 0x3e
+ 209 0020 0B       		.uleb128 0xb
+ 210 0021 03       		.uleb128 0x3
+ 211 0022 08       		.uleb128 0x8
+ 212 0023 00       		.byte	0
+ 213 0024 00       		.byte	0
+ 214 0025 04       		.uleb128 0x4
+ 215 0026 16       		.uleb128 0x16
+ 216 0027 00       		.byte	0
+ 217 0028 03       		.uleb128 0x3
+ 218 0029 0E       		.uleb128 0xe
+ 219 002a 3A       		.uleb128 0x3a
+ 220 002b 0B       		.uleb128 0xb
+ 221 002c 3B       		.uleb128 0x3b
+ 222 002d 0B       		.uleb128 0xb
+ 223 002e 49       		.uleb128 0x49
+ 224 002f 13       		.uleb128 0x13
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccF1DmgG.s 			page 5
+
+
+ 225 0030 00       		.byte	0
+ 226 0031 00       		.byte	0
+ 227 0032 05       		.uleb128 0x5
+ 228 0033 01       		.uleb128 0x1
+ 229 0034 01       		.byte	0x1
+ 230 0035 49       		.uleb128 0x49
+ 231 0036 13       		.uleb128 0x13
+ 232 0037 01       		.uleb128 0x1
+ 233 0038 13       		.uleb128 0x13
+ 234 0039 00       		.byte	0
+ 235 003a 00       		.byte	0
+ 236 003b 06       		.uleb128 0x6
+ 237 003c 21       		.uleb128 0x21
+ 238 003d 00       		.byte	0
+ 239 003e 49       		.uleb128 0x49
+ 240 003f 13       		.uleb128 0x13
+ 241 0040 2F       		.uleb128 0x2f
+ 242 0041 0B       		.uleb128 0xb
+ 243 0042 00       		.byte	0
+ 244 0043 00       		.byte	0
+ 245 0044 07       		.uleb128 0x7
+ 246 0045 34       		.uleb128 0x34
+ 247 0046 00       		.byte	0
+ 248 0047 03       		.uleb128 0x3
+ 249 0048 0E       		.uleb128 0xe
+ 250 0049 3A       		.uleb128 0x3a
+ 251 004a 0B       		.uleb128 0xb
+ 252 004b 3B       		.uleb128 0x3b
+ 253 004c 0B       		.uleb128 0xb
+ 254 004d 49       		.uleb128 0x49
+ 255 004e 13       		.uleb128 0x13
+ 256 004f 3F       		.uleb128 0x3f
+ 257 0050 19       		.uleb128 0x19
+ 258 0051 02       		.uleb128 0x2
+ 259 0052 18       		.uleb128 0x18
+ 260 0053 00       		.byte	0
+ 261 0054 00       		.byte	0
+ 262 0055 08       		.uleb128 0x8
+ 263 0056 26       		.uleb128 0x26
+ 264 0057 00       		.byte	0
+ 265 0058 49       		.uleb128 0x49
+ 266 0059 13       		.uleb128 0x13
+ 267 005a 00       		.byte	0
+ 268 005b 00       		.byte	0
+ 269 005c 00       		.byte	0
+ 270              		.section	.debug_aranges,"",%progbits
+ 271 0000 14000000 		.4byte	0x14
+ 272 0004 0200     		.2byte	0x2
+ 273 0006 00000000 		.4byte	.Ldebug_info0
+ 274 000a 04       		.byte	0x4
+ 275 000b 00       		.byte	0
+ 276 000c 0000     		.2byte	0
+ 277 000e 0000     		.2byte	0
+ 278 0010 00000000 		.4byte	0
+ 279 0014 00000000 		.4byte	0
+ 280              		.section	.debug_line,"",%progbits
+ 281              	.Ldebug_line0:
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccF1DmgG.s 			page 6
+
+
+ 282 0000 4F000000 		.section	.debug_str,"MS",%progbits,1
+ 282      02004900 
+ 282      00000201 
+ 282      FB0E0D00 
+ 282      01010101 
+ 283              	.LASF15:
+ 284 0000 63795F6D 		.ascii	"cy_meta_chipprotect\000"
+ 284      6574615F 
+ 284      63686970 
+ 284      70726F74 
+ 284      65637400 
+ 285              	.LASF16:
+ 286 0014 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 286      4320342E 
+ 286      392E3320 
+ 286      32303135 
+ 286      30333033 
+ 287 0047 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 287      20726576 
+ 287      6973696F 
+ 287      6E203232 
+ 287      31323230 
+ 288 007a 73202D66 		.ascii	"s -ffunction-sections -ffat-lto-objects\000"
+ 288      66756E63 
+ 288      74696F6E 
+ 288      2D736563 
+ 288      74696F6E 
+ 289              	.LASF14:
+ 290 00a2 63795F6D 		.ascii	"cy_metadata\000"
+ 290      65746164 
+ 290      61746100 
+ 291              	.LASF9:
+ 292 00ae 666C6F61 		.ascii	"float\000"
+ 292      7400
+ 293              	.LASF1:
+ 294 00b4 756E7369 		.ascii	"unsigned char\000"
+ 294      676E6564 
+ 294      20636861 
+ 294      7200
+ 295              	.LASF5:
+ 296 00c2 6C6F6E67 		.ascii	"long unsigned int\000"
+ 296      20756E73 
+ 296      69676E65 
+ 296      6420696E 
+ 296      7400
+ 297              	.LASF3:
+ 298 00d4 73686F72 		.ascii	"short unsigned int\000"
+ 298      7420756E 
+ 298      7369676E 
+ 298      65642069 
+ 298      6E7400
+ 299              	.LASF10:
+ 300 00e7 646F7562 		.ascii	"double\000"
+ 300      6C6500
+ 301              	.LASF17:
+ 302 00ee 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\cymetadata.c\000"
+ 302      6E657261 
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccF1DmgG.s 			page 7
+
+
+ 302      7465645F 
+ 302      536F7572 
+ 302      63655C50 
+ 303              	.LASF8:
+ 304 0114 756E7369 		.ascii	"unsigned int\000"
+ 304      676E6564 
+ 304      20696E74 
+ 304      00
+ 305              	.LASF7:
+ 306 0121 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 306      206C6F6E 
+ 306      6720756E 
+ 306      7369676E 
+ 306      65642069 
+ 307              	.LASF13:
+ 308 0138 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 308      6574615F 
+ 308      666C6173 
+ 308      6870726F 
+ 308      74656374 
+ 309              	.LASF12:
+ 310 014d 73697A65 		.ascii	"sizetype\000"
+ 310      74797065 
+ 310      00
+ 311              	.LASF6:
+ 312 0156 6C6F6E67 		.ascii	"long long int\000"
+ 312      206C6F6E 
+ 312      6720696E 
+ 312      7400
+ 313              	.LASF11:
+ 314 0164 63686172 		.ascii	"char\000"
+ 314      00
+ 315              	.LASF2:
+ 316 0169 73686F72 		.ascii	"short int\000"
+ 316      7420696E 
+ 316      7400
+ 317              	.LASF19:
+ 318 0173 75696E74 		.ascii	"uint8\000"
+ 318      3800
+ 319              	.LASF4:
+ 320 0179 6C6F6E67 		.ascii	"long int\000"
+ 320      20696E74 
+ 320      00
+ 321              	.LASF18:
+ 322 0182 453A5C68 		.ascii	"E:\\home\\jarik\\src\\psoc\\mpi_rom_emu\\mpi_rom_em"
+ 322      6F6D655C 
+ 322      6A617269 
+ 322      6B5C7372 
+ 322      635C7073 
+ 323 01af 752E6379 		.ascii	"u.cydsn\000"
+ 323      64736E00 
+ 324              	.LASF0:
+ 325 01b7 7369676E 		.ascii	"signed char\000"
+ 325      65642063 
+ 325      68617200 
+ 326              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

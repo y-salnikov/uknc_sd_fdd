@@ -1,3 +1,0 @@
---------------- Rebuild Started: 08/07/2015 16:18:14 Project: cmd.c, Configuration: ARM GCC 4.8.4 Debug ---------------
-arm-none-eabi-gcc.exe -mcpu=cortex-m0 -mthumb -Wno-main -I. -IGenerated_Source\PSoC4 -Wa,-alh=.\CortexM0\ARM_GCC_484\Debug/cmd.lst -g -D DEBUG -Wall -ffunction-sections -O2 -c .\cmd.c -o .\CortexM0\ARM_GCC_484\Debug\cmd.o
---------------- Rebuild Succeeded: 08/07/2015 16:18:15 ---------------

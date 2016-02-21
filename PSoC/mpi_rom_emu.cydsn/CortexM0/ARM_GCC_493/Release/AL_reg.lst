@@ -1,0 +1,941 @@
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccORyYsn.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"AL_reg.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.AL_reg_Read,"ax",%progbits
+  18              		.align	1
+  19              		.global	AL_reg_Read
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	AL_reg_Read, %function
+  23              	AL_reg_Read:
+  24              	.LFB0:
+  25              		.file 1 ".\\Generated_Source\\PSoC4\\AL_reg.c"
+   1:.\Generated_Source\PSoC4/AL_reg.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/AL_reg.c **** * File Name: AL_reg.c  
+   3:.\Generated_Source\PSoC4/AL_reg.c **** * Version 1.90
+   4:.\Generated_Source\PSoC4/AL_reg.c **** *
+   5:.\Generated_Source\PSoC4/AL_reg.c **** * Description:
+   6:.\Generated_Source\PSoC4/AL_reg.c **** *  This file contains API to enable firmware to read the value of a Status 
+   7:.\Generated_Source\PSoC4/AL_reg.c **** *  Register.
+   8:.\Generated_Source\PSoC4/AL_reg.c **** *
+   9:.\Generated_Source\PSoC4/AL_reg.c **** * Note:
+  10:.\Generated_Source\PSoC4/AL_reg.c **** *
+  11:.\Generated_Source\PSoC4/AL_reg.c **** ********************************************************************************
+  12:.\Generated_Source\PSoC4/AL_reg.c **** * Copyright 2008-2015, Cypress Semiconductor Corporation.  All rights reserved.
+  13:.\Generated_Source\PSoC4/AL_reg.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  14:.\Generated_Source\PSoC4/AL_reg.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  15:.\Generated_Source\PSoC4/AL_reg.c **** * the software package with which this file was provided.
+  16:.\Generated_Source\PSoC4/AL_reg.c **** *******************************************************************************/
+  17:.\Generated_Source\PSoC4/AL_reg.c **** 
+  18:.\Generated_Source\PSoC4/AL_reg.c **** #include "AL_reg.h"
+  19:.\Generated_Source\PSoC4/AL_reg.c **** 
+  20:.\Generated_Source\PSoC4/AL_reg.c **** #if !defined(AL_reg_sts_sts_reg__REMOVED) /* Check for removal by optimization */
+  21:.\Generated_Source\PSoC4/AL_reg.c **** 
+  22:.\Generated_Source\PSoC4/AL_reg.c **** 
+  23:.\Generated_Source\PSoC4/AL_reg.c **** /*******************************************************************************
+  24:.\Generated_Source\PSoC4/AL_reg.c **** * Function Name: AL_reg_Read
+  25:.\Generated_Source\PSoC4/AL_reg.c **** ********************************************************************************
+  26:.\Generated_Source\PSoC4/AL_reg.c **** *
+  27:.\Generated_Source\PSoC4/AL_reg.c **** * Summary:
+  28:.\Generated_Source\PSoC4/AL_reg.c **** *  Reads the current value assigned to the Status Register.
+  29:.\Generated_Source\PSoC4/AL_reg.c **** *
+  30:.\Generated_Source\PSoC4/AL_reg.c **** * Parameters:
+  31:.\Generated_Source\PSoC4/AL_reg.c **** *  None.
+  32:.\Generated_Source\PSoC4/AL_reg.c **** *
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccORyYsn.s 			page 2
+
+
+  33:.\Generated_Source\PSoC4/AL_reg.c **** * Return:
+  34:.\Generated_Source\PSoC4/AL_reg.c **** *  The current value in the Status Register.
+  35:.\Generated_Source\PSoC4/AL_reg.c **** *
+  36:.\Generated_Source\PSoC4/AL_reg.c **** *******************************************************************************/
+  37:.\Generated_Source\PSoC4/AL_reg.c **** uint8 AL_reg_Read(void) 
+  38:.\Generated_Source\PSoC4/AL_reg.c **** { 
+  26              		.loc 1 38 0
+  27              		.cfi_startproc
+  39:.\Generated_Source\PSoC4/AL_reg.c ****     return AL_reg_Status;
+  28              		.loc 1 39 0
+  29 0000 014B     		ldr	r3, .L2
+  40:.\Generated_Source\PSoC4/AL_reg.c **** }
+  30              		.loc 1 40 0
+  31              		@ sp needed
+  39:.\Generated_Source\PSoC4/AL_reg.c ****     return AL_reg_Status;
+  32              		.loc 1 39 0
+  33 0002 1878     		ldrb	r0, [r3]
+  34 0004 C0B2     		uxtb	r0, r0
+  35              		.loc 1 40 0
+  36 0006 7047     		bx	lr
+  37              	.L3:
+  38              		.align	2
+  39              	.L2:
+  40 0008 62000F40 		.word	1074724962
+  41              		.cfi_endproc
+  42              	.LFE0:
+  43              		.size	AL_reg_Read, .-AL_reg_Read
+  44              		.section	.text.AL_reg_InterruptEnable,"ax",%progbits
+  45              		.align	1
+  46              		.global	AL_reg_InterruptEnable
+  47              		.code	16
+  48              		.thumb_func
+  49              		.type	AL_reg_InterruptEnable, %function
+  50              	AL_reg_InterruptEnable:
+  51              	.LFB1:
+  41:.\Generated_Source\PSoC4/AL_reg.c **** 
+  42:.\Generated_Source\PSoC4/AL_reg.c **** 
+  43:.\Generated_Source\PSoC4/AL_reg.c **** /*******************************************************************************
+  44:.\Generated_Source\PSoC4/AL_reg.c **** * Function Name: AL_reg_InterruptEnable
+  45:.\Generated_Source\PSoC4/AL_reg.c **** ********************************************************************************
+  46:.\Generated_Source\PSoC4/AL_reg.c **** *
+  47:.\Generated_Source\PSoC4/AL_reg.c **** * Summary:
+  48:.\Generated_Source\PSoC4/AL_reg.c **** *  Enables the Status Register interrupt.
+  49:.\Generated_Source\PSoC4/AL_reg.c **** *
+  50:.\Generated_Source\PSoC4/AL_reg.c **** * Parameters:
+  51:.\Generated_Source\PSoC4/AL_reg.c **** *  None.
+  52:.\Generated_Source\PSoC4/AL_reg.c **** *
+  53:.\Generated_Source\PSoC4/AL_reg.c **** * Return:
+  54:.\Generated_Source\PSoC4/AL_reg.c **** *  None.
+  55:.\Generated_Source\PSoC4/AL_reg.c **** *
+  56:.\Generated_Source\PSoC4/AL_reg.c **** *******************************************************************************/
+  57:.\Generated_Source\PSoC4/AL_reg.c **** void AL_reg_InterruptEnable(void) 
+  58:.\Generated_Source\PSoC4/AL_reg.c **** {
+  52              		.loc 1 58 0
+  53              		.cfi_startproc
+  54 0000 08B5     		push	{r3, lr}
+  55              		.cfi_def_cfa_offset 8
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccORyYsn.s 			page 3
+
+
+  56              		.cfi_offset 3, -8
+  57              		.cfi_offset 14, -4
+  59:.\Generated_Source\PSoC4/AL_reg.c ****     uint8 interruptState;
+  60:.\Generated_Source\PSoC4/AL_reg.c ****     interruptState = CyEnterCriticalSection();
+  58              		.loc 1 60 0
+  59 0002 FFF7FEFF 		bl	CyEnterCriticalSection
+  60              	.LVL0:
+  61:.\Generated_Source\PSoC4/AL_reg.c ****     AL_reg_Status_Aux_Ctrl |= AL_reg_STATUS_INTR_ENBL;
+  61              		.loc 1 61 0
+  62 0006 1021     		mov	r1, #16
+  63 0008 034A     		ldr	r2, .L5
+  62:.\Generated_Source\PSoC4/AL_reg.c ****     CyExitCriticalSection(interruptState);
+  63:.\Generated_Source\PSoC4/AL_reg.c **** }
+  64              		.loc 1 63 0
+  65              		@ sp needed
+  61:.\Generated_Source\PSoC4/AL_reg.c ****     AL_reg_Status_Aux_Ctrl |= AL_reg_STATUS_INTR_ENBL;
+  66              		.loc 1 61 0
+  67 000a 1378     		ldrb	r3, [r2]
+  68 000c 0B43     		orr	r3, r1
+  69 000e 1370     		strb	r3, [r2]
+  62:.\Generated_Source\PSoC4/AL_reg.c ****     CyExitCriticalSection(interruptState);
+  70              		.loc 1 62 0
+  71 0010 FFF7FEFF 		bl	CyExitCriticalSection
+  72              	.LVL1:
+  73              		.loc 1 63 0
+  74 0014 08BD     		pop	{r3, pc}
+  75              	.L6:
+  76 0016 C046     		.align	2
+  77              	.L5:
+  78 0018 92000F40 		.word	1074725010
+  79              		.cfi_endproc
+  80              	.LFE1:
+  81              		.size	AL_reg_InterruptEnable, .-AL_reg_InterruptEnable
+  82              		.section	.text.AL_reg_InterruptDisable,"ax",%progbits
+  83              		.align	1
+  84              		.global	AL_reg_InterruptDisable
+  85              		.code	16
+  86              		.thumb_func
+  87              		.type	AL_reg_InterruptDisable, %function
+  88              	AL_reg_InterruptDisable:
+  89              	.LFB2:
+  64:.\Generated_Source\PSoC4/AL_reg.c **** 
+  65:.\Generated_Source\PSoC4/AL_reg.c **** 
+  66:.\Generated_Source\PSoC4/AL_reg.c **** /*******************************************************************************
+  67:.\Generated_Source\PSoC4/AL_reg.c **** * Function Name: AL_reg_InterruptDisable
+  68:.\Generated_Source\PSoC4/AL_reg.c **** ********************************************************************************
+  69:.\Generated_Source\PSoC4/AL_reg.c **** *
+  70:.\Generated_Source\PSoC4/AL_reg.c **** * Summary:
+  71:.\Generated_Source\PSoC4/AL_reg.c **** *  Disables the Status Register interrupt.
+  72:.\Generated_Source\PSoC4/AL_reg.c **** *
+  73:.\Generated_Source\PSoC4/AL_reg.c **** * Parameters:
+  74:.\Generated_Source\PSoC4/AL_reg.c **** *  None.
+  75:.\Generated_Source\PSoC4/AL_reg.c **** *
+  76:.\Generated_Source\PSoC4/AL_reg.c **** * Return:
+  77:.\Generated_Source\PSoC4/AL_reg.c **** *  None.
+  78:.\Generated_Source\PSoC4/AL_reg.c **** *
+  79:.\Generated_Source\PSoC4/AL_reg.c **** *******************************************************************************/
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccORyYsn.s 			page 4
+
+
+  80:.\Generated_Source\PSoC4/AL_reg.c **** void AL_reg_InterruptDisable(void) 
+  81:.\Generated_Source\PSoC4/AL_reg.c **** {
+  90              		.loc 1 81 0
+  91              		.cfi_startproc
+  92 0000 08B5     		push	{r3, lr}
+  93              		.cfi_def_cfa_offset 8
+  94              		.cfi_offset 3, -8
+  95              		.cfi_offset 14, -4
+  82:.\Generated_Source\PSoC4/AL_reg.c ****     uint8 interruptState;
+  83:.\Generated_Source\PSoC4/AL_reg.c ****     interruptState = CyEnterCriticalSection();
+  96              		.loc 1 83 0
+  97 0002 FFF7FEFF 		bl	CyEnterCriticalSection
+  98              	.LVL2:
+  84:.\Generated_Source\PSoC4/AL_reg.c ****     AL_reg_Status_Aux_Ctrl &= (uint8)(~AL_reg_STATUS_INTR_ENBL);
+  99              		.loc 1 84 0
+ 100 0006 1021     		mov	r1, #16
+ 101 0008 034A     		ldr	r2, .L8
+  85:.\Generated_Source\PSoC4/AL_reg.c ****     CyExitCriticalSection(interruptState);
+  86:.\Generated_Source\PSoC4/AL_reg.c **** }
+ 102              		.loc 1 86 0
+ 103              		@ sp needed
+  84:.\Generated_Source\PSoC4/AL_reg.c ****     AL_reg_Status_Aux_Ctrl &= (uint8)(~AL_reg_STATUS_INTR_ENBL);
+ 104              		.loc 1 84 0
+ 105 000a 1378     		ldrb	r3, [r2]
+ 106 000c 8B43     		bic	r3, r1
+ 107 000e 1370     		strb	r3, [r2]
+  85:.\Generated_Source\PSoC4/AL_reg.c ****     CyExitCriticalSection(interruptState);
+ 108              		.loc 1 85 0
+ 109 0010 FFF7FEFF 		bl	CyExitCriticalSection
+ 110              	.LVL3:
+ 111              		.loc 1 86 0
+ 112 0014 08BD     		pop	{r3, pc}
+ 113              	.L9:
+ 114 0016 C046     		.align	2
+ 115              	.L8:
+ 116 0018 92000F40 		.word	1074725010
+ 117              		.cfi_endproc
+ 118              	.LFE2:
+ 119              		.size	AL_reg_InterruptDisable, .-AL_reg_InterruptDisable
+ 120              		.section	.text.AL_reg_WriteMask,"ax",%progbits
+ 121              		.align	1
+ 122              		.global	AL_reg_WriteMask
+ 123              		.code	16
+ 124              		.thumb_func
+ 125              		.type	AL_reg_WriteMask, %function
+ 126              	AL_reg_WriteMask:
+ 127              	.LFB3:
+  87:.\Generated_Source\PSoC4/AL_reg.c **** 
+  88:.\Generated_Source\PSoC4/AL_reg.c **** 
+  89:.\Generated_Source\PSoC4/AL_reg.c **** /*******************************************************************************
+  90:.\Generated_Source\PSoC4/AL_reg.c **** * Function Name: AL_reg_WriteMask
+  91:.\Generated_Source\PSoC4/AL_reg.c **** ********************************************************************************
+  92:.\Generated_Source\PSoC4/AL_reg.c **** *
+  93:.\Generated_Source\PSoC4/AL_reg.c **** * Summary:
+  94:.\Generated_Source\PSoC4/AL_reg.c **** *  Writes the current mask value assigned to the Status Register.
+  95:.\Generated_Source\PSoC4/AL_reg.c **** *
+  96:.\Generated_Source\PSoC4/AL_reg.c **** * Parameters:
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccORyYsn.s 			page 5
+
+
+  97:.\Generated_Source\PSoC4/AL_reg.c **** *  mask:  Value to write into the mask register.
+  98:.\Generated_Source\PSoC4/AL_reg.c **** *
+  99:.\Generated_Source\PSoC4/AL_reg.c **** * Return:
+ 100:.\Generated_Source\PSoC4/AL_reg.c **** *  None.
+ 101:.\Generated_Source\PSoC4/AL_reg.c **** *
+ 102:.\Generated_Source\PSoC4/AL_reg.c **** *******************************************************************************/
+ 103:.\Generated_Source\PSoC4/AL_reg.c **** void AL_reg_WriteMask(uint8 mask) 
+ 104:.\Generated_Source\PSoC4/AL_reg.c **** {
+ 128              		.loc 1 104 0
+ 129              		.cfi_startproc
+ 130              	.LVL4:
+ 105:.\Generated_Source\PSoC4/AL_reg.c ****     #if(AL_reg_INPUTS < 8u)
+ 106:.\Generated_Source\PSoC4/AL_reg.c ****     	mask &= ((uint8)(1u << AL_reg_INPUTS) - 1u);
+ 107:.\Generated_Source\PSoC4/AL_reg.c **** 	#endif /* End AL_reg_INPUTS < 8u */
+ 108:.\Generated_Source\PSoC4/AL_reg.c ****     AL_reg_Status_Mask = mask;
+ 131              		.loc 1 108 0
+ 132 0000 014B     		ldr	r3, .L11
+ 109:.\Generated_Source\PSoC4/AL_reg.c **** }
+ 133              		.loc 1 109 0
+ 134              		@ sp needed
+ 108:.\Generated_Source\PSoC4/AL_reg.c **** }
+ 135              		.loc 1 108 0
+ 136 0002 1870     		strb	r0, [r3]
+ 137              		.loc 1 109 0
+ 138 0004 7047     		bx	lr
+ 139              	.L12:
+ 140 0006 C046     		.align	2
+ 141              	.L11:
+ 142 0008 82000F40 		.word	1074724994
+ 143              		.cfi_endproc
+ 144              	.LFE3:
+ 145              		.size	AL_reg_WriteMask, .-AL_reg_WriteMask
+ 146              		.section	.text.AL_reg_ReadMask,"ax",%progbits
+ 147              		.align	1
+ 148              		.global	AL_reg_ReadMask
+ 149              		.code	16
+ 150              		.thumb_func
+ 151              		.type	AL_reg_ReadMask, %function
+ 152              	AL_reg_ReadMask:
+ 153              	.LFB4:
+ 110:.\Generated_Source\PSoC4/AL_reg.c **** 
+ 111:.\Generated_Source\PSoC4/AL_reg.c **** 
+ 112:.\Generated_Source\PSoC4/AL_reg.c **** /*******************************************************************************
+ 113:.\Generated_Source\PSoC4/AL_reg.c **** * Function Name: AL_reg_ReadMask
+ 114:.\Generated_Source\PSoC4/AL_reg.c **** ********************************************************************************
+ 115:.\Generated_Source\PSoC4/AL_reg.c **** *
+ 116:.\Generated_Source\PSoC4/AL_reg.c **** * Summary:
+ 117:.\Generated_Source\PSoC4/AL_reg.c **** *  Reads the current interrupt mask assigned to the Status Register.
+ 118:.\Generated_Source\PSoC4/AL_reg.c **** *
+ 119:.\Generated_Source\PSoC4/AL_reg.c **** * Parameters:
+ 120:.\Generated_Source\PSoC4/AL_reg.c **** *  None.
+ 121:.\Generated_Source\PSoC4/AL_reg.c **** *
+ 122:.\Generated_Source\PSoC4/AL_reg.c **** * Return:
+ 123:.\Generated_Source\PSoC4/AL_reg.c **** *  The value of the interrupt mask of the Status Register.
+ 124:.\Generated_Source\PSoC4/AL_reg.c **** *
+ 125:.\Generated_Source\PSoC4/AL_reg.c **** *******************************************************************************/
+ 126:.\Generated_Source\PSoC4/AL_reg.c **** uint8 AL_reg_ReadMask(void) 
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccORyYsn.s 			page 6
+
+
+ 127:.\Generated_Source\PSoC4/AL_reg.c **** {
+ 154              		.loc 1 127 0
+ 155              		.cfi_startproc
+ 128:.\Generated_Source\PSoC4/AL_reg.c ****     return AL_reg_Status_Mask;
+ 156              		.loc 1 128 0
+ 157 0000 014B     		ldr	r3, .L14
+ 129:.\Generated_Source\PSoC4/AL_reg.c **** }
+ 158              		.loc 1 129 0
+ 159              		@ sp needed
+ 128:.\Generated_Source\PSoC4/AL_reg.c ****     return AL_reg_Status_Mask;
+ 160              		.loc 1 128 0
+ 161 0002 1878     		ldrb	r0, [r3]
+ 162 0004 C0B2     		uxtb	r0, r0
+ 163              		.loc 1 129 0
+ 164 0006 7047     		bx	lr
+ 165              	.L15:
+ 166              		.align	2
+ 167              	.L14:
+ 168 0008 82000F40 		.word	1074724994
+ 169              		.cfi_endproc
+ 170              	.LFE4:
+ 171              		.size	AL_reg_ReadMask, .-AL_reg_ReadMask
+ 172              		.text
+ 173              	.Letext0:
+ 174              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+ 175              		.file 3 ".\\Generated_Source\\PSoC4\\CyLib.h"
+ 176              		.section	.debug_info,"",%progbits
+ 177              	.Ldebug_info0:
+ 178 0000 73010000 		.4byte	0x173
+ 179 0004 0400     		.2byte	0x4
+ 180 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 181 000a 04       		.byte	0x4
+ 182 000b 01       		.uleb128 0x1
+ 183 000c 68000000 		.4byte	.LASF21
+ 184 0010 01       		.byte	0x1
+ 185 0011 1F010000 		.4byte	.LASF22
+ 186 0015 41010000 		.4byte	.LASF23
+ 187 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 188 001d 00000000 		.4byte	0
+ 189 0021 00000000 		.4byte	.Ldebug_line0
+ 190 0025 02       		.uleb128 0x2
+ 191 0026 01       		.byte	0x1
+ 192 0027 06       		.byte	0x6
+ 193 0028 C5010000 		.4byte	.LASF0
+ 194 002c 02       		.uleb128 0x2
+ 195 002d 01       		.byte	0x1
+ 196 002e 08       		.byte	0x8
+ 197 002f 7B010000 		.4byte	.LASF1
+ 198 0033 02       		.uleb128 0x2
+ 199 0034 02       		.byte	0x2
+ 200 0035 05       		.byte	0x5
+ 201 0036 ED010000 		.4byte	.LASF2
+ 202 003a 02       		.uleb128 0x2
+ 203 003b 02       		.byte	0x2
+ 204 003c 07       		.byte	0x7
+ 205 003d 0E000000 		.4byte	.LASF3
+ 206 0041 02       		.uleb128 0x2
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccORyYsn.s 			page 7
+
+
+ 207 0042 04       		.byte	0x4
+ 208 0043 05       		.byte	0x5
+ 209 0044 8E010000 		.4byte	.LASF4
+ 210 0048 02       		.uleb128 0x2
+ 211 0049 04       		.byte	0x4
+ 212 004a 07       		.byte	0x7
+ 213 004b F6000000 		.4byte	.LASF5
+ 214 004f 02       		.uleb128 0x2
+ 215 0050 08       		.byte	0x8
+ 216 0051 05       		.byte	0x5
+ 217 0052 00000000 		.4byte	.LASF6
+ 218 0056 02       		.uleb128 0x2
+ 219 0057 08       		.byte	0x8
+ 220 0058 07       		.byte	0x7
+ 221 0059 08010000 		.4byte	.LASF7
+ 222 005d 03       		.uleb128 0x3
+ 223 005e 04       		.byte	0x4
+ 224 005f 05       		.byte	0x5
+ 225 0060 696E7400 		.ascii	"int\000"
+ 226 0064 02       		.uleb128 0x2
+ 227 0065 04       		.byte	0x4
+ 228 0066 07       		.byte	0x7
+ 229 0067 21000000 		.4byte	.LASF8
+ 230 006b 04       		.uleb128 0x4
+ 231 006c BF010000 		.4byte	.LASF12
+ 232 0070 02       		.byte	0x2
+ 233 0071 C2       		.byte	0xc2
+ 234 0072 2C000000 		.4byte	0x2c
+ 235 0076 02       		.uleb128 0x2
+ 236 0077 04       		.byte	0x4
+ 237 0078 04       		.byte	0x4
+ 238 0079 E7010000 		.4byte	.LASF9
+ 239 007d 02       		.uleb128 0x2
+ 240 007e 08       		.byte	0x8
+ 241 007f 04       		.byte	0x4
+ 242 0080 A7010000 		.4byte	.LASF10
+ 243 0084 02       		.uleb128 0x2
+ 244 0085 01       		.byte	0x1
+ 245 0086 08       		.byte	0x8
+ 246 0087 89010000 		.4byte	.LASF11
+ 247 008b 05       		.uleb128 0x5
+ 248 008c F7010000 		.4byte	.LASF13
+ 249 0090 02       		.byte	0x2
+ 250 0091 6C01     		.2byte	0x16c
+ 251 0093 97000000 		.4byte	0x97
+ 252 0097 06       		.uleb128 0x6
+ 253 0098 6B000000 		.4byte	0x6b
+ 254 009c 02       		.uleb128 0x2
+ 255 009d 04       		.byte	0x4
+ 256 009e 07       		.byte	0x7
+ 257 009f FC010000 		.4byte	.LASF14
+ 258 00a3 07       		.uleb128 0x7
+ 259 00a4 2E000000 		.4byte	.LASF19
+ 260 00a8 01       		.byte	0x1
+ 261 00a9 25       		.byte	0x25
+ 262 00aa 6B000000 		.4byte	0x6b
+ 263 00ae 00000000 		.4byte	.LFB0
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccORyYsn.s 			page 8
+
+
+ 264 00b2 0C000000 		.4byte	.LFE0-.LFB0
+ 265 00b6 01       		.uleb128 0x1
+ 266 00b7 9C       		.byte	0x9c
+ 267 00b8 08       		.uleb128 0x8
+ 268 00b9 51000000 		.4byte	.LASF15
+ 269 00bd 01       		.byte	0x1
+ 270 00be 39       		.byte	0x39
+ 271 00bf 00000000 		.4byte	.LFB1
+ 272 00c3 1C000000 		.4byte	.LFE1-.LFB1
+ 273 00c7 01       		.uleb128 0x1
+ 274 00c8 9C       		.byte	0x9c
+ 275 00c9 EF000000 		.4byte	0xef
+ 276 00cd 09       		.uleb128 0x9
+ 277 00ce 05020000 		.4byte	.LASF17
+ 278 00d2 01       		.byte	0x1
+ 279 00d3 3B       		.byte	0x3b
+ 280 00d4 6B000000 		.4byte	0x6b
+ 281 00d8 00000000 		.4byte	.LLST0
+ 282 00dc 0A       		.uleb128 0xa
+ 283 00dd 06000000 		.4byte	.LVL0
+ 284 00e1 5E010000 		.4byte	0x15e
+ 285 00e5 0A       		.uleb128 0xa
+ 286 00e6 14000000 		.4byte	.LVL1
+ 287 00ea 69010000 		.4byte	0x169
+ 288 00ee 00       		.byte	0
+ 289 00ef 08       		.uleb128 0x8
+ 290 00f0 14020000 		.4byte	.LASF16
+ 291 00f4 01       		.byte	0x1
+ 292 00f5 50       		.byte	0x50
+ 293 00f6 00000000 		.4byte	.LFB2
+ 294 00fa 1C000000 		.4byte	.LFE2-.LFB2
+ 295 00fe 01       		.uleb128 0x1
+ 296 00ff 9C       		.byte	0x9c
+ 297 0100 26010000 		.4byte	0x126
+ 298 0104 09       		.uleb128 0x9
+ 299 0105 05020000 		.4byte	.LASF17
+ 300 0109 01       		.byte	0x1
+ 301 010a 52       		.byte	0x52
+ 302 010b 6B000000 		.4byte	0x6b
+ 303 010f 13000000 		.4byte	.LLST1
+ 304 0113 0A       		.uleb128 0xa
+ 305 0114 06000000 		.4byte	.LVL2
+ 306 0118 5E010000 		.4byte	0x15e
+ 307 011c 0A       		.uleb128 0xa
+ 308 011d 14000000 		.4byte	.LVL3
+ 309 0121 69010000 		.4byte	0x169
+ 310 0125 00       		.byte	0
+ 311 0126 08       		.uleb128 0x8
+ 312 0127 AE010000 		.4byte	.LASF18
+ 313 012b 01       		.byte	0x1
+ 314 012c 67       		.byte	0x67
+ 315 012d 00000000 		.4byte	.LFB3
+ 316 0131 0C000000 		.4byte	.LFE3-.LFB3
+ 317 0135 01       		.uleb128 0x1
+ 318 0136 9C       		.byte	0x9c
+ 319 0137 49010000 		.4byte	0x149
+ 320 013b 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccORyYsn.s 			page 9
+
+
+ 321 013c 76010000 		.4byte	.LASF24
+ 322 0140 01       		.byte	0x1
+ 323 0141 67       		.byte	0x67
+ 324 0142 6B000000 		.4byte	0x6b
+ 325 0146 01       		.uleb128 0x1
+ 326 0147 50       		.byte	0x50
+ 327 0148 00       		.byte	0
+ 328 0149 07       		.uleb128 0x7
+ 329 014a 97010000 		.4byte	.LASF20
+ 330 014e 01       		.byte	0x1
+ 331 014f 7E       		.byte	0x7e
+ 332 0150 6B000000 		.4byte	0x6b
+ 333 0154 00000000 		.4byte	.LFB4
+ 334 0158 0C000000 		.4byte	.LFE4-.LFB4
+ 335 015c 01       		.uleb128 0x1
+ 336 015d 9C       		.byte	0x9c
+ 337 015e 0C       		.uleb128 0xc
+ 338 015f 3A000000 		.4byte	.LASF25
+ 339 0163 03       		.byte	0x3
+ 340 0164 5E       		.byte	0x5e
+ 341 0165 6B000000 		.4byte	0x6b
+ 342 0169 0D       		.uleb128 0xd
+ 343 016a D1010000 		.4byte	.LASF26
+ 344 016e 03       		.byte	0x3
+ 345 016f 5F       		.byte	0x5f
+ 346 0170 0E       		.uleb128 0xe
+ 347 0171 6B000000 		.4byte	0x6b
+ 348 0175 00       		.byte	0
+ 349 0176 00       		.byte	0
+ 350              		.section	.debug_abbrev,"",%progbits
+ 351              	.Ldebug_abbrev0:
+ 352 0000 01       		.uleb128 0x1
+ 353 0001 11       		.uleb128 0x11
+ 354 0002 01       		.byte	0x1
+ 355 0003 25       		.uleb128 0x25
+ 356 0004 0E       		.uleb128 0xe
+ 357 0005 13       		.uleb128 0x13
+ 358 0006 0B       		.uleb128 0xb
+ 359 0007 03       		.uleb128 0x3
+ 360 0008 0E       		.uleb128 0xe
+ 361 0009 1B       		.uleb128 0x1b
+ 362 000a 0E       		.uleb128 0xe
+ 363 000b 55       		.uleb128 0x55
+ 364 000c 17       		.uleb128 0x17
+ 365 000d 11       		.uleb128 0x11
+ 366 000e 01       		.uleb128 0x1
+ 367 000f 10       		.uleb128 0x10
+ 368 0010 17       		.uleb128 0x17
+ 369 0011 00       		.byte	0
+ 370 0012 00       		.byte	0
+ 371 0013 02       		.uleb128 0x2
+ 372 0014 24       		.uleb128 0x24
+ 373 0015 00       		.byte	0
+ 374 0016 0B       		.uleb128 0xb
+ 375 0017 0B       		.uleb128 0xb
+ 376 0018 3E       		.uleb128 0x3e
+ 377 0019 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccORyYsn.s 			page 10
+
+
+ 378 001a 03       		.uleb128 0x3
+ 379 001b 0E       		.uleb128 0xe
+ 380 001c 00       		.byte	0
+ 381 001d 00       		.byte	0
+ 382 001e 03       		.uleb128 0x3
+ 383 001f 24       		.uleb128 0x24
+ 384 0020 00       		.byte	0
+ 385 0021 0B       		.uleb128 0xb
+ 386 0022 0B       		.uleb128 0xb
+ 387 0023 3E       		.uleb128 0x3e
+ 388 0024 0B       		.uleb128 0xb
+ 389 0025 03       		.uleb128 0x3
+ 390 0026 08       		.uleb128 0x8
+ 391 0027 00       		.byte	0
+ 392 0028 00       		.byte	0
+ 393 0029 04       		.uleb128 0x4
+ 394 002a 16       		.uleb128 0x16
+ 395 002b 00       		.byte	0
+ 396 002c 03       		.uleb128 0x3
+ 397 002d 0E       		.uleb128 0xe
+ 398 002e 3A       		.uleb128 0x3a
+ 399 002f 0B       		.uleb128 0xb
+ 400 0030 3B       		.uleb128 0x3b
+ 401 0031 0B       		.uleb128 0xb
+ 402 0032 49       		.uleb128 0x49
+ 403 0033 13       		.uleb128 0x13
+ 404 0034 00       		.byte	0
+ 405 0035 00       		.byte	0
+ 406 0036 05       		.uleb128 0x5
+ 407 0037 16       		.uleb128 0x16
+ 408 0038 00       		.byte	0
+ 409 0039 03       		.uleb128 0x3
+ 410 003a 0E       		.uleb128 0xe
+ 411 003b 3A       		.uleb128 0x3a
+ 412 003c 0B       		.uleb128 0xb
+ 413 003d 3B       		.uleb128 0x3b
+ 414 003e 05       		.uleb128 0x5
+ 415 003f 49       		.uleb128 0x49
+ 416 0040 13       		.uleb128 0x13
+ 417 0041 00       		.byte	0
+ 418 0042 00       		.byte	0
+ 419 0043 06       		.uleb128 0x6
+ 420 0044 35       		.uleb128 0x35
+ 421 0045 00       		.byte	0
+ 422 0046 49       		.uleb128 0x49
+ 423 0047 13       		.uleb128 0x13
+ 424 0048 00       		.byte	0
+ 425 0049 00       		.byte	0
+ 426 004a 07       		.uleb128 0x7
+ 427 004b 2E       		.uleb128 0x2e
+ 428 004c 00       		.byte	0
+ 429 004d 3F       		.uleb128 0x3f
+ 430 004e 19       		.uleb128 0x19
+ 431 004f 03       		.uleb128 0x3
+ 432 0050 0E       		.uleb128 0xe
+ 433 0051 3A       		.uleb128 0x3a
+ 434 0052 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccORyYsn.s 			page 11
+
+
+ 435 0053 3B       		.uleb128 0x3b
+ 436 0054 0B       		.uleb128 0xb
+ 437 0055 27       		.uleb128 0x27
+ 438 0056 19       		.uleb128 0x19
+ 439 0057 49       		.uleb128 0x49
+ 440 0058 13       		.uleb128 0x13
+ 441 0059 11       		.uleb128 0x11
+ 442 005a 01       		.uleb128 0x1
+ 443 005b 12       		.uleb128 0x12
+ 444 005c 06       		.uleb128 0x6
+ 445 005d 40       		.uleb128 0x40
+ 446 005e 18       		.uleb128 0x18
+ 447 005f 9742     		.uleb128 0x2117
+ 448 0061 19       		.uleb128 0x19
+ 449 0062 00       		.byte	0
+ 450 0063 00       		.byte	0
+ 451 0064 08       		.uleb128 0x8
+ 452 0065 2E       		.uleb128 0x2e
+ 453 0066 01       		.byte	0x1
+ 454 0067 3F       		.uleb128 0x3f
+ 455 0068 19       		.uleb128 0x19
+ 456 0069 03       		.uleb128 0x3
+ 457 006a 0E       		.uleb128 0xe
+ 458 006b 3A       		.uleb128 0x3a
+ 459 006c 0B       		.uleb128 0xb
+ 460 006d 3B       		.uleb128 0x3b
+ 461 006e 0B       		.uleb128 0xb
+ 462 006f 27       		.uleb128 0x27
+ 463 0070 19       		.uleb128 0x19
+ 464 0071 11       		.uleb128 0x11
+ 465 0072 01       		.uleb128 0x1
+ 466 0073 12       		.uleb128 0x12
+ 467 0074 06       		.uleb128 0x6
+ 468 0075 40       		.uleb128 0x40
+ 469 0076 18       		.uleb128 0x18
+ 470 0077 9742     		.uleb128 0x2117
+ 471 0079 19       		.uleb128 0x19
+ 472 007a 01       		.uleb128 0x1
+ 473 007b 13       		.uleb128 0x13
+ 474 007c 00       		.byte	0
+ 475 007d 00       		.byte	0
+ 476 007e 09       		.uleb128 0x9
+ 477 007f 34       		.uleb128 0x34
+ 478 0080 00       		.byte	0
+ 479 0081 03       		.uleb128 0x3
+ 480 0082 0E       		.uleb128 0xe
+ 481 0083 3A       		.uleb128 0x3a
+ 482 0084 0B       		.uleb128 0xb
+ 483 0085 3B       		.uleb128 0x3b
+ 484 0086 0B       		.uleb128 0xb
+ 485 0087 49       		.uleb128 0x49
+ 486 0088 13       		.uleb128 0x13
+ 487 0089 02       		.uleb128 0x2
+ 488 008a 17       		.uleb128 0x17
+ 489 008b 00       		.byte	0
+ 490 008c 00       		.byte	0
+ 491 008d 0A       		.uleb128 0xa
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccORyYsn.s 			page 12
+
+
+ 492 008e 898201   		.uleb128 0x4109
+ 493 0091 00       		.byte	0
+ 494 0092 11       		.uleb128 0x11
+ 495 0093 01       		.uleb128 0x1
+ 496 0094 31       		.uleb128 0x31
+ 497 0095 13       		.uleb128 0x13
+ 498 0096 00       		.byte	0
+ 499 0097 00       		.byte	0
+ 500 0098 0B       		.uleb128 0xb
+ 501 0099 05       		.uleb128 0x5
+ 502 009a 00       		.byte	0
+ 503 009b 03       		.uleb128 0x3
+ 504 009c 0E       		.uleb128 0xe
+ 505 009d 3A       		.uleb128 0x3a
+ 506 009e 0B       		.uleb128 0xb
+ 507 009f 3B       		.uleb128 0x3b
+ 508 00a0 0B       		.uleb128 0xb
+ 509 00a1 49       		.uleb128 0x49
+ 510 00a2 13       		.uleb128 0x13
+ 511 00a3 02       		.uleb128 0x2
+ 512 00a4 18       		.uleb128 0x18
+ 513 00a5 00       		.byte	0
+ 514 00a6 00       		.byte	0
+ 515 00a7 0C       		.uleb128 0xc
+ 516 00a8 2E       		.uleb128 0x2e
+ 517 00a9 00       		.byte	0
+ 518 00aa 3F       		.uleb128 0x3f
+ 519 00ab 19       		.uleb128 0x19
+ 520 00ac 03       		.uleb128 0x3
+ 521 00ad 0E       		.uleb128 0xe
+ 522 00ae 3A       		.uleb128 0x3a
+ 523 00af 0B       		.uleb128 0xb
+ 524 00b0 3B       		.uleb128 0x3b
+ 525 00b1 0B       		.uleb128 0xb
+ 526 00b2 27       		.uleb128 0x27
+ 527 00b3 19       		.uleb128 0x19
+ 528 00b4 49       		.uleb128 0x49
+ 529 00b5 13       		.uleb128 0x13
+ 530 00b6 3C       		.uleb128 0x3c
+ 531 00b7 19       		.uleb128 0x19
+ 532 00b8 00       		.byte	0
+ 533 00b9 00       		.byte	0
+ 534 00ba 0D       		.uleb128 0xd
+ 535 00bb 2E       		.uleb128 0x2e
+ 536 00bc 01       		.byte	0x1
+ 537 00bd 3F       		.uleb128 0x3f
+ 538 00be 19       		.uleb128 0x19
+ 539 00bf 03       		.uleb128 0x3
+ 540 00c0 0E       		.uleb128 0xe
+ 541 00c1 3A       		.uleb128 0x3a
+ 542 00c2 0B       		.uleb128 0xb
+ 543 00c3 3B       		.uleb128 0x3b
+ 544 00c4 0B       		.uleb128 0xb
+ 545 00c5 27       		.uleb128 0x27
+ 546 00c6 19       		.uleb128 0x19
+ 547 00c7 3C       		.uleb128 0x3c
+ 548 00c8 19       		.uleb128 0x19
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccORyYsn.s 			page 13
+
+
+ 549 00c9 00       		.byte	0
+ 550 00ca 00       		.byte	0
+ 551 00cb 0E       		.uleb128 0xe
+ 552 00cc 05       		.uleb128 0x5
+ 553 00cd 00       		.byte	0
+ 554 00ce 49       		.uleb128 0x49
+ 555 00cf 13       		.uleb128 0x13
+ 556 00d0 00       		.byte	0
+ 557 00d1 00       		.byte	0
+ 558 00d2 00       		.byte	0
+ 559              		.section	.debug_loc,"",%progbits
+ 560              	.Ldebug_loc0:
+ 561              	.LLST0:
+ 562 0000 06000000 		.4byte	.LVL0
+ 563 0004 13000000 		.4byte	.LVL1-1
+ 564 0008 0100     		.2byte	0x1
+ 565 000a 50       		.byte	0x50
+ 566 000b 00000000 		.4byte	0
+ 567 000f 00000000 		.4byte	0
+ 568              	.LLST1:
+ 569 0013 06000000 		.4byte	.LVL2
+ 570 0017 13000000 		.4byte	.LVL3-1
+ 571 001b 0100     		.2byte	0x1
+ 572 001d 50       		.byte	0x50
+ 573 001e 00000000 		.4byte	0
+ 574 0022 00000000 		.4byte	0
+ 575              		.section	.debug_aranges,"",%progbits
+ 576 0000 3C000000 		.4byte	0x3c
+ 577 0004 0200     		.2byte	0x2
+ 578 0006 00000000 		.4byte	.Ldebug_info0
+ 579 000a 04       		.byte	0x4
+ 580 000b 00       		.byte	0
+ 581 000c 0000     		.2byte	0
+ 582 000e 0000     		.2byte	0
+ 583 0010 00000000 		.4byte	.LFB0
+ 584 0014 0C000000 		.4byte	.LFE0-.LFB0
+ 585 0018 00000000 		.4byte	.LFB1
+ 586 001c 1C000000 		.4byte	.LFE1-.LFB1
+ 587 0020 00000000 		.4byte	.LFB2
+ 588 0024 1C000000 		.4byte	.LFE2-.LFB2
+ 589 0028 00000000 		.4byte	.LFB3
+ 590 002c 0C000000 		.4byte	.LFE3-.LFB3
+ 591 0030 00000000 		.4byte	.LFB4
+ 592 0034 0C000000 		.4byte	.LFE4-.LFB4
+ 593 0038 00000000 		.4byte	0
+ 594 003c 00000000 		.4byte	0
+ 595              		.section	.debug_ranges,"",%progbits
+ 596              	.Ldebug_ranges0:
+ 597 0000 00000000 		.4byte	.LFB0
+ 598 0004 0C000000 		.4byte	.LFE0
+ 599 0008 00000000 		.4byte	.LFB1
+ 600 000c 1C000000 		.4byte	.LFE1
+ 601 0010 00000000 		.4byte	.LFB2
+ 602 0014 1C000000 		.4byte	.LFE2
+ 603 0018 00000000 		.4byte	.LFB3
+ 604 001c 0C000000 		.4byte	.LFE3
+ 605 0020 00000000 		.4byte	.LFB4
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccORyYsn.s 			page 14
+
+
+ 606 0024 0C000000 		.4byte	.LFE4
+ 607 0028 00000000 		.4byte	0
+ 608 002c 00000000 		.4byte	0
+ 609              		.section	.debug_line,"",%progbits
+ 610              	.Ldebug_line0:
+ 611 0000 BC000000 		.section	.debug_str,"MS",%progbits,1
+ 611      02005000 
+ 611      00000201 
+ 611      FB0E0D00 
+ 611      01010101 
+ 612              	.LASF6:
+ 613 0000 6C6F6E67 		.ascii	"long long int\000"
+ 613      206C6F6E 
+ 613      6720696E 
+ 613      7400
+ 614              	.LASF3:
+ 615 000e 73686F72 		.ascii	"short unsigned int\000"
+ 615      7420756E 
+ 615      7369676E 
+ 615      65642069 
+ 615      6E7400
+ 616              	.LASF8:
+ 617 0021 756E7369 		.ascii	"unsigned int\000"
+ 617      676E6564 
+ 617      20696E74 
+ 617      00
+ 618              	.LASF19:
+ 619 002e 414C5F72 		.ascii	"AL_reg_Read\000"
+ 619      65675F52 
+ 619      65616400 
+ 620              	.LASF25:
+ 621 003a 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 621      74657243 
+ 621      72697469 
+ 621      63616C53 
+ 621      65637469 
+ 622              	.LASF15:
+ 623 0051 414C5F72 		.ascii	"AL_reg_InterruptEnable\000"
+ 623      65675F49 
+ 623      6E746572 
+ 623      72757074 
+ 623      456E6162 
+ 624              	.LASF21:
+ 625 0068 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 625      4320342E 
+ 625      392E3320 
+ 625      32303135 
+ 625      30333033 
+ 626 009b 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 626      20726576 
+ 626      6973696F 
+ 626      6E203232 
+ 626      31323230 
+ 627 00ce 73202D66 		.ascii	"s -ffunction-sections -ffat-lto-objects\000"
+ 627      66756E63 
+ 627      74696F6E 
+ 627      2D736563 
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccORyYsn.s 			page 15
+
+
+ 627      74696F6E 
+ 628              	.LASF5:
+ 629 00f6 6C6F6E67 		.ascii	"long unsigned int\000"
+ 629      20756E73 
+ 629      69676E65 
+ 629      6420696E 
+ 629      7400
+ 630              	.LASF7:
+ 631 0108 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 631      206C6F6E 
+ 631      6720756E 
+ 631      7369676E 
+ 631      65642069 
+ 632              	.LASF22:
+ 633 011f 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\AL_reg.c\000"
+ 633      6E657261 
+ 633      7465645F 
+ 633      536F7572 
+ 633      63655C50 
+ 634              	.LASF23:
+ 635 0141 453A5C68 		.ascii	"E:\\home\\jarik\\src\\psoc\\mpi_rom_emu\\mpi_rom_em"
+ 635      6F6D655C 
+ 635      6A617269 
+ 635      6B5C7372 
+ 635      635C7073 
+ 636 016e 752E6379 		.ascii	"u.cydsn\000"
+ 636      64736E00 
+ 637              	.LASF24:
+ 638 0176 6D61736B 		.ascii	"mask\000"
+ 638      00
+ 639              	.LASF1:
+ 640 017b 756E7369 		.ascii	"unsigned char\000"
+ 640      676E6564 
+ 640      20636861 
+ 640      7200
+ 641              	.LASF11:
+ 642 0189 63686172 		.ascii	"char\000"
+ 642      00
+ 643              	.LASF4:
+ 644 018e 6C6F6E67 		.ascii	"long int\000"
+ 644      20696E74 
+ 644      00
+ 645              	.LASF20:
+ 646 0197 414C5F72 		.ascii	"AL_reg_ReadMask\000"
+ 646      65675F52 
+ 646      6561644D 
+ 646      61736B00 
+ 647              	.LASF10:
+ 648 01a7 646F7562 		.ascii	"double\000"
+ 648      6C6500
+ 649              	.LASF18:
+ 650 01ae 414C5F72 		.ascii	"AL_reg_WriteMask\000"
+ 650      65675F57 
+ 650      72697465 
+ 650      4D61736B 
+ 650      00
+ 651              	.LASF12:
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccORyYsn.s 			page 16
+
+
+ 652 01bf 75696E74 		.ascii	"uint8\000"
+ 652      3800
+ 653              	.LASF0:
+ 654 01c5 7369676E 		.ascii	"signed char\000"
+ 654      65642063 
+ 654      68617200 
+ 655              	.LASF26:
+ 656 01d1 43794578 		.ascii	"CyExitCriticalSection\000"
+ 656      69744372 
+ 656      69746963 
+ 656      616C5365 
+ 656      6374696F 
+ 657              	.LASF9:
+ 658 01e7 666C6F61 		.ascii	"float\000"
+ 658      7400
+ 659              	.LASF2:
+ 660 01ed 73686F72 		.ascii	"short int\000"
+ 660      7420696E 
+ 660      7400
+ 661              	.LASF13:
+ 662 01f7 72656738 		.ascii	"reg8\000"
+ 662      00
+ 663              	.LASF14:
+ 664 01fc 73697A65 		.ascii	"sizetype\000"
+ 664      74797065 
+ 664      00
+ 665              	.LASF17:
+ 666 0205 696E7465 		.ascii	"interruptState\000"
+ 666      72727570 
+ 666      74537461 
+ 666      746500
+ 667              	.LASF16:
+ 668 0214 414C5F72 		.ascii	"AL_reg_InterruptDisable\000"
+ 668      65675F49 
+ 668      6E746572 
+ 668      72757074 
+ 668      44697361 
+ 669              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

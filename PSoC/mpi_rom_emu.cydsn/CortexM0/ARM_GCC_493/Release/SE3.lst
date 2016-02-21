@@ -1,0 +1,947 @@
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc0zCrK4.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1
+   4              		.eabi_attribute 21, 1
+   5              		.eabi_attribute 23, 3
+   6              		.eabi_attribute 24, 1
+   7              		.eabi_attribute 25, 1
+   8              		.eabi_attribute 26, 1
+   9              		.eabi_attribute 30, 4
+  10              		.eabi_attribute 34, 0
+  11              		.eabi_attribute 18, 4
+  12              		.code	16
+  13              		.file	"SE3.c"
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.section	.text.SE3_Write,"ax",%progbits
+  18              		.align	1
+  19              		.global	SE3_Write
+  20              		.code	16
+  21              		.thumb_func
+  22              		.type	SE3_Write, %function
+  23              	SE3_Write:
+  24              	.LFB0:
+  25              		.file 1 ".\\Generated_Source\\PSoC4\\SE3.c"
+   1:.\Generated_Source\PSoC4/SE3.c **** /*******************************************************************************
+   2:.\Generated_Source\PSoC4/SE3.c **** * File Name: SE3.c  
+   3:.\Generated_Source\PSoC4/SE3.c **** * Version 2.10
+   4:.\Generated_Source\PSoC4/SE3.c **** *
+   5:.\Generated_Source\PSoC4/SE3.c **** * Description:
+   6:.\Generated_Source\PSoC4/SE3.c **** *  This file contains API to enable firmware control of a Pins component.
+   7:.\Generated_Source\PSoC4/SE3.c **** *
+   8:.\Generated_Source\PSoC4/SE3.c **** * Note:
+   9:.\Generated_Source\PSoC4/SE3.c **** *
+  10:.\Generated_Source\PSoC4/SE3.c **** ********************************************************************************
+  11:.\Generated_Source\PSoC4/SE3.c **** * Copyright 2008-2014, Cypress Semiconductor Corporation.  All rights reserved.
+  12:.\Generated_Source\PSoC4/SE3.c **** * You may use this file only in accordance with the license, terms, conditions, 
+  13:.\Generated_Source\PSoC4/SE3.c **** * disclaimers, and limitations in the end user license agreement accompanying 
+  14:.\Generated_Source\PSoC4/SE3.c **** * the software package with which this file was provided.
+  15:.\Generated_Source\PSoC4/SE3.c **** *******************************************************************************/
+  16:.\Generated_Source\PSoC4/SE3.c **** 
+  17:.\Generated_Source\PSoC4/SE3.c **** #include "cytypes.h"
+  18:.\Generated_Source\PSoC4/SE3.c **** #include "SE3.h"
+  19:.\Generated_Source\PSoC4/SE3.c **** 
+  20:.\Generated_Source\PSoC4/SE3.c **** #define SetP4PinDriveMode(shift, mode)  \
+  21:.\Generated_Source\PSoC4/SE3.c ****     do { \
+  22:.\Generated_Source\PSoC4/SE3.c ****         SE3_PC =   (SE3_PC & \
+  23:.\Generated_Source\PSoC4/SE3.c ****                                 (uint32)(~(uint32)(SE3_DRIVE_MODE_IND_MASK << (SE3_DRIVE_MODE_BITS 
+  24:.\Generated_Source\PSoC4/SE3.c ****                                 (uint32)((uint32)(mode) << (SE3_DRIVE_MODE_BITS * (shift))); \
+  25:.\Generated_Source\PSoC4/SE3.c ****     } while (0)
+  26:.\Generated_Source\PSoC4/SE3.c **** 
+  27:.\Generated_Source\PSoC4/SE3.c **** 
+  28:.\Generated_Source\PSoC4/SE3.c **** /*******************************************************************************
+  29:.\Generated_Source\PSoC4/SE3.c **** * Function Name: SE3_Write
+  30:.\Generated_Source\PSoC4/SE3.c **** ********************************************************************************
+  31:.\Generated_Source\PSoC4/SE3.c **** *
+  32:.\Generated_Source\PSoC4/SE3.c **** * Summary:
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc0zCrK4.s 			page 2
+
+
+  33:.\Generated_Source\PSoC4/SE3.c **** *  Assign a new value to the digital port's data output register.  
+  34:.\Generated_Source\PSoC4/SE3.c **** *
+  35:.\Generated_Source\PSoC4/SE3.c **** * Parameters:  
+  36:.\Generated_Source\PSoC4/SE3.c **** *  prtValue:  The value to be assigned to the Digital Port. 
+  37:.\Generated_Source\PSoC4/SE3.c **** *
+  38:.\Generated_Source\PSoC4/SE3.c **** * Return: 
+  39:.\Generated_Source\PSoC4/SE3.c **** *  None 
+  40:.\Generated_Source\PSoC4/SE3.c **** *  
+  41:.\Generated_Source\PSoC4/SE3.c **** *******************************************************************************/
+  42:.\Generated_Source\PSoC4/SE3.c **** void SE3_Write(uint8 value) 
+  43:.\Generated_Source\PSoC4/SE3.c **** {
+  26              		.loc 1 43 0
+  27              		.cfi_startproc
+  28              	.LVL0:
+  44:.\Generated_Source\PSoC4/SE3.c ****     uint8 drVal = (uint8)(SE3_DR & (uint8)(~SE3_MASK));
+  29              		.loc 1 44 0
+  30 0000 7F23     		mov	r3, #127
+  31 0002 044A     		ldr	r2, .L2
+  45:.\Generated_Source\PSoC4/SE3.c ****     drVal = (drVal | ((uint8)(value << SE3_SHIFT) & SE3_MASK));
+  32              		.loc 1 45 0
+  33 0004 C001     		lsl	r0, r0, #7
+  34              	.LVL1:
+  44:.\Generated_Source\PSoC4/SE3.c ****     uint8 drVal = (uint8)(SE3_DR & (uint8)(~SE3_MASK));
+  35              		.loc 1 44 0
+  36 0006 1168     		ldr	r1, [r2]
+  46:.\Generated_Source\PSoC4/SE3.c ****     SE3_DR = (uint32)drVal;
+  47:.\Generated_Source\PSoC4/SE3.c **** }
+  37              		.loc 1 47 0
+  38              		@ sp needed
+  44:.\Generated_Source\PSoC4/SE3.c ****     drVal = (drVal | ((uint8)(value << SE3_SHIFT) & SE3_MASK));
+  39              		.loc 1 44 0
+  40 0008 0B40     		and	r3, r1
+  45:.\Generated_Source\PSoC4/SE3.c ****     drVal = (drVal | ((uint8)(value << SE3_SHIFT) & SE3_MASK));
+  41              		.loc 1 45 0
+  42 000a 1843     		orr	r0, r3
+  46:.\Generated_Source\PSoC4/SE3.c ****     SE3_DR = (uint32)drVal;
+  43              		.loc 1 46 0
+  44 000c C0B2     		uxtb	r0, r0
+  45 000e 1060     		str	r0, [r2]
+  46              		.loc 1 47 0
+  47 0010 7047     		bx	lr
+  48              	.L3:
+  49 0012 C046     		.align	2
+  50              	.L2:
+  51 0014 00030440 		.word	1074004736
+  52              		.cfi_endproc
+  53              	.LFE0:
+  54              		.size	SE3_Write, .-SE3_Write
+  55              		.section	.text.SE3_SetDriveMode,"ax",%progbits
+  56              		.align	1
+  57              		.global	SE3_SetDriveMode
+  58              		.code	16
+  59              		.thumb_func
+  60              		.type	SE3_SetDriveMode, %function
+  61              	SE3_SetDriveMode:
+  62              	.LFB1:
+  48:.\Generated_Source\PSoC4/SE3.c **** 
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc0zCrK4.s 			page 3
+
+
+  49:.\Generated_Source\PSoC4/SE3.c **** 
+  50:.\Generated_Source\PSoC4/SE3.c **** /*******************************************************************************
+  51:.\Generated_Source\PSoC4/SE3.c **** * Function Name: SE3_SetDriveMode
+  52:.\Generated_Source\PSoC4/SE3.c **** ********************************************************************************
+  53:.\Generated_Source\PSoC4/SE3.c **** *
+  54:.\Generated_Source\PSoC4/SE3.c **** * Summary:
+  55:.\Generated_Source\PSoC4/SE3.c **** *  Change the drive mode on the pins of the port.
+  56:.\Generated_Source\PSoC4/SE3.c **** * 
+  57:.\Generated_Source\PSoC4/SE3.c **** * Parameters:  
+  58:.\Generated_Source\PSoC4/SE3.c **** *  mode:  Change the pins to one of the following drive modes.
+  59:.\Generated_Source\PSoC4/SE3.c **** *
+  60:.\Generated_Source\PSoC4/SE3.c **** *  SE3_DM_STRONG     Strong Drive 
+  61:.\Generated_Source\PSoC4/SE3.c **** *  SE3_DM_OD_HI      Open Drain, Drives High 
+  62:.\Generated_Source\PSoC4/SE3.c **** *  SE3_DM_OD_LO      Open Drain, Drives Low 
+  63:.\Generated_Source\PSoC4/SE3.c **** *  SE3_DM_RES_UP     Resistive Pull Up 
+  64:.\Generated_Source\PSoC4/SE3.c **** *  SE3_DM_RES_DWN    Resistive Pull Down 
+  65:.\Generated_Source\PSoC4/SE3.c **** *  SE3_DM_RES_UPDWN  Resistive Pull Up/Down 
+  66:.\Generated_Source\PSoC4/SE3.c **** *  SE3_DM_DIG_HIZ    High Impedance Digital 
+  67:.\Generated_Source\PSoC4/SE3.c **** *  SE3_DM_ALG_HIZ    High Impedance Analog 
+  68:.\Generated_Source\PSoC4/SE3.c **** *
+  69:.\Generated_Source\PSoC4/SE3.c **** * Return: 
+  70:.\Generated_Source\PSoC4/SE3.c **** *  None
+  71:.\Generated_Source\PSoC4/SE3.c **** *
+  72:.\Generated_Source\PSoC4/SE3.c **** *******************************************************************************/
+  73:.\Generated_Source\PSoC4/SE3.c **** void SE3_SetDriveMode(uint8 mode) 
+  74:.\Generated_Source\PSoC4/SE3.c **** {
+  63              		.loc 1 74 0
+  64              		.cfi_startproc
+  65              	.LVL2:
+  75:.\Generated_Source\PSoC4/SE3.c **** 	SetP4PinDriveMode(SE3__0__SHIFT, mode);
+  66              		.loc 1 75 0
+  67 0000 034A     		ldr	r2, .L5
+  68 0002 044B     		ldr	r3, .L5+4
+  69 0004 1168     		ldr	r1, [r2]
+  70 0006 4005     		lsl	r0, r0, #21
+  71              	.LVL3:
+  72 0008 0B40     		and	r3, r1
+  73 000a 1843     		orr	r0, r3
+  74 000c 1060     		str	r0, [r2]
+  76:.\Generated_Source\PSoC4/SE3.c **** }
+  75              		.loc 1 76 0
+  76              		@ sp needed
+  77 000e 7047     		bx	lr
+  78              	.L6:
+  79              		.align	2
+  80              	.L5:
+  81 0010 08030440 		.word	1074004744
+  82 0014 FFFF1FFF 		.word	-14680065
+  83              		.cfi_endproc
+  84              	.LFE1:
+  85              		.size	SE3_SetDriveMode, .-SE3_SetDriveMode
+  86              		.section	.text.SE3_Read,"ax",%progbits
+  87              		.align	1
+  88              		.global	SE3_Read
+  89              		.code	16
+  90              		.thumb_func
+  91              		.type	SE3_Read, %function
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc0zCrK4.s 			page 4
+
+
+  92              	SE3_Read:
+  93              	.LFB2:
+  77:.\Generated_Source\PSoC4/SE3.c **** 
+  78:.\Generated_Source\PSoC4/SE3.c **** 
+  79:.\Generated_Source\PSoC4/SE3.c **** /*******************************************************************************
+  80:.\Generated_Source\PSoC4/SE3.c **** * Function Name: SE3_Read
+  81:.\Generated_Source\PSoC4/SE3.c **** ********************************************************************************
+  82:.\Generated_Source\PSoC4/SE3.c **** *
+  83:.\Generated_Source\PSoC4/SE3.c **** * Summary:
+  84:.\Generated_Source\PSoC4/SE3.c **** *  Read the current value on the pins of the Digital Port in right justified 
+  85:.\Generated_Source\PSoC4/SE3.c **** *  form.
+  86:.\Generated_Source\PSoC4/SE3.c **** *
+  87:.\Generated_Source\PSoC4/SE3.c **** * Parameters:  
+  88:.\Generated_Source\PSoC4/SE3.c **** *  None 
+  89:.\Generated_Source\PSoC4/SE3.c **** *
+  90:.\Generated_Source\PSoC4/SE3.c **** * Return: 
+  91:.\Generated_Source\PSoC4/SE3.c **** *  Returns the current value of the Digital Port as a right justified number
+  92:.\Generated_Source\PSoC4/SE3.c **** *  
+  93:.\Generated_Source\PSoC4/SE3.c **** * Note:
+  94:.\Generated_Source\PSoC4/SE3.c **** *  Macro SE3_ReadPS calls this function. 
+  95:.\Generated_Source\PSoC4/SE3.c **** *  
+  96:.\Generated_Source\PSoC4/SE3.c **** *******************************************************************************/
+  97:.\Generated_Source\PSoC4/SE3.c **** uint8 SE3_Read(void) 
+  98:.\Generated_Source\PSoC4/SE3.c **** {
+  94              		.loc 1 98 0
+  95              		.cfi_startproc
+  99:.\Generated_Source\PSoC4/SE3.c ****     return (uint8)((SE3_PS & SE3_MASK) >> SE3_SHIFT);
+  96              		.loc 1 99 0
+  97 0000 024B     		ldr	r3, .L8
+ 100:.\Generated_Source\PSoC4/SE3.c **** }
+  98              		.loc 1 100 0
+  99              		@ sp needed
+  99:.\Generated_Source\PSoC4/SE3.c ****     return (uint8)((SE3_PS & SE3_MASK) >> SE3_SHIFT);
+ 100              		.loc 1 99 0
+ 101 0002 1868     		ldr	r0, [r3]
+ 102 0004 0006     		lsl	r0, r0, #24
+ 103 0006 C00F     		lsr	r0, r0, #31
+ 104              		.loc 1 100 0
+ 105 0008 7047     		bx	lr
+ 106              	.L9:
+ 107 000a C046     		.align	2
+ 108              	.L8:
+ 109 000c 04030440 		.word	1074004740
+ 110              		.cfi_endproc
+ 111              	.LFE2:
+ 112              		.size	SE3_Read, .-SE3_Read
+ 113              		.section	.text.SE3_ReadDataReg,"ax",%progbits
+ 114              		.align	1
+ 115              		.global	SE3_ReadDataReg
+ 116              		.code	16
+ 117              		.thumb_func
+ 118              		.type	SE3_ReadDataReg, %function
+ 119              	SE3_ReadDataReg:
+ 120              	.LFB3:
+ 101:.\Generated_Source\PSoC4/SE3.c **** 
+ 102:.\Generated_Source\PSoC4/SE3.c **** 
+ 103:.\Generated_Source\PSoC4/SE3.c **** /*******************************************************************************
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc0zCrK4.s 			page 5
+
+
+ 104:.\Generated_Source\PSoC4/SE3.c **** * Function Name: SE3_ReadDataReg
+ 105:.\Generated_Source\PSoC4/SE3.c **** ********************************************************************************
+ 106:.\Generated_Source\PSoC4/SE3.c **** *
+ 107:.\Generated_Source\PSoC4/SE3.c **** * Summary:
+ 108:.\Generated_Source\PSoC4/SE3.c **** *  Read the current value assigned to a Digital Port's data output register
+ 109:.\Generated_Source\PSoC4/SE3.c **** *
+ 110:.\Generated_Source\PSoC4/SE3.c **** * Parameters:  
+ 111:.\Generated_Source\PSoC4/SE3.c **** *  None 
+ 112:.\Generated_Source\PSoC4/SE3.c **** *
+ 113:.\Generated_Source\PSoC4/SE3.c **** * Return: 
+ 114:.\Generated_Source\PSoC4/SE3.c **** *  Returns the current value assigned to the Digital Port's data output register
+ 115:.\Generated_Source\PSoC4/SE3.c **** *  
+ 116:.\Generated_Source\PSoC4/SE3.c **** *******************************************************************************/
+ 117:.\Generated_Source\PSoC4/SE3.c **** uint8 SE3_ReadDataReg(void) 
+ 118:.\Generated_Source\PSoC4/SE3.c **** {
+ 121              		.loc 1 118 0
+ 122              		.cfi_startproc
+ 119:.\Generated_Source\PSoC4/SE3.c ****     return (uint8)((SE3_DR & SE3_MASK) >> SE3_SHIFT);
+ 123              		.loc 1 119 0
+ 124 0000 024B     		ldr	r3, .L11
+ 120:.\Generated_Source\PSoC4/SE3.c **** }
+ 125              		.loc 1 120 0
+ 126              		@ sp needed
+ 119:.\Generated_Source\PSoC4/SE3.c ****     return (uint8)((SE3_DR & SE3_MASK) >> SE3_SHIFT);
+ 127              		.loc 1 119 0
+ 128 0002 1868     		ldr	r0, [r3]
+ 129 0004 0006     		lsl	r0, r0, #24
+ 130 0006 C00F     		lsr	r0, r0, #31
+ 131              		.loc 1 120 0
+ 132 0008 7047     		bx	lr
+ 133              	.L12:
+ 134 000a C046     		.align	2
+ 135              	.L11:
+ 136 000c 00030440 		.word	1074004736
+ 137              		.cfi_endproc
+ 138              	.LFE3:
+ 139              		.size	SE3_ReadDataReg, .-SE3_ReadDataReg
+ 140              		.section	.text.SE3_ClearInterrupt,"ax",%progbits
+ 141              		.align	1
+ 142              		.global	SE3_ClearInterrupt
+ 143              		.code	16
+ 144              		.thumb_func
+ 145              		.type	SE3_ClearInterrupt, %function
+ 146              	SE3_ClearInterrupt:
+ 147              	.LFB4:
+ 121:.\Generated_Source\PSoC4/SE3.c **** 
+ 122:.\Generated_Source\PSoC4/SE3.c **** 
+ 123:.\Generated_Source\PSoC4/SE3.c **** /* If Interrupts Are Enabled for this Pins component */ 
+ 124:.\Generated_Source\PSoC4/SE3.c **** #if defined(SE3_INTSTAT) 
+ 125:.\Generated_Source\PSoC4/SE3.c **** 
+ 126:.\Generated_Source\PSoC4/SE3.c ****     /*******************************************************************************
+ 127:.\Generated_Source\PSoC4/SE3.c ****     * Function Name: SE3_ClearInterrupt
+ 128:.\Generated_Source\PSoC4/SE3.c ****     ********************************************************************************
+ 129:.\Generated_Source\PSoC4/SE3.c ****     *
+ 130:.\Generated_Source\PSoC4/SE3.c ****     * Summary:
+ 131:.\Generated_Source\PSoC4/SE3.c ****     *  Clears any active interrupts attached to port and returns the value of the 
+ 132:.\Generated_Source\PSoC4/SE3.c ****     *  interrupt status register.
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc0zCrK4.s 			page 6
+
+
+ 133:.\Generated_Source\PSoC4/SE3.c ****     *
+ 134:.\Generated_Source\PSoC4/SE3.c ****     * Parameters:  
+ 135:.\Generated_Source\PSoC4/SE3.c ****     *  None 
+ 136:.\Generated_Source\PSoC4/SE3.c ****     *
+ 137:.\Generated_Source\PSoC4/SE3.c ****     * Return: 
+ 138:.\Generated_Source\PSoC4/SE3.c ****     *  Returns the value of the interrupt status register
+ 139:.\Generated_Source\PSoC4/SE3.c ****     *  
+ 140:.\Generated_Source\PSoC4/SE3.c ****     *******************************************************************************/
+ 141:.\Generated_Source\PSoC4/SE3.c ****     uint8 SE3_ClearInterrupt(void) 
+ 142:.\Generated_Source\PSoC4/SE3.c ****     {
+ 148              		.loc 1 142 0
+ 149              		.cfi_startproc
+ 143:.\Generated_Source\PSoC4/SE3.c **** 		uint8 maskedStatus = (uint8)(SE3_INTSTAT & SE3_MASK);
+ 150              		.loc 1 143 0
+ 151 0000 7F22     		mov	r2, #127
+ 152 0002 034B     		ldr	r3, .L14
+ 144:.\Generated_Source\PSoC4/SE3.c **** 		SE3_INTSTAT = maskedStatus;
+ 145:.\Generated_Source\PSoC4/SE3.c ****         return maskedStatus >> SE3_SHIFT;
+ 146:.\Generated_Source\PSoC4/SE3.c ****     }
+ 153              		.loc 1 146 0
+ 154              		@ sp needed
+ 143:.\Generated_Source\PSoC4/SE3.c **** 		uint8 maskedStatus = (uint8)(SE3_INTSTAT & SE3_MASK);
+ 155              		.loc 1 143 0
+ 156 0004 1868     		ldr	r0, [r3]
+ 157 0006 9043     		bic	r0, r2
+ 158 0008 C0B2     		uxtb	r0, r0
+ 159              	.LVL4:
+ 144:.\Generated_Source\PSoC4/SE3.c **** 		SE3_INTSTAT = maskedStatus;
+ 160              		.loc 1 144 0
+ 161 000a 1860     		str	r0, [r3]
+ 145:.\Generated_Source\PSoC4/SE3.c ****     }
+ 162              		.loc 1 145 0
+ 163 000c C009     		lsr	r0, r0, #7
+ 164              	.LVL5:
+ 165              		.loc 1 146 0
+ 166 000e 7047     		bx	lr
+ 167              	.L15:
+ 168              		.align	2
+ 169              	.L14:
+ 170 0010 10030440 		.word	1074004752
+ 171              		.cfi_endproc
+ 172              	.LFE4:
+ 173              		.size	SE3_ClearInterrupt, .-SE3_ClearInterrupt
+ 174              		.text
+ 175              	.Letext0:
+ 176              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
+ 177              		.section	.debug_info,"",%progbits
+ 178              	.Ldebug_info0:
+ 179 0000 48010000 		.4byte	0x148
+ 180 0004 0400     		.2byte	0x4
+ 181 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 182 000a 04       		.byte	0x4
+ 183 000b 01       		.uleb128 0x1
+ 184 000c 06000000 		.4byte	.LASF22
+ 185 0010 01       		.byte	0x1
+ 186 0011 9A000000 		.4byte	.LASF23
+ 187 0015 AF010000 		.4byte	.LASF24
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc0zCrK4.s 			page 7
+
+
+ 188 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 189 001d 00000000 		.4byte	0
+ 190 0021 00000000 		.4byte	.Ldebug_line0
+ 191 0025 02       		.uleb128 0x2
+ 192 0026 01       		.byte	0x1
+ 193 0027 06       		.byte	0x6
+ 194 0028 E4010000 		.4byte	.LASF0
+ 195 002c 02       		.uleb128 0x2
+ 196 002d 01       		.byte	0x1
+ 197 002e 08       		.byte	0x8
+ 198 002f D9000000 		.4byte	.LASF1
+ 199 0033 02       		.uleb128 0x2
+ 200 0034 02       		.byte	0x2
+ 201 0035 05       		.byte	0x5
+ 202 0036 83010000 		.4byte	.LASF2
+ 203 003a 02       		.uleb128 0x2
+ 204 003b 02       		.byte	0x2
+ 205 003c 07       		.byte	0x7
+ 206 003d FF000000 		.4byte	.LASF3
+ 207 0041 02       		.uleb128 0x2
+ 208 0042 04       		.byte	0x4
+ 209 0043 05       		.byte	0x5
+ 210 0044 A6010000 		.4byte	.LASF4
+ 211 0048 02       		.uleb128 0x2
+ 212 0049 04       		.byte	0x4
+ 213 004a 07       		.byte	0x7
+ 214 004b ED000000 		.4byte	.LASF5
+ 215 004f 02       		.uleb128 0x2
+ 216 0050 08       		.byte	0x8
+ 217 0051 05       		.byte	0x5
+ 218 0052 63010000 		.4byte	.LASF6
+ 219 0056 02       		.uleb128 0x2
+ 220 0057 08       		.byte	0x8
+ 221 0058 07       		.byte	0x7
+ 222 0059 2D010000 		.4byte	.LASF7
+ 223 005d 03       		.uleb128 0x3
+ 224 005e 04       		.byte	0x4
+ 225 005f 05       		.byte	0x5
+ 226 0060 696E7400 		.ascii	"int\000"
+ 227 0064 02       		.uleb128 0x2
+ 228 0065 04       		.byte	0x4
+ 229 0066 07       		.byte	0x7
+ 230 0067 20010000 		.4byte	.LASF8
+ 231 006b 04       		.uleb128 0x4
+ 232 006c 8D010000 		.4byte	.LASF9
+ 233 0070 02       		.byte	0x2
+ 234 0071 C2       		.byte	0xc2
+ 235 0072 2C000000 		.4byte	0x2c
+ 236 0076 04       		.uleb128 0x4
+ 237 0077 19010000 		.4byte	.LASF10
+ 238 007b 02       		.byte	0x2
+ 239 007c C4       		.byte	0xc4
+ 240 007d 48000000 		.4byte	0x48
+ 241 0081 02       		.uleb128 0x2
+ 242 0082 04       		.byte	0x4
+ 243 0083 04       		.byte	0x4
+ 244 0084 C9000000 		.4byte	.LASF11
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc0zCrK4.s 			page 8
+
+
+ 245 0088 02       		.uleb128 0x2
+ 246 0089 08       		.byte	0x8
+ 247 008a 04       		.byte	0x4
+ 248 008b 12010000 		.4byte	.LASF12
+ 249 008f 02       		.uleb128 0x2
+ 250 0090 01       		.byte	0x1
+ 251 0091 08       		.byte	0x8
+ 252 0092 7E010000 		.4byte	.LASF13
+ 253 0096 05       		.uleb128 0x5
+ 254 0097 00000000 		.4byte	.LASF14
+ 255 009b 02       		.byte	0x2
+ 256 009c 6E01     		.2byte	0x16e
+ 257 009e A2000000 		.4byte	0xa2
+ 258 00a2 06       		.uleb128 0x6
+ 259 00a3 76000000 		.4byte	0x76
+ 260 00a7 07       		.uleb128 0x7
+ 261 00a8 CF000000 		.4byte	.LASF15
+ 262 00ac 01       		.byte	0x1
+ 263 00ad 2A       		.byte	0x2a
+ 264 00ae 00000000 		.4byte	.LFB0
+ 265 00b2 18000000 		.4byte	.LFE0-.LFB0
+ 266 00b6 01       		.uleb128 0x1
+ 267 00b7 9C       		.byte	0x9c
+ 268 00b8 D7000000 		.4byte	0xd7
+ 269 00bc 08       		.uleb128 0x8
+ 270 00bd 94000000 		.4byte	.LASF17
+ 271 00c1 01       		.byte	0x1
+ 272 00c2 2A       		.byte	0x2a
+ 273 00c3 6B000000 		.4byte	0x6b
+ 274 00c7 00000000 		.4byte	.LLST0
+ 275 00cb 09       		.uleb128 0x9
+ 276 00cc E7000000 		.4byte	.LASF25
+ 277 00d0 01       		.byte	0x1
+ 278 00d1 2C       		.byte	0x2c
+ 279 00d2 6B000000 		.4byte	0x6b
+ 280 00d6 00       		.byte	0
+ 281 00d7 07       		.uleb128 0x7
+ 282 00d8 44010000 		.4byte	.LASF16
+ 283 00dc 01       		.byte	0x1
+ 284 00dd 49       		.byte	0x49
+ 285 00de 00000000 		.4byte	.LFB1
+ 286 00e2 18000000 		.4byte	.LFE1-.LFB1
+ 287 00e6 01       		.uleb128 0x1
+ 288 00e7 9C       		.byte	0x9c
+ 289 00e8 FC000000 		.4byte	0xfc
+ 290 00ec 08       		.uleb128 0x8
+ 291 00ed 55010000 		.4byte	.LASF18
+ 292 00f1 01       		.byte	0x1
+ 293 00f2 49       		.byte	0x49
+ 294 00f3 6B000000 		.4byte	0x6b
+ 295 00f7 21000000 		.4byte	.LLST1
+ 296 00fb 00       		.byte	0
+ 297 00fc 0A       		.uleb128 0xa
+ 298 00fd 5A010000 		.4byte	.LASF19
+ 299 0101 01       		.byte	0x1
+ 300 0102 61       		.byte	0x61
+ 301 0103 6B000000 		.4byte	0x6b
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc0zCrK4.s 			page 9
+
+
+ 302 0107 00000000 		.4byte	.LFB2
+ 303 010b 10000000 		.4byte	.LFE2-.LFB2
+ 304 010f 01       		.uleb128 0x1
+ 305 0110 9C       		.byte	0x9c
+ 306 0111 0A       		.uleb128 0xa
+ 307 0112 B9000000 		.4byte	.LASF20
+ 308 0116 01       		.byte	0x1
+ 309 0117 75       		.byte	0x75
+ 310 0118 6B000000 		.4byte	0x6b
+ 311 011c 00000000 		.4byte	.LFB3
+ 312 0120 10000000 		.4byte	.LFE3-.LFB3
+ 313 0124 01       		.uleb128 0x1
+ 314 0125 9C       		.byte	0x9c
+ 315 0126 0B       		.uleb128 0xb
+ 316 0127 93010000 		.4byte	.LASF21
+ 317 012b 01       		.byte	0x1
+ 318 012c 8D       		.byte	0x8d
+ 319 012d 6B000000 		.4byte	0x6b
+ 320 0131 00000000 		.4byte	.LFB4
+ 321 0135 14000000 		.4byte	.LFE4-.LFB4
+ 322 0139 01       		.uleb128 0x1
+ 323 013a 9C       		.byte	0x9c
+ 324 013b 0C       		.uleb128 0xc
+ 325 013c 71010000 		.4byte	.LASF26
+ 326 0140 01       		.byte	0x1
+ 327 0141 8F       		.byte	0x8f
+ 328 0142 6B000000 		.4byte	0x6b
+ 329 0146 42000000 		.4byte	.LLST2
+ 330 014a 00       		.byte	0
+ 331 014b 00       		.byte	0
+ 332              		.section	.debug_abbrev,"",%progbits
+ 333              	.Ldebug_abbrev0:
+ 334 0000 01       		.uleb128 0x1
+ 335 0001 11       		.uleb128 0x11
+ 336 0002 01       		.byte	0x1
+ 337 0003 25       		.uleb128 0x25
+ 338 0004 0E       		.uleb128 0xe
+ 339 0005 13       		.uleb128 0x13
+ 340 0006 0B       		.uleb128 0xb
+ 341 0007 03       		.uleb128 0x3
+ 342 0008 0E       		.uleb128 0xe
+ 343 0009 1B       		.uleb128 0x1b
+ 344 000a 0E       		.uleb128 0xe
+ 345 000b 55       		.uleb128 0x55
+ 346 000c 17       		.uleb128 0x17
+ 347 000d 11       		.uleb128 0x11
+ 348 000e 01       		.uleb128 0x1
+ 349 000f 10       		.uleb128 0x10
+ 350 0010 17       		.uleb128 0x17
+ 351 0011 00       		.byte	0
+ 352 0012 00       		.byte	0
+ 353 0013 02       		.uleb128 0x2
+ 354 0014 24       		.uleb128 0x24
+ 355 0015 00       		.byte	0
+ 356 0016 0B       		.uleb128 0xb
+ 357 0017 0B       		.uleb128 0xb
+ 358 0018 3E       		.uleb128 0x3e
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc0zCrK4.s 			page 10
+
+
+ 359 0019 0B       		.uleb128 0xb
+ 360 001a 03       		.uleb128 0x3
+ 361 001b 0E       		.uleb128 0xe
+ 362 001c 00       		.byte	0
+ 363 001d 00       		.byte	0
+ 364 001e 03       		.uleb128 0x3
+ 365 001f 24       		.uleb128 0x24
+ 366 0020 00       		.byte	0
+ 367 0021 0B       		.uleb128 0xb
+ 368 0022 0B       		.uleb128 0xb
+ 369 0023 3E       		.uleb128 0x3e
+ 370 0024 0B       		.uleb128 0xb
+ 371 0025 03       		.uleb128 0x3
+ 372 0026 08       		.uleb128 0x8
+ 373 0027 00       		.byte	0
+ 374 0028 00       		.byte	0
+ 375 0029 04       		.uleb128 0x4
+ 376 002a 16       		.uleb128 0x16
+ 377 002b 00       		.byte	0
+ 378 002c 03       		.uleb128 0x3
+ 379 002d 0E       		.uleb128 0xe
+ 380 002e 3A       		.uleb128 0x3a
+ 381 002f 0B       		.uleb128 0xb
+ 382 0030 3B       		.uleb128 0x3b
+ 383 0031 0B       		.uleb128 0xb
+ 384 0032 49       		.uleb128 0x49
+ 385 0033 13       		.uleb128 0x13
+ 386 0034 00       		.byte	0
+ 387 0035 00       		.byte	0
+ 388 0036 05       		.uleb128 0x5
+ 389 0037 16       		.uleb128 0x16
+ 390 0038 00       		.byte	0
+ 391 0039 03       		.uleb128 0x3
+ 392 003a 0E       		.uleb128 0xe
+ 393 003b 3A       		.uleb128 0x3a
+ 394 003c 0B       		.uleb128 0xb
+ 395 003d 3B       		.uleb128 0x3b
+ 396 003e 05       		.uleb128 0x5
+ 397 003f 49       		.uleb128 0x49
+ 398 0040 13       		.uleb128 0x13
+ 399 0041 00       		.byte	0
+ 400 0042 00       		.byte	0
+ 401 0043 06       		.uleb128 0x6
+ 402 0044 35       		.uleb128 0x35
+ 403 0045 00       		.byte	0
+ 404 0046 49       		.uleb128 0x49
+ 405 0047 13       		.uleb128 0x13
+ 406 0048 00       		.byte	0
+ 407 0049 00       		.byte	0
+ 408 004a 07       		.uleb128 0x7
+ 409 004b 2E       		.uleb128 0x2e
+ 410 004c 01       		.byte	0x1
+ 411 004d 3F       		.uleb128 0x3f
+ 412 004e 19       		.uleb128 0x19
+ 413 004f 03       		.uleb128 0x3
+ 414 0050 0E       		.uleb128 0xe
+ 415 0051 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc0zCrK4.s 			page 11
+
+
+ 416 0052 0B       		.uleb128 0xb
+ 417 0053 3B       		.uleb128 0x3b
+ 418 0054 0B       		.uleb128 0xb
+ 419 0055 27       		.uleb128 0x27
+ 420 0056 19       		.uleb128 0x19
+ 421 0057 11       		.uleb128 0x11
+ 422 0058 01       		.uleb128 0x1
+ 423 0059 12       		.uleb128 0x12
+ 424 005a 06       		.uleb128 0x6
+ 425 005b 40       		.uleb128 0x40
+ 426 005c 18       		.uleb128 0x18
+ 427 005d 9742     		.uleb128 0x2117
+ 428 005f 19       		.uleb128 0x19
+ 429 0060 01       		.uleb128 0x1
+ 430 0061 13       		.uleb128 0x13
+ 431 0062 00       		.byte	0
+ 432 0063 00       		.byte	0
+ 433 0064 08       		.uleb128 0x8
+ 434 0065 05       		.uleb128 0x5
+ 435 0066 00       		.byte	0
+ 436 0067 03       		.uleb128 0x3
+ 437 0068 0E       		.uleb128 0xe
+ 438 0069 3A       		.uleb128 0x3a
+ 439 006a 0B       		.uleb128 0xb
+ 440 006b 3B       		.uleb128 0x3b
+ 441 006c 0B       		.uleb128 0xb
+ 442 006d 49       		.uleb128 0x49
+ 443 006e 13       		.uleb128 0x13
+ 444 006f 02       		.uleb128 0x2
+ 445 0070 17       		.uleb128 0x17
+ 446 0071 00       		.byte	0
+ 447 0072 00       		.byte	0
+ 448 0073 09       		.uleb128 0x9
+ 449 0074 34       		.uleb128 0x34
+ 450 0075 00       		.byte	0
+ 451 0076 03       		.uleb128 0x3
+ 452 0077 0E       		.uleb128 0xe
+ 453 0078 3A       		.uleb128 0x3a
+ 454 0079 0B       		.uleb128 0xb
+ 455 007a 3B       		.uleb128 0x3b
+ 456 007b 0B       		.uleb128 0xb
+ 457 007c 49       		.uleb128 0x49
+ 458 007d 13       		.uleb128 0x13
+ 459 007e 00       		.byte	0
+ 460 007f 00       		.byte	0
+ 461 0080 0A       		.uleb128 0xa
+ 462 0081 2E       		.uleb128 0x2e
+ 463 0082 00       		.byte	0
+ 464 0083 3F       		.uleb128 0x3f
+ 465 0084 19       		.uleb128 0x19
+ 466 0085 03       		.uleb128 0x3
+ 467 0086 0E       		.uleb128 0xe
+ 468 0087 3A       		.uleb128 0x3a
+ 469 0088 0B       		.uleb128 0xb
+ 470 0089 3B       		.uleb128 0x3b
+ 471 008a 0B       		.uleb128 0xb
+ 472 008b 27       		.uleb128 0x27
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc0zCrK4.s 			page 12
+
+
+ 473 008c 19       		.uleb128 0x19
+ 474 008d 49       		.uleb128 0x49
+ 475 008e 13       		.uleb128 0x13
+ 476 008f 11       		.uleb128 0x11
+ 477 0090 01       		.uleb128 0x1
+ 478 0091 12       		.uleb128 0x12
+ 479 0092 06       		.uleb128 0x6
+ 480 0093 40       		.uleb128 0x40
+ 481 0094 18       		.uleb128 0x18
+ 482 0095 9742     		.uleb128 0x2117
+ 483 0097 19       		.uleb128 0x19
+ 484 0098 00       		.byte	0
+ 485 0099 00       		.byte	0
+ 486 009a 0B       		.uleb128 0xb
+ 487 009b 2E       		.uleb128 0x2e
+ 488 009c 01       		.byte	0x1
+ 489 009d 3F       		.uleb128 0x3f
+ 490 009e 19       		.uleb128 0x19
+ 491 009f 03       		.uleb128 0x3
+ 492 00a0 0E       		.uleb128 0xe
+ 493 00a1 3A       		.uleb128 0x3a
+ 494 00a2 0B       		.uleb128 0xb
+ 495 00a3 3B       		.uleb128 0x3b
+ 496 00a4 0B       		.uleb128 0xb
+ 497 00a5 27       		.uleb128 0x27
+ 498 00a6 19       		.uleb128 0x19
+ 499 00a7 49       		.uleb128 0x49
+ 500 00a8 13       		.uleb128 0x13
+ 501 00a9 11       		.uleb128 0x11
+ 502 00aa 01       		.uleb128 0x1
+ 503 00ab 12       		.uleb128 0x12
+ 504 00ac 06       		.uleb128 0x6
+ 505 00ad 40       		.uleb128 0x40
+ 506 00ae 18       		.uleb128 0x18
+ 507 00af 9742     		.uleb128 0x2117
+ 508 00b1 19       		.uleb128 0x19
+ 509 00b2 00       		.byte	0
+ 510 00b3 00       		.byte	0
+ 511 00b4 0C       		.uleb128 0xc
+ 512 00b5 34       		.uleb128 0x34
+ 513 00b6 00       		.byte	0
+ 514 00b7 03       		.uleb128 0x3
+ 515 00b8 0E       		.uleb128 0xe
+ 516 00b9 3A       		.uleb128 0x3a
+ 517 00ba 0B       		.uleb128 0xb
+ 518 00bb 3B       		.uleb128 0x3b
+ 519 00bc 0B       		.uleb128 0xb
+ 520 00bd 49       		.uleb128 0x49
+ 521 00be 13       		.uleb128 0x13
+ 522 00bf 02       		.uleb128 0x2
+ 523 00c0 17       		.uleb128 0x17
+ 524 00c1 00       		.byte	0
+ 525 00c2 00       		.byte	0
+ 526 00c3 00       		.byte	0
+ 527              		.section	.debug_loc,"",%progbits
+ 528              	.Ldebug_loc0:
+ 529              	.LLST0:
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc0zCrK4.s 			page 13
+
+
+ 530 0000 00000000 		.4byte	.LVL0
+ 531 0004 06000000 		.4byte	.LVL1
+ 532 0008 0100     		.2byte	0x1
+ 533 000a 50       		.byte	0x50
+ 534 000b 06000000 		.4byte	.LVL1
+ 535 000f 18000000 		.4byte	.LFE0
+ 536 0013 0400     		.2byte	0x4
+ 537 0015 F3       		.byte	0xf3
+ 538 0016 01       		.uleb128 0x1
+ 539 0017 50       		.byte	0x50
+ 540 0018 9F       		.byte	0x9f
+ 541 0019 00000000 		.4byte	0
+ 542 001d 00000000 		.4byte	0
+ 543              	.LLST1:
+ 544 0021 00000000 		.4byte	.LVL2
+ 545 0025 08000000 		.4byte	.LVL3
+ 546 0029 0100     		.2byte	0x1
+ 547 002b 50       		.byte	0x50
+ 548 002c 08000000 		.4byte	.LVL3
+ 549 0030 18000000 		.4byte	.LFE1
+ 550 0034 0400     		.2byte	0x4
+ 551 0036 F3       		.byte	0xf3
+ 552 0037 01       		.uleb128 0x1
+ 553 0038 50       		.byte	0x50
+ 554 0039 9F       		.byte	0x9f
+ 555 003a 00000000 		.4byte	0
+ 556 003e 00000000 		.4byte	0
+ 557              	.LLST2:
+ 558 0042 0A000000 		.4byte	.LVL4
+ 559 0046 0E000000 		.4byte	.LVL5
+ 560 004a 0100     		.2byte	0x1
+ 561 004c 50       		.byte	0x50
+ 562 004d 0E000000 		.4byte	.LVL5
+ 563 0051 14000000 		.4byte	.LFE4
+ 564 0055 0400     		.2byte	0x4
+ 565 0057 73       		.byte	0x73
+ 566 0058 00       		.sleb128 0
+ 567 0059 06       		.byte	0x6
+ 568 005a 9F       		.byte	0x9f
+ 569 005b 00000000 		.4byte	0
+ 570 005f 00000000 		.4byte	0
+ 571              		.section	.debug_aranges,"",%progbits
+ 572 0000 3C000000 		.4byte	0x3c
+ 573 0004 0200     		.2byte	0x2
+ 574 0006 00000000 		.4byte	.Ldebug_info0
+ 575 000a 04       		.byte	0x4
+ 576 000b 00       		.byte	0
+ 577 000c 0000     		.2byte	0
+ 578 000e 0000     		.2byte	0
+ 579 0010 00000000 		.4byte	.LFB0
+ 580 0014 18000000 		.4byte	.LFE0-.LFB0
+ 581 0018 00000000 		.4byte	.LFB1
+ 582 001c 18000000 		.4byte	.LFE1-.LFB1
+ 583 0020 00000000 		.4byte	.LFB2
+ 584 0024 10000000 		.4byte	.LFE2-.LFB2
+ 585 0028 00000000 		.4byte	.LFB3
+ 586 002c 10000000 		.4byte	.LFE3-.LFB3
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc0zCrK4.s 			page 14
+
+
+ 587 0030 00000000 		.4byte	.LFB4
+ 588 0034 14000000 		.4byte	.LFE4-.LFB4
+ 589 0038 00000000 		.4byte	0
+ 590 003c 00000000 		.4byte	0
+ 591              		.section	.debug_ranges,"",%progbits
+ 592              	.Ldebug_ranges0:
+ 593 0000 00000000 		.4byte	.LFB0
+ 594 0004 18000000 		.4byte	.LFE0
+ 595 0008 00000000 		.4byte	.LFB1
+ 596 000c 18000000 		.4byte	.LFE1
+ 597 0010 00000000 		.4byte	.LFB2
+ 598 0014 10000000 		.4byte	.LFE2
+ 599 0018 00000000 		.4byte	.LFB3
+ 600 001c 10000000 		.4byte	.LFE3
+ 601 0020 00000000 		.4byte	.LFB4
+ 602 0024 14000000 		.4byte	.LFE4
+ 603 0028 00000000 		.4byte	0
+ 604 002c 00000000 		.4byte	0
+ 605              		.section	.debug_line,"",%progbits
+ 606              	.Ldebug_line0:
+ 607 0000 AF000000 		.section	.debug_str,"MS",%progbits,1
+ 607      02004200 
+ 607      00000201 
+ 607      FB0E0D00 
+ 607      01010101 
+ 608              	.LASF14:
+ 609 0000 72656733 		.ascii	"reg32\000"
+ 609      3200
+ 610              	.LASF22:
+ 611 0006 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 611      4320342E 
+ 611      392E3320 
+ 611      32303135 
+ 611      30333033 
+ 612 0039 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 612      20726576 
+ 612      6973696F 
+ 612      6E203232 
+ 612      31323230 
+ 613 006c 73202D66 		.ascii	"s -ffunction-sections -ffat-lto-objects\000"
+ 613      66756E63 
+ 613      74696F6E 
+ 613      2D736563 
+ 613      74696F6E 
+ 614              	.LASF17:
+ 615 0094 76616C75 		.ascii	"value\000"
+ 615      6500
+ 616              	.LASF23:
+ 617 009a 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\SE3.c\000"
+ 617      6E657261 
+ 617      7465645F 
+ 617      536F7572 
+ 617      63655C50 
+ 618              	.LASF20:
+ 619 00b9 5345335F 		.ascii	"SE3_ReadDataReg\000"
+ 619      52656164 
+ 619      44617461 
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc0zCrK4.s 			page 15
+
+
+ 619      52656700 
+ 620              	.LASF11:
+ 621 00c9 666C6F61 		.ascii	"float\000"
+ 621      7400
+ 622              	.LASF15:
+ 623 00cf 5345335F 		.ascii	"SE3_Write\000"
+ 623      57726974 
+ 623      6500
+ 624              	.LASF1:
+ 625 00d9 756E7369 		.ascii	"unsigned char\000"
+ 625      676E6564 
+ 625      20636861 
+ 625      7200
+ 626              	.LASF25:
+ 627 00e7 64725661 		.ascii	"drVal\000"
+ 627      6C00
+ 628              	.LASF5:
+ 629 00ed 6C6F6E67 		.ascii	"long unsigned int\000"
+ 629      20756E73 
+ 629      69676E65 
+ 629      6420696E 
+ 629      7400
+ 630              	.LASF3:
+ 631 00ff 73686F72 		.ascii	"short unsigned int\000"
+ 631      7420756E 
+ 631      7369676E 
+ 631      65642069 
+ 631      6E7400
+ 632              	.LASF12:
+ 633 0112 646F7562 		.ascii	"double\000"
+ 633      6C6500
+ 634              	.LASF10:
+ 635 0119 75696E74 		.ascii	"uint32\000"
+ 635      333200
+ 636              	.LASF8:
+ 637 0120 756E7369 		.ascii	"unsigned int\000"
+ 637      676E6564 
+ 637      20696E74 
+ 637      00
+ 638              	.LASF7:
+ 639 012d 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 639      206C6F6E 
+ 639      6720756E 
+ 639      7369676E 
+ 639      65642069 
+ 640              	.LASF16:
+ 641 0144 5345335F 		.ascii	"SE3_SetDriveMode\000"
+ 641      53657444 
+ 641      72697665 
+ 641      4D6F6465 
+ 641      00
+ 642              	.LASF18:
+ 643 0155 6D6F6465 		.ascii	"mode\000"
+ 643      00
+ 644              	.LASF19:
+ 645 015a 5345335F 		.ascii	"SE3_Read\000"
+ 645      52656164 
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc0zCrK4.s 			page 16
+
+
+ 645      00
+ 646              	.LASF6:
+ 647 0163 6C6F6E67 		.ascii	"long long int\000"
+ 647      206C6F6E 
+ 647      6720696E 
+ 647      7400
+ 648              	.LASF26:
+ 649 0171 6D61736B 		.ascii	"maskedStatus\000"
+ 649      65645374 
+ 649      61747573 
+ 649      00
+ 650              	.LASF13:
+ 651 017e 63686172 		.ascii	"char\000"
+ 651      00
+ 652              	.LASF2:
+ 653 0183 73686F72 		.ascii	"short int\000"
+ 653      7420696E 
+ 653      7400
+ 654              	.LASF9:
+ 655 018d 75696E74 		.ascii	"uint8\000"
+ 655      3800
+ 656              	.LASF21:
+ 657 0193 5345335F 		.ascii	"SE3_ClearInterrupt\000"
+ 657      436C6561 
+ 657      72496E74 
+ 657      65727275 
+ 657      707400
+ 658              	.LASF4:
+ 659 01a6 6C6F6E67 		.ascii	"long int\000"
+ 659      20696E74 
+ 659      00
+ 660              	.LASF24:
+ 661 01af 453A5C68 		.ascii	"E:\\home\\jarik\\src\\psoc\\mpi_rom_emu\\mpi_rom_em"
+ 661      6F6D655C 
+ 661      6A617269 
+ 661      6B5C7372 
+ 661      635C7073 
+ 662 01dc 752E6379 		.ascii	"u.cydsn\000"
+ 662      64736E00 
+ 663              	.LASF0:
+ 664 01e4 7369676E 		.ascii	"signed char\000"
+ 664      65642063 
+ 664      68617200 
+ 665              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
