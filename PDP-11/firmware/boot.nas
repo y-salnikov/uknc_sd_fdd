@@ -3,13 +3,27 @@ equ("tmp_buf=020000")
 equ("dsk_buf=0116000")
 		org(0)
 		240
-		br(start_)
+		137
+		start_
 		0
 		0
 		0
 		0
 		0
 		0
+		org(0100)
+		dummy_int
+		0
+		org(0360)
+		dummy_int
+		0
+		dummy_int
+		0
+		dummy_int
+		0
+		dummy_int
+		0
+
 start_:		12706
 		stk_l
 		12701
@@ -108,6 +122,7 @@ p_n_l:		10102
 		print_msg
 		207
 
+dummy_int:	2
 #################################
 nm_buf:		0
 		0
