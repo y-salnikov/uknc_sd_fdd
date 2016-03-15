@@ -28,8 +28,8 @@ permalink: /:year/:month/:title
 paginate: 3
 
 highlighter: rouge
-#markdown: kramdown
-markdown: redcarpet
+markdown: kramdown
+#markdown: redcarpet
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 syntax-highlighting:
