@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
   30:.\Generated_Source\PSoC4/CyLFClk.c ****     static volatile uint32 wdtIsrMask = CY_SYS_WDT_COUNTER0_INT |\
   31:.\Generated_Source\PSoC4/CyLFClk.c ****                                         CY_SYS_WDT_COUNTER1_INT |\
   32:.\Generated_Source\PSoC4/CyLFClk.c ****                                         CY_SYS_WDT_COUNTER2_INT;
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 2
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/CyLFClk.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
   43 0010 04010B40 		.word	1074462980
   44              		.cfi_endproc
   45              	.LFE0:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 3
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 3
 
 
   46              		.size	CySysClkIloStart, .-CySysClkIloStart
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  114:.\Generated_Source\PSoC4/CyLFClk.c ****                 CY_SYS_CLK_ILO_CONFIG_REG &= ( uint32 ) ( ~( uint32 )CY_SYS_CLK_ILO_CONFIG_ENABLE);
  115:.\Generated_Source\PSoC4/CyLFClk.c ****                 CySysClkLfclkPosedgeRestore();
  116:.\Generated_Source\PSoC4/CyLFClk.c ****                 CyExitCriticalSection(interruptState);
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 4
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 4
 
 
  117:.\Generated_Source\PSoC4/CyLFClk.c **** 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  171:.\Generated_Source\PSoC4/CyLFClk.c **** *   CY_SYS_CLK_LFCLK_SRC_ILO    Internal Low Frequency (32 kHz) Oscillator (ILO)
  172:.\Generated_Source\PSoC4/CyLFClk.c **** *   CY_SYS_CLK_LFCLK_SRC_WCO    Low Frequency Watch Crystal Oscillator (WCO)
  173:.\Generated_Source\PSoC4/CyLFClk.c **** *
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 5
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 5
 
 
  174:.\Generated_Source\PSoC4/CyLFClk.c **** *******************************************************************************/
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  228:.\Generated_Source\PSoC4/CyLFClk.c **** 
  229:.\Generated_Source\PSoC4/CyLFClk.c ****         if (CySysClkGetLfclkSource() != source)
  230:.\Generated_Source\PSoC4/CyLFClk.c ****         {
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 6
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 6
 
 
  231:.\Generated_Source\PSoC4/CyLFClk.c ****             interruptState = CyEnterCriticalSection();
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  285:.\Generated_Source\PSoC4/CyLFClk.c ****     *  None.
  286:.\Generated_Source\PSoC4/CyLFClk.c ****     *
  287:.\Generated_Source\PSoC4/CyLFClk.c ****     * Return:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 7
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 7
 
 
  288:.\Generated_Source\PSoC4/CyLFClk.c ****     *  None.
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  342:.\Generated_Source\PSoC4/CyLFClk.c ****     *
  343:.\Generated_Source\PSoC4/CyLFClk.c ****     * Parameters:
  344:.\Generated_Source\PSoC4/CyLFClk.c ****     *  uint32 mode:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 8
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 8
 
 
  345:.\Generated_Source\PSoC4/CyLFClk.c ****     *   CY_SYS_CLK_WCO_HPM  - The High Power mode
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  399:.\Generated_Source\PSoC4/CyLFClk.c ****     *
  400:.\Generated_Source\PSoC4/CyLFClk.c ****     * Return:
  401:.\Generated_Source\PSoC4/CyLFClk.c ****     *  None.
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 9
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 9
 
 
  402:.\Generated_Source\PSoC4/CyLFClk.c ****     *
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
   91              		.type	CySysWdtUnlock, %function
   92              	CySysWdtUnlock:
   93              	.LFB5:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 10
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 10
 
 
  418:.\Generated_Source\PSoC4/CyLFClk.c **** 
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  103 0004 FFF7FEFF 		bl	CyEnterCriticalSection
  104              	.LVL2:
  105              		.loc 1 461 0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 11
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 11
 
 
  106 0008 0749     		ldr	r1, .L8
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  476:.\Generated_Source\PSoC4/CyLFClk.c ****     *  Reads the enabled status of one of the three WDT counters.
  477:.\Generated_Source\PSoC4/CyLFClk.c ****     *
  478:.\Generated_Source\PSoC4/CyLFClk.c ****     * Parameters:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 12
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 12
 
 
  479:.\Generated_Source\PSoC4/CyLFClk.c ****     *  counterNum: Valid range [0-2].  the number of the WDT counter.
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  499:.\Generated_Source\PSoC4/CyLFClk.c **** 
  500:.\Generated_Source\PSoC4/CyLFClk.c ****     /*******************************************************************************
  501:.\Generated_Source\PSoC4/CyLFClk.c ****     * Function Name: CySysWdtSetMode
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 13
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 13
 
 
  502:.\Generated_Source\PSoC4/CyLFClk.c ****     ********************************************************************************
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  536:.\Generated_Source\PSoC4/CyLFClk.c ****         {
  537:.\Generated_Source\PSoC4/CyLFClk.c ****             configRegValue = CY_SYS_WDT_CONFIG_REG &
  538:.\Generated_Source\PSoC4/CyLFClk.c ****                                 (uint32)~((uint32)(CY_SYS_WDT_MODE_MASK << (counterNum * CY_SYS_WDT
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 14
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 14
 
 
  197              		.loc 1 538 0
@@ -838,7 +838,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  550:.\Generated_Source\PSoC4/CyLFClk.c ****     *  Reads the mode of one of the three WDT counters.
  551:.\Generated_Source\PSoC4/CyLFClk.c ****     *
  552:.\Generated_Source\PSoC4/CyLFClk.c ****     * Parameters:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 15
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 15
 
 
  553:.\Generated_Source\PSoC4/CyLFClk.c ****     *  counterNum: Valid range [0-2].  The number of the WDT counter.
@@ -898,7 +898,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  574:.\Generated_Source\PSoC4/CyLFClk.c ****     *
  575:.\Generated_Source\PSoC4/CyLFClk.c ****     * Parameters:
  576:.\Generated_Source\PSoC4/CyLFClk.c ****     *  counterNum:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 16
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 16
 
 
  577:.\Generated_Source\PSoC4/CyLFClk.c ****     *   Valid range [0-1].  The number of the WDT counter.  The match values are not
@@ -958,7 +958,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  295              	.LVL19:
  603:.\Generated_Source\PSoC4/CyLFClk.c **** 
  296              		.loc 1 603 0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 17
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 17
 
 
  297 0016 A140     		lsl	r1, r1, r4
@@ -1018,7 +1018,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  627:.\Generated_Source\PSoC4/CyLFClk.c ****     *******************************************************************************/
  628:.\Generated_Source\PSoC4/CyLFClk.c ****     uint32 CySysWdtGetClearOnMatch(uint32 counterNum)
  629:.\Generated_Source\PSoC4/CyLFClk.c ****     {
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 18
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 18
 
 
  330              		.loc 1 629 0
@@ -1078,7 +1078,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  644:.\Generated_Source\PSoC4/CyLFClk.c ****     *  are enabled.
  645:.\Generated_Source\PSoC4/CyLFClk.c ****     *
  646:.\Generated_Source\PSoC4/CyLFClk.c ****     * Parameters:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 19
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 19
 
 
  647:.\Generated_Source\PSoC4/CyLFClk.c ****     *  counterMask: The mask of all counters to enable.
@@ -1138,7 +1138,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  385 0010 E207     		lsl	r2, r4, #31
  386 0012 02D5     		bpl	.L29
  387              	.L30:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 20
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 20
 
 
  388              	.LVL27:
@@ -1198,7 +1198,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  424              	.LBB21:
  496:.\Generated_Source\PSoC4/CyLFClk.c ****     }
  425              		.loc 1 496 0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 21
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 21
 
 
  426 0028 1A68     		ldr	r2, [r3]
@@ -1258,7 +1258,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  724:.\Generated_Source\PSoC4/CyLFClk.c ****     *   None.
  725:.\Generated_Source\PSoC4/CyLFClk.c ****     *
  726:.\Generated_Source\PSoC4/CyLFClk.c ****     *******************************************************************************/
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 22
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 22
 
 
  727:.\Generated_Source\PSoC4/CyLFClk.c ****     void CySysWdtDisable(uint32 counterMask)
@@ -1318,7 +1318,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  492 0020 02D5     		bpl	.L52
  493              	.L53:
  494              	.LVL37:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 23
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 23
 
 
  495              	.LBB34:
@@ -1378,7 +1378,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  531              	.LFE12:
  532              		.size	CySysWdtDisable, .-CySysWdtDisable
  533              		.section	.text.CySysWdtSetCascade,"ax",%progbits
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 24
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 24
 
 
  534              		.align	1
@@ -1438,7 +1438,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  550              		.loc 1 794 0
  551 0002 10B5     		push	{r4, lr}
  552              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 25
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 25
 
 
  553              		.cfi_offset 4, -8
@@ -1498,7 +1498,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  597 0016 05D4     		bmi	.L65
  803:.\Generated_Source\PSoC4/CyLFClk.c ****         {
  804:.\Generated_Source\PSoC4/CyLFClk.c ****             configRegValue = CY_SYS_WDT_CONFIG_REG;
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 26
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 26
 
 
  598              		.loc 1 804 0
@@ -1558,7 +1558,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  821:.\Generated_Source\PSoC4/CyLFClk.c ****     *
  822:.\Generated_Source\PSoC4/CyLFClk.c ****     * Return:
  823:.\Generated_Source\PSoC4/CyLFClk.c ****     *   The mask of the cascade values set.
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 27
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 27
 
 
  824:.\Generated_Source\PSoC4/CyLFClk.c ****     *   Define                     Cascade
@@ -1618,7 +1618,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  849:.\Generated_Source\PSoC4/CyLFClk.c ****     *   Valid range [0-65535]. The value to be used to match against the counter.
  850:.\Generated_Source\PSoC4/CyLFClk.c ****     *
  851:.\Generated_Source\PSoC4/CyLFClk.c ****     * Return:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 28
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 28
 
 
  852:.\Generated_Source\PSoC4/CyLFClk.c ****     *   None.
@@ -1678,7 +1678,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  695              		@ sp needed
  866:.\Generated_Source\PSoC4/CyLFClk.c ****         CY_SYS_WDT_MATCH_REG = (regValue | (match << (counterNum * CY_SYS_WDT_CNT_MATCH_SHIFT)));
  696              		.loc 1 866 0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 29
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 29
 
 
  697 001a 9343     		bic	r3, r2
@@ -1738,7 +1738,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  898:.\Generated_Source\PSoC4/CyLFClk.c ****     *******************************************************************************/
  899:.\Generated_Source\PSoC4/CyLFClk.c ****     void CySysWdtSetToggleBit(uint32 bits)
  900:.\Generated_Source\PSoC4/CyLFClk.c ****     {
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 30
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 30
 
 
  723              		.loc 1 900 0
@@ -1798,7 +1798,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  765 0024 FFFFFFE0 		.word	-520093697
  766              		.cfi_endproc
  767              	.LFE16:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 31
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 31
 
 
  768              		.size	CySysWdtSetToggleBit, .-CySysWdtSetToggleBit
@@ -1858,7 +1858,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  801              		.type	CySysWdtGetMatch, %function
  802              	CySysWdtGetMatch:
  803              	.LFB18:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 32
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 32
 
 
  931:.\Generated_Source\PSoC4/CyLFClk.c **** 
@@ -1918,7 +1918,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  833              	.LFB19:
  955:.\Generated_Source\PSoC4/CyLFClk.c **** 
  956:.\Generated_Source\PSoC4/CyLFClk.c **** 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 33
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 33
 
 
  957:.\Generated_Source\PSoC4/CyLFClk.c ****     /*******************************************************************************
@@ -1978,7 +1978,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  852              		.loc 1 980 0
  853 0012 064B     		ldr	r3, .L93+4
  854 0014 1868     		ldr	r0, [r3]
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 34
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 34
 
 
  855              	.LVL68:
@@ -2038,7 +2038,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  896              		.cfi_startproc
  897              	.LBB78:
  898              	.LBB79:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 35
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 35
 
 
  437:.\Generated_Source\PSoC4/CyLFClk.c ****     }
@@ -2098,7 +2098,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  946              	.LBE85:
  947              	.LBE84:
  112:.\Generated_Source\PSoC4/CyLFClk.c ****                 CySysClkLfclkPosedgeCatch();
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 36
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 36
 
 
  948              		.loc 1 112 0
@@ -2158,7 +2158,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
 1040:.\Generated_Source\PSoC4/CyLFClk.c ****     *   counterMask: The mask of all the counters to enable.
 1041:.\Generated_Source\PSoC4/CyLFClk.c ****     *   Define                    Counter
 1042:.\Generated_Source\PSoC4/CyLFClk.c ****     *   CY_SYS_WDT_COUNTER0_INT    0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 37
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 37
 
 
 1043:.\Generated_Source\PSoC4/CyLFClk.c ****     *   CY_SYS_WDT_COUNTER1_INT    1
@@ -2218,7 +2218,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
 1097:.\Generated_Source\PSoC4/CyLFClk.c ****     ********************************************************************************
 1098:.\Generated_Source\PSoC4/CyLFClk.c ****     *
 1099:.\Generated_Source\PSoC4/CyLFClk.c ****     * Summary:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 38
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 38
 
 
 1100:.\Generated_Source\PSoC4/CyLFClk.c ****     *  Resets all the WDT counters set in the mask.
@@ -2278,7 +2278,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
 1154:.\Generated_Source\PSoC4/CyLFClk.c ****             prevCallback = cySysWdtCallback[counterNum];
 1155:.\Generated_Source\PSoC4/CyLFClk.c ****             cySysWdtCallback[counterNum] = function;
 1156:.\Generated_Source\PSoC4/CyLFClk.c ****         }
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 39
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 39
 
 
 1157:.\Generated_Source\PSoC4/CyLFClk.c ****         else
@@ -2338,7 +2338,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
 1211:.\Generated_Source\PSoC4/CyLFClk.c ****         if(counterNum <= CY_SYS_WDT_COUNTER2)
 1212:.\Generated_Source\PSoC4/CyLFClk.c ****         {
 1213:.\Generated_Source\PSoC4/CyLFClk.c ****             disableServicedIsr &= ~counterIntMaskTbl[counterNum];
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 40
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 40
 
 
 1214:.\Generated_Source\PSoC4/CyLFClk.c ****             wdtIsrMask |= counterIntMaskTbl[counterNum];
@@ -2398,7 +2398,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
 1268:.\Generated_Source\PSoC4/CyLFClk.c ****     *  as the interrupt handler even if the "Watchdog with Interrupt" mode is
 1269:.\Generated_Source\PSoC4/CyLFClk.c ****     *  selected on the "Low Frequency Clocks" tab.
 1270:.\Generated_Source\PSoC4/CyLFClk.c ****     *
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 41
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 41
 
 
 1271:.\Generated_Source\PSoC4/CyLFClk.c ****     *******************************************************************************/
@@ -2458,7 +2458,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
 1325:.\Generated_Source\PSoC4/CyLFClk.c ****     *  the "WAIT" mode, the function waits for the specified number of ticks. In the
 1326:.\Generated_Source\PSoC4/CyLFClk.c ****     *  "INTERRUPT" mode, the interrupt is generated after the specified number of
 1327:.\Generated_Source\PSoC4/CyLFClk.c ****     *  ticks.
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 42
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 42
 
 
 1328:.\Generated_Source\PSoC4/CyLFClk.c ****     *
@@ -2518,7 +2518,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
 1382:.\Generated_Source\PSoC4/CyLFClk.c ****         }
 1383:.\Generated_Source\PSoC4/CyLFClk.c ****         else
 1384:.\Generated_Source\PSoC4/CyLFClk.c ****         {
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 43
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 43
 
 
 1385:.\Generated_Source\PSoC4/CyLFClk.c ****             CYASSERT(0u != 0u);
@@ -2578,7 +2578,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
 1439:.\Generated_Source\PSoC4/CyLFClk.c ****     *  None
 1440:.\Generated_Source\PSoC4/CyLFClk.c ****     *
 1441:.\Generated_Source\PSoC4/CyLFClk.c ****     * Side effects:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 44
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 44
 
 
 1442:.\Generated_Source\PSoC4/CyLFClk.c ****     *  In the "INTERRUPT" mode, this function enables ISR callback servicing
@@ -2638,7 +2638,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
 1496:.\Generated_Source\PSoC4/CyLFClk.c ****     *  Clears the WDT counter in the "Watchdog" mode or clears the WDT interrupt in
 1497:.\Generated_Source\PSoC4/CyLFClk.c ****     *  "Watchdog w/ Interrupts" mode. Does nothing in other modes.
 1498:.\Generated_Source\PSoC4/CyLFClk.c ****     *
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 45
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 45
 
 
 1499:.\Generated_Source\PSoC4/CyLFClk.c ****     *******************************************************************************/
@@ -2698,7 +2698,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
 1553:.\Generated_Source\PSoC4/CyLFClk.c ****     *
 1554:.\Generated_Source\PSoC4/CyLFClk.c ****     *  To ensure that the WDT counter value is read until it changes, the enabled
 1555:.\Generated_Source\PSoC4/CyLFClk.c ****     *  WDT counter is used. If no counter is enabled, counter 0 is enabled.
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 46
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 46
 
 
 1556:.\Generated_Source\PSoC4/CyLFClk.c ****     *  And after the LFCLK source is switched, the counter 0 configuration
@@ -2758,7 +2758,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  496:.\Generated_Source\PSoC4/CyLFClk.c ****     }
  986              		.loc 1 496 0
  987 003a 2968     		ldr	r1, [r5]
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 47
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 47
 
 
  988 003c 490C     		lsr	r1, r1, #17
@@ -2818,7 +2818,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  1026              	.LBE97:
  1027              	.LBE99:
 1595:.\Generated_Source\PSoC4/CyLFClk.c ****             CySysWdtSetMode(CY_SYS_WDT_COUNTER0, CY_SYS_WDT_MODE_NONE);
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 48
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 48
 
 
  1028              		.loc 1 1595 0
@@ -2878,7 +2878,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
 1616:.\Generated_Source\PSoC4/CyLFClk.c ****     *  functions is expected to be called inside a critical section.
 1617:.\Generated_Source\PSoC4/CyLFClk.c ****     *
 1618:.\Generated_Source\PSoC4/CyLFClk.c ****     *  Not applicable for the PSoC 4000 devices.
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 49
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 49
 
 
 1619:.\Generated_Source\PSoC4/CyLFClk.c ****     *
@@ -2938,7 +2938,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  1093 00a2 C046     		.align	2
  1094              	.L112:
  1095 00a4 00010B40 		.word	1074462976
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 50
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 50
 
 
  1096 00a8 04010B40 		.word	1074462980
@@ -2998,7 +2998,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  1144              		.cfi_offset 4, -16
  1145              		.cfi_offset 5, -12
  1146              		.cfi_offset 6, -8
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 51
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 51
 
 
  1147              		.cfi_offset 14, -4
@@ -3058,7 +3058,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  1190              		.loc 1 1086 0
  1191 002a 012B     		cmp	r3, #1
  1192 002c 01D1     		bne	.L119
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 52
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 52
 
 
  1193              	.LVL94:
@@ -3118,7 +3118,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  1240              	.LVL101:
  1241 0008 0843     		orr	r0, r1
  1242 000a 1860     		str	r0, [r3]
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 53
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 53
 
 
  1243              	.L125:
@@ -3178,7 +3178,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  1289 0012 7047     		bx	lr
  1290              	.L132:
  1291              		.align	2
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 54
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 54
 
 
  1292              	.L131:
@@ -3238,7 +3238,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  1340              		.loc 1 1210 0
  1341              		.cfi_startproc
  1342              	.LVL109:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 55
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 55
 
 
 1211:.\Generated_Source\PSoC4/CyLFClk.c ****         {
@@ -3298,7 +3298,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  1390 0008 8000     		lsl	r0, r0, #2
  1391              	.LVL112:
  1392 000a 1368     		ldr	r3, [r2]
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 56
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 56
 
 
  1393 000c 4158     		ldr	r1, [r0, r1]
@@ -3358,7 +3358,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  1440 0018 0868     		ldr	r0, [r1]
  1441 001a 1540     		and	r5, r2
  1442 001c A843     		bic	r0, r5
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 57
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 57
 
 
  1443 001e 0860     		str	r0, [r1]
@@ -3418,7 +3418,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
 1296:.\Generated_Source\PSoC4/CyLFClk.c ****                 }
  1488              		.loc 1 1296 0
  1489 0060 9847     		blx	r3
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 58
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 58
 
 
  1490              	.LVL115:
@@ -3478,7 +3478,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  1537              		.section	.text.CySysTimerDelayUntilMatch,"ax",%progbits
  1538              		.align	1
  1539              		.global	CySysTimerDelayUntilMatch
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 59
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 59
 
 
  1540              		.code	16
@@ -3538,7 +3538,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
 1463:.\Generated_Source\PSoC4/CyLFClk.c ****             }
  1586              		.loc 1 1463 0 discriminator 1
  1587 002e A842     		cmp	r0, r5
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 60
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 60
 
 
  1588 0030 FAD3     		bcc	.L186
@@ -3598,7 +3598,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  1635              		.global	CySysTimerDelay
  1636              		.code	16
  1637              		.thumb_func
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 61
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 61
 
 
  1638              		.type	CySysTimerDelay, %function
@@ -3658,7 +3658,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  1684              	.L193:
  1685 0030 FFFF0000 		.word	65535
  1686              		.cfi_endproc
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 62
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 62
 
 
  1687              	.LFE28:
@@ -3718,7 +3718,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  1732              		.loc 1 1518 0
  1733 0026 0128     		cmp	r0, #1
  1734 0028 12D1     		bne	.L195
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 63
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 63
 
 
 1520:.\Generated_Source\PSoC4/CyLFClk.c ****             {
@@ -3778,14 +3778,14 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  1783              	wdtIsrMask:
  1784 0000 04040400 		.word	263172
  1785              		.bss
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 64
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 64
 
 
  1786              		.align	2
  1787              		.set	.LANCHOR0,. + 0
- 1788              		.type	lfclkPosedgeEnabledWdtCounter.4836, %object
- 1789              		.size	lfclkPosedgeEnabledWdtCounter.4836, 4
- 1790              	lfclkPosedgeEnabledWdtCounter.4836:
+ 1788              		.type	lfclkPosedgeEnabledWdtCounter.4838, %object
+ 1789              		.size	lfclkPosedgeEnabledWdtCounter.4838, 4
+ 1790              	lfclkPosedgeEnabledWdtCounter.4838:
  1791 0000 00000000 		.space	4
  1792              		.type	lfclkPosedgeWdtCounter0Enabled, %object
  1793              		.size	lfclkPosedgeWdtCounter0Enabled, 4
@@ -3812,7 +3812,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  1812              		.file 4 ".\\Generated_Source\\PSoC4\\CyLib.h"
  1813              		.section	.debug_info,"",%progbits
  1814              	.Ldebug_info0:
- 1815 0000 930C0000 		.4byte	0xc93
+ 1815 0000 960C0000 		.4byte	0xc96
  1816 0004 0400     		.2byte	0x4
  1817 0006 00000000 		.4byte	.Ldebug_abbrev0
  1818 000a 04       		.byte	0x4
@@ -3838,7 +3838,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  1838 0036 D6040000 		.4byte	.LASF2
  1839 003a 02       		.uleb128 0x2
  1840 003b 02       		.byte	0x2
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 65
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 65
 
 
  1841 003c 07       		.byte	0x7
@@ -3870,1424 +3870,1424 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  1867 006b 04       		.uleb128 0x4
  1868 006c 00020000 		.4byte	.LASF9
  1869 0070 02       		.byte	0x2
- 1870 0071 C2       		.byte	0xc2
- 1871 0072 2C000000 		.4byte	0x2c
- 1872 0076 04       		.uleb128 0x4
- 1873 0077 00000000 		.4byte	.LASF10
- 1874 007b 02       		.byte	0x2
- 1875 007c C3       		.byte	0xc3
- 1876 007d 3A000000 		.4byte	0x3a
- 1877 0081 04       		.uleb128 0x4
- 1878 0082 31020000 		.4byte	.LASF11
- 1879 0086 02       		.byte	0x2
- 1880 0087 C4       		.byte	0xc4
- 1881 0088 48000000 		.4byte	0x48
- 1882 008c 02       		.uleb128 0x2
- 1883 008d 04       		.byte	0x4
- 1884 008e 04       		.byte	0x4
- 1885 008f 65040000 		.4byte	.LASF12
- 1886 0093 02       		.uleb128 0x2
- 1887 0094 08       		.byte	0x8
- 1888 0095 04       		.byte	0x4
- 1889 0096 0D020000 		.4byte	.LASF13
- 1890 009a 02       		.uleb128 0x2
- 1891 009b 01       		.byte	0x1
- 1892 009c 08       		.byte	0x8
- 1893 009d 77050000 		.4byte	.LASF14
- 1894 00a1 05       		.uleb128 0x5
- 1895 00a2 E9030000 		.4byte	.LASF15
- 1896 00a6 02       		.byte	0x2
- 1897 00a7 6E01     		.2byte	0x16e
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 66
+ 1870 0071 3801     		.2byte	0x138
+ 1871 0073 2C000000 		.4byte	0x2c
+ 1872 0077 04       		.uleb128 0x4
+ 1873 0078 00000000 		.4byte	.LASF10
+ 1874 007c 02       		.byte	0x2
+ 1875 007d 3901     		.2byte	0x139
+ 1876 007f 3A000000 		.4byte	0x3a
+ 1877 0083 04       		.uleb128 0x4
+ 1878 0084 31020000 		.4byte	.LASF11
+ 1879 0088 02       		.byte	0x2
+ 1880 0089 3A01     		.2byte	0x13a
+ 1881 008b 48000000 		.4byte	0x48
+ 1882 008f 02       		.uleb128 0x2
+ 1883 0090 04       		.byte	0x4
+ 1884 0091 04       		.byte	0x4
+ 1885 0092 65040000 		.4byte	.LASF12
+ 1886 0096 02       		.uleb128 0x2
+ 1887 0097 08       		.byte	0x8
+ 1888 0098 04       		.byte	0x4
+ 1889 0099 0D020000 		.4byte	.LASF13
+ 1890 009d 02       		.uleb128 0x2
+ 1891 009e 01       		.byte	0x1
+ 1892 009f 08       		.byte	0x8
+ 1893 00a0 77050000 		.4byte	.LASF14
+ 1894 00a4 04       		.uleb128 0x4
+ 1895 00a5 E9030000 		.4byte	.LASF15
+ 1896 00a9 02       		.byte	0x2
+ 1897 00aa E401     		.2byte	0x1e4
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 66
 
 
- 1898 00a9 AD000000 		.4byte	0xad
- 1899 00ad 06       		.uleb128 0x6
- 1900 00ae 81000000 		.4byte	0x81
- 1901 00b2 07       		.uleb128 0x7
- 1902 00b3 04       		.byte	0x4
- 1903 00b4 B8000000 		.4byte	0xb8
- 1904 00b8 08       		.uleb128 0x8
- 1905 00b9 09       		.uleb128 0x9
- 1906 00ba 01       		.byte	0x1
- 1907 00bb 03       		.byte	0x3
- 1908 00bc 16       		.byte	0x16
- 1909 00bd CE000000 		.4byte	0xce
- 1910 00c1 0A       		.uleb128 0xa
- 1911 00c2 26040000 		.4byte	.LASF16
- 1912 00c6 00       		.sleb128 0
- 1913 00c7 0A       		.uleb128 0xa
- 1914 00c8 2A060000 		.4byte	.LASF17
- 1915 00cc 01       		.sleb128 1
- 1916 00cd 00       		.byte	0
- 1917 00ce 04       		.uleb128 0x4
- 1918 00cf CD010000 		.4byte	.LASF18
- 1919 00d3 03       		.byte	0x3
- 1920 00d4 19       		.byte	0x19
- 1921 00d5 B9000000 		.4byte	0xb9
- 1922 00d9 04       		.uleb128 0x4
- 1923 00da B5010000 		.4byte	.LASF19
- 1924 00de 03       		.byte	0x3
- 1925 00df 2D       		.byte	0x2d
- 1926 00e0 B2000000 		.4byte	0xb2
- 1927 00e4 02       		.uleb128 0x2
- 1928 00e5 04       		.byte	0x4
- 1929 00e6 07       		.byte	0x7
- 1930 00e7 06040000 		.4byte	.LASF20
- 1931 00eb 0B       		.uleb128 0xb
- 1932 00ec CE000000 		.4byte	.LASF23
- 1933 00f0 01       		.byte	0x1
- 1934 00f1 1102     		.2byte	0x211
- 1935 00f3 01       		.byte	0x1
- 1936 00f4 1D010000 		.4byte	0x11d
- 1937 00f8 0C       		.uleb128 0xc
- 1938 00f9 FF000000 		.4byte	.LASF21
- 1939 00fd 01       		.byte	0x1
- 1940 00fe 1102     		.2byte	0x211
- 1941 0100 81000000 		.4byte	0x81
- 1942 0104 0C       		.uleb128 0xc
- 1943 0105 7C050000 		.4byte	.LASF22
- 1944 0109 01       		.byte	0x1
- 1945 010a 1102     		.2byte	0x211
- 1946 010c 81000000 		.4byte	0x81
- 1947 0110 0D       		.uleb128 0xd
- 1948 0111 D1050000 		.4byte	.LASF29
- 1949 0115 01       		.byte	0x1
- 1950 0116 1302     		.2byte	0x213
- 1951 0118 81000000 		.4byte	0x81
- 1952 011c 00       		.byte	0
- 1953 011d 0B       		.uleb128 0xb
- 1954 011e 76020000 		.4byte	.LASF24
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 67
+ 1898 00ac B0000000 		.4byte	0xb0
+ 1899 00b0 05       		.uleb128 0x5
+ 1900 00b1 83000000 		.4byte	0x83
+ 1901 00b5 06       		.uleb128 0x6
+ 1902 00b6 04       		.byte	0x4
+ 1903 00b7 BB000000 		.4byte	0xbb
+ 1904 00bb 07       		.uleb128 0x7
+ 1905 00bc 08       		.uleb128 0x8
+ 1906 00bd 01       		.byte	0x1
+ 1907 00be 03       		.byte	0x3
+ 1908 00bf 16       		.byte	0x16
+ 1909 00c0 D1000000 		.4byte	0xd1
+ 1910 00c4 09       		.uleb128 0x9
+ 1911 00c5 26040000 		.4byte	.LASF16
+ 1912 00c9 00       		.sleb128 0
+ 1913 00ca 09       		.uleb128 0x9
+ 1914 00cb 2A060000 		.4byte	.LASF17
+ 1915 00cf 01       		.sleb128 1
+ 1916 00d0 00       		.byte	0
+ 1917 00d1 0A       		.uleb128 0xa
+ 1918 00d2 CD010000 		.4byte	.LASF18
+ 1919 00d6 03       		.byte	0x3
+ 1920 00d7 19       		.byte	0x19
+ 1921 00d8 BC000000 		.4byte	0xbc
+ 1922 00dc 0A       		.uleb128 0xa
+ 1923 00dd B5010000 		.4byte	.LASF19
+ 1924 00e1 03       		.byte	0x3
+ 1925 00e2 2D       		.byte	0x2d
+ 1926 00e3 B5000000 		.4byte	0xb5
+ 1927 00e7 02       		.uleb128 0x2
+ 1928 00e8 04       		.byte	0x4
+ 1929 00e9 07       		.byte	0x7
+ 1930 00ea 06040000 		.4byte	.LASF20
+ 1931 00ee 0B       		.uleb128 0xb
+ 1932 00ef CE000000 		.4byte	.LASF23
+ 1933 00f3 01       		.byte	0x1
+ 1934 00f4 1102     		.2byte	0x211
+ 1935 00f6 01       		.byte	0x1
+ 1936 00f7 20010000 		.4byte	0x120
+ 1937 00fb 0C       		.uleb128 0xc
+ 1938 00fc FF000000 		.4byte	.LASF21
+ 1939 0100 01       		.byte	0x1
+ 1940 0101 1102     		.2byte	0x211
+ 1941 0103 83000000 		.4byte	0x83
+ 1942 0107 0C       		.uleb128 0xc
+ 1943 0108 7C050000 		.4byte	.LASF22
+ 1944 010c 01       		.byte	0x1
+ 1945 010d 1102     		.2byte	0x211
+ 1946 010f 83000000 		.4byte	0x83
+ 1947 0113 0D       		.uleb128 0xd
+ 1948 0114 D1050000 		.4byte	.LASF29
+ 1949 0118 01       		.byte	0x1
+ 1950 0119 1302     		.2byte	0x213
+ 1951 011b 83000000 		.4byte	0x83
+ 1952 011f 00       		.byte	0
+ 1953 0120 0B       		.uleb128 0xb
+ 1954 0121 76020000 		.4byte	.LASF24
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 67
 
 
- 1955 0122 01       		.byte	0x1
- 1956 0123 A202     		.2byte	0x2a2
- 1957 0125 01       		.byte	0x1
- 1958 0126 37010000 		.4byte	0x137
- 1959 012a 0C       		.uleb128 0xc
- 1960 012b A2020000 		.4byte	.LASF25
- 1961 012f 01       		.byte	0x1
- 1962 0130 A202     		.2byte	0x2a2
- 1963 0132 81000000 		.4byte	0x81
- 1964 0136 00       		.byte	0
- 1965 0137 0B       		.uleb128 0xb
- 1966 0138 6B040000 		.4byte	.LASF26
- 1967 013c 01       		.byte	0x1
- 1968 013d A705     		.2byte	0x5a7
- 1969 013f 01       		.byte	0x1
- 1970 0140 75010000 		.4byte	0x175
- 1971 0144 0C       		.uleb128 0xc
- 1972 0145 FF000000 		.4byte	.LASF21
- 1973 0149 01       		.byte	0x1
- 1974 014a A705     		.2byte	0x5a7
- 1975 014c 81000000 		.4byte	0x81
- 1976 0150 0C       		.uleb128 0xc
- 1977 0151 E0040000 		.4byte	.LASF27
- 1978 0155 01       		.byte	0x1
- 1979 0156 A705     		.2byte	0x5a7
- 1980 0158 CE000000 		.4byte	0xce
- 1981 015c 0C       		.uleb128 0xc
- 1982 015d 20040000 		.4byte	.LASF28
- 1983 0161 01       		.byte	0x1
- 1984 0162 A705     		.2byte	0x5a7
- 1985 0164 81000000 		.4byte	0x81
- 1986 0168 0D       		.uleb128 0xd
- 1987 0169 A5050000 		.4byte	.LASF30
- 1988 016d 01       		.byte	0x1
- 1989 016e A905     		.2byte	0x5a9
- 1990 0170 81000000 		.4byte	0x81
- 1991 0174 00       		.byte	0
- 1992 0175 0E       		.uleb128 0xe
- 1993 0176 A0030000 		.4byte	.LASF83
- 1994 017a 01       		.byte	0x1
- 1995 017b 41       		.byte	0x41
- 1996 017c 00000000 		.4byte	.LFB0
- 1997 0180 14000000 		.4byte	.LFE0-.LFB0
- 1998 0184 01       		.uleb128 0x1
- 1999 0185 9C       		.byte	0x9c
- 2000 0186 0F       		.uleb128 0xf
- 2001 0187 A8010000 		.4byte	.LASF31
- 2002 018b 01       		.byte	0x1
- 2003 018c 9801     		.2byte	0x198
- 2004 018e 00000000 		.4byte	.LFB3
- 2005 0192 1C000000 		.4byte	.LFE3-.LFB3
- 2006 0196 01       		.uleb128 0x1
- 2007 0197 9C       		.byte	0x9c
- 2008 0198 BF010000 		.4byte	0x1bf
- 2009 019c 10       		.uleb128 0x10
- 2010 019d FC020000 		.4byte	.LASF33
- 2011 01a1 01       		.byte	0x1
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 68
+ 1955 0125 01       		.byte	0x1
+ 1956 0126 A202     		.2byte	0x2a2
+ 1957 0128 01       		.byte	0x1
+ 1958 0129 3A010000 		.4byte	0x13a
+ 1959 012d 0C       		.uleb128 0xc
+ 1960 012e A2020000 		.4byte	.LASF25
+ 1961 0132 01       		.byte	0x1
+ 1962 0133 A202     		.2byte	0x2a2
+ 1963 0135 83000000 		.4byte	0x83
+ 1964 0139 00       		.byte	0
+ 1965 013a 0B       		.uleb128 0xb
+ 1966 013b 6B040000 		.4byte	.LASF26
+ 1967 013f 01       		.byte	0x1
+ 1968 0140 A705     		.2byte	0x5a7
+ 1969 0142 01       		.byte	0x1
+ 1970 0143 78010000 		.4byte	0x178
+ 1971 0147 0C       		.uleb128 0xc
+ 1972 0148 FF000000 		.4byte	.LASF21
+ 1973 014c 01       		.byte	0x1
+ 1974 014d A705     		.2byte	0x5a7
+ 1975 014f 83000000 		.4byte	0x83
+ 1976 0153 0C       		.uleb128 0xc
+ 1977 0154 E0040000 		.4byte	.LASF27
+ 1978 0158 01       		.byte	0x1
+ 1979 0159 A705     		.2byte	0x5a7
+ 1980 015b D1000000 		.4byte	0xd1
+ 1981 015f 0C       		.uleb128 0xc
+ 1982 0160 20040000 		.4byte	.LASF28
+ 1983 0164 01       		.byte	0x1
+ 1984 0165 A705     		.2byte	0x5a7
+ 1985 0167 83000000 		.4byte	0x83
+ 1986 016b 0D       		.uleb128 0xd
+ 1987 016c A5050000 		.4byte	.LASF30
+ 1988 0170 01       		.byte	0x1
+ 1989 0171 A905     		.2byte	0x5a9
+ 1990 0173 83000000 		.4byte	0x83
+ 1991 0177 00       		.byte	0
+ 1992 0178 0E       		.uleb128 0xe
+ 1993 0179 A0030000 		.4byte	.LASF83
+ 1994 017d 01       		.byte	0x1
+ 1995 017e 41       		.byte	0x41
+ 1996 017f 00000000 		.4byte	.LFB0
+ 1997 0183 14000000 		.4byte	.LFE0-.LFB0
+ 1998 0187 01       		.uleb128 0x1
+ 1999 0188 9C       		.byte	0x9c
+ 2000 0189 0F       		.uleb128 0xf
+ 2001 018a A8010000 		.4byte	.LASF31
+ 2002 018e 01       		.byte	0x1
+ 2003 018f 9801     		.2byte	0x198
+ 2004 0191 00000000 		.4byte	.LFB3
+ 2005 0195 1C000000 		.4byte	.LFE3-.LFB3
+ 2006 0199 01       		.uleb128 0x1
+ 2007 019a 9C       		.byte	0x9c
+ 2008 019b C2010000 		.4byte	0x1c2
+ 2009 019f 10       		.uleb128 0x10
+ 2010 01a0 FC020000 		.4byte	.LASF33
+ 2011 01a4 01       		.byte	0x1
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 68
 
 
- 2012 01a2 9A01     		.2byte	0x19a
- 2013 01a4 6B000000 		.4byte	0x6b
- 2014 01a8 00000000 		.4byte	.LLST0
- 2015 01ac 11       		.uleb128 0x11
- 2016 01ad 06000000 		.4byte	.LVL0
- 2017 01b1 6D0C0000 		.4byte	0xc6d
- 2018 01b5 11       		.uleb128 0x11
- 2019 01b6 16000000 		.4byte	.LVL1
- 2020 01ba 780C0000 		.4byte	0xc78
- 2021 01be 00       		.byte	0
- 2022 01bf 0F       		.uleb128 0xf
- 2023 01c0 DE000000 		.4byte	.LASF32
- 2024 01c4 01       		.byte	0x1
- 2025 01c5 C701     		.2byte	0x1c7
- 2026 01c7 00000000 		.4byte	.LFB5
- 2027 01cb 30000000 		.4byte	.LFE5-.LFB5
- 2028 01cf 01       		.uleb128 0x1
- 2029 01d0 9C       		.byte	0x9c
- 2030 01d1 F8010000 		.4byte	0x1f8
- 2031 01d5 10       		.uleb128 0x10
- 2032 01d6 FC020000 		.4byte	.LASF33
- 2033 01da 01       		.byte	0x1
- 2034 01db C901     		.2byte	0x1c9
- 2035 01dd 6B000000 		.4byte	0x6b
- 2036 01e1 13000000 		.4byte	.LLST1
- 2037 01e5 11       		.uleb128 0x11
- 2038 01e6 08000000 		.4byte	.LVL2
- 2039 01ea 6D0C0000 		.4byte	0xc6d
- 2040 01ee 11       		.uleb128 0x11
- 2041 01ef 26000000 		.4byte	.LVL3
- 2042 01f3 780C0000 		.4byte	0xc78
- 2043 01f7 00       		.byte	0
- 2044 01f8 12       		.uleb128 0x12
- 2045 01f9 5E030000 		.4byte	.LASF34
- 2046 01fd 01       		.byte	0x1
- 2047 01fe ED01     		.2byte	0x1ed
- 2048 0200 81000000 		.4byte	0x81
- 2049 0204 01       		.byte	0x1
- 2050 0205 16020000 		.4byte	0x216
- 2051 0209 0C       		.uleb128 0xc
- 2052 020a FF000000 		.4byte	.LASF21
- 2053 020e 01       		.byte	0x1
- 2054 020f ED01     		.2byte	0x1ed
- 2055 0211 81000000 		.4byte	0x81
- 2056 0215 00       		.byte	0
- 2057 0216 13       		.uleb128 0x13
- 2058 0217 F8010000 		.4byte	0x1f8
- 2059 021b 00000000 		.4byte	.LFB6
- 2060 021f 18000000 		.4byte	.LFE6-.LFB6
- 2061 0223 01       		.uleb128 0x1
- 2062 0224 9C       		.byte	0x9c
- 2063 0225 33020000 		.4byte	0x233
- 2064 0229 14       		.uleb128 0x14
- 2065 022a 09020000 		.4byte	0x209
- 2066 022e 26000000 		.4byte	.LLST2
- 2067 0232 00       		.byte	0
- 2068 0233 13       		.uleb128 0x13
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 69
+ 2012 01a5 9A01     		.2byte	0x19a
+ 2013 01a7 6B000000 		.4byte	0x6b
+ 2014 01ab 00000000 		.4byte	.LLST0
+ 2015 01af 11       		.uleb128 0x11
+ 2016 01b0 06000000 		.4byte	.LVL0
+ 2017 01b4 700C0000 		.4byte	0xc70
+ 2018 01b8 11       		.uleb128 0x11
+ 2019 01b9 16000000 		.4byte	.LVL1
+ 2020 01bd 7B0C0000 		.4byte	0xc7b
+ 2021 01c1 00       		.byte	0
+ 2022 01c2 0F       		.uleb128 0xf
+ 2023 01c3 DE000000 		.4byte	.LASF32
+ 2024 01c7 01       		.byte	0x1
+ 2025 01c8 C701     		.2byte	0x1c7
+ 2026 01ca 00000000 		.4byte	.LFB5
+ 2027 01ce 30000000 		.4byte	.LFE5-.LFB5
+ 2028 01d2 01       		.uleb128 0x1
+ 2029 01d3 9C       		.byte	0x9c
+ 2030 01d4 FB010000 		.4byte	0x1fb
+ 2031 01d8 10       		.uleb128 0x10
+ 2032 01d9 FC020000 		.4byte	.LASF33
+ 2033 01dd 01       		.byte	0x1
+ 2034 01de C901     		.2byte	0x1c9
+ 2035 01e0 6B000000 		.4byte	0x6b
+ 2036 01e4 13000000 		.4byte	.LLST1
+ 2037 01e8 11       		.uleb128 0x11
+ 2038 01e9 08000000 		.4byte	.LVL2
+ 2039 01ed 700C0000 		.4byte	0xc70
+ 2040 01f1 11       		.uleb128 0x11
+ 2041 01f2 26000000 		.4byte	.LVL3
+ 2042 01f6 7B0C0000 		.4byte	0xc7b
+ 2043 01fa 00       		.byte	0
+ 2044 01fb 12       		.uleb128 0x12
+ 2045 01fc 5E030000 		.4byte	.LASF34
+ 2046 0200 01       		.byte	0x1
+ 2047 0201 ED01     		.2byte	0x1ed
+ 2048 0203 83000000 		.4byte	0x83
+ 2049 0207 01       		.byte	0x1
+ 2050 0208 19020000 		.4byte	0x219
+ 2051 020c 0C       		.uleb128 0xc
+ 2052 020d FF000000 		.4byte	.LASF21
+ 2053 0211 01       		.byte	0x1
+ 2054 0212 ED01     		.2byte	0x1ed
+ 2055 0214 83000000 		.4byte	0x83
+ 2056 0218 00       		.byte	0
+ 2057 0219 13       		.uleb128 0x13
+ 2058 021a FB010000 		.4byte	0x1fb
+ 2059 021e 00000000 		.4byte	.LFB6
+ 2060 0222 18000000 		.4byte	.LFE6-.LFB6
+ 2061 0226 01       		.uleb128 0x1
+ 2062 0227 9C       		.byte	0x9c
+ 2063 0228 36020000 		.4byte	0x236
+ 2064 022c 14       		.uleb128 0x14
+ 2065 022d 0C020000 		.4byte	0x20c
+ 2066 0231 26000000 		.4byte	.LLST2
+ 2067 0235 00       		.byte	0
+ 2068 0236 13       		.uleb128 0x13
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 69
 
 
- 2069 0234 EB000000 		.4byte	0xeb
- 2070 0238 00000000 		.4byte	.LFB7
- 2071 023c 2C000000 		.4byte	.LFE7-.LFB7
- 2072 0240 01       		.uleb128 0x1
- 2073 0241 9C       		.byte	0x9c
- 2074 0242 A1020000 		.4byte	0x2a1
- 2075 0246 14       		.uleb128 0x14
- 2076 0247 F8000000 		.4byte	0xf8
- 2077 024b 47000000 		.4byte	.LLST3
- 2078 024f 14       		.uleb128 0x14
- 2079 0250 04010000 		.4byte	0x104
- 2080 0254 73000000 		.4byte	.LLST4
- 2081 0258 15       		.uleb128 0x15
- 2082 0259 10010000 		.4byte	0x110
- 2083 025d 16       		.uleb128 0x16
- 2084 025e 0E000000 		.4byte	.LBB4
- 2085 0262 16000000 		.4byte	.LBE4-.LBB4
- 2086 0266 90020000 		.4byte	0x290
- 2087 026a 14       		.uleb128 0x14
- 2088 026b 04010000 		.4byte	0x104
- 2089 026f 9F000000 		.4byte	.LLST5
- 2090 0273 14       		.uleb128 0x14
- 2091 0274 F8000000 		.4byte	0xf8
- 2092 0278 B2000000 		.4byte	.LLST6
- 2093 027c 17       		.uleb128 0x17
- 2094 027d 0E000000 		.4byte	.LBB5
- 2095 0281 16000000 		.4byte	.LBE5-.LBB5
- 2096 0285 18       		.uleb128 0x18
- 2097 0286 10010000 		.4byte	0x110
- 2098 028a D3000000 		.4byte	.LLST7
- 2099 028e 00       		.byte	0
- 2100 028f 00       		.byte	0
- 2101 0290 19       		.uleb128 0x19
- 2102 0291 0A000000 		.4byte	.LVL7
- 2103 0295 F8010000 		.4byte	0x1f8
- 2104 0299 1A       		.uleb128 0x1a
- 2105 029a 01       		.uleb128 0x1
- 2106 029b 50       		.byte	0x50
- 2107 029c 02       		.uleb128 0x2
- 2108 029d 74       		.byte	0x74
- 2109 029e 00       		.sleb128 0
- 2110 029f 00       		.byte	0
- 2111 02a0 00       		.byte	0
- 2112 02a1 12       		.uleb128 0x12
- 2113 02a2 C1050000 		.4byte	.LASF35
- 2114 02a6 01       		.byte	0x1
- 2115 02a7 3002     		.2byte	0x230
- 2116 02a9 81000000 		.4byte	0x81
- 2117 02ad 01       		.byte	0x1
- 2118 02ae BF020000 		.4byte	0x2bf
- 2119 02b2 0C       		.uleb128 0xc
- 2120 02b3 FF000000 		.4byte	.LASF21
- 2121 02b7 01       		.byte	0x1
- 2122 02b8 3002     		.2byte	0x230
- 2123 02ba 81000000 		.4byte	0x81
- 2124 02be 00       		.byte	0
- 2125 02bf 13       		.uleb128 0x13
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 70
+ 2069 0237 EE000000 		.4byte	0xee
+ 2070 023b 00000000 		.4byte	.LFB7
+ 2071 023f 2C000000 		.4byte	.LFE7-.LFB7
+ 2072 0243 01       		.uleb128 0x1
+ 2073 0244 9C       		.byte	0x9c
+ 2074 0245 A4020000 		.4byte	0x2a4
+ 2075 0249 14       		.uleb128 0x14
+ 2076 024a FB000000 		.4byte	0xfb
+ 2077 024e 47000000 		.4byte	.LLST3
+ 2078 0252 14       		.uleb128 0x14
+ 2079 0253 07010000 		.4byte	0x107
+ 2080 0257 73000000 		.4byte	.LLST4
+ 2081 025b 15       		.uleb128 0x15
+ 2082 025c 13010000 		.4byte	0x113
+ 2083 0260 16       		.uleb128 0x16
+ 2084 0261 0E000000 		.4byte	.LBB4
+ 2085 0265 16000000 		.4byte	.LBE4-.LBB4
+ 2086 0269 93020000 		.4byte	0x293
+ 2087 026d 14       		.uleb128 0x14
+ 2088 026e 07010000 		.4byte	0x107
+ 2089 0272 9F000000 		.4byte	.LLST5
+ 2090 0276 14       		.uleb128 0x14
+ 2091 0277 FB000000 		.4byte	0xfb
+ 2092 027b B2000000 		.4byte	.LLST6
+ 2093 027f 17       		.uleb128 0x17
+ 2094 0280 0E000000 		.4byte	.LBB5
+ 2095 0284 16000000 		.4byte	.LBE5-.LBB5
+ 2096 0288 18       		.uleb128 0x18
+ 2097 0289 13010000 		.4byte	0x113
+ 2098 028d D3000000 		.4byte	.LLST7
+ 2099 0291 00       		.byte	0
+ 2100 0292 00       		.byte	0
+ 2101 0293 19       		.uleb128 0x19
+ 2102 0294 0A000000 		.4byte	.LVL7
+ 2103 0298 FB010000 		.4byte	0x1fb
+ 2104 029c 1A       		.uleb128 0x1a
+ 2105 029d 01       		.uleb128 0x1
+ 2106 029e 50       		.byte	0x50
+ 2107 029f 02       		.uleb128 0x2
+ 2108 02a0 74       		.byte	0x74
+ 2109 02a1 00       		.sleb128 0
+ 2110 02a2 00       		.byte	0
+ 2111 02a3 00       		.byte	0
+ 2112 02a4 12       		.uleb128 0x12
+ 2113 02a5 C1050000 		.4byte	.LASF35
+ 2114 02a9 01       		.byte	0x1
+ 2115 02aa 3002     		.2byte	0x230
+ 2116 02ac 83000000 		.4byte	0x83
+ 2117 02b0 01       		.byte	0x1
+ 2118 02b1 C2020000 		.4byte	0x2c2
+ 2119 02b5 0C       		.uleb128 0xc
+ 2120 02b6 FF000000 		.4byte	.LASF21
+ 2121 02ba 01       		.byte	0x1
+ 2122 02bb 3002     		.2byte	0x230
+ 2123 02bd 83000000 		.4byte	0x83
+ 2124 02c1 00       		.byte	0
+ 2125 02c2 13       		.uleb128 0x13
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 70
 
 
- 2126 02c0 A1020000 		.4byte	0x2a1
- 2127 02c4 00000000 		.4byte	.LFB8
- 2128 02c8 14000000 		.4byte	.LFE8-.LFB8
- 2129 02cc 01       		.uleb128 0x1
- 2130 02cd 9C       		.byte	0x9c
- 2131 02ce DC020000 		.4byte	0x2dc
- 2132 02d2 14       		.uleb128 0x14
- 2133 02d3 B2020000 		.4byte	0x2b2
- 2134 02d7 F1000000 		.4byte	.LLST8
- 2135 02db 00       		.byte	0
- 2136 02dc 0F       		.uleb128 0xf
- 2137 02dd 6D010000 		.4byte	.LASF36
- 2138 02e1 01       		.byte	0x1
- 2139 02e2 5102     		.2byte	0x251
- 2140 02e4 00000000 		.4byte	.LFB9
- 2141 02e8 2C000000 		.4byte	.LFE9-.LFB9
- 2142 02ec 01       		.uleb128 0x1
- 2143 02ed 9C       		.byte	0x9c
- 2144 02ee 33030000 		.4byte	0x333
- 2145 02f2 1B       		.uleb128 0x1b
- 2146 02f3 FF000000 		.4byte	.LASF21
- 2147 02f7 01       		.byte	0x1
- 2148 02f8 5102     		.2byte	0x251
- 2149 02fa 81000000 		.4byte	0x81
- 2150 02fe 12010000 		.4byte	.LLST9
- 2151 0302 1B       		.uleb128 0x1b
- 2152 0303 06020000 		.4byte	.LASF37
- 2153 0307 01       		.byte	0x1
- 2154 0308 5102     		.2byte	0x251
- 2155 030a 81000000 		.4byte	0x81
- 2156 030e 3E010000 		.4byte	.LLST10
- 2157 0312 10       		.uleb128 0x10
- 2158 0313 D1050000 		.4byte	.LASF29
- 2159 0317 01       		.byte	0x1
- 2160 0318 5302     		.2byte	0x253
- 2161 031a 81000000 		.4byte	0x81
- 2162 031e 6A010000 		.4byte	.LLST11
- 2163 0322 19       		.uleb128 0x19
- 2164 0323 0A000000 		.4byte	.LVL17
- 2165 0327 F8010000 		.4byte	0x1f8
- 2166 032b 1A       		.uleb128 0x1a
- 2167 032c 01       		.uleb128 0x1
- 2168 032d 50       		.byte	0x50
- 2169 032e 02       		.uleb128 0x2
- 2170 032f 74       		.byte	0x74
- 2171 0330 00       		.sleb128 0
- 2172 0331 00       		.byte	0
- 2173 0332 00       		.byte	0
- 2174 0333 1C       		.uleb128 0x1c
- 2175 0334 AE020000 		.4byte	.LASF48
- 2176 0338 01       		.byte	0x1
- 2177 0339 7402     		.2byte	0x274
- 2178 033b 81000000 		.4byte	0x81
- 2179 033f 00000000 		.4byte	.LFB10
- 2180 0343 18000000 		.4byte	.LFE10-.LFB10
- 2181 0347 01       		.uleb128 0x1
- 2182 0348 9C       		.byte	0x9c
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 71
+ 2126 02c3 A4020000 		.4byte	0x2a4
+ 2127 02c7 00000000 		.4byte	.LFB8
+ 2128 02cb 14000000 		.4byte	.LFE8-.LFB8
+ 2129 02cf 01       		.uleb128 0x1
+ 2130 02d0 9C       		.byte	0x9c
+ 2131 02d1 DF020000 		.4byte	0x2df
+ 2132 02d5 14       		.uleb128 0x14
+ 2133 02d6 B5020000 		.4byte	0x2b5
+ 2134 02da F1000000 		.4byte	.LLST8
+ 2135 02de 00       		.byte	0
+ 2136 02df 0F       		.uleb128 0xf
+ 2137 02e0 6D010000 		.4byte	.LASF36
+ 2138 02e4 01       		.byte	0x1
+ 2139 02e5 5102     		.2byte	0x251
+ 2140 02e7 00000000 		.4byte	.LFB9
+ 2141 02eb 2C000000 		.4byte	.LFE9-.LFB9
+ 2142 02ef 01       		.uleb128 0x1
+ 2143 02f0 9C       		.byte	0x9c
+ 2144 02f1 36030000 		.4byte	0x336
+ 2145 02f5 1B       		.uleb128 0x1b
+ 2146 02f6 FF000000 		.4byte	.LASF21
+ 2147 02fa 01       		.byte	0x1
+ 2148 02fb 5102     		.2byte	0x251
+ 2149 02fd 83000000 		.4byte	0x83
+ 2150 0301 12010000 		.4byte	.LLST9
+ 2151 0305 1B       		.uleb128 0x1b
+ 2152 0306 06020000 		.4byte	.LASF37
+ 2153 030a 01       		.byte	0x1
+ 2154 030b 5102     		.2byte	0x251
+ 2155 030d 83000000 		.4byte	0x83
+ 2156 0311 3E010000 		.4byte	.LLST10
+ 2157 0315 10       		.uleb128 0x10
+ 2158 0316 D1050000 		.4byte	.LASF29
+ 2159 031a 01       		.byte	0x1
+ 2160 031b 5302     		.2byte	0x253
+ 2161 031d 83000000 		.4byte	0x83
+ 2162 0321 6A010000 		.4byte	.LLST11
+ 2163 0325 19       		.uleb128 0x19
+ 2164 0326 0A000000 		.4byte	.LVL17
+ 2165 032a FB010000 		.4byte	0x1fb
+ 2166 032e 1A       		.uleb128 0x1a
+ 2167 032f 01       		.uleb128 0x1
+ 2168 0330 50       		.byte	0x50
+ 2169 0331 02       		.uleb128 0x2
+ 2170 0332 74       		.byte	0x74
+ 2171 0333 00       		.sleb128 0
+ 2172 0334 00       		.byte	0
+ 2173 0335 00       		.byte	0
+ 2174 0336 1C       		.uleb128 0x1c
+ 2175 0337 AE020000 		.4byte	.LASF48
+ 2176 033b 01       		.byte	0x1
+ 2177 033c 7402     		.2byte	0x274
+ 2178 033e 83000000 		.4byte	0x83
+ 2179 0342 00000000 		.4byte	.LFB10
+ 2180 0346 18000000 		.4byte	.LFE10-.LFB10
+ 2181 034a 01       		.uleb128 0x1
+ 2182 034b 9C       		.byte	0x9c
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 71
 
 
- 2183 0349 5E030000 		.4byte	0x35e
- 2184 034d 1B       		.uleb128 0x1b
- 2185 034e FF000000 		.4byte	.LASF21
- 2186 0352 01       		.byte	0x1
- 2187 0353 7402     		.2byte	0x274
- 2188 0355 81000000 		.4byte	0x81
- 2189 0359 88010000 		.4byte	.LLST12
- 2190 035d 00       		.byte	0
- 2191 035e 13       		.uleb128 0x13
- 2192 035f 1D010000 		.4byte	0x11d
- 2193 0363 00000000 		.4byte	.LFB11
- 2194 0367 34000000 		.4byte	.LFE11-.LFB11
- 2195 036b 01       		.uleb128 0x1
- 2196 036c 9C       		.byte	0x9c
- 2197 036d ED030000 		.4byte	0x3ed
- 2198 0371 14       		.uleb128 0x14
- 2199 0372 2A010000 		.4byte	0x12a
- 2200 0376 A9010000 		.4byte	.LLST13
- 2201 037a 1D       		.uleb128 0x1d
- 2202 037b F8010000 		.4byte	0x1f8
- 2203 037f 14000000 		.4byte	.LBB14
- 2204 0383 02000000 		.4byte	.LBE14-.LBB14
- 2205 0387 01       		.byte	0x1
- 2206 0388 AC02     		.2byte	0x2ac
- 2207 038a 98030000 		.4byte	0x398
- 2208 038e 14       		.uleb128 0x14
- 2209 038f 09020000 		.4byte	0x209
- 2210 0393 D5010000 		.4byte	.LLST14
- 2211 0397 00       		.byte	0
- 2212 0398 1D       		.uleb128 0x1d
- 2213 0399 F8010000 		.4byte	0x1f8
- 2214 039d 1E000000 		.4byte	.LBB16
- 2215 03a1 02000000 		.4byte	.LBE16-.LBB16
- 2216 03a5 01       		.byte	0x1
- 2217 03a6 B402     		.2byte	0x2b4
- 2218 03a8 B6030000 		.4byte	0x3b6
- 2219 03ac 14       		.uleb128 0x14
- 2220 03ad 09020000 		.4byte	0x209
- 2221 03b1 E9010000 		.4byte	.LLST15
- 2222 03b5 00       		.byte	0
- 2223 03b6 16       		.uleb128 0x16
- 2224 03b7 28000000 		.4byte	.LBB18
- 2225 03bb 06000000 		.4byte	.LBE18-.LBB18
- 2226 03bf E3030000 		.4byte	0x3e3
- 2227 03c3 1E       		.uleb128 0x1e
- 2228 03c4 2A010000 		.4byte	0x12a
- 2229 03c8 1F       		.uleb128 0x1f
- 2230 03c9 F8010000 		.4byte	0x1f8
- 2231 03cd 28000000 		.4byte	.LBB20
- 2232 03d1 02000000 		.4byte	.LBE20-.LBB20
- 2233 03d5 01       		.byte	0x1
- 2234 03d6 BC02     		.2byte	0x2bc
- 2235 03d8 14       		.uleb128 0x14
- 2236 03d9 09020000 		.4byte	0x209
- 2237 03dd FD010000 		.4byte	.LLST16
- 2238 03e1 00       		.byte	0
- 2239 03e2 00       		.byte	0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 72
+ 2183 034c 61030000 		.4byte	0x361
+ 2184 0350 1B       		.uleb128 0x1b
+ 2185 0351 FF000000 		.4byte	.LASF21
+ 2186 0355 01       		.byte	0x1
+ 2187 0356 7402     		.2byte	0x274
+ 2188 0358 83000000 		.4byte	0x83
+ 2189 035c 88010000 		.4byte	.LLST12
+ 2190 0360 00       		.byte	0
+ 2191 0361 13       		.uleb128 0x13
+ 2192 0362 20010000 		.4byte	0x120
+ 2193 0366 00000000 		.4byte	.LFB11
+ 2194 036a 34000000 		.4byte	.LFE11-.LFB11
+ 2195 036e 01       		.uleb128 0x1
+ 2196 036f 9C       		.byte	0x9c
+ 2197 0370 F0030000 		.4byte	0x3f0
+ 2198 0374 14       		.uleb128 0x14
+ 2199 0375 2D010000 		.4byte	0x12d
+ 2200 0379 A9010000 		.4byte	.LLST13
+ 2201 037d 1D       		.uleb128 0x1d
+ 2202 037e FB010000 		.4byte	0x1fb
+ 2203 0382 14000000 		.4byte	.LBB14
+ 2204 0386 02000000 		.4byte	.LBE14-.LBB14
+ 2205 038a 01       		.byte	0x1
+ 2206 038b AC02     		.2byte	0x2ac
+ 2207 038d 9B030000 		.4byte	0x39b
+ 2208 0391 14       		.uleb128 0x14
+ 2209 0392 0C020000 		.4byte	0x20c
+ 2210 0396 D5010000 		.4byte	.LLST14
+ 2211 039a 00       		.byte	0
+ 2212 039b 1D       		.uleb128 0x1d
+ 2213 039c FB010000 		.4byte	0x1fb
+ 2214 03a0 1E000000 		.4byte	.LBB16
+ 2215 03a4 02000000 		.4byte	.LBE16-.LBB16
+ 2216 03a8 01       		.byte	0x1
+ 2217 03a9 B402     		.2byte	0x2b4
+ 2218 03ab B9030000 		.4byte	0x3b9
+ 2219 03af 14       		.uleb128 0x14
+ 2220 03b0 0C020000 		.4byte	0x20c
+ 2221 03b4 E9010000 		.4byte	.LLST15
+ 2222 03b8 00       		.byte	0
+ 2223 03b9 16       		.uleb128 0x16
+ 2224 03ba 28000000 		.4byte	.LBB18
+ 2225 03be 06000000 		.4byte	.LBE18-.LBB18
+ 2226 03c2 E6030000 		.4byte	0x3e6
+ 2227 03c6 1E       		.uleb128 0x1e
+ 2228 03c7 2D010000 		.4byte	0x12d
+ 2229 03cb 1F       		.uleb128 0x1f
+ 2230 03cc FB010000 		.4byte	0x1fb
+ 2231 03d0 28000000 		.4byte	.LBB20
+ 2232 03d4 02000000 		.4byte	.LBE20-.LBB20
+ 2233 03d8 01       		.byte	0x1
+ 2234 03d9 BC02     		.2byte	0x2bc
+ 2235 03db 14       		.uleb128 0x14
+ 2236 03dc 0C020000 		.4byte	0x20c
+ 2237 03e0 FD010000 		.4byte	.LLST16
+ 2238 03e4 00       		.byte	0
+ 2239 03e5 00       		.byte	0
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 72
 
 
- 2240 03e3 11       		.uleb128 0x11
- 2241 03e4 08000000 		.4byte	.LVL26
- 2242 03e8 75010000 		.4byte	0x175
- 2243 03ec 00       		.byte	0
- 2244 03ed 20       		.uleb128 0x20
- 2245 03ee 95040000 		.4byte	.LASF51
- 2246 03f2 01       		.byte	0x1
- 2247 03f3 B201     		.2byte	0x1b2
- 2248 03f5 81000000 		.4byte	0x81
- 2249 03f9 01       		.byte	0x1
- 2250 03fa 0F       		.uleb128 0xf
- 2251 03fb EA040000 		.4byte	.LASF38
- 2252 03ff 01       		.byte	0x1
- 2253 0400 D702     		.2byte	0x2d7
- 2254 0402 00000000 		.4byte	.LFB12
- 2255 0406 3C000000 		.4byte	.LFE12-.LFB12
- 2256 040a 01       		.uleb128 0x1
- 2257 040b 9C       		.byte	0x9c
- 2258 040c 85040000 		.4byte	0x485
- 2259 0410 21       		.uleb128 0x21
- 2260 0411 A2020000 		.4byte	.LASF25
- 2261 0415 01       		.byte	0x1
- 2262 0416 D702     		.2byte	0x2d7
- 2263 0418 81000000 		.4byte	0x81
- 2264 041c 01       		.uleb128 0x1
- 2265 041d 50       		.byte	0x50
- 2266 041e 22       		.uleb128 0x22
- 2267 041f ED030000 		.4byte	0x3ed
- 2268 0423 00000000 		.4byte	.LBB30
- 2269 0427 0C000000 		.4byte	.LBE30-.LBB30
- 2270 042b 01       		.byte	0x1
- 2271 042c D902     		.2byte	0x2d9
- 2272 042e 1D       		.uleb128 0x1d
- 2273 042f F8010000 		.4byte	0x1f8
- 2274 0433 18000000 		.4byte	.LBB32
- 2275 0437 02000000 		.4byte	.LBE32-.LBB32
- 2276 043b 01       		.byte	0x1
- 2277 043c DF02     		.2byte	0x2df
- 2278 043e 4C040000 		.4byte	0x44c
- 2279 0442 14       		.uleb128 0x14
- 2280 0443 09020000 		.4byte	0x209
- 2281 0447 11020000 		.4byte	.LLST17
- 2282 044b 00       		.byte	0
- 2283 044c 1D       		.uleb128 0x1d
- 2284 044d F8010000 		.4byte	0x1f8
- 2285 0451 22000000 		.4byte	.LBB34
- 2286 0455 02000000 		.4byte	.LBE34-.LBB34
- 2287 0459 01       		.byte	0x1
- 2288 045a E702     		.2byte	0x2e7
- 2289 045c 6A040000 		.4byte	0x46a
- 2290 0460 14       		.uleb128 0x14
- 2291 0461 09020000 		.4byte	0x209
- 2292 0465 25020000 		.4byte	.LLST18
- 2293 0469 00       		.byte	0
- 2294 046a 1F       		.uleb128 0x1f
- 2295 046b F8010000 		.4byte	0x1f8
- 2296 046f 2C000000 		.4byte	.LBB36
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 73
+ 2240 03e6 11       		.uleb128 0x11
+ 2241 03e7 08000000 		.4byte	.LVL26
+ 2242 03eb 78010000 		.4byte	0x178
+ 2243 03ef 00       		.byte	0
+ 2244 03f0 20       		.uleb128 0x20
+ 2245 03f1 95040000 		.4byte	.LASF51
+ 2246 03f5 01       		.byte	0x1
+ 2247 03f6 B201     		.2byte	0x1b2
+ 2248 03f8 83000000 		.4byte	0x83
+ 2249 03fc 01       		.byte	0x1
+ 2250 03fd 0F       		.uleb128 0xf
+ 2251 03fe EA040000 		.4byte	.LASF38
+ 2252 0402 01       		.byte	0x1
+ 2253 0403 D702     		.2byte	0x2d7
+ 2254 0405 00000000 		.4byte	.LFB12
+ 2255 0409 3C000000 		.4byte	.LFE12-.LFB12
+ 2256 040d 01       		.uleb128 0x1
+ 2257 040e 9C       		.byte	0x9c
+ 2258 040f 88040000 		.4byte	0x488
+ 2259 0413 21       		.uleb128 0x21
+ 2260 0414 A2020000 		.4byte	.LASF25
+ 2261 0418 01       		.byte	0x1
+ 2262 0419 D702     		.2byte	0x2d7
+ 2263 041b 83000000 		.4byte	0x83
+ 2264 041f 01       		.uleb128 0x1
+ 2265 0420 50       		.byte	0x50
+ 2266 0421 22       		.uleb128 0x22
+ 2267 0422 F0030000 		.4byte	0x3f0
+ 2268 0426 00000000 		.4byte	.LBB30
+ 2269 042a 0C000000 		.4byte	.LBE30-.LBB30
+ 2270 042e 01       		.byte	0x1
+ 2271 042f D902     		.2byte	0x2d9
+ 2272 0431 1D       		.uleb128 0x1d
+ 2273 0432 FB010000 		.4byte	0x1fb
+ 2274 0436 18000000 		.4byte	.LBB32
+ 2275 043a 02000000 		.4byte	.LBE32-.LBB32
+ 2276 043e 01       		.byte	0x1
+ 2277 043f DF02     		.2byte	0x2df
+ 2278 0441 4F040000 		.4byte	0x44f
+ 2279 0445 14       		.uleb128 0x14
+ 2280 0446 0C020000 		.4byte	0x20c
+ 2281 044a 11020000 		.4byte	.LLST17
+ 2282 044e 00       		.byte	0
+ 2283 044f 1D       		.uleb128 0x1d
+ 2284 0450 FB010000 		.4byte	0x1fb
+ 2285 0454 22000000 		.4byte	.LBB34
+ 2286 0458 02000000 		.4byte	.LBE34-.LBB34
+ 2287 045c 01       		.byte	0x1
+ 2288 045d E702     		.2byte	0x2e7
+ 2289 045f 6D040000 		.4byte	0x46d
+ 2290 0463 14       		.uleb128 0x14
+ 2291 0464 0C020000 		.4byte	0x20c
+ 2292 0468 25020000 		.4byte	.LLST18
+ 2293 046c 00       		.byte	0
+ 2294 046d 1F       		.uleb128 0x1f
+ 2295 046e FB010000 		.4byte	0x1fb
+ 2296 0472 2C000000 		.4byte	.LBB36
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 73
 
 
- 2297 0473 02000000 		.4byte	.LBE36-.LBB36
- 2298 0477 01       		.byte	0x1
- 2299 0478 EF02     		.2byte	0x2ef
- 2300 047a 14       		.uleb128 0x14
- 2301 047b 09020000 		.4byte	0x209
- 2302 047f 39020000 		.4byte	.LLST19
- 2303 0483 00       		.byte	0
- 2304 0484 00       		.byte	0
- 2305 0485 0F       		.uleb128 0xf
- 2306 0486 AE050000 		.4byte	.LASF39
- 2307 048a 01       		.byte	0x1
- 2308 048b 1903     		.2byte	0x319
- 2309 048d 00000000 		.4byte	.LFB13
- 2310 0491 34000000 		.4byte	.LFE13-.LFB13
- 2311 0495 01       		.uleb128 0x1
- 2312 0496 9C       		.byte	0x9c
- 2313 0497 19050000 		.4byte	0x519
- 2314 049b 1B       		.uleb128 0x1b
- 2315 049c 09060000 		.4byte	.LASF40
- 2316 04a0 01       		.byte	0x1
- 2317 04a1 1903     		.2byte	0x319
- 2318 04a3 81000000 		.4byte	0x81
- 2319 04a7 4D020000 		.4byte	.LLST20
- 2320 04ab 10       		.uleb128 0x10
- 2321 04ac D1050000 		.4byte	.LASF29
- 2322 04b0 01       		.byte	0x1
- 2323 04b1 1B03     		.2byte	0x31b
- 2324 04b3 81000000 		.4byte	0x81
- 2325 04b7 6E020000 		.4byte	.LLST21
- 2326 04bb 10       		.uleb128 0x10
- 2327 04bc 56020000 		.4byte	.LASF41
- 2328 04c0 01       		.byte	0x1
- 2329 04c1 1C03     		.2byte	0x31c
- 2330 04c3 81000000 		.4byte	0x81
- 2331 04c7 97020000 		.4byte	.LLST22
- 2332 04cb 23       		.uleb128 0x23
- 2333 04cc F8010000 		.4byte	0x1f8
- 2334 04d0 00000000 		.4byte	.LBB44
- 2335 04d4 00000000 		.4byte	.Ldebug_ranges0+0
- 2336 04d8 01       		.byte	0x1
- 2337 04d9 1E03     		.2byte	0x31e
- 2338 04db E6040000 		.4byte	0x4e6
- 2339 04df 24       		.uleb128 0x24
- 2340 04e0 09020000 		.4byte	0x209
- 2341 04e4 00       		.byte	0
- 2342 04e5 00       		.byte	0
- 2343 04e6 23       		.uleb128 0x23
- 2344 04e7 F8010000 		.4byte	0x1f8
- 2345 04eb 06000000 		.4byte	.LBB49
- 2346 04ef 20000000 		.4byte	.Ldebug_ranges0+0x20
- 2347 04f3 01       		.byte	0x1
- 2348 04f4 1F03     		.2byte	0x31f
- 2349 04f6 01050000 		.4byte	0x501
- 2350 04fa 24       		.uleb128 0x24
- 2351 04fb 09020000 		.4byte	0x209
- 2352 04ff 01       		.byte	0x1
- 2353 0500 00       		.byte	0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 74
+ 2297 0476 02000000 		.4byte	.LBE36-.LBB36
+ 2298 047a 01       		.byte	0x1
+ 2299 047b EF02     		.2byte	0x2ef
+ 2300 047d 14       		.uleb128 0x14
+ 2301 047e 0C020000 		.4byte	0x20c
+ 2302 0482 39020000 		.4byte	.LLST19
+ 2303 0486 00       		.byte	0
+ 2304 0487 00       		.byte	0
+ 2305 0488 0F       		.uleb128 0xf
+ 2306 0489 AE050000 		.4byte	.LASF39
+ 2307 048d 01       		.byte	0x1
+ 2308 048e 1903     		.2byte	0x319
+ 2309 0490 00000000 		.4byte	.LFB13
+ 2310 0494 34000000 		.4byte	.LFE13-.LFB13
+ 2311 0498 01       		.uleb128 0x1
+ 2312 0499 9C       		.byte	0x9c
+ 2313 049a 1C050000 		.4byte	0x51c
+ 2314 049e 1B       		.uleb128 0x1b
+ 2315 049f 09060000 		.4byte	.LASF40
+ 2316 04a3 01       		.byte	0x1
+ 2317 04a4 1903     		.2byte	0x319
+ 2318 04a6 83000000 		.4byte	0x83
+ 2319 04aa 4D020000 		.4byte	.LLST20
+ 2320 04ae 10       		.uleb128 0x10
+ 2321 04af D1050000 		.4byte	.LASF29
+ 2322 04b3 01       		.byte	0x1
+ 2323 04b4 1B03     		.2byte	0x31b
+ 2324 04b6 83000000 		.4byte	0x83
+ 2325 04ba 6E020000 		.4byte	.LLST21
+ 2326 04be 10       		.uleb128 0x10
+ 2327 04bf 56020000 		.4byte	.LASF41
+ 2328 04c3 01       		.byte	0x1
+ 2329 04c4 1C03     		.2byte	0x31c
+ 2330 04c6 83000000 		.4byte	0x83
+ 2331 04ca 97020000 		.4byte	.LLST22
+ 2332 04ce 23       		.uleb128 0x23
+ 2333 04cf FB010000 		.4byte	0x1fb
+ 2334 04d3 00000000 		.4byte	.LBB44
+ 2335 04d7 00000000 		.4byte	.Ldebug_ranges0+0
+ 2336 04db 01       		.byte	0x1
+ 2337 04dc 1E03     		.2byte	0x31e
+ 2338 04de E9040000 		.4byte	0x4e9
+ 2339 04e2 24       		.uleb128 0x24
+ 2340 04e3 0C020000 		.4byte	0x20c
+ 2341 04e7 00       		.byte	0
+ 2342 04e8 00       		.byte	0
+ 2343 04e9 23       		.uleb128 0x23
+ 2344 04ea FB010000 		.4byte	0x1fb
+ 2345 04ee 06000000 		.4byte	.LBB49
+ 2346 04f2 20000000 		.4byte	.Ldebug_ranges0+0x20
+ 2347 04f6 01       		.byte	0x1
+ 2348 04f7 1F03     		.2byte	0x31f
+ 2349 04f9 04050000 		.4byte	0x504
+ 2350 04fd 24       		.uleb128 0x24
+ 2351 04fe 0C020000 		.4byte	0x20c
+ 2352 0502 01       		.byte	0x1
+ 2353 0503 00       		.byte	0
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 74
 
 
- 2354 0501 25       		.uleb128 0x25
- 2355 0502 F8010000 		.4byte	0x1f8
- 2356 0506 08000000 		.4byte	.LBB52
- 2357 050a 38000000 		.4byte	.Ldebug_ranges0+0x38
- 2358 050e 01       		.byte	0x1
- 2359 050f 2003     		.2byte	0x320
- 2360 0511 24       		.uleb128 0x24
- 2361 0512 09020000 		.4byte	0x209
- 2362 0516 02       		.byte	0x2
- 2363 0517 00       		.byte	0
- 2364 0518 00       		.byte	0
- 2365 0519 26       		.uleb128 0x26
- 2366 051a 24010000 		.4byte	.LASF46
- 2367 051e 01       		.byte	0x1
- 2368 051f 3E03     		.2byte	0x33e
- 2369 0521 81000000 		.4byte	0x81
- 2370 0525 00000000 		.4byte	.LFB14
- 2371 0529 14000000 		.4byte	.LFE14-.LFB14
- 2372 052d 01       		.uleb128 0x1
- 2373 052e 9C       		.byte	0x9c
- 2374 052f 0F       		.uleb128 0xf
- 2375 0530 45020000 		.4byte	.LASF42
- 2376 0534 01       		.byte	0x1
- 2377 0535 5703     		.2byte	0x357
- 2378 0537 00000000 		.4byte	.LFB15
- 2379 053b 30000000 		.4byte	.LFE15-.LFB15
- 2380 053f 01       		.uleb128 0x1
- 2381 0540 9C       		.byte	0x9c
- 2382 0541 96050000 		.4byte	0x596
- 2383 0545 1B       		.uleb128 0x1b
- 2384 0546 FF000000 		.4byte	.LASF21
- 2385 054a 01       		.byte	0x1
- 2386 054b 5703     		.2byte	0x357
- 2387 054d 81000000 		.4byte	0x81
- 2388 0551 BA020000 		.4byte	.LLST23
- 2389 0555 1B       		.uleb128 0x1b
- 2390 0556 20040000 		.4byte	.LASF28
- 2391 055a 01       		.byte	0x1
- 2392 055b 5703     		.2byte	0x357
- 2393 055d 81000000 		.4byte	0x81
- 2394 0561 E6020000 		.4byte	.LLST24
- 2395 0565 0D       		.uleb128 0xd
- 2396 0566 F7010000 		.4byte	.LASF43
- 2397 056a 01       		.byte	0x1
- 2398 056b 5903     		.2byte	0x359
- 2399 056d 81000000 		.4byte	0x81
- 2400 0571 27       		.uleb128 0x27
- 2401 0572 0C000000 		.4byte	.LVL52
- 2402 0576 890C0000 		.4byte	0xc89
- 2403 057a 85050000 		.4byte	0x585
- 2404 057e 1A       		.uleb128 0x1a
- 2405 057f 01       		.uleb128 0x1
- 2406 0580 50       		.byte	0x50
- 2407 0581 02       		.uleb128 0x2
- 2408 0582 08       		.byte	0x8
- 2409 0583 C9       		.byte	0xc9
- 2410 0584 00       		.byte	0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 75
+ 2354 0504 25       		.uleb128 0x25
+ 2355 0505 FB010000 		.4byte	0x1fb
+ 2356 0509 08000000 		.4byte	.LBB52
+ 2357 050d 38000000 		.4byte	.Ldebug_ranges0+0x38
+ 2358 0511 01       		.byte	0x1
+ 2359 0512 2003     		.2byte	0x320
+ 2360 0514 24       		.uleb128 0x24
+ 2361 0515 0C020000 		.4byte	0x20c
+ 2362 0519 02       		.byte	0x2
+ 2363 051a 00       		.byte	0
+ 2364 051b 00       		.byte	0
+ 2365 051c 26       		.uleb128 0x26
+ 2366 051d 24010000 		.4byte	.LASF46
+ 2367 0521 01       		.byte	0x1
+ 2368 0522 3E03     		.2byte	0x33e
+ 2369 0524 83000000 		.4byte	0x83
+ 2370 0528 00000000 		.4byte	.LFB14
+ 2371 052c 14000000 		.4byte	.LFE14-.LFB14
+ 2372 0530 01       		.uleb128 0x1
+ 2373 0531 9C       		.byte	0x9c
+ 2374 0532 0F       		.uleb128 0xf
+ 2375 0533 45020000 		.4byte	.LASF42
+ 2376 0537 01       		.byte	0x1
+ 2377 0538 5703     		.2byte	0x357
+ 2378 053a 00000000 		.4byte	.LFB15
+ 2379 053e 30000000 		.4byte	.LFE15-.LFB15
+ 2380 0542 01       		.uleb128 0x1
+ 2381 0543 9C       		.byte	0x9c
+ 2382 0544 99050000 		.4byte	0x599
+ 2383 0548 1B       		.uleb128 0x1b
+ 2384 0549 FF000000 		.4byte	.LASF21
+ 2385 054d 01       		.byte	0x1
+ 2386 054e 5703     		.2byte	0x357
+ 2387 0550 83000000 		.4byte	0x83
+ 2388 0554 BA020000 		.4byte	.LLST23
+ 2389 0558 1B       		.uleb128 0x1b
+ 2390 0559 20040000 		.4byte	.LASF28
+ 2391 055d 01       		.byte	0x1
+ 2392 055e 5703     		.2byte	0x357
+ 2393 0560 83000000 		.4byte	0x83
+ 2394 0564 E6020000 		.4byte	.LLST24
+ 2395 0568 0D       		.uleb128 0xd
+ 2396 0569 F7010000 		.4byte	.LASF43
+ 2397 056d 01       		.byte	0x1
+ 2398 056e 5903     		.2byte	0x359
+ 2399 0570 83000000 		.4byte	0x83
+ 2400 0574 27       		.uleb128 0x27
+ 2401 0575 0C000000 		.4byte	.LVL52
+ 2402 0579 8C0C0000 		.4byte	0xc8c
+ 2403 057d 88050000 		.4byte	0x588
+ 2404 0581 1A       		.uleb128 0x1a
+ 2405 0582 01       		.uleb128 0x1
+ 2406 0583 50       		.byte	0x50
+ 2407 0584 02       		.uleb128 0x2
+ 2408 0585 08       		.byte	0x8
+ 2409 0586 C9       		.byte	0xc9
+ 2410 0587 00       		.byte	0
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 75
 
 
- 2411 0585 19       		.uleb128 0x19
- 2412 0586 24000000 		.4byte	.LVL55
- 2413 058a 890C0000 		.4byte	0xc89
- 2414 058e 1A       		.uleb128 0x1a
- 2415 058f 01       		.uleb128 0x1
- 2416 0590 50       		.byte	0x50
- 2417 0591 02       		.uleb128 0x2
- 2418 0592 08       		.byte	0x8
- 2419 0593 43       		.byte	0x43
- 2420 0594 00       		.byte	0
- 2421 0595 00       		.byte	0
- 2422 0596 0F       		.uleb128 0xf
- 2423 0597 B1030000 		.4byte	.LASF44
- 2424 059b 01       		.byte	0x1
- 2425 059c 8303     		.2byte	0x383
- 2426 059e 00000000 		.4byte	.LFB16
- 2427 05a2 28000000 		.4byte	.LFE16-.LFB16
- 2428 05a6 01       		.uleb128 0x1
- 2429 05a7 9C       		.byte	0x9c
- 2430 05a8 E4050000 		.4byte	0x5e4
- 2431 05ac 1B       		.uleb128 0x1b
- 2432 05ad E9010000 		.4byte	.LASF45
- 2433 05b1 01       		.byte	0x1
- 2434 05b2 8303     		.2byte	0x383
- 2435 05b4 81000000 		.4byte	0x81
- 2436 05b8 12030000 		.4byte	.LLST25
- 2437 05bc 10       		.uleb128 0x10
- 2438 05bd D1050000 		.4byte	.LASF29
- 2439 05c1 01       		.byte	0x1
- 2440 05c2 8503     		.2byte	0x385
- 2441 05c4 81000000 		.4byte	0x81
- 2442 05c8 33030000 		.4byte	.LLST26
- 2443 05cc 1F       		.uleb128 0x1f
- 2444 05cd F8010000 		.4byte	0x1f8
- 2445 05d1 00000000 		.4byte	.LBB60
- 2446 05d5 04000000 		.4byte	.LBE60-.LBB60
- 2447 05d9 01       		.byte	0x1
- 2448 05da 8703     		.2byte	0x387
- 2449 05dc 24       		.uleb128 0x24
- 2450 05dd 09020000 		.4byte	0x209
- 2451 05e1 02       		.byte	0x2
- 2452 05e2 00       		.byte	0
- 2453 05e3 00       		.byte	0
- 2454 05e4 26       		.uleb128 0x26
- 2455 05e5 15060000 		.4byte	.LASF47
- 2456 05e9 01       		.byte	0x1
- 2457 05ea 9F03     		.2byte	0x39f
- 2458 05ec 81000000 		.4byte	0x81
- 2459 05f0 00000000 		.4byte	.LFB17
- 2460 05f4 10000000 		.4byte	.LFE17-.LFB17
- 2461 05f8 01       		.uleb128 0x1
- 2462 05f9 9C       		.byte	0x9c
- 2463 05fa 1C       		.uleb128 0x1c
- 2464 05fb 0F040000 		.4byte	.LASF49
- 2465 05ff 01       		.byte	0x1
- 2466 0600 B403     		.2byte	0x3b4
- 2467 0602 81000000 		.4byte	0x81
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 76
+ 2411 0588 19       		.uleb128 0x19
+ 2412 0589 24000000 		.4byte	.LVL55
+ 2413 058d 8C0C0000 		.4byte	0xc8c
+ 2414 0591 1A       		.uleb128 0x1a
+ 2415 0592 01       		.uleb128 0x1
+ 2416 0593 50       		.byte	0x50
+ 2417 0594 02       		.uleb128 0x2
+ 2418 0595 08       		.byte	0x8
+ 2419 0596 43       		.byte	0x43
+ 2420 0597 00       		.byte	0
+ 2421 0598 00       		.byte	0
+ 2422 0599 0F       		.uleb128 0xf
+ 2423 059a B1030000 		.4byte	.LASF44
+ 2424 059e 01       		.byte	0x1
+ 2425 059f 8303     		.2byte	0x383
+ 2426 05a1 00000000 		.4byte	.LFB16
+ 2427 05a5 28000000 		.4byte	.LFE16-.LFB16
+ 2428 05a9 01       		.uleb128 0x1
+ 2429 05aa 9C       		.byte	0x9c
+ 2430 05ab E7050000 		.4byte	0x5e7
+ 2431 05af 1B       		.uleb128 0x1b
+ 2432 05b0 E9010000 		.4byte	.LASF45
+ 2433 05b4 01       		.byte	0x1
+ 2434 05b5 8303     		.2byte	0x383
+ 2435 05b7 83000000 		.4byte	0x83
+ 2436 05bb 12030000 		.4byte	.LLST25
+ 2437 05bf 10       		.uleb128 0x10
+ 2438 05c0 D1050000 		.4byte	.LASF29
+ 2439 05c4 01       		.byte	0x1
+ 2440 05c5 8503     		.2byte	0x385
+ 2441 05c7 83000000 		.4byte	0x83
+ 2442 05cb 33030000 		.4byte	.LLST26
+ 2443 05cf 1F       		.uleb128 0x1f
+ 2444 05d0 FB010000 		.4byte	0x1fb
+ 2445 05d4 00000000 		.4byte	.LBB60
+ 2446 05d8 04000000 		.4byte	.LBE60-.LBB60
+ 2447 05dc 01       		.byte	0x1
+ 2448 05dd 8703     		.2byte	0x387
+ 2449 05df 24       		.uleb128 0x24
+ 2450 05e0 0C020000 		.4byte	0x20c
+ 2451 05e4 02       		.byte	0x2
+ 2452 05e5 00       		.byte	0
+ 2453 05e6 00       		.byte	0
+ 2454 05e7 26       		.uleb128 0x26
+ 2455 05e8 15060000 		.4byte	.LASF47
+ 2456 05ec 01       		.byte	0x1
+ 2457 05ed 9F03     		.2byte	0x39f
+ 2458 05ef 83000000 		.4byte	0x83
+ 2459 05f3 00000000 		.4byte	.LFB17
+ 2460 05f7 10000000 		.4byte	.LFE17-.LFB17
+ 2461 05fb 01       		.uleb128 0x1
+ 2462 05fc 9C       		.byte	0x9c
+ 2463 05fd 1C       		.uleb128 0x1c
+ 2464 05fe 0F040000 		.4byte	.LASF49
+ 2465 0602 01       		.byte	0x1
+ 2466 0603 B403     		.2byte	0x3b4
+ 2467 0605 83000000 		.4byte	0x83
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 76
 
 
- 2468 0606 00000000 		.4byte	.LFB18
- 2469 060a 10000000 		.4byte	.LFE18-.LFB18
- 2470 060e 01       		.uleb128 0x1
- 2471 060f 9C       		.byte	0x9c
- 2472 0610 25060000 		.4byte	0x625
- 2473 0614 1B       		.uleb128 0x1b
- 2474 0615 FF000000 		.4byte	.LASF21
- 2475 0619 01       		.byte	0x1
- 2476 061a B403     		.2byte	0x3b4
- 2477 061c 81000000 		.4byte	0x81
- 2478 0620 5C030000 		.4byte	.LLST27
- 2479 0624 00       		.byte	0
- 2480 0625 1C       		.uleb128 0x1c
- 2481 0626 81050000 		.4byte	.LASF50
- 2482 062a 01       		.byte	0x1
- 2483 062b CC03     		.2byte	0x3cc
- 2484 062d 81000000 		.4byte	0x81
- 2485 0631 00000000 		.4byte	.LFB19
- 2486 0635 30000000 		.4byte	.LFE19-.LFB19
- 2487 0639 01       		.uleb128 0x1
- 2488 063a 9C       		.byte	0x9c
- 2489 063b 60060000 		.4byte	0x660
- 2490 063f 1B       		.uleb128 0x1b
- 2491 0640 FF000000 		.4byte	.LASF21
- 2492 0644 01       		.byte	0x1
- 2493 0645 CC03     		.2byte	0x3cc
- 2494 0647 81000000 		.4byte	0x81
- 2495 064b 7D030000 		.4byte	.LLST28
- 2496 064f 10       		.uleb128 0x10
- 2497 0650 F7010000 		.4byte	.LASF43
- 2498 0654 01       		.byte	0x1
- 2499 0655 CE03     		.2byte	0x3ce
- 2500 0657 81000000 		.4byte	0x81
- 2501 065b E9030000 		.4byte	.LLST29
- 2502 065f 00       		.byte	0
- 2503 0660 28       		.uleb128 0x28
- 2504 0661 FA040000 		.4byte	.LASF52
- 2505 0665 01       		.byte	0x1
- 2506 0666 94       		.byte	0x94
- 2507 0667 81000000 		.4byte	0x81
- 2508 066b 01       		.byte	0x1
- 2509 066c 29       		.uleb128 0x29
- 2510 066d 0A010000 		.4byte	.LASF84
- 2511 0671 01       		.byte	0x1
- 2512 0672 2406     		.2byte	0x624
- 2513 0674 01       		.byte	0x1
- 2514 0675 92060000 		.4byte	0x692
- 2515 0679 0D       		.uleb128 0xd
- 2516 067a D3020000 		.4byte	.LASF53
- 2517 067e 01       		.byte	0x1
- 2518 067f 2606     		.2byte	0x626
- 2519 0681 81000000 		.4byte	0x81
- 2520 0685 0D       		.uleb128 0xd
- 2521 0686 B2040000 		.4byte	.LASF54
- 2522 068a 01       		.byte	0x1
- 2523 068b 2706     		.2byte	0x627
- 2524 068d 81000000 		.4byte	0x81
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 77
+ 2468 0609 00000000 		.4byte	.LFB18
+ 2469 060d 10000000 		.4byte	.LFE18-.LFB18
+ 2470 0611 01       		.uleb128 0x1
+ 2471 0612 9C       		.byte	0x9c
+ 2472 0613 28060000 		.4byte	0x628
+ 2473 0617 1B       		.uleb128 0x1b
+ 2474 0618 FF000000 		.4byte	.LASF21
+ 2475 061c 01       		.byte	0x1
+ 2476 061d B403     		.2byte	0x3b4
+ 2477 061f 83000000 		.4byte	0x83
+ 2478 0623 5C030000 		.4byte	.LLST27
+ 2479 0627 00       		.byte	0
+ 2480 0628 1C       		.uleb128 0x1c
+ 2481 0629 81050000 		.4byte	.LASF50
+ 2482 062d 01       		.byte	0x1
+ 2483 062e CC03     		.2byte	0x3cc
+ 2484 0630 83000000 		.4byte	0x83
+ 2485 0634 00000000 		.4byte	.LFB19
+ 2486 0638 30000000 		.4byte	.LFE19-.LFB19
+ 2487 063c 01       		.uleb128 0x1
+ 2488 063d 9C       		.byte	0x9c
+ 2489 063e 63060000 		.4byte	0x663
+ 2490 0642 1B       		.uleb128 0x1b
+ 2491 0643 FF000000 		.4byte	.LASF21
+ 2492 0647 01       		.byte	0x1
+ 2493 0648 CC03     		.2byte	0x3cc
+ 2494 064a 83000000 		.4byte	0x83
+ 2495 064e 7D030000 		.4byte	.LLST28
+ 2496 0652 10       		.uleb128 0x10
+ 2497 0653 F7010000 		.4byte	.LASF43
+ 2498 0657 01       		.byte	0x1
+ 2499 0658 CE03     		.2byte	0x3ce
+ 2500 065a 83000000 		.4byte	0x83
+ 2501 065e E9030000 		.4byte	.LLST29
+ 2502 0662 00       		.byte	0
+ 2503 0663 28       		.uleb128 0x28
+ 2504 0664 FA040000 		.4byte	.LASF52
+ 2505 0668 01       		.byte	0x1
+ 2506 0669 94       		.byte	0x94
+ 2507 066a 83000000 		.4byte	0x83
+ 2508 066e 01       		.byte	0x1
+ 2509 066f 29       		.uleb128 0x29
+ 2510 0670 0A010000 		.4byte	.LASF84
+ 2511 0674 01       		.byte	0x1
+ 2512 0675 2406     		.2byte	0x624
+ 2513 0677 01       		.byte	0x1
+ 2514 0678 95060000 		.4byte	0x695
+ 2515 067c 0D       		.uleb128 0xd
+ 2516 067d D3020000 		.4byte	.LASF53
+ 2517 0681 01       		.byte	0x1
+ 2518 0682 2606     		.2byte	0x626
+ 2519 0684 83000000 		.4byte	0x83
+ 2520 0688 0D       		.uleb128 0xd
+ 2521 0689 B2040000 		.4byte	.LASF54
+ 2522 068d 01       		.byte	0x1
+ 2523 068e 2706     		.2byte	0x627
+ 2524 0690 83000000 		.4byte	0x83
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 77
 
 
- 2525 0691 00       		.byte	0
- 2526 0692 2A       		.uleb128 0x2a
- 2527 0693 16030000 		.4byte	.LASF85
- 2528 0697 01       		.byte	0x1
- 2529 0698 5F06     		.2byte	0x65f
- 2530 069a 01       		.byte	0x1
- 2531 069b 2B       		.uleb128 0x2b
- 2532 069c 14020000 		.4byte	.LASF55
- 2533 06a0 01       		.byte	0x1
- 2534 06a1 60       		.byte	0x60
- 2535 06a2 00000000 		.4byte	.LFB1
- 2536 06a6 B8000000 		.4byte	.LFE1-.LFB1
- 2537 06aa 01       		.uleb128 0x1
- 2538 06ab 9C       		.byte	0x9c
- 2539 06ac 03080000 		.4byte	0x803
- 2540 06b0 2C       		.uleb128 0x2c
- 2541 06b1 FC020000 		.4byte	.LASF33
- 2542 06b5 01       		.byte	0x1
- 2543 06b6 63       		.byte	0x63
- 2544 06b7 6B000000 		.4byte	0x6b
- 2545 06bb 4D040000 		.4byte	.LLST30
- 2546 06bf 2D       		.uleb128 0x2d
- 2547 06c0 ED030000 		.4byte	0x3ed
- 2548 06c4 00000000 		.4byte	.LBB78
- 2549 06c8 50000000 		.4byte	.Ldebug_ranges0+0x50
- 2550 06cc 01       		.byte	0x1
- 2551 06cd 66       		.byte	0x66
- 2552 06ce 2E       		.uleb128 0x2e
- 2553 06cf 60060000 		.4byte	0x660
- 2554 06d3 10000000 		.4byte	.LBB82
- 2555 06d7 08000000 		.4byte	.LBE82-.LBB82
- 2556 06db 01       		.byte	0x1
- 2557 06dc 68       		.byte	0x68
- 2558 06dd 2F       		.uleb128 0x2f
- 2559 06de 6C060000 		.4byte	0x66c
- 2560 06e2 1C000000 		.4byte	.LBB84
- 2561 06e6 68000000 		.4byte	.Ldebug_ranges0+0x68
- 2562 06ea 01       		.byte	0x1
- 2563 06eb 71       		.byte	0x71
- 2564 06ec C4070000 		.4byte	0x7c4
- 2565 06f0 30       		.uleb128 0x30
- 2566 06f1 68000000 		.4byte	.Ldebug_ranges0+0x68
- 2567 06f5 18       		.uleb128 0x18
- 2568 06f6 79060000 		.4byte	0x679
- 2569 06fa 61040000 		.4byte	.LLST31
- 2570 06fe 31       		.uleb128 0x31
- 2571 06ff 85060000 		.4byte	0x685
- 2572 0703 05       		.uleb128 0x5
- 2573 0704 03       		.byte	0x3
- 2574 0705 00000000 		.4byte	lfclkPosedgeEnabledWdtCounter.4836
- 2575 0709 23       		.uleb128 0x23
- 2576 070a F8010000 		.4byte	0x1f8
- 2577 070e 1C000000 		.4byte	.LBB86
- 2578 0712 80000000 		.4byte	.Ldebug_ranges0+0x80
- 2579 0716 01       		.byte	0x1
- 2580 0717 2906     		.2byte	0x629
- 2581 0719 27070000 		.4byte	0x727
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 78
+ 2525 0694 00       		.byte	0
+ 2526 0695 2A       		.uleb128 0x2a
+ 2527 0696 16030000 		.4byte	.LASF85
+ 2528 069a 01       		.byte	0x1
+ 2529 069b 5F06     		.2byte	0x65f
+ 2530 069d 01       		.byte	0x1
+ 2531 069e 2B       		.uleb128 0x2b
+ 2532 069f 14020000 		.4byte	.LASF55
+ 2533 06a3 01       		.byte	0x1
+ 2534 06a4 60       		.byte	0x60
+ 2535 06a5 00000000 		.4byte	.LFB1
+ 2536 06a9 B8000000 		.4byte	.LFE1-.LFB1
+ 2537 06ad 01       		.uleb128 0x1
+ 2538 06ae 9C       		.byte	0x9c
+ 2539 06af 06080000 		.4byte	0x806
+ 2540 06b3 2C       		.uleb128 0x2c
+ 2541 06b4 FC020000 		.4byte	.LASF33
+ 2542 06b8 01       		.byte	0x1
+ 2543 06b9 63       		.byte	0x63
+ 2544 06ba 6B000000 		.4byte	0x6b
+ 2545 06be 4D040000 		.4byte	.LLST30
+ 2546 06c2 2D       		.uleb128 0x2d
+ 2547 06c3 F0030000 		.4byte	0x3f0
+ 2548 06c7 00000000 		.4byte	.LBB78
+ 2549 06cb 50000000 		.4byte	.Ldebug_ranges0+0x50
+ 2550 06cf 01       		.byte	0x1
+ 2551 06d0 66       		.byte	0x66
+ 2552 06d1 2E       		.uleb128 0x2e
+ 2553 06d2 63060000 		.4byte	0x663
+ 2554 06d6 10000000 		.4byte	.LBB82
+ 2555 06da 08000000 		.4byte	.LBE82-.LBB82
+ 2556 06de 01       		.byte	0x1
+ 2557 06df 68       		.byte	0x68
+ 2558 06e0 2F       		.uleb128 0x2f
+ 2559 06e1 6F060000 		.4byte	0x66f
+ 2560 06e5 1C000000 		.4byte	.LBB84
+ 2561 06e9 68000000 		.4byte	.Ldebug_ranges0+0x68
+ 2562 06ed 01       		.byte	0x1
+ 2563 06ee 71       		.byte	0x71
+ 2564 06ef C7070000 		.4byte	0x7c7
+ 2565 06f3 30       		.uleb128 0x30
+ 2566 06f4 68000000 		.4byte	.Ldebug_ranges0+0x68
+ 2567 06f8 18       		.uleb128 0x18
+ 2568 06f9 7C060000 		.4byte	0x67c
+ 2569 06fd 61040000 		.4byte	.LLST31
+ 2570 0701 31       		.uleb128 0x31
+ 2571 0702 88060000 		.4byte	0x688
+ 2572 0706 05       		.uleb128 0x5
+ 2573 0707 03       		.byte	0x3
+ 2574 0708 00000000 		.4byte	lfclkPosedgeEnabledWdtCounter.4838
+ 2575 070c 23       		.uleb128 0x23
+ 2576 070d FB010000 		.4byte	0x1fb
+ 2577 0711 1C000000 		.4byte	.LBB86
+ 2578 0715 80000000 		.4byte	.Ldebug_ranges0+0x80
+ 2579 0719 01       		.byte	0x1
+ 2580 071a 2906     		.2byte	0x629
+ 2581 071c 2A070000 		.4byte	0x72a
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 78
 
 
- 2582 071d 14       		.uleb128 0x14
- 2583 071e 09020000 		.4byte	0x209
- 2584 0722 75040000 		.4byte	.LLST32
- 2585 0726 00       		.byte	0
- 2586 0727 1D       		.uleb128 0x1d
- 2587 0728 F8010000 		.4byte	0x1f8
- 2588 072c 2E000000 		.4byte	.LBB90
- 2589 0730 04000000 		.4byte	.LBE90-.LBB90
- 2590 0734 01       		.byte	0x1
- 2591 0735 2D06     		.2byte	0x62d
- 2592 0737 45070000 		.4byte	0x745
- 2593 073b 14       		.uleb128 0x14
- 2594 073c 09020000 		.4byte	0x209
- 2595 0740 89040000 		.4byte	.LLST33
- 2596 0744 00       		.byte	0
- 2597 0745 1D       		.uleb128 0x1d
- 2598 0746 F8010000 		.4byte	0x1f8
- 2599 074a 3A000000 		.4byte	.LBB92
- 2600 074e 06000000 		.4byte	.LBE92-.LBB92
- 2601 0752 01       		.byte	0x1
- 2602 0753 3106     		.2byte	0x631
- 2603 0755 63070000 		.4byte	0x763
- 2604 0759 14       		.uleb128 0x14
- 2605 075a 09020000 		.4byte	0x209
- 2606 075e A9040000 		.4byte	.LLST34
- 2607 0762 00       		.byte	0
- 2608 0763 23       		.uleb128 0x23
- 2609 0764 A1020000 		.4byte	0x2a1
- 2610 0768 48000000 		.4byte	.LBB94
- 2611 076c 98000000 		.4byte	.Ldebug_ranges0+0x98
- 2612 0770 01       		.byte	0x1
- 2613 0771 3B06     		.2byte	0x63b
- 2614 0773 81070000 		.4byte	0x781
- 2615 0777 14       		.uleb128 0x14
- 2616 0778 B2020000 		.4byte	0x2b2
- 2617 077c C9040000 		.4byte	.LLST35
- 2618 0780 00       		.byte	0
- 2619 0781 11       		.uleb128 0x11
- 2620 0782 5C000000 		.4byte	.LVL82
- 2621 0786 EB000000 		.4byte	0xeb
- 2622 078a 27       		.uleb128 0x27
- 2623 078b 62000000 		.4byte	.LVL83
- 2624 078f 1D010000 		.4byte	0x11d
- 2625 0793 9E070000 		.4byte	0x79e
- 2626 0797 1A       		.uleb128 0x1a
- 2627 0798 01       		.uleb128 0x1
- 2628 0799 50       		.byte	0x50
- 2629 079a 02       		.uleb128 0x2
- 2630 079b 76       		.byte	0x76
- 2631 079c 00       		.sleb128 0
- 2632 079d 00       		.byte	0
- 2633 079e 27       		.uleb128 0x27
- 2634 079f 6A000000 		.4byte	.LVL84
- 2635 07a3 25060000 		.4byte	0x625
- 2636 07a7 B2070000 		.4byte	0x7b2
- 2637 07ab 1A       		.uleb128 0x1a
- 2638 07ac 01       		.uleb128 0x1
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 79
+ 2582 0720 14       		.uleb128 0x14
+ 2583 0721 0C020000 		.4byte	0x20c
+ 2584 0725 75040000 		.4byte	.LLST32
+ 2585 0729 00       		.byte	0
+ 2586 072a 1D       		.uleb128 0x1d
+ 2587 072b FB010000 		.4byte	0x1fb
+ 2588 072f 2E000000 		.4byte	.LBB90
+ 2589 0733 04000000 		.4byte	.LBE90-.LBB90
+ 2590 0737 01       		.byte	0x1
+ 2591 0738 2D06     		.2byte	0x62d
+ 2592 073a 48070000 		.4byte	0x748
+ 2593 073e 14       		.uleb128 0x14
+ 2594 073f 0C020000 		.4byte	0x20c
+ 2595 0743 89040000 		.4byte	.LLST33
+ 2596 0747 00       		.byte	0
+ 2597 0748 1D       		.uleb128 0x1d
+ 2598 0749 FB010000 		.4byte	0x1fb
+ 2599 074d 3A000000 		.4byte	.LBB92
+ 2600 0751 06000000 		.4byte	.LBE92-.LBB92
+ 2601 0755 01       		.byte	0x1
+ 2602 0756 3106     		.2byte	0x631
+ 2603 0758 66070000 		.4byte	0x766
+ 2604 075c 14       		.uleb128 0x14
+ 2605 075d 0C020000 		.4byte	0x20c
+ 2606 0761 A9040000 		.4byte	.LLST34
+ 2607 0765 00       		.byte	0
+ 2608 0766 23       		.uleb128 0x23
+ 2609 0767 A4020000 		.4byte	0x2a4
+ 2610 076b 48000000 		.4byte	.LBB94
+ 2611 076f 98000000 		.4byte	.Ldebug_ranges0+0x98
+ 2612 0773 01       		.byte	0x1
+ 2613 0774 3B06     		.2byte	0x63b
+ 2614 0776 84070000 		.4byte	0x784
+ 2615 077a 14       		.uleb128 0x14
+ 2616 077b B5020000 		.4byte	0x2b5
+ 2617 077f C9040000 		.4byte	.LLST35
+ 2618 0783 00       		.byte	0
+ 2619 0784 11       		.uleb128 0x11
+ 2620 0785 5C000000 		.4byte	.LVL82
+ 2621 0789 EE000000 		.4byte	0xee
+ 2622 078d 27       		.uleb128 0x27
+ 2623 078e 62000000 		.4byte	.LVL83
+ 2624 0792 20010000 		.4byte	0x120
+ 2625 0796 A1070000 		.4byte	0x7a1
+ 2626 079a 1A       		.uleb128 0x1a
+ 2627 079b 01       		.uleb128 0x1
+ 2628 079c 50       		.byte	0x50
+ 2629 079d 02       		.uleb128 0x2
+ 2630 079e 76       		.byte	0x76
+ 2631 079f 00       		.sleb128 0
+ 2632 07a0 00       		.byte	0
+ 2633 07a1 27       		.uleb128 0x27
+ 2634 07a2 6A000000 		.4byte	.LVL84
+ 2635 07a6 28060000 		.4byte	0x628
+ 2636 07aa B5070000 		.4byte	0x7b5
+ 2637 07ae 1A       		.uleb128 0x1a
+ 2638 07af 01       		.uleb128 0x1
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 79
 
 
- 2639 07ad 50       		.byte	0x50
- 2640 07ae 02       		.uleb128 0x2
- 2641 07af 76       		.byte	0x76
- 2642 07b0 00       		.sleb128 0
- 2643 07b1 00       		.byte	0
- 2644 07b2 19       		.uleb128 0x19
- 2645 07b3 72000000 		.4byte	.LVL86
- 2646 07b7 25060000 		.4byte	0x625
- 2647 07bb 1A       		.uleb128 0x1a
- 2648 07bc 01       		.uleb128 0x1
- 2649 07bd 50       		.byte	0x50
- 2650 07be 02       		.uleb128 0x2
- 2651 07bf 76       		.byte	0x76
- 2652 07c0 00       		.sleb128 0
- 2653 07c1 00       		.byte	0
- 2654 07c2 00       		.byte	0
- 2655 07c3 00       		.byte	0
- 2656 07c4 32       		.uleb128 0x32
- 2657 07c5 92060000 		.4byte	0x692
- 2658 07c9 80000000 		.4byte	.LBB102
- 2659 07cd 1A000000 		.4byte	.LBE102-.LBB102
- 2660 07d1 01       		.byte	0x1
- 2661 07d2 73       		.byte	0x73
- 2662 07d3 E7070000 		.4byte	0x7e7
- 2663 07d7 19       		.uleb128 0x19
- 2664 07d8 96000000 		.4byte	.LVL87
- 2665 07dc EB000000 		.4byte	0xeb
- 2666 07e0 1A       		.uleb128 0x1a
- 2667 07e1 01       		.uleb128 0x1
- 2668 07e2 50       		.byte	0x50
- 2669 07e3 01       		.uleb128 0x1
- 2670 07e4 30       		.byte	0x30
- 2671 07e5 00       		.byte	0
- 2672 07e6 00       		.byte	0
- 2673 07e7 11       		.uleb128 0x11
- 2674 07e8 1C000000 		.4byte	.LVL75
- 2675 07ec 6D0C0000 		.4byte	0xc6d
- 2676 07f0 19       		.uleb128 0x19
- 2677 07f1 A0000000 		.4byte	.LVL88
- 2678 07f5 780C0000 		.4byte	0xc78
- 2679 07f9 1A       		.uleb128 0x1a
- 2680 07fa 01       		.uleb128 0x1
- 2681 07fb 50       		.byte	0x50
- 2682 07fc 04       		.uleb128 0x4
- 2683 07fd 91       		.byte	0x91
- 2684 07fe 64       		.sleb128 -28
- 2685 07ff 94       		.byte	0x94
- 2686 0800 01       		.byte	0x1
- 2687 0801 00       		.byte	0
- 2688 0802 00       		.byte	0
- 2689 0803 26       		.uleb128 0x26
- 2690 0804 0D050000 		.4byte	.LASF56
- 2691 0808 01       		.byte	0x1
- 2692 0809 FD03     		.2byte	0x3fd
- 2693 080b 81000000 		.4byte	0x81
- 2694 080f 00000000 		.4byte	.LFB20
- 2695 0813 14000000 		.4byte	.LFE20-.LFB20
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 80
+ 2639 07b0 50       		.byte	0x50
+ 2640 07b1 02       		.uleb128 0x2
+ 2641 07b2 76       		.byte	0x76
+ 2642 07b3 00       		.sleb128 0
+ 2643 07b4 00       		.byte	0
+ 2644 07b5 19       		.uleb128 0x19
+ 2645 07b6 72000000 		.4byte	.LVL86
+ 2646 07ba 28060000 		.4byte	0x628
+ 2647 07be 1A       		.uleb128 0x1a
+ 2648 07bf 01       		.uleb128 0x1
+ 2649 07c0 50       		.byte	0x50
+ 2650 07c1 02       		.uleb128 0x2
+ 2651 07c2 76       		.byte	0x76
+ 2652 07c3 00       		.sleb128 0
+ 2653 07c4 00       		.byte	0
+ 2654 07c5 00       		.byte	0
+ 2655 07c6 00       		.byte	0
+ 2656 07c7 32       		.uleb128 0x32
+ 2657 07c8 95060000 		.4byte	0x695
+ 2658 07cc 80000000 		.4byte	.LBB102
+ 2659 07d0 1A000000 		.4byte	.LBE102-.LBB102
+ 2660 07d4 01       		.byte	0x1
+ 2661 07d5 73       		.byte	0x73
+ 2662 07d6 EA070000 		.4byte	0x7ea
+ 2663 07da 19       		.uleb128 0x19
+ 2664 07db 96000000 		.4byte	.LVL87
+ 2665 07df EE000000 		.4byte	0xee
+ 2666 07e3 1A       		.uleb128 0x1a
+ 2667 07e4 01       		.uleb128 0x1
+ 2668 07e5 50       		.byte	0x50
+ 2669 07e6 01       		.uleb128 0x1
+ 2670 07e7 30       		.byte	0x30
+ 2671 07e8 00       		.byte	0
+ 2672 07e9 00       		.byte	0
+ 2673 07ea 11       		.uleb128 0x11
+ 2674 07eb 1C000000 		.4byte	.LVL75
+ 2675 07ef 700C0000 		.4byte	0xc70
+ 2676 07f3 19       		.uleb128 0x19
+ 2677 07f4 A0000000 		.4byte	.LVL88
+ 2678 07f8 7B0C0000 		.4byte	0xc7b
+ 2679 07fc 1A       		.uleb128 0x1a
+ 2680 07fd 01       		.uleb128 0x1
+ 2681 07fe 50       		.byte	0x50
+ 2682 07ff 04       		.uleb128 0x4
+ 2683 0800 91       		.byte	0x91
+ 2684 0801 64       		.sleb128 -28
+ 2685 0802 94       		.byte	0x94
+ 2686 0803 01       		.byte	0x1
+ 2687 0804 00       		.byte	0
+ 2688 0805 00       		.byte	0
+ 2689 0806 26       		.uleb128 0x26
+ 2690 0807 0D050000 		.4byte	.LASF56
+ 2691 080b 01       		.byte	0x1
+ 2692 080c FD03     		.2byte	0x3fd
+ 2693 080e 83000000 		.4byte	0x83
+ 2694 0812 00000000 		.4byte	.LFB20
+ 2695 0816 14000000 		.4byte	.LFE20-.LFB20
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 80
 
 
- 2696 0817 01       		.uleb128 0x1
- 2697 0818 9C       		.byte	0x9c
- 2698 0819 0F       		.uleb128 0xf
- 2699 081a 4E040000 		.4byte	.LASF57
- 2700 081e 01       		.byte	0x1
- 2701 081f 1F04     		.2byte	0x41f
- 2702 0821 00000000 		.4byte	.LFB21
- 2703 0825 54000000 		.4byte	.LFE21-.LFB21
- 2704 0829 01       		.uleb128 0x1
- 2705 082a 9C       		.byte	0x9c
- 2706 082b 9F080000 		.4byte	0x89f
- 2707 082f 1B       		.uleb128 0x1b
- 2708 0830 A2020000 		.4byte	.LASF25
- 2709 0834 01       		.byte	0x1
- 2710 0835 1F04     		.2byte	0x41f
- 2711 0837 81000000 		.4byte	0x81
- 2712 083b DD040000 		.4byte	.LLST36
- 2713 083f 10       		.uleb128 0x10
- 2714 0840 FC020000 		.4byte	.LASF33
- 2715 0844 01       		.byte	0x1
- 2716 0845 2104     		.2byte	0x421
- 2717 0847 6B000000 		.4byte	0x6b
- 2718 084b 24050000 		.4byte	.LLST37
- 2719 084f 10       		.uleb128 0x10
- 2720 0850 E0050000 		.4byte	.LASF58
- 2721 0854 01       		.byte	0x1
- 2722 0855 2204     		.2byte	0x422
- 2723 0857 81000000 		.4byte	0x81
- 2724 085b 42050000 		.4byte	.LLST38
- 2725 085f 33       		.uleb128 0x33
- 2726 0860 ED030000 		.4byte	0x3ed
- 2727 0864 08000000 		.4byte	.LBB106
- 2728 0868 B8000000 		.4byte	.Ldebug_ranges0+0xb8
- 2729 086c 01       		.byte	0x1
- 2730 086d 2604     		.2byte	0x426
- 2731 086f 11       		.uleb128 0x11
- 2732 0870 08000000 		.4byte	.LVL90
- 2733 0874 6D0C0000 		.4byte	0xc6d
- 2734 0878 11       		.uleb128 0x11
- 2735 0879 32000000 		.4byte	.LVL95
- 2736 087d 86010000 		.4byte	0x186
- 2737 0881 27       		.uleb128 0x27
- 2738 0882 38000000 		.4byte	.LVL96
- 2739 0886 780C0000 		.4byte	0xc78
- 2740 088a 95080000 		.4byte	0x895
- 2741 088e 1A       		.uleb128 0x1a
- 2742 088f 01       		.uleb128 0x1
- 2743 0890 50       		.byte	0x50
- 2744 0891 02       		.uleb128 0x2
- 2745 0892 74       		.byte	0x74
- 2746 0893 00       		.sleb128 0
- 2747 0894 00       		.byte	0
- 2748 0895 11       		.uleb128 0x11
- 2749 0896 3E000000 		.4byte	.LVL99
- 2750 089a BF010000 		.4byte	0x1bf
- 2751 089e 00       		.byte	0
- 2752 089f 0F       		.uleb128 0xf
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 81
+ 2696 081a 01       		.uleb128 0x1
+ 2697 081b 9C       		.byte	0x9c
+ 2698 081c 0F       		.uleb128 0xf
+ 2699 081d 4E040000 		.4byte	.LASF57
+ 2700 0821 01       		.byte	0x1
+ 2701 0822 1F04     		.2byte	0x41f
+ 2702 0824 00000000 		.4byte	.LFB21
+ 2703 0828 54000000 		.4byte	.LFE21-.LFB21
+ 2704 082c 01       		.uleb128 0x1
+ 2705 082d 9C       		.byte	0x9c
+ 2706 082e A2080000 		.4byte	0x8a2
+ 2707 0832 1B       		.uleb128 0x1b
+ 2708 0833 A2020000 		.4byte	.LASF25
+ 2709 0837 01       		.byte	0x1
+ 2710 0838 1F04     		.2byte	0x41f
+ 2711 083a 83000000 		.4byte	0x83
+ 2712 083e DD040000 		.4byte	.LLST36
+ 2713 0842 10       		.uleb128 0x10
+ 2714 0843 FC020000 		.4byte	.LASF33
+ 2715 0847 01       		.byte	0x1
+ 2716 0848 2104     		.2byte	0x421
+ 2717 084a 6B000000 		.4byte	0x6b
+ 2718 084e 24050000 		.4byte	.LLST37
+ 2719 0852 10       		.uleb128 0x10
+ 2720 0853 E0050000 		.4byte	.LASF58
+ 2721 0857 01       		.byte	0x1
+ 2722 0858 2204     		.2byte	0x422
+ 2723 085a 83000000 		.4byte	0x83
+ 2724 085e 42050000 		.4byte	.LLST38
+ 2725 0862 33       		.uleb128 0x33
+ 2726 0863 F0030000 		.4byte	0x3f0
+ 2727 0867 08000000 		.4byte	.LBB106
+ 2728 086b B8000000 		.4byte	.Ldebug_ranges0+0xb8
+ 2729 086f 01       		.byte	0x1
+ 2730 0870 2604     		.2byte	0x426
+ 2731 0872 11       		.uleb128 0x11
+ 2732 0873 08000000 		.4byte	.LVL90
+ 2733 0877 700C0000 		.4byte	0xc70
+ 2734 087b 11       		.uleb128 0x11
+ 2735 087c 32000000 		.4byte	.LVL95
+ 2736 0880 89010000 		.4byte	0x189
+ 2737 0884 27       		.uleb128 0x27
+ 2738 0885 38000000 		.4byte	.LVL96
+ 2739 0889 7B0C0000 		.4byte	0xc7b
+ 2740 088d 98080000 		.4byte	0x898
+ 2741 0891 1A       		.uleb128 0x1a
+ 2742 0892 01       		.uleb128 0x1
+ 2743 0893 50       		.byte	0x50
+ 2744 0894 02       		.uleb128 0x2
+ 2745 0895 74       		.byte	0x74
+ 2746 0896 00       		.sleb128 0
+ 2747 0897 00       		.byte	0
+ 2748 0898 11       		.uleb128 0x11
+ 2749 0899 3E000000 		.4byte	.LVL99
+ 2750 089d C2010000 		.4byte	0x1c2
+ 2751 08a1 00       		.byte	0
+ 2752 08a2 0F       		.uleb128 0xf
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 81
 
 
- 2753 08a0 38040000 		.4byte	.LASF59
- 2754 08a4 01       		.byte	0x1
- 2755 08a5 5F04     		.2byte	0x45f
- 2756 08a7 00000000 		.4byte	.LFB22
- 2757 08ab 1C000000 		.4byte	.LFE22-.LFB22
- 2758 08af 01       		.uleb128 0x1
- 2759 08b0 9C       		.byte	0x9c
- 2760 08b1 C6080000 		.4byte	0x8c6
- 2761 08b5 1B       		.uleb128 0x1b
- 2762 08b6 24020000 		.4byte	.LASF60
- 2763 08ba 01       		.byte	0x1
- 2764 08bb 5F04     		.2byte	0x45f
- 2765 08bd 81000000 		.4byte	0x81
- 2766 08c1 6D050000 		.4byte	.LLST39
- 2767 08c5 00       		.byte	0
- 2768 08c6 1C       		.uleb128 0x1c
- 2769 08c7 85020000 		.4byte	.LASF61
- 2770 08cb 01       		.byte	0x1
- 2771 08cc 7C04     		.2byte	0x47c
- 2772 08ce D9000000 		.4byte	0xd9
- 2773 08d2 00000000 		.4byte	.LFB23
- 2774 08d6 18000000 		.4byte	.LFE23-.LFB23
- 2775 08da 01       		.uleb128 0x1
- 2776 08db 9C       		.byte	0x9c
- 2777 08dc 0F090000 		.4byte	0x90f
- 2778 08e0 1B       		.uleb128 0x1b
- 2779 08e1 FF000000 		.4byte	.LASF21
- 2780 08e5 01       		.byte	0x1
- 2781 08e6 7C04     		.2byte	0x47c
- 2782 08e8 81000000 		.4byte	0x81
- 2783 08ec 8E050000 		.4byte	.LLST40
- 2784 08f0 21       		.uleb128 0x21
- 2785 08f1 9F010000 		.4byte	.LASF62
- 2786 08f5 01       		.byte	0x1
- 2787 08f6 7C04     		.2byte	0x47c
- 2788 08f8 D9000000 		.4byte	0xd9
- 2789 08fc 01       		.uleb128 0x1
- 2790 08fd 51       		.byte	0x51
- 2791 08fe 10       		.uleb128 0x10
- 2792 08ff 38020000 		.4byte	.LASF63
- 2793 0903 01       		.byte	0x1
- 2794 0904 7E04     		.2byte	0x47e
- 2795 0906 D9000000 		.4byte	0xd9
- 2796 090a AF050000 		.4byte	.LLST41
- 2797 090e 00       		.byte	0
- 2798 090f 1C       		.uleb128 0x1c
- 2799 0910 77030000 		.4byte	.LASF64
- 2800 0914 01       		.byte	0x1
- 2801 0915 9D04     		.2byte	0x49d
- 2802 0917 D9000000 		.4byte	0xd9
- 2803 091b 00000000 		.4byte	.LFB24
- 2804 091f 18000000 		.4byte	.LFE24-.LFB24
- 2805 0923 01       		.uleb128 0x1
- 2806 0924 9C       		.byte	0x9c
- 2807 0925 4A090000 		.4byte	0x94a
- 2808 0929 1B       		.uleb128 0x1b
- 2809 092a FF000000 		.4byte	.LASF21
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 82
+ 2753 08a3 38040000 		.4byte	.LASF59
+ 2754 08a7 01       		.byte	0x1
+ 2755 08a8 5F04     		.2byte	0x45f
+ 2756 08aa 00000000 		.4byte	.LFB22
+ 2757 08ae 1C000000 		.4byte	.LFE22-.LFB22
+ 2758 08b2 01       		.uleb128 0x1
+ 2759 08b3 9C       		.byte	0x9c
+ 2760 08b4 C9080000 		.4byte	0x8c9
+ 2761 08b8 1B       		.uleb128 0x1b
+ 2762 08b9 24020000 		.4byte	.LASF60
+ 2763 08bd 01       		.byte	0x1
+ 2764 08be 5F04     		.2byte	0x45f
+ 2765 08c0 83000000 		.4byte	0x83
+ 2766 08c4 6D050000 		.4byte	.LLST39
+ 2767 08c8 00       		.byte	0
+ 2768 08c9 1C       		.uleb128 0x1c
+ 2769 08ca 85020000 		.4byte	.LASF61
+ 2770 08ce 01       		.byte	0x1
+ 2771 08cf 7C04     		.2byte	0x47c
+ 2772 08d1 DC000000 		.4byte	0xdc
+ 2773 08d5 00000000 		.4byte	.LFB23
+ 2774 08d9 18000000 		.4byte	.LFE23-.LFB23
+ 2775 08dd 01       		.uleb128 0x1
+ 2776 08de 9C       		.byte	0x9c
+ 2777 08df 12090000 		.4byte	0x912
+ 2778 08e3 1B       		.uleb128 0x1b
+ 2779 08e4 FF000000 		.4byte	.LASF21
+ 2780 08e8 01       		.byte	0x1
+ 2781 08e9 7C04     		.2byte	0x47c
+ 2782 08eb 83000000 		.4byte	0x83
+ 2783 08ef 8E050000 		.4byte	.LLST40
+ 2784 08f3 21       		.uleb128 0x21
+ 2785 08f4 9F010000 		.4byte	.LASF62
+ 2786 08f8 01       		.byte	0x1
+ 2787 08f9 7C04     		.2byte	0x47c
+ 2788 08fb DC000000 		.4byte	0xdc
+ 2789 08ff 01       		.uleb128 0x1
+ 2790 0900 51       		.byte	0x51
+ 2791 0901 10       		.uleb128 0x10
+ 2792 0902 38020000 		.4byte	.LASF63
+ 2793 0906 01       		.byte	0x1
+ 2794 0907 7E04     		.2byte	0x47e
+ 2795 0909 DC000000 		.4byte	0xdc
+ 2796 090d AF050000 		.4byte	.LLST41
+ 2797 0911 00       		.byte	0
+ 2798 0912 1C       		.uleb128 0x1c
+ 2799 0913 77030000 		.4byte	.LASF64
+ 2800 0917 01       		.byte	0x1
+ 2801 0918 9D04     		.2byte	0x49d
+ 2802 091a DC000000 		.4byte	0xdc
+ 2803 091e 00000000 		.4byte	.LFB24
+ 2804 0922 18000000 		.4byte	.LFE24-.LFB24
+ 2805 0926 01       		.uleb128 0x1
+ 2806 0927 9C       		.byte	0x9c
+ 2807 0928 4D090000 		.4byte	0x94d
+ 2808 092c 1B       		.uleb128 0x1b
+ 2809 092d FF000000 		.4byte	.LASF21
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 82
 
 
- 2810 092e 01       		.byte	0x1
- 2811 092f 9D04     		.2byte	0x49d
- 2812 0931 81000000 		.4byte	0x81
- 2813 0935 CE050000 		.4byte	.LLST42
- 2814 0939 10       		.uleb128 0x10
- 2815 093a DE020000 		.4byte	.LASF65
- 2816 093e 01       		.byte	0x1
- 2817 093f 9F04     		.2byte	0x49f
- 2818 0941 D9000000 		.4byte	0xd9
- 2819 0945 EF050000 		.4byte	.LLST43
- 2820 0949 00       		.byte	0
- 2821 094a 0F       		.uleb128 0xf
- 2822 094b 32030000 		.4byte	.LASF66
- 2823 094f 01       		.byte	0x1
- 2824 0950 B904     		.2byte	0x4b9
- 2825 0952 00000000 		.4byte	.LFB25
- 2826 0956 28000000 		.4byte	.LFE25-.LFB25
- 2827 095a 01       		.uleb128 0x1
- 2828 095b 9C       		.byte	0x9c
- 2829 095c 71090000 		.4byte	0x971
- 2830 0960 1B       		.uleb128 0x1b
- 2831 0961 FF000000 		.4byte	.LASF21
- 2832 0965 01       		.byte	0x1
- 2833 0966 B904     		.2byte	0x4b9
- 2834 0968 81000000 		.4byte	0x81
- 2835 096c 0E060000 		.4byte	.LLST44
- 2836 0970 00       		.byte	0
- 2837 0971 0F       		.uleb128 0xf
- 2838 0972 5D050000 		.4byte	.LASF67
- 2839 0976 01       		.byte	0x1
- 2840 0977 D204     		.2byte	0x4d2
- 2841 0979 00000000 		.4byte	.LFB26
- 2842 097d 1C000000 		.4byte	.LFE26-.LFB26
- 2843 0981 01       		.uleb128 0x1
- 2844 0982 9C       		.byte	0x9c
- 2845 0983 98090000 		.4byte	0x998
- 2846 0987 1B       		.uleb128 0x1b
- 2847 0988 FF000000 		.4byte	.LASF21
- 2848 098c 01       		.byte	0x1
- 2849 098d D204     		.2byte	0x4d2
- 2850 098f 81000000 		.4byte	0x81
- 2851 0993 2F060000 		.4byte	.LLST45
- 2852 0997 00       		.byte	0
- 2853 0998 34       		.uleb128 0x34
- 2854 0999 94030000 		.4byte	.LASF68
- 2855 099d 01       		.byte	0x1
- 2856 099e F804     		.2byte	0x4f8
- 2857 09a0 00000000 		.4byte	.LFB27
- 2858 09a4 A0000000 		.4byte	.LFE27-.LFB27
- 2859 09a8 01       		.uleb128 0x1
- 2860 09a9 9C       		.byte	0x9c
- 2861 09aa E8090000 		.4byte	0x9e8
- 2862 09ae 27       		.uleb128 0x27
- 2863 09af 34000000 		.4byte	.LVL114
- 2864 09b3 19080000 		.4byte	0x819
- 2865 09b7 C1090000 		.4byte	0x9c1
- 2866 09bb 1A       		.uleb128 0x1a
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 83
+ 2810 0931 01       		.byte	0x1
+ 2811 0932 9D04     		.2byte	0x49d
+ 2812 0934 83000000 		.4byte	0x83
+ 2813 0938 CE050000 		.4byte	.LLST42
+ 2814 093c 10       		.uleb128 0x10
+ 2815 093d DE020000 		.4byte	.LASF65
+ 2816 0941 01       		.byte	0x1
+ 2817 0942 9F04     		.2byte	0x49f
+ 2818 0944 DC000000 		.4byte	0xdc
+ 2819 0948 EF050000 		.4byte	.LLST43
+ 2820 094c 00       		.byte	0
+ 2821 094d 0F       		.uleb128 0xf
+ 2822 094e 32030000 		.4byte	.LASF66
+ 2823 0952 01       		.byte	0x1
+ 2824 0953 B904     		.2byte	0x4b9
+ 2825 0955 00000000 		.4byte	.LFB25
+ 2826 0959 28000000 		.4byte	.LFE25-.LFB25
+ 2827 095d 01       		.uleb128 0x1
+ 2828 095e 9C       		.byte	0x9c
+ 2829 095f 74090000 		.4byte	0x974
+ 2830 0963 1B       		.uleb128 0x1b
+ 2831 0964 FF000000 		.4byte	.LASF21
+ 2832 0968 01       		.byte	0x1
+ 2833 0969 B904     		.2byte	0x4b9
+ 2834 096b 83000000 		.4byte	0x83
+ 2835 096f 0E060000 		.4byte	.LLST44
+ 2836 0973 00       		.byte	0
+ 2837 0974 0F       		.uleb128 0xf
+ 2838 0975 5D050000 		.4byte	.LASF67
+ 2839 0979 01       		.byte	0x1
+ 2840 097a D204     		.2byte	0x4d2
+ 2841 097c 00000000 		.4byte	.LFB26
+ 2842 0980 1C000000 		.4byte	.LFE26-.LFB26
+ 2843 0984 01       		.uleb128 0x1
+ 2844 0985 9C       		.byte	0x9c
+ 2845 0986 9B090000 		.4byte	0x99b
+ 2846 098a 1B       		.uleb128 0x1b
+ 2847 098b FF000000 		.4byte	.LASF21
+ 2848 098f 01       		.byte	0x1
+ 2849 0990 D204     		.2byte	0x4d2
+ 2850 0992 83000000 		.4byte	0x83
+ 2851 0996 2F060000 		.4byte	.LLST45
+ 2852 099a 00       		.byte	0
+ 2853 099b 34       		.uleb128 0x34
+ 2854 099c 94030000 		.4byte	.LASF68
+ 2855 09a0 01       		.byte	0x1
+ 2856 09a1 F804     		.2byte	0x4f8
+ 2857 09a3 00000000 		.4byte	.LFB27
+ 2858 09a7 A0000000 		.4byte	.LFE27-.LFB27
+ 2859 09ab 01       		.uleb128 0x1
+ 2860 09ac 9C       		.byte	0x9c
+ 2861 09ad EB090000 		.4byte	0x9eb
+ 2862 09b1 27       		.uleb128 0x27
+ 2863 09b2 34000000 		.4byte	.LVL114
+ 2864 09b6 1C080000 		.4byte	0x81c
+ 2865 09ba C4090000 		.4byte	0x9c4
+ 2866 09be 1A       		.uleb128 0x1a
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 83
 
 
- 2867 09bc 01       		.uleb128 0x1
- 2868 09bd 50       		.byte	0x50
- 2869 09be 01       		.uleb128 0x1
- 2870 09bf 34       		.byte	0x34
- 2871 09c0 00       		.byte	0
- 2872 09c1 27       		.uleb128 0x27
- 2873 09c2 6A000000 		.4byte	.LVL116
- 2874 09c6 19080000 		.4byte	0x819
- 2875 09ca D6090000 		.4byte	0x9d6
- 2876 09ce 1A       		.uleb128 0x1a
- 2877 09cf 01       		.uleb128 0x1
- 2878 09d0 50       		.byte	0x50
- 2879 09d1 03       		.uleb128 0x3
- 2880 09d2 0A       		.byte	0xa
- 2881 09d3 0004     		.2byte	0x400
- 2882 09d5 00       		.byte	0
- 2883 09d6 19       		.uleb128 0x19
- 2884 09d7 8E000000 		.4byte	.LVL118
- 2885 09db 19080000 		.4byte	0x819
- 2886 09df 1A       		.uleb128 0x1a
- 2887 09e0 01       		.uleb128 0x1
- 2888 09e1 50       		.byte	0x50
- 2889 09e2 03       		.uleb128 0x3
- 2890 09e3 40       		.byte	0x40
- 2891 09e4 3E       		.byte	0x3e
- 2892 09e5 24       		.byte	0x24
- 2893 09e6 00       		.byte	0
- 2894 09e7 00       		.byte	0
- 2895 09e8 13       		.uleb128 0x13
- 2896 09e9 37010000 		.4byte	0x137
- 2897 09ed 00000000 		.4byte	.LFB29
- 2898 09f1 64000000 		.4byte	.LFE29-.LFB29
- 2899 09f5 01       		.uleb128 0x1
- 2900 09f6 9C       		.byte	0x9c
- 2901 09f7 AA0A0000 		.4byte	0xaaa
- 2902 09fb 14       		.uleb128 0x14
- 2903 09fc 44010000 		.4byte	0x144
- 2904 0a00 50060000 		.4byte	.LLST46
- 2905 0a04 14       		.uleb128 0x14
- 2906 0a05 50010000 		.4byte	0x150
- 2907 0a09 7C060000 		.4byte	.LLST47
- 2908 0a0d 14       		.uleb128 0x14
- 2909 0a0e 5C010000 		.4byte	0x15c
- 2910 0a12 9D060000 		.4byte	.LLST48
- 2911 0a16 18       		.uleb128 0x18
- 2912 0a17 68010000 		.4byte	0x168
- 2913 0a1b C9060000 		.4byte	.LLST49
- 2914 0a1f 16       		.uleb128 0x16
- 2915 0a20 34000000 		.4byte	.LBB112
- 2916 0a24 1E000000 		.4byte	.LBE112-.LBB112
- 2917 0a28 710A0000 		.4byte	0xa71
- 2918 0a2c 14       		.uleb128 0x14
- 2919 0a2d 50010000 		.4byte	0x150
- 2920 0a31 E7060000 		.4byte	.LLST50
- 2921 0a35 14       		.uleb128 0x14
- 2922 0a36 5C010000 		.4byte	0x15c
- 2923 0a3a FA060000 		.4byte	.LLST51
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 84
+ 2867 09bf 01       		.uleb128 0x1
+ 2868 09c0 50       		.byte	0x50
+ 2869 09c1 01       		.uleb128 0x1
+ 2870 09c2 34       		.byte	0x34
+ 2871 09c3 00       		.byte	0
+ 2872 09c4 27       		.uleb128 0x27
+ 2873 09c5 6A000000 		.4byte	.LVL116
+ 2874 09c9 1C080000 		.4byte	0x81c
+ 2875 09cd D9090000 		.4byte	0x9d9
+ 2876 09d1 1A       		.uleb128 0x1a
+ 2877 09d2 01       		.uleb128 0x1
+ 2878 09d3 50       		.byte	0x50
+ 2879 09d4 03       		.uleb128 0x3
+ 2880 09d5 0A       		.byte	0xa
+ 2881 09d6 0004     		.2byte	0x400
+ 2882 09d8 00       		.byte	0
+ 2883 09d9 19       		.uleb128 0x19
+ 2884 09da 8E000000 		.4byte	.LVL118
+ 2885 09de 1C080000 		.4byte	0x81c
+ 2886 09e2 1A       		.uleb128 0x1a
+ 2887 09e3 01       		.uleb128 0x1
+ 2888 09e4 50       		.byte	0x50
+ 2889 09e5 03       		.uleb128 0x3
+ 2890 09e6 40       		.byte	0x40
+ 2891 09e7 3E       		.byte	0x3e
+ 2892 09e8 24       		.byte	0x24
+ 2893 09e9 00       		.byte	0
+ 2894 09ea 00       		.byte	0
+ 2895 09eb 13       		.uleb128 0x13
+ 2896 09ec 3A010000 		.4byte	0x13a
+ 2897 09f0 00000000 		.4byte	.LFB29
+ 2898 09f4 64000000 		.4byte	.LFE29-.LFB29
+ 2899 09f8 01       		.uleb128 0x1
+ 2900 09f9 9C       		.byte	0x9c
+ 2901 09fa AD0A0000 		.4byte	0xaad
+ 2902 09fe 14       		.uleb128 0x14
+ 2903 09ff 47010000 		.4byte	0x147
+ 2904 0a03 50060000 		.4byte	.LLST46
+ 2905 0a07 14       		.uleb128 0x14
+ 2906 0a08 53010000 		.4byte	0x153
+ 2907 0a0c 7C060000 		.4byte	.LLST47
+ 2908 0a10 14       		.uleb128 0x14
+ 2909 0a11 5F010000 		.4byte	0x15f
+ 2910 0a15 9D060000 		.4byte	.LLST48
+ 2911 0a19 18       		.uleb128 0x18
+ 2912 0a1a 6B010000 		.4byte	0x16b
+ 2913 0a1e C9060000 		.4byte	.LLST49
+ 2914 0a22 16       		.uleb128 0x16
+ 2915 0a23 34000000 		.4byte	.LBB112
+ 2916 0a27 1E000000 		.4byte	.LBE112-.LBB112
+ 2917 0a2b 740A0000 		.4byte	0xa74
+ 2918 0a2f 14       		.uleb128 0x14
+ 2919 0a30 53010000 		.4byte	0x153
+ 2920 0a34 E7060000 		.4byte	.LLST50
+ 2921 0a38 14       		.uleb128 0x14
+ 2922 0a39 5F010000 		.4byte	0x15f
+ 2923 0a3d FA060000 		.4byte	.LLST51
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 84
 
 
- 2924 0a3e 14       		.uleb128 0x14
- 2925 0a3f 44010000 		.4byte	0x144
- 2926 0a43 0D070000 		.4byte	.LLST52
- 2927 0a47 17       		.uleb128 0x17
- 2928 0a48 34000000 		.4byte	.LBB113
- 2929 0a4c 1E000000 		.4byte	.LBE113-.LBB113
- 2930 0a50 18       		.uleb128 0x18
- 2931 0a51 68010000 		.4byte	0x168
- 2932 0a55 20070000 		.4byte	.LLST53
- 2933 0a59 19       		.uleb128 0x19
- 2934 0a5a 42000000 		.4byte	.LVL126
- 2935 0a5e 2F050000 		.4byte	0x52f
- 2936 0a62 1A       		.uleb128 0x1a
- 2937 0a63 01       		.uleb128 0x1
- 2938 0a64 51       		.byte	0x51
- 2939 0a65 02       		.uleb128 0x2
- 2940 0a66 75       		.byte	0x75
- 2941 0a67 00       		.sleb128 0
- 2942 0a68 1A       		.uleb128 0x1a
- 2943 0a69 01       		.uleb128 0x1
- 2944 0a6a 50       		.byte	0x50
- 2945 0a6b 02       		.uleb128 0x2
- 2946 0a6c 74       		.byte	0x74
- 2947 0a6d 00       		.sleb128 0
- 2948 0a6e 00       		.byte	0
- 2949 0a6f 00       		.byte	0
- 2950 0a70 00       		.byte	0
- 2951 0a71 27       		.uleb128 0x27
- 2952 0a72 10000000 		.4byte	.LVL120
- 2953 0a76 33030000 		.4byte	0x333
- 2954 0a7a 850A0000 		.4byte	0xa85
- 2955 0a7e 1A       		.uleb128 0x1a
- 2956 0a7f 01       		.uleb128 0x1
- 2957 0a80 50       		.byte	0x50
- 2958 0a81 02       		.uleb128 0x2
- 2959 0a82 74       		.byte	0x74
- 2960 0a83 00       		.sleb128 0
- 2961 0a84 00       		.byte	0
- 2962 0a85 27       		.uleb128 0x27
- 2963 0a86 24000000 		.4byte	.LVL121
- 2964 0a8a 25060000 		.4byte	0x625
- 2965 0a8e 990A0000 		.4byte	0xa99
- 2966 0a92 1A       		.uleb128 0x1a
- 2967 0a93 01       		.uleb128 0x1
- 2968 0a94 50       		.byte	0x50
- 2969 0a95 02       		.uleb128 0x2
- 2970 0a96 74       		.byte	0x74
- 2971 0a97 00       		.sleb128 0
- 2972 0a98 00       		.byte	0
- 2973 0a99 19       		.uleb128 0x19
- 2974 0a9a 2E000000 		.4byte	.LVL123
- 2975 0a9e 25060000 		.4byte	0x625
- 2976 0aa2 1A       		.uleb128 0x1a
- 2977 0aa3 01       		.uleb128 0x1
- 2978 0aa4 50       		.byte	0x50
- 2979 0aa5 02       		.uleb128 0x2
- 2980 0aa6 74       		.byte	0x74
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 85
+ 2924 0a41 14       		.uleb128 0x14
+ 2925 0a42 47010000 		.4byte	0x147
+ 2926 0a46 0D070000 		.4byte	.LLST52
+ 2927 0a4a 17       		.uleb128 0x17
+ 2928 0a4b 34000000 		.4byte	.LBB113
+ 2929 0a4f 1E000000 		.4byte	.LBE113-.LBB113
+ 2930 0a53 18       		.uleb128 0x18
+ 2931 0a54 6B010000 		.4byte	0x16b
+ 2932 0a58 20070000 		.4byte	.LLST53
+ 2933 0a5c 19       		.uleb128 0x19
+ 2934 0a5d 42000000 		.4byte	.LVL126
+ 2935 0a61 32050000 		.4byte	0x532
+ 2936 0a65 1A       		.uleb128 0x1a
+ 2937 0a66 01       		.uleb128 0x1
+ 2938 0a67 51       		.byte	0x51
+ 2939 0a68 02       		.uleb128 0x2
+ 2940 0a69 75       		.byte	0x75
+ 2941 0a6a 00       		.sleb128 0
+ 2942 0a6b 1A       		.uleb128 0x1a
+ 2943 0a6c 01       		.uleb128 0x1
+ 2944 0a6d 50       		.byte	0x50
+ 2945 0a6e 02       		.uleb128 0x2
+ 2946 0a6f 74       		.byte	0x74
+ 2947 0a70 00       		.sleb128 0
+ 2948 0a71 00       		.byte	0
+ 2949 0a72 00       		.byte	0
+ 2950 0a73 00       		.byte	0
+ 2951 0a74 27       		.uleb128 0x27
+ 2952 0a75 10000000 		.4byte	.LVL120
+ 2953 0a79 36030000 		.4byte	0x336
+ 2954 0a7d 880A0000 		.4byte	0xa88
+ 2955 0a81 1A       		.uleb128 0x1a
+ 2956 0a82 01       		.uleb128 0x1
+ 2957 0a83 50       		.byte	0x50
+ 2958 0a84 02       		.uleb128 0x2
+ 2959 0a85 74       		.byte	0x74
+ 2960 0a86 00       		.sleb128 0
+ 2961 0a87 00       		.byte	0
+ 2962 0a88 27       		.uleb128 0x27
+ 2963 0a89 24000000 		.4byte	.LVL121
+ 2964 0a8d 28060000 		.4byte	0x628
+ 2965 0a91 9C0A0000 		.4byte	0xa9c
+ 2966 0a95 1A       		.uleb128 0x1a
+ 2967 0a96 01       		.uleb128 0x1
+ 2968 0a97 50       		.byte	0x50
+ 2969 0a98 02       		.uleb128 0x2
+ 2970 0a99 74       		.byte	0x74
+ 2971 0a9a 00       		.sleb128 0
+ 2972 0a9b 00       		.byte	0
+ 2973 0a9c 19       		.uleb128 0x19
+ 2974 0a9d 2E000000 		.4byte	.LVL123
+ 2975 0aa1 28060000 		.4byte	0x628
+ 2976 0aa5 1A       		.uleb128 0x1a
+ 2977 0aa6 01       		.uleb128 0x1
+ 2978 0aa7 50       		.byte	0x50
+ 2979 0aa8 02       		.uleb128 0x2
+ 2980 0aa9 74       		.byte	0x74
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 85
 
 
- 2981 0aa7 00       		.sleb128 0
- 2982 0aa8 00       		.byte	0
- 2983 0aa9 00       		.byte	0
- 2984 0aaa 0F       		.uleb128 0xf
- 2985 0aab 85040000 		.4byte	.LASF69
- 2986 0aaf 01       		.byte	0x1
- 2987 0ab0 5B05     		.2byte	0x55b
- 2988 0ab2 00000000 		.4byte	.LFB28
- 2989 0ab6 34000000 		.4byte	.LFE28-.LFB28
- 2990 0aba 01       		.uleb128 0x1
- 2991 0abb 9C       		.byte	0x9c
- 2992 0abc 4F0B0000 		.4byte	0xb4f
- 2993 0ac0 1B       		.uleb128 0x1b
- 2994 0ac1 FF000000 		.4byte	.LASF21
- 2995 0ac5 01       		.byte	0x1
- 2996 0ac6 5B05     		.2byte	0x55b
- 2997 0ac8 81000000 		.4byte	0x81
- 2998 0acc 33070000 		.4byte	.LLST54
- 2999 0ad0 1B       		.uleb128 0x1b
- 3000 0ad1 E0040000 		.4byte	.LASF27
- 3001 0ad5 01       		.byte	0x1
- 3002 0ad6 5B05     		.2byte	0x55b
- 3003 0ad8 CE000000 		.4byte	0xce
- 3004 0adc 5F070000 		.4byte	.LLST55
- 3005 0ae0 1B       		.uleb128 0x1b
- 3006 0ae1 D0040000 		.4byte	.LASF70
- 3007 0ae5 01       		.byte	0x1
- 3008 0ae6 5B05     		.2byte	0x55b
- 3009 0ae8 81000000 		.4byte	0x81
- 3010 0aec 80070000 		.4byte	.LLST56
- 3011 0af0 10       		.uleb128 0x10
- 3012 0af1 F7010000 		.4byte	.LASF43
- 3013 0af5 01       		.byte	0x1
- 3014 0af6 5D05     		.2byte	0x55d
- 3015 0af8 81000000 		.4byte	0x81
- 3016 0afc AC070000 		.4byte	.LLST57
- 3017 0b00 10       		.uleb128 0x10
- 3018 0b01 0B030000 		.4byte	.LASF71
- 3019 0b05 01       		.byte	0x1
- 3020 0b06 5E05     		.2byte	0x55e
- 3021 0b08 81000000 		.4byte	0x81
- 3022 0b0c BF070000 		.4byte	.LLST58
- 3023 0b10 27       		.uleb128 0x27
- 3024 0b11 10000000 		.4byte	.LVL129
- 3025 0b15 33030000 		.4byte	0x333
- 3026 0b19 240B0000 		.4byte	0xb24
- 3027 0b1d 1A       		.uleb128 0x1a
- 3028 0b1e 01       		.uleb128 0x1
- 3029 0b1f 50       		.byte	0x50
- 3030 0b20 02       		.uleb128 0x2
- 3031 0b21 75       		.byte	0x75
- 3032 0b22 00       		.sleb128 0
- 3033 0b23 00       		.byte	0
- 3034 0b24 27       		.uleb128 0x27
- 3035 0b25 20000000 		.4byte	.LVL130
- 3036 0b29 25060000 		.4byte	0x625
- 3037 0b2d 380B0000 		.4byte	0xb38
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 86
+ 2981 0aaa 00       		.sleb128 0
+ 2982 0aab 00       		.byte	0
+ 2983 0aac 00       		.byte	0
+ 2984 0aad 0F       		.uleb128 0xf
+ 2985 0aae 85040000 		.4byte	.LASF69
+ 2986 0ab2 01       		.byte	0x1
+ 2987 0ab3 5B05     		.2byte	0x55b
+ 2988 0ab5 00000000 		.4byte	.LFB28
+ 2989 0ab9 34000000 		.4byte	.LFE28-.LFB28
+ 2990 0abd 01       		.uleb128 0x1
+ 2991 0abe 9C       		.byte	0x9c
+ 2992 0abf 520B0000 		.4byte	0xb52
+ 2993 0ac3 1B       		.uleb128 0x1b
+ 2994 0ac4 FF000000 		.4byte	.LASF21
+ 2995 0ac8 01       		.byte	0x1
+ 2996 0ac9 5B05     		.2byte	0x55b
+ 2997 0acb 83000000 		.4byte	0x83
+ 2998 0acf 33070000 		.4byte	.LLST54
+ 2999 0ad3 1B       		.uleb128 0x1b
+ 3000 0ad4 E0040000 		.4byte	.LASF27
+ 3001 0ad8 01       		.byte	0x1
+ 3002 0ad9 5B05     		.2byte	0x55b
+ 3003 0adb D1000000 		.4byte	0xd1
+ 3004 0adf 5F070000 		.4byte	.LLST55
+ 3005 0ae3 1B       		.uleb128 0x1b
+ 3006 0ae4 D0040000 		.4byte	.LASF70
+ 3007 0ae8 01       		.byte	0x1
+ 3008 0ae9 5B05     		.2byte	0x55b
+ 3009 0aeb 83000000 		.4byte	0x83
+ 3010 0aef 80070000 		.4byte	.LLST56
+ 3011 0af3 10       		.uleb128 0x10
+ 3012 0af4 F7010000 		.4byte	.LASF43
+ 3013 0af8 01       		.byte	0x1
+ 3014 0af9 5D05     		.2byte	0x55d
+ 3015 0afb 83000000 		.4byte	0x83
+ 3016 0aff AC070000 		.4byte	.LLST57
+ 3017 0b03 10       		.uleb128 0x10
+ 3018 0b04 0B030000 		.4byte	.LASF71
+ 3019 0b08 01       		.byte	0x1
+ 3020 0b09 5E05     		.2byte	0x55e
+ 3021 0b0b 83000000 		.4byte	0x83
+ 3022 0b0f BF070000 		.4byte	.LLST58
+ 3023 0b13 27       		.uleb128 0x27
+ 3024 0b14 10000000 		.4byte	.LVL129
+ 3025 0b18 36030000 		.4byte	0x336
+ 3026 0b1c 270B0000 		.4byte	0xb27
+ 3027 0b20 1A       		.uleb128 0x1a
+ 3028 0b21 01       		.uleb128 0x1
+ 3029 0b22 50       		.byte	0x50
+ 3030 0b23 02       		.uleb128 0x2
+ 3031 0b24 75       		.byte	0x75
+ 3032 0b25 00       		.sleb128 0
+ 3033 0b26 00       		.byte	0
+ 3034 0b27 27       		.uleb128 0x27
+ 3035 0b28 20000000 		.4byte	.LVL130
+ 3036 0b2c 28060000 		.4byte	0x628
+ 3037 0b30 3B0B0000 		.4byte	0xb3b
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 86
 
 
- 3038 0b31 1A       		.uleb128 0x1a
- 3039 0b32 01       		.uleb128 0x1
- 3040 0b33 50       		.byte	0x50
- 3041 0b34 02       		.uleb128 0x2
- 3042 0b35 75       		.byte	0x75
- 3043 0b36 00       		.sleb128 0
- 3044 0b37 00       		.byte	0
- 3045 0b38 19       		.uleb128 0x19
- 3046 0b39 2C000000 		.4byte	.LVL132
- 3047 0b3d 37010000 		.4byte	0x137
- 3048 0b41 1A       		.uleb128 0x1a
- 3049 0b42 01       		.uleb128 0x1
- 3050 0b43 51       		.byte	0x51
- 3051 0b44 02       		.uleb128 0x2
- 3052 0b45 76       		.byte	0x76
- 3053 0b46 00       		.sleb128 0
- 3054 0b47 1A       		.uleb128 0x1a
- 3055 0b48 01       		.uleb128 0x1
- 3056 0b49 50       		.byte	0x50
- 3057 0b4a 02       		.uleb128 0x2
- 3058 0b4b 75       		.byte	0x75
- 3059 0b4c 00       		.sleb128 0
- 3060 0b4d 00       		.byte	0
- 3061 0b4e 00       		.byte	0
- 3062 0b4f 0F       		.uleb128 0xf
- 3063 0b50 ED000000 		.4byte	.LASF72
- 3064 0b54 01       		.byte	0x1
- 3065 0b55 DC05     		.2byte	0x5dc
- 3066 0b57 00000000 		.4byte	.LFB30
- 3067 0b5b 52000000 		.4byte	.LFE30-.LFB30
- 3068 0b5f 01       		.uleb128 0x1
- 3069 0b60 9C       		.byte	0x9c
- 3070 0b61 E20B0000 		.4byte	0xbe2
- 3071 0b65 1B       		.uleb128 0x1b
- 3072 0b66 FF000000 		.4byte	.LASF21
- 3073 0b6a 01       		.byte	0x1
- 3074 0b6b DC05     		.2byte	0x5dc
- 3075 0b6d 81000000 		.4byte	0x81
- 3076 0b71 DB070000 		.4byte	.LLST59
- 3077 0b75 27       		.uleb128 0x27
- 3078 0b76 0A000000 		.4byte	.LVL134
- 3079 0b7a A1020000 		.4byte	0x2a1
- 3080 0b7e 890B0000 		.4byte	0xb89
- 3081 0b82 1A       		.uleb128 0x1a
- 3082 0b83 01       		.uleb128 0x1
- 3083 0b84 50       		.byte	0x50
- 3084 0b85 02       		.uleb128 0x2
- 3085 0b86 74       		.byte	0x74
- 3086 0b87 00       		.sleb128 0
- 3087 0b88 00       		.byte	0
- 3088 0b89 27       		.uleb128 0x27
- 3089 0b8a 18000000 		.4byte	.LVL135
- 3090 0b8e A1020000 		.4byte	0x2a1
- 3091 0b92 9D0B0000 		.4byte	0xb9d
- 3092 0b96 1A       		.uleb128 0x1a
- 3093 0b97 01       		.uleb128 0x1
- 3094 0b98 50       		.byte	0x50
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 87
+ 3038 0b34 1A       		.uleb128 0x1a
+ 3039 0b35 01       		.uleb128 0x1
+ 3040 0b36 50       		.byte	0x50
+ 3041 0b37 02       		.uleb128 0x2
+ 3042 0b38 75       		.byte	0x75
+ 3043 0b39 00       		.sleb128 0
+ 3044 0b3a 00       		.byte	0
+ 3045 0b3b 19       		.uleb128 0x19
+ 3046 0b3c 2C000000 		.4byte	.LVL132
+ 3047 0b40 3A010000 		.4byte	0x13a
+ 3048 0b44 1A       		.uleb128 0x1a
+ 3049 0b45 01       		.uleb128 0x1
+ 3050 0b46 51       		.byte	0x51
+ 3051 0b47 02       		.uleb128 0x2
+ 3052 0b48 76       		.byte	0x76
+ 3053 0b49 00       		.sleb128 0
+ 3054 0b4a 1A       		.uleb128 0x1a
+ 3055 0b4b 01       		.uleb128 0x1
+ 3056 0b4c 50       		.byte	0x50
+ 3057 0b4d 02       		.uleb128 0x2
+ 3058 0b4e 75       		.byte	0x75
+ 3059 0b4f 00       		.sleb128 0
+ 3060 0b50 00       		.byte	0
+ 3061 0b51 00       		.byte	0
+ 3062 0b52 0F       		.uleb128 0xf
+ 3063 0b53 ED000000 		.4byte	.LASF72
+ 3064 0b57 01       		.byte	0x1
+ 3065 0b58 DC05     		.2byte	0x5dc
+ 3066 0b5a 00000000 		.4byte	.LFB30
+ 3067 0b5e 52000000 		.4byte	.LFE30-.LFB30
+ 3068 0b62 01       		.uleb128 0x1
+ 3069 0b63 9C       		.byte	0x9c
+ 3070 0b64 E50B0000 		.4byte	0xbe5
+ 3071 0b68 1B       		.uleb128 0x1b
+ 3072 0b69 FF000000 		.4byte	.LASF21
+ 3073 0b6d 01       		.byte	0x1
+ 3074 0b6e DC05     		.2byte	0x5dc
+ 3075 0b70 83000000 		.4byte	0x83
+ 3076 0b74 DB070000 		.4byte	.LLST59
+ 3077 0b78 27       		.uleb128 0x27
+ 3078 0b79 0A000000 		.4byte	.LVL134
+ 3079 0b7d A4020000 		.4byte	0x2a4
+ 3080 0b81 8C0B0000 		.4byte	0xb8c
+ 3081 0b85 1A       		.uleb128 0x1a
+ 3082 0b86 01       		.uleb128 0x1
+ 3083 0b87 50       		.byte	0x50
+ 3084 0b88 02       		.uleb128 0x2
+ 3085 0b89 74       		.byte	0x74
+ 3086 0b8a 00       		.sleb128 0
+ 3087 0b8b 00       		.byte	0
+ 3088 0b8c 27       		.uleb128 0x27
+ 3089 0b8d 18000000 		.4byte	.LVL135
+ 3090 0b91 A4020000 		.4byte	0x2a4
+ 3091 0b95 A00B0000 		.4byte	0xba0
+ 3092 0b99 1A       		.uleb128 0x1a
+ 3093 0b9a 01       		.uleb128 0x1
+ 3094 0b9b 50       		.byte	0x50
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 87
 
 
- 3095 0b99 02       		.uleb128 0x2
- 3096 0b9a 74       		.byte	0x74
- 3097 0b9b 00       		.sleb128 0
- 3098 0b9c 00       		.byte	0
- 3099 0b9d 11       		.uleb128 0x11
- 3100 0b9e 22000000 		.4byte	.LVL136
- 3101 0ba2 9F080000 		.4byte	0x89f
- 3102 0ba6 11       		.uleb128 0x11
- 3103 0ba7 2E000000 		.4byte	.LVL138
- 3104 0bab A1020000 		.4byte	0x2a1
- 3105 0baf 27       		.uleb128 0x27
- 3106 0bb0 3C000000 		.4byte	.LVL139
- 3107 0bb4 A1020000 		.4byte	0x2a1
- 3108 0bb8 C30B0000 		.4byte	0xbc3
- 3109 0bbc 1A       		.uleb128 0x1a
- 3110 0bbd 01       		.uleb128 0x1
- 3111 0bbe 50       		.byte	0x50
- 3112 0bbf 02       		.uleb128 0x2
- 3113 0bc0 74       		.byte	0x74
- 3114 0bc1 00       		.sleb128 0
- 3115 0bc2 00       		.byte	0
- 3116 0bc3 27       		.uleb128 0x27
- 3117 0bc4 48000000 		.4byte	.LVL140
- 3118 0bc8 9F080000 		.4byte	0x89f
- 3119 0bcc D80B0000 		.4byte	0xbd8
- 3120 0bd0 1A       		.uleb128 0x1a
- 3121 0bd1 01       		.uleb128 0x1
- 3122 0bd2 50       		.byte	0x50
- 3123 0bd3 03       		.uleb128 0x3
- 3124 0bd4 0A       		.byte	0xa
- 3125 0bd5 0008     		.2byte	0x800
- 3126 0bd7 00       		.byte	0
- 3127 0bd8 11       		.uleb128 0x11
- 3128 0bd9 50000000 		.4byte	.LVL141
- 3129 0bdd 19080000 		.4byte	0x819
- 3130 0be1 00       		.byte	0
- 3131 0be2 35       		.uleb128 0x35
- 3132 0be3 37010000 		.4byte	.LASF73
- 3133 0be7 01       		.byte	0x1
- 3134 0be8 1A       		.byte	0x1a
- 3135 0be9 81000000 		.4byte	0x81
- 3136 0bed 05       		.uleb128 0x5
- 3137 0bee 03       		.byte	0x3
- 3138 0bef 04000000 		.4byte	lfclkPosedgeWdtCounter0Enabled
- 3139 0bf3 35       		.uleb128 0x35
- 3140 0bf4 ED050000 		.4byte	.LASF74
- 3141 0bf8 01       		.byte	0x1
- 3142 0bf9 1B       		.byte	0x1b
- 3143 0bfa 81000000 		.4byte	0x81
- 3144 0bfe 05       		.uleb128 0x5
- 3145 0bff 03       		.byte	0x3
- 3146 0c00 08000000 		.4byte	lfclkPosedgeWdtCounter0Mode
- 3147 0c04 35       		.uleb128 0x35
- 3148 0c05 92050000 		.4byte	.LASF75
- 3149 0c09 01       		.byte	0x1
- 3150 0c0a 1D       		.byte	0x1d
- 3151 0c0b AD000000 		.4byte	0xad
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 88
+ 3095 0b9c 02       		.uleb128 0x2
+ 3096 0b9d 74       		.byte	0x74
+ 3097 0b9e 00       		.sleb128 0
+ 3098 0b9f 00       		.byte	0
+ 3099 0ba0 11       		.uleb128 0x11
+ 3100 0ba1 22000000 		.4byte	.LVL136
+ 3101 0ba5 A2080000 		.4byte	0x8a2
+ 3102 0ba9 11       		.uleb128 0x11
+ 3103 0baa 2E000000 		.4byte	.LVL138
+ 3104 0bae A4020000 		.4byte	0x2a4
+ 3105 0bb2 27       		.uleb128 0x27
+ 3106 0bb3 3C000000 		.4byte	.LVL139
+ 3107 0bb7 A4020000 		.4byte	0x2a4
+ 3108 0bbb C60B0000 		.4byte	0xbc6
+ 3109 0bbf 1A       		.uleb128 0x1a
+ 3110 0bc0 01       		.uleb128 0x1
+ 3111 0bc1 50       		.byte	0x50
+ 3112 0bc2 02       		.uleb128 0x2
+ 3113 0bc3 74       		.byte	0x74
+ 3114 0bc4 00       		.sleb128 0
+ 3115 0bc5 00       		.byte	0
+ 3116 0bc6 27       		.uleb128 0x27
+ 3117 0bc7 48000000 		.4byte	.LVL140
+ 3118 0bcb A2080000 		.4byte	0x8a2
+ 3119 0bcf DB0B0000 		.4byte	0xbdb
+ 3120 0bd3 1A       		.uleb128 0x1a
+ 3121 0bd4 01       		.uleb128 0x1
+ 3122 0bd5 50       		.byte	0x50
+ 3123 0bd6 03       		.uleb128 0x3
+ 3124 0bd7 0A       		.byte	0xa
+ 3125 0bd8 0008     		.2byte	0x800
+ 3126 0bda 00       		.byte	0
+ 3127 0bdb 11       		.uleb128 0x11
+ 3128 0bdc 50000000 		.4byte	.LVL141
+ 3129 0be0 1C080000 		.4byte	0x81c
+ 3130 0be4 00       		.byte	0
+ 3131 0be5 35       		.uleb128 0x35
+ 3132 0be6 37010000 		.4byte	.LASF73
+ 3133 0bea 01       		.byte	0x1
+ 3134 0beb 1A       		.byte	0x1a
+ 3135 0bec 83000000 		.4byte	0x83
+ 3136 0bf0 05       		.uleb128 0x5
+ 3137 0bf1 03       		.byte	0x3
+ 3138 0bf2 04000000 		.4byte	lfclkPosedgeWdtCounter0Enabled
+ 3139 0bf6 35       		.uleb128 0x35
+ 3140 0bf7 ED050000 		.4byte	.LASF74
+ 3141 0bfb 01       		.byte	0x1
+ 3142 0bfc 1B       		.byte	0x1b
+ 3143 0bfd 83000000 		.4byte	0x83
+ 3144 0c01 05       		.uleb128 0x5
+ 3145 0c02 03       		.byte	0x3
+ 3146 0c03 08000000 		.4byte	lfclkPosedgeWdtCounter0Mode
+ 3147 0c07 35       		.uleb128 0x35
+ 3148 0c08 92050000 		.4byte	.LASF75
+ 3149 0c0c 01       		.byte	0x1
+ 3150 0c0d 1D       		.byte	0x1d
+ 3151 0c0e B0000000 		.4byte	0xb0
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 88
 
 
- 3152 0c0f 05       		.uleb128 0x5
- 3153 0c10 03       		.byte	0x3
- 3154 0c11 18000000 		.4byte	disableServicedIsr
- 3155 0c15 35       		.uleb128 0x35
- 3156 0c16 6B020000 		.4byte	.LASF76
- 3157 0c1a 01       		.byte	0x1
- 3158 0c1b 1E       		.byte	0x1e
- 3159 0c1c AD000000 		.4byte	0xad
- 3160 0c20 05       		.uleb128 0x5
- 3161 0c21 03       		.byte	0x3
- 3162 0c22 00000000 		.4byte	wdtIsrMask
- 3163 0c26 36       		.uleb128 0x36
- 3164 0c27 81000000 		.4byte	0x81
- 3165 0c2b 360C0000 		.4byte	0xc36
- 3166 0c2f 37       		.uleb128 0x37
- 3167 0c30 E4000000 		.4byte	0xe4
- 3168 0c34 02       		.byte	0x2
- 3169 0c35 00       		.byte	0
- 3170 0c36 35       		.uleb128 0x35
- 3171 0c37 AB000000 		.4byte	.LASF77
- 3172 0c3b 01       		.byte	0x1
- 3173 0c3c 22       		.byte	0x22
- 3174 0c3d 470C0000 		.4byte	0xc47
- 3175 0c41 05       		.uleb128 0x5
- 3176 0c42 03       		.byte	0x3
- 3177 0c43 00000000 		.4byte	counterIntMaskTbl
- 3178 0c47 38       		.uleb128 0x38
- 3179 0c48 260C0000 		.4byte	0xc26
- 3180 0c4c 36       		.uleb128 0x36
- 3181 0c4d D9000000 		.4byte	0xd9
- 3182 0c51 5C0C0000 		.4byte	0xc5c
- 3183 0c55 37       		.uleb128 0x37
- 3184 0c56 E4000000 		.4byte	0xe4
- 3185 0c5a 02       		.byte	0x2
- 3186 0c5b 00       		.byte	0
- 3187 0c5c 35       		.uleb128 0x35
- 3188 0c5d BD000000 		.4byte	.LASF78
- 3189 0c61 01       		.byte	0x1
- 3190 0c62 2E       		.byte	0x2e
- 3191 0c63 4C0C0000 		.4byte	0xc4c
- 3192 0c67 05       		.uleb128 0x5
- 3193 0c68 03       		.byte	0x3
- 3194 0c69 0C000000 		.4byte	cySysWdtCallback
- 3195 0c6d 39       		.uleb128 0x39
- 3196 0c6e EF030000 		.4byte	.LASF86
- 3197 0c72 04       		.byte	0x4
- 3198 0c73 5E       		.byte	0x5e
- 3199 0c74 6B000000 		.4byte	0x6b
- 3200 0c78 3A       		.uleb128 0x3a
- 3201 0c79 95000000 		.4byte	.LASF79
- 3202 0c7d 04       		.byte	0x4
- 3203 0c7e 5F       		.byte	0x5f
- 3204 0c7f 890C0000 		.4byte	0xc89
- 3205 0c83 3B       		.uleb128 0x3b
- 3206 0c84 6B000000 		.4byte	0x6b
- 3207 0c88 00       		.byte	0
- 3208 0c89 3C       		.uleb128 0x3c
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 89
+ 3152 0c12 05       		.uleb128 0x5
+ 3153 0c13 03       		.byte	0x3
+ 3154 0c14 18000000 		.4byte	disableServicedIsr
+ 3155 0c18 35       		.uleb128 0x35
+ 3156 0c19 6B020000 		.4byte	.LASF76
+ 3157 0c1d 01       		.byte	0x1
+ 3158 0c1e 1E       		.byte	0x1e
+ 3159 0c1f B0000000 		.4byte	0xb0
+ 3160 0c23 05       		.uleb128 0x5
+ 3161 0c24 03       		.byte	0x3
+ 3162 0c25 00000000 		.4byte	wdtIsrMask
+ 3163 0c29 36       		.uleb128 0x36
+ 3164 0c2a 83000000 		.4byte	0x83
+ 3165 0c2e 390C0000 		.4byte	0xc39
+ 3166 0c32 37       		.uleb128 0x37
+ 3167 0c33 E7000000 		.4byte	0xe7
+ 3168 0c37 02       		.byte	0x2
+ 3169 0c38 00       		.byte	0
+ 3170 0c39 35       		.uleb128 0x35
+ 3171 0c3a AB000000 		.4byte	.LASF77
+ 3172 0c3e 01       		.byte	0x1
+ 3173 0c3f 22       		.byte	0x22
+ 3174 0c40 4A0C0000 		.4byte	0xc4a
+ 3175 0c44 05       		.uleb128 0x5
+ 3176 0c45 03       		.byte	0x3
+ 3177 0c46 00000000 		.4byte	counterIntMaskTbl
+ 3178 0c4a 38       		.uleb128 0x38
+ 3179 0c4b 290C0000 		.4byte	0xc29
+ 3180 0c4f 36       		.uleb128 0x36
+ 3181 0c50 DC000000 		.4byte	0xdc
+ 3182 0c54 5F0C0000 		.4byte	0xc5f
+ 3183 0c58 37       		.uleb128 0x37
+ 3184 0c59 E7000000 		.4byte	0xe7
+ 3185 0c5d 02       		.byte	0x2
+ 3186 0c5e 00       		.byte	0
+ 3187 0c5f 35       		.uleb128 0x35
+ 3188 0c60 BD000000 		.4byte	.LASF78
+ 3189 0c64 01       		.byte	0x1
+ 3190 0c65 2E       		.byte	0x2e
+ 3191 0c66 4F0C0000 		.4byte	0xc4f
+ 3192 0c6a 05       		.uleb128 0x5
+ 3193 0c6b 03       		.byte	0x3
+ 3194 0c6c 0C000000 		.4byte	cySysWdtCallback
+ 3195 0c70 39       		.uleb128 0x39
+ 3196 0c71 EF030000 		.4byte	.LASF86
+ 3197 0c75 04       		.byte	0x4
+ 3198 0c76 61       		.byte	0x61
+ 3199 0c77 6B000000 		.4byte	0x6b
+ 3200 0c7b 3A       		.uleb128 0x3a
+ 3201 0c7c 95000000 		.4byte	.LASF79
+ 3202 0c80 04       		.byte	0x4
+ 3203 0c81 62       		.byte	0x62
+ 3204 0c82 8C0C0000 		.4byte	0xc8c
+ 3205 0c86 3B       		.uleb128 0x3b
+ 3206 0c87 6B000000 		.4byte	0x6b
+ 3207 0c8b 00       		.byte	0
+ 3208 0c8c 3C       		.uleb128 0x3c
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 89
 
 
- 3209 0c8a C3010000 		.4byte	.LASF87
- 3210 0c8e 04       		.byte	0x4
- 3211 0c8f 58       		.byte	0x58
- 3212 0c90 3B       		.uleb128 0x3b
- 3213 0c91 76000000 		.4byte	0x76
- 3214 0c95 00       		.byte	0
- 3215 0c96 00       		.byte	0
+ 3209 0c8d C3010000 		.4byte	.LASF87
+ 3210 0c91 04       		.byte	0x4
+ 3211 0c92 5B       		.byte	0x5b
+ 3212 0c93 3B       		.uleb128 0x3b
+ 3213 0c94 77000000 		.4byte	0x77
+ 3214 0c98 00       		.byte	0
+ 3215 0c99 00       		.byte	0
  3216              		.section	.debug_abbrev,"",%progbits
  3217              	.Ldebug_abbrev0:
  3218 0000 01       		.uleb128 0x1
@@ -5338,74 +5338,74 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  3263 002d 0E       		.uleb128 0xe
  3264 002e 3A       		.uleb128 0x3a
  3265 002f 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 90
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 90
 
 
  3266 0030 3B       		.uleb128 0x3b
- 3267 0031 0B       		.uleb128 0xb
+ 3267 0031 05       		.uleb128 0x5
  3268 0032 49       		.uleb128 0x49
  3269 0033 13       		.uleb128 0x13
  3270 0034 00       		.byte	0
  3271 0035 00       		.byte	0
  3272 0036 05       		.uleb128 0x5
- 3273 0037 16       		.uleb128 0x16
+ 3273 0037 35       		.uleb128 0x35
  3274 0038 00       		.byte	0
- 3275 0039 03       		.uleb128 0x3
- 3276 003a 0E       		.uleb128 0xe
- 3277 003b 3A       		.uleb128 0x3a
- 3278 003c 0B       		.uleb128 0xb
- 3279 003d 3B       		.uleb128 0x3b
- 3280 003e 05       		.uleb128 0x5
- 3281 003f 49       		.uleb128 0x49
- 3282 0040 13       		.uleb128 0x13
- 3283 0041 00       		.byte	0
- 3284 0042 00       		.byte	0
- 3285 0043 06       		.uleb128 0x6
- 3286 0044 35       		.uleb128 0x35
+ 3275 0039 49       		.uleb128 0x49
+ 3276 003a 13       		.uleb128 0x13
+ 3277 003b 00       		.byte	0
+ 3278 003c 00       		.byte	0
+ 3279 003d 06       		.uleb128 0x6
+ 3280 003e 0F       		.uleb128 0xf
+ 3281 003f 00       		.byte	0
+ 3282 0040 0B       		.uleb128 0xb
+ 3283 0041 0B       		.uleb128 0xb
+ 3284 0042 49       		.uleb128 0x49
+ 3285 0043 13       		.uleb128 0x13
+ 3286 0044 00       		.byte	0
  3287 0045 00       		.byte	0
- 3288 0046 49       		.uleb128 0x49
- 3289 0047 13       		.uleb128 0x13
+ 3288 0046 07       		.uleb128 0x7
+ 3289 0047 15       		.uleb128 0x15
  3290 0048 00       		.byte	0
- 3291 0049 00       		.byte	0
- 3292 004a 07       		.uleb128 0x7
- 3293 004b 0F       		.uleb128 0xf
+ 3291 0049 27       		.uleb128 0x27
+ 3292 004a 19       		.uleb128 0x19
+ 3293 004b 00       		.byte	0
  3294 004c 00       		.byte	0
- 3295 004d 0B       		.uleb128 0xb
- 3296 004e 0B       		.uleb128 0xb
- 3297 004f 49       		.uleb128 0x49
- 3298 0050 13       		.uleb128 0x13
- 3299 0051 00       		.byte	0
- 3300 0052 00       		.byte	0
- 3301 0053 08       		.uleb128 0x8
- 3302 0054 15       		.uleb128 0x15
- 3303 0055 00       		.byte	0
- 3304 0056 27       		.uleb128 0x27
- 3305 0057 19       		.uleb128 0x19
+ 3295 004d 08       		.uleb128 0x8
+ 3296 004e 04       		.uleb128 0x4
+ 3297 004f 01       		.byte	0x1
+ 3298 0050 0B       		.uleb128 0xb
+ 3299 0051 0B       		.uleb128 0xb
+ 3300 0052 3A       		.uleb128 0x3a
+ 3301 0053 0B       		.uleb128 0xb
+ 3302 0054 3B       		.uleb128 0x3b
+ 3303 0055 0B       		.uleb128 0xb
+ 3304 0056 01       		.uleb128 0x1
+ 3305 0057 13       		.uleb128 0x13
  3306 0058 00       		.byte	0
  3307 0059 00       		.byte	0
  3308 005a 09       		.uleb128 0x9
- 3309 005b 04       		.uleb128 0x4
- 3310 005c 01       		.byte	0x1
- 3311 005d 0B       		.uleb128 0xb
- 3312 005e 0B       		.uleb128 0xb
- 3313 005f 3A       		.uleb128 0x3a
- 3314 0060 0B       		.uleb128 0xb
- 3315 0061 3B       		.uleb128 0x3b
- 3316 0062 0B       		.uleb128 0xb
- 3317 0063 01       		.uleb128 0x1
- 3318 0064 13       		.uleb128 0x13
+ 3309 005b 28       		.uleb128 0x28
+ 3310 005c 00       		.byte	0
+ 3311 005d 03       		.uleb128 0x3
+ 3312 005e 0E       		.uleb128 0xe
+ 3313 005f 1C       		.uleb128 0x1c
+ 3314 0060 0D       		.uleb128 0xd
+ 3315 0061 00       		.byte	0
+ 3316 0062 00       		.byte	0
+ 3317 0063 0A       		.uleb128 0xa
+ 3318 0064 16       		.uleb128 0x16
  3319 0065 00       		.byte	0
- 3320 0066 00       		.byte	0
- 3321 0067 0A       		.uleb128 0xa
- 3322 0068 28       		.uleb128 0x28
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 91
+ 3320 0066 03       		.uleb128 0x3
+ 3321 0067 0E       		.uleb128 0xe
+ 3322 0068 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 91
 
 
- 3323 0069 00       		.byte	0
- 3324 006a 03       		.uleb128 0x3
- 3325 006b 0E       		.uleb128 0xe
- 3326 006c 1C       		.uleb128 0x1c
- 3327 006d 0D       		.uleb128 0xd
+ 3323 0069 0B       		.uleb128 0xb
+ 3324 006a 3B       		.uleb128 0x3b
+ 3325 006b 0B       		.uleb128 0xb
+ 3326 006c 49       		.uleb128 0x49
+ 3327 006d 13       		.uleb128 0x13
  3328 006e 00       		.byte	0
  3329 006f 00       		.byte	0
  3330 0070 0B       		.uleb128 0xb
@@ -5458,7 +5458,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  3377 009f 00       		.byte	0
  3378 00a0 3F       		.uleb128 0x3f
  3379 00a1 19       		.uleb128 0x19
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 92
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 92
 
 
  3380 00a2 03       		.uleb128 0x3
@@ -5518,7 +5518,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  3434 00da 02       		.uleb128 0x2
  3435 00db 17       		.uleb128 0x17
  3436 00dc 00       		.byte	0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 93
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 93
 
 
  3437 00dd 00       		.byte	0
@@ -5578,7 +5578,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  3491 0116 17       		.uleb128 0x17
  3492 0117 00       		.byte	0
  3493 0118 00       		.byte	0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 94
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 94
 
 
  3494 0119 15       		.uleb128 0x15
@@ -5638,7 +5638,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  3548 0154 1B       		.uleb128 0x1b
  3549 0155 05       		.uleb128 0x5
  3550 0156 00       		.byte	0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 95
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 95
 
 
  3551 0157 03       		.uleb128 0x3
@@ -5698,7 +5698,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  3605 018e 00       		.byte	0
  3606 018f 00       		.byte	0
  3607 0190 1E       		.uleb128 0x1e
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 96
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 96
 
 
  3608 0191 05       		.uleb128 0x5
@@ -5758,7 +5758,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  3662 01c7 1D       		.uleb128 0x1d
  3663 01c8 00       		.byte	0
  3664 01c9 31       		.uleb128 0x31
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 97
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 97
 
 
  3665 01ca 13       		.uleb128 0x13
@@ -5818,7 +5818,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  3719 0200 00       		.byte	0
  3720 0201 3F       		.uleb128 0x3f
  3721 0202 19       		.uleb128 0x19
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 98
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 98
 
 
  3722 0203 03       		.uleb128 0x3
@@ -5878,7 +5878,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  3776 023c 0B       		.uleb128 0xb
  3777 023d 3B       		.uleb128 0x3b
  3778 023e 05       		.uleb128 0x5
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 99
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 99
 
 
  3779 023f 27       		.uleb128 0x27
@@ -5938,7 +5938,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  3833 0276 0B       		.uleb128 0xb
  3834 0277 3B       		.uleb128 0x3b
  3835 0278 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 100
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 100
 
 
  3836 0279 49       		.uleb128 0x49
@@ -5998,7 +5998,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  3890 02af 0B       		.uleb128 0xb
  3891 02b0 01       		.byte	0x1
  3892 02b1 55       		.uleb128 0x55
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 101
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 101
 
 
  3893 02b2 17       		.uleb128 0x17
@@ -6058,7 +6058,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  3947 02e8 05       		.uleb128 0x5
  3948 02e9 27       		.uleb128 0x27
  3949 02ea 19       		.uleb128 0x19
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 102
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 102
 
 
  3950 02eb 11       		.uleb128 0x11
@@ -6118,7 +6118,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  4004 0322 00       		.byte	0
  4005 0323 3F       		.uleb128 0x3f
  4006 0324 19       		.uleb128 0x19
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 103
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 103
 
 
  4007 0325 03       		.uleb128 0x3
@@ -6178,7 +6178,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  4061 035b 19       		.uleb128 0x19
  4062 035c 00       		.byte	0
  4063 035d 00       		.byte	0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 104
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 104
 
 
  4064 035e 00       		.byte	0
@@ -6238,7 +6238,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  4118 007e 09000000 		.4byte	.LVL7-1
  4119 0082 24000000 		.4byte	.LVL13
  4120 0086 0100     		.2byte	0x1
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 105
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 105
 
 
  4121 0088 55       		.byte	0x55
@@ -6298,7 +6298,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  4175 010a 00000000 		.4byte	0
  4176 010e 00000000 		.4byte	0
  4177              	.LLST9:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 106
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 106
 
 
  4178 0112 00000000 		.4byte	.LVL16
@@ -6358,7 +6358,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  4232 019d F3       		.byte	0xf3
  4233 019e 01       		.uleb128 0x1
  4234 019f 50       		.byte	0x50
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 107
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 107
 
 
  4235 01a0 9F       		.byte	0x9f
@@ -6418,7 +6418,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  4289 0225 22000000 		.4byte	.LVL37
  4290 0229 28000000 		.4byte	.LVL38
  4291 022d 0200     		.2byte	0x2
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 108
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 108
 
 
  4292 022f 31       		.byte	0x31
@@ -6478,7 +6478,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  4346 02aa 72       		.byte	0x72
  4347 02ab 00       		.sleb128 0
  4348 02ac 41       		.byte	0x41
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 109
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 109
 
 
  4349 02ad 25       		.byte	0x25
@@ -6538,7 +6538,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  4403 032a 9F       		.byte	0x9f
  4404 032b 00000000 		.4byte	0
  4405 032f 00000000 		.4byte	0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 110
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 110
 
 
  4406              	.LLST26:
@@ -6598,7 +6598,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  4460 03b7 0100     		.2byte	0x1
  4461 03b9 50       		.byte	0x50
  4462 03ba 1E000000 		.4byte	.LVL71
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 111
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 111
 
 
  4463 03be 22000000 		.4byte	.LVL73
@@ -6658,7 +6658,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  4517 0442 0100     		.2byte	0x1
  4518 0444 50       		.byte	0x50
  4519 0445 00000000 		.4byte	0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 112
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 112
 
 
  4520 0449 00000000 		.4byte	0
@@ -6718,7 +6718,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  4574 04d1 0200     		.2byte	0x2
  4575 04d3 30       		.byte	0x30
  4576 04d4 9F       		.byte	0x9f
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 113
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 113
 
 
  4577 04d5 00000000 		.4byte	0
@@ -6778,7 +6778,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  4631 0563 31       		.byte	0x31
  4632 0564 9F       		.byte	0x9f
  4633 0565 00000000 		.4byte	0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 114
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 114
 
 
  4634 0569 00000000 		.4byte	0
@@ -6838,7 +6838,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  4688 05eb 00000000 		.4byte	0
  4689              	.LLST43:
  4690 05ef 00000000 		.4byte	.LVL106
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 115
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 115
 
 
  4691 05f3 0E000000 		.4byte	.LVL108
@@ -6898,7 +6898,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  4745 0674 00000000 		.4byte	0
  4746 0678 00000000 		.4byte	0
  4747              	.LLST47:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 116
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 116
 
 
  4748 067c 00000000 		.4byte	.LVL119
@@ -6958,7 +6958,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  4802 0705 00000000 		.4byte	0
  4803 0709 00000000 		.4byte	0
  4804              	.LLST52:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 117
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 117
 
 
  4805 070d 34000000 		.4byte	.LVL124
@@ -7018,7 +7018,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  4859 0796 2C000000 		.4byte	.LVL132
  4860 079a 34000000 		.4byte	.LFE28
  4861 079e 0400     		.2byte	0x4
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 118
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 118
 
 
  4862 07a0 F3       		.byte	0xf3
@@ -7078,7 +7078,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  4916              		.section	.debug_aranges,"",%progbits
  4917 0000 FC000000 		.4byte	0xfc
  4918 0004 0200     		.2byte	0x2
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 119
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 119
 
 
  4919 0006 00000000 		.4byte	.Ldebug_info0
@@ -7138,7 +7138,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  4973 00d4 1C000000 		.4byte	.LFE26-.LFB26
  4974 00d8 00000000 		.4byte	.LFB27
  4975 00dc A0000000 		.4byte	.LFE27-.LFB27
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 120
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 120
 
 
  4976 00e0 00000000 		.4byte	.LFB29
@@ -7198,7 +7198,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  5030 00b0 00000000 		.4byte	0
  5031 00b4 00000000 		.4byte	0
  5032 00b8 08000000 		.4byte	.LBB106
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 121
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 121
 
 
  5033 00bc 0A000000 		.4byte	.LBE106
@@ -7258,7 +7258,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  5087 0194 1C000000 		.4byte	.LFE26
  5088 0198 00000000 		.4byte	.LFB27
  5089 019c A0000000 		.4byte	.LFE27
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 122
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 122
 
 
  5090 01a0 00000000 		.4byte	.LFB29
@@ -7318,7 +7318,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  5114      73576474 
  5114      5365744D 
  5114      6F646500 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 123
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 123
 
 
  5115              	.LASF32:
@@ -7378,7 +7378,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  5135              	.LASF62:
  5136 019f 66756E63 		.ascii	"function\000"
  5136      74696F6E 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 124
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 124
 
 
  5136      00
@@ -7438,7 +7438,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  5163              	.LASF63:
  5164 0238 70726576 		.ascii	"prevCallback\000"
  5164      43616C6C 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 125
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 125
 
 
  5164      6261636B 
@@ -7498,7 +7498,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  5186      20756E73 
  5186      69676E65 
  5186      6420696E 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 126
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 126
 
 
  5186      7400
@@ -7558,7 +7558,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  5206      6F67676C 
  5206      65426974 
  5207              	.LASF81:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 127
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 127
 
 
  5208 03c6 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\CyLFClk.c\000"
@@ -7618,7 +7618,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  5229              	.LASF69:
  5230 0485 43795379 		.ascii	"CySysTimerDelay\000"
  5230      7354696D 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 128
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 128
 
 
  5230      65724465 
@@ -7678,7 +7678,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  5252              	.LASF67:
  5253 055d 43795379 		.ascii	"CySysWdtDisableCounterIsr\000"
  5253      73576474 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 129
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 129
 
 
  5253      44697361 
@@ -7738,7 +7738,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 1
  5275      6164654D 
  5275      61736B00 
  5276              	.LASF47:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccuZHL0k.s 			page 130
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccPjN50m.s 			page 130
 
 
  5277 0615 43795379 		.ascii	"CySysWdtGetToggleBit\000"

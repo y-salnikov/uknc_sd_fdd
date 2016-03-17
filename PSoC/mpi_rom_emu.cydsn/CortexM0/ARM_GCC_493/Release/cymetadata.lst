@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccF1DmgG.s 			page 1
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1LlFiW.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -56,9 +56,9 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccF1DmgG.s 			page 1
   49              		.file 2 ".\\Generated_Source\\PSoC4\\cytypes.h"
   50              		.section	.debug_info,"",%progbits
   51              	.Ldebug_info0:
-  52 0000 F9000000 		.4byte	0xf9
+  52 0000 FA000000 		.4byte	0xfa
   53 0004 0400     		.2byte	0x4
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccF1DmgG.s 			page 2
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1LlFiW.s 			page 2
 
 
   54 0006 00000000 		.4byte	.Ldebug_abbrev0
@@ -112,82 +112,82 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccF1DmgG.s 			page 1
  102 0063 04       		.uleb128 0x4
  103 0064 73010000 		.4byte	.LASF19
  104 0068 02       		.byte	0x2
- 105 0069 C2       		.byte	0xc2
- 106 006a 24000000 		.4byte	0x24
- 107 006e 02       		.uleb128 0x2
- 108 006f 04       		.byte	0x4
- 109 0070 04       		.byte	0x4
- 110 0071 AE000000 		.4byte	.LASF9
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccF1DmgG.s 			page 3
+ 105 0069 3801     		.2byte	0x138
+ 106 006b 24000000 		.4byte	0x24
+ 107 006f 02       		.uleb128 0x2
+ 108 0070 04       		.byte	0x4
+ 109 0071 04       		.byte	0x4
+ 110 0072 AE000000 		.4byte	.LASF9
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1LlFiW.s 			page 3
 
 
- 111 0075 02       		.uleb128 0x2
- 112 0076 08       		.byte	0x8
- 113 0077 04       		.byte	0x4
- 114 0078 E7000000 		.4byte	.LASF10
- 115 007c 02       		.uleb128 0x2
- 116 007d 01       		.byte	0x1
- 117 007e 08       		.byte	0x8
- 118 007f 64010000 		.4byte	.LASF11
- 119 0083 05       		.uleb128 0x5
- 120 0084 63000000 		.4byte	0x63
- 121 0088 93000000 		.4byte	0x93
- 122 008c 06       		.uleb128 0x6
- 123 008d 93000000 		.4byte	0x93
- 124 0091 1F       		.byte	0x1f
- 125 0092 00       		.byte	0
- 126 0093 02       		.uleb128 0x2
- 127 0094 04       		.byte	0x4
- 128 0095 07       		.byte	0x7
- 129 0096 4D010000 		.4byte	.LASF12
- 130 009a 07       		.uleb128 0x7
- 131 009b 38010000 		.4byte	.LASF13
- 132 009f 01       		.byte	0x1
- 133 00a0 1C       		.byte	0x1c
- 134 00a1 AB000000 		.4byte	0xab
- 135 00a5 05       		.uleb128 0x5
- 136 00a6 03       		.byte	0x3
- 137 00a7 00000000 		.4byte	cy_meta_flashprotect
- 138 00ab 08       		.uleb128 0x8
- 139 00ac 83000000 		.4byte	0x83
- 140 00b0 05       		.uleb128 0x5
- 141 00b1 63000000 		.4byte	0x63
- 142 00b5 C0000000 		.4byte	0xc0
- 143 00b9 06       		.uleb128 0x6
- 144 00ba 93000000 		.4byte	0x93
- 145 00be 0B       		.byte	0xb
- 146 00bf 00       		.byte	0
- 147 00c0 07       		.uleb128 0x7
- 148 00c1 A2000000 		.4byte	.LASF14
- 149 00c5 01       		.byte	0x1
- 150 00c6 2A       		.byte	0x2a
- 151 00c7 D1000000 		.4byte	0xd1
- 152 00cb 05       		.uleb128 0x5
- 153 00cc 03       		.byte	0x3
- 154 00cd 00000000 		.4byte	cy_metadata
- 155 00d1 08       		.uleb128 0x8
- 156 00d2 B0000000 		.4byte	0xb0
- 157 00d6 05       		.uleb128 0x5
- 158 00d7 63000000 		.4byte	0x63
- 159 00db E6000000 		.4byte	0xe6
- 160 00df 06       		.uleb128 0x6
- 161 00e0 93000000 		.4byte	0x93
- 162 00e4 00       		.byte	0
- 163 00e5 00       		.byte	0
- 164 00e6 07       		.uleb128 0x7
- 165 00e7 00000000 		.4byte	.LASF15
- 166 00eb 01       		.byte	0x1
- 167 00ec 36       		.byte	0x36
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccF1DmgG.s 			page 4
+ 111 0076 02       		.uleb128 0x2
+ 112 0077 08       		.byte	0x8
+ 113 0078 04       		.byte	0x4
+ 114 0079 E7000000 		.4byte	.LASF10
+ 115 007d 02       		.uleb128 0x2
+ 116 007e 01       		.byte	0x1
+ 117 007f 08       		.byte	0x8
+ 118 0080 64010000 		.4byte	.LASF11
+ 119 0084 05       		.uleb128 0x5
+ 120 0085 63000000 		.4byte	0x63
+ 121 0089 94000000 		.4byte	0x94
+ 122 008d 06       		.uleb128 0x6
+ 123 008e 94000000 		.4byte	0x94
+ 124 0092 1F       		.byte	0x1f
+ 125 0093 00       		.byte	0
+ 126 0094 02       		.uleb128 0x2
+ 127 0095 04       		.byte	0x4
+ 128 0096 07       		.byte	0x7
+ 129 0097 4D010000 		.4byte	.LASF12
+ 130 009b 07       		.uleb128 0x7
+ 131 009c 38010000 		.4byte	.LASF13
+ 132 00a0 01       		.byte	0x1
+ 133 00a1 1F       		.byte	0x1f
+ 134 00a2 AC000000 		.4byte	0xac
+ 135 00a6 05       		.uleb128 0x5
+ 136 00a7 03       		.byte	0x3
+ 137 00a8 00000000 		.4byte	cy_meta_flashprotect
+ 138 00ac 08       		.uleb128 0x8
+ 139 00ad 84000000 		.4byte	0x84
+ 140 00b1 05       		.uleb128 0x5
+ 141 00b2 63000000 		.4byte	0x63
+ 142 00b6 C1000000 		.4byte	0xc1
+ 143 00ba 06       		.uleb128 0x6
+ 144 00bb 94000000 		.4byte	0x94
+ 145 00bf 0B       		.byte	0xb
+ 146 00c0 00       		.byte	0
+ 147 00c1 07       		.uleb128 0x7
+ 148 00c2 A2000000 		.4byte	.LASF14
+ 149 00c6 01       		.byte	0x1
+ 150 00c7 30       		.byte	0x30
+ 151 00c8 D2000000 		.4byte	0xd2
+ 152 00cc 05       		.uleb128 0x5
+ 153 00cd 03       		.byte	0x3
+ 154 00ce 00000000 		.4byte	cy_metadata
+ 155 00d2 08       		.uleb128 0x8
+ 156 00d3 B1000000 		.4byte	0xb1
+ 157 00d7 05       		.uleb128 0x5
+ 158 00d8 63000000 		.4byte	0x63
+ 159 00dc E7000000 		.4byte	0xe7
+ 160 00e0 06       		.uleb128 0x6
+ 161 00e1 94000000 		.4byte	0x94
+ 162 00e5 00       		.byte	0
+ 163 00e6 00       		.byte	0
+ 164 00e7 07       		.uleb128 0x7
+ 165 00e8 00000000 		.4byte	.LASF15
+ 166 00ec 01       		.byte	0x1
+ 167 00ed 3F       		.byte	0x3f
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1LlFiW.s 			page 4
 
 
- 168 00ed F7000000 		.4byte	0xf7
- 169 00f1 05       		.uleb128 0x5
- 170 00f2 03       		.byte	0x3
- 171 00f3 00000000 		.4byte	cy_meta_chipprotect
- 172 00f7 08       		.uleb128 0x8
- 173 00f8 D6000000 		.4byte	0xd6
- 174 00fc 00       		.byte	0
+ 168 00ee F8000000 		.4byte	0xf8
+ 169 00f2 05       		.uleb128 0x5
+ 170 00f3 03       		.byte	0x3
+ 171 00f4 00000000 		.4byte	cy_meta_chipprotect
+ 172 00f8 08       		.uleb128 0x8
+ 173 00f9 D7000000 		.4byte	0xd7
+ 174 00fd 00       		.byte	0
  175              		.section	.debug_abbrev,"",%progbits
  176              	.Ldebug_abbrev0:
  177 0000 01       		.uleb128 0x1
@@ -235,10 +235,10 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccF1DmgG.s 			page 1
  219 002a 3A       		.uleb128 0x3a
  220 002b 0B       		.uleb128 0xb
  221 002c 3B       		.uleb128 0x3b
- 222 002d 0B       		.uleb128 0xb
+ 222 002d 05       		.uleb128 0x5
  223 002e 49       		.uleb128 0x49
  224 002f 13       		.uleb128 0x13
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccF1DmgG.s 			page 5
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1LlFiW.s 			page 5
 
 
  225 0030 00       		.byte	0
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccF1DmgG.s 			page 1
  279 0014 00000000 		.4byte	0
  280              		.section	.debug_line,"",%progbits
  281              	.Ldebug_line0:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccF1DmgG.s 			page 6
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1LlFiW.s 			page 6
 
 
  282 0000 4F000000 		.section	.debug_str,"MS",%progbits,1
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccF1DmgG.s 			page 1
  301              	.LASF17:
  302 00ee 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\cymetadata.c\000"
  302      6E657261 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccF1DmgG.s 			page 7
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cc1LlFiW.s 			page 7
 
 
  302      7465645F 

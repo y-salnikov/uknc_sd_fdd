@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 1
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccSOMbpc.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 1
   30:.\Generated_Source\PSoC4/AH_reg.c **** * Parameters:
   31:.\Generated_Source\PSoC4/AH_reg.c **** *  None.
   32:.\Generated_Source\PSoC4/AH_reg.c **** *
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 2
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccSOMbpc.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/AH_reg.c **** * Return:
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 1
   53              		.cfi_startproc
   54 0000 08B5     		push	{r3, lr}
   55              		.cfi_def_cfa_offset 8
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 3
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccSOMbpc.s 			page 3
 
 
   56              		.cfi_offset 3, -8
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 1
   77:.\Generated_Source\PSoC4/AH_reg.c **** *  None.
   78:.\Generated_Source\PSoC4/AH_reg.c **** *
   79:.\Generated_Source\PSoC4/AH_reg.c **** *******************************************************************************/
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 4
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccSOMbpc.s 			page 4
 
 
   80:.\Generated_Source\PSoC4/AH_reg.c **** void AH_reg_InterruptDisable(void) 
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 1
   94:.\Generated_Source\PSoC4/AH_reg.c **** *  Writes the current mask value assigned to the Status Register.
   95:.\Generated_Source\PSoC4/AH_reg.c **** *
   96:.\Generated_Source\PSoC4/AH_reg.c **** * Parameters:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 5
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccSOMbpc.s 			page 5
 
 
   97:.\Generated_Source\PSoC4/AH_reg.c **** *  mask:  Value to write into the mask register.
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 1
  124:.\Generated_Source\PSoC4/AH_reg.c **** *
  125:.\Generated_Source\PSoC4/AH_reg.c **** *******************************************************************************/
  126:.\Generated_Source\PSoC4/AH_reg.c **** uint8 AH_reg_ReadMask(void) 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 6
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccSOMbpc.s 			page 6
 
 
  127:.\Generated_Source\PSoC4/AH_reg.c **** {
@@ -329,7 +329,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 1
  175              		.file 3 ".\\Generated_Source\\PSoC4\\CyLib.h"
  176              		.section	.debug_info,"",%progbits
  177              	.Ldebug_info0:
- 178 0000 73010000 		.4byte	0x173
+ 178 0000 74010000 		.4byte	0x174
  179 0004 0400     		.2byte	0x4
  180 0006 00000000 		.4byte	.Ldebug_abbrev0
  181 000a 04       		.byte	0x4
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 1
  204 003c 07       		.byte	0x7
  205 003d 0E000000 		.4byte	.LASF3
  206 0041 02       		.uleb128 0x2
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 7
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccSOMbpc.s 			page 7
 
 
  207 0042 04       		.byte	0x4
@@ -387,129 +387,129 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 1
  230 006b 04       		.uleb128 0x4
  231 006c C0010000 		.4byte	.LASF12
  232 0070 02       		.byte	0x2
- 233 0071 C2       		.byte	0xc2
- 234 0072 2C000000 		.4byte	0x2c
- 235 0076 02       		.uleb128 0x2
- 236 0077 04       		.byte	0x4
- 237 0078 04       		.byte	0x4
- 238 0079 E8010000 		.4byte	.LASF9
- 239 007d 02       		.uleb128 0x2
- 240 007e 08       		.byte	0x8
- 241 007f 04       		.byte	0x4
- 242 0080 B9010000 		.4byte	.LASF10
- 243 0084 02       		.uleb128 0x2
- 244 0085 01       		.byte	0x1
- 245 0086 08       		.byte	0x8
- 246 0087 AB010000 		.4byte	.LASF11
- 247 008b 05       		.uleb128 0x5
- 248 008c F8010000 		.4byte	.LASF13
- 249 0090 02       		.byte	0x2
- 250 0091 6C01     		.2byte	0x16c
- 251 0093 97000000 		.4byte	0x97
- 252 0097 06       		.uleb128 0x6
- 253 0098 6B000000 		.4byte	0x6b
- 254 009c 02       		.uleb128 0x2
- 255 009d 04       		.byte	0x4
- 256 009e 07       		.byte	0x7
- 257 009f 14020000 		.4byte	.LASF14
- 258 00a3 07       		.uleb128 0x7
- 259 00a4 9F010000 		.4byte	.LASF19
- 260 00a8 01       		.byte	0x1
- 261 00a9 25       		.byte	0x25
- 262 00aa 6B000000 		.4byte	0x6b
- 263 00ae 00000000 		.4byte	.LFB0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 8
+ 233 0071 3801     		.2byte	0x138
+ 234 0073 2C000000 		.4byte	0x2c
+ 235 0077 02       		.uleb128 0x2
+ 236 0078 04       		.byte	0x4
+ 237 0079 04       		.byte	0x4
+ 238 007a E8010000 		.4byte	.LASF9
+ 239 007e 02       		.uleb128 0x2
+ 240 007f 08       		.byte	0x8
+ 241 0080 04       		.byte	0x4
+ 242 0081 B9010000 		.4byte	.LASF10
+ 243 0085 02       		.uleb128 0x2
+ 244 0086 01       		.byte	0x1
+ 245 0087 08       		.byte	0x8
+ 246 0088 AB010000 		.4byte	.LASF11
+ 247 008c 04       		.uleb128 0x4
+ 248 008d F8010000 		.4byte	.LASF13
+ 249 0091 02       		.byte	0x2
+ 250 0092 E201     		.2byte	0x1e2
+ 251 0094 98000000 		.4byte	0x98
+ 252 0098 05       		.uleb128 0x5
+ 253 0099 6B000000 		.4byte	0x6b
+ 254 009d 02       		.uleb128 0x2
+ 255 009e 04       		.byte	0x4
+ 256 009f 07       		.byte	0x7
+ 257 00a0 14020000 		.4byte	.LASF14
+ 258 00a4 06       		.uleb128 0x6
+ 259 00a5 9F010000 		.4byte	.LASF19
+ 260 00a9 01       		.byte	0x1
+ 261 00aa 25       		.byte	0x25
+ 262 00ab 6B000000 		.4byte	0x6b
+ 263 00af 00000000 		.4byte	.LFB0
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccSOMbpc.s 			page 8
 
 
- 264 00b2 0C000000 		.4byte	.LFE0-.LFB0
- 265 00b6 01       		.uleb128 0x1
- 266 00b7 9C       		.byte	0x9c
- 267 00b8 08       		.uleb128 0x8
- 268 00b9 1E010000 		.4byte	.LASF15
- 269 00bd 01       		.byte	0x1
- 270 00be 39       		.byte	0x39
- 271 00bf 00000000 		.4byte	.LFB1
- 272 00c3 1C000000 		.4byte	.LFE1-.LFB1
- 273 00c7 01       		.uleb128 0x1
- 274 00c8 9C       		.byte	0x9c
- 275 00c9 EF000000 		.4byte	0xef
- 276 00cd 09       		.uleb128 0x9
- 277 00ce 1D020000 		.4byte	.LASF17
- 278 00d2 01       		.byte	0x1
- 279 00d3 3B       		.byte	0x3b
- 280 00d4 6B000000 		.4byte	0x6b
- 281 00d8 00000000 		.4byte	.LLST0
- 282 00dc 0A       		.uleb128 0xa
- 283 00dd 06000000 		.4byte	.LVL0
- 284 00e1 5E010000 		.4byte	0x15e
- 285 00e5 0A       		.uleb128 0xa
- 286 00e6 14000000 		.4byte	.LVL1
- 287 00ea 69010000 		.4byte	0x169
- 288 00ee 00       		.byte	0
- 289 00ef 08       		.uleb128 0x8
- 290 00f0 06010000 		.4byte	.LASF16
- 291 00f4 01       		.byte	0x1
- 292 00f5 50       		.byte	0x50
- 293 00f6 00000000 		.4byte	.LFB2
- 294 00fa 1C000000 		.4byte	.LFE2-.LFB2
- 295 00fe 01       		.uleb128 0x1
- 296 00ff 9C       		.byte	0x9c
- 297 0100 26010000 		.4byte	0x126
- 298 0104 09       		.uleb128 0x9
- 299 0105 1D020000 		.4byte	.LASF17
- 300 0109 01       		.byte	0x1
- 301 010a 52       		.byte	0x52
- 302 010b 6B000000 		.4byte	0x6b
- 303 010f 13000000 		.4byte	.LLST1
- 304 0113 0A       		.uleb128 0xa
- 305 0114 06000000 		.4byte	.LVL2
- 306 0118 5E010000 		.4byte	0x15e
- 307 011c 0A       		.uleb128 0xa
- 308 011d 14000000 		.4byte	.LVL3
- 309 0121 69010000 		.4byte	0x169
- 310 0125 00       		.byte	0
- 311 0126 08       		.uleb128 0x8
- 312 0127 21000000 		.4byte	.LASF18
- 313 012b 01       		.byte	0x1
- 314 012c 67       		.byte	0x67
- 315 012d 00000000 		.4byte	.LFB3
- 316 0131 0C000000 		.4byte	.LFE3-.LFB3
- 317 0135 01       		.uleb128 0x1
- 318 0136 9C       		.byte	0x9c
- 319 0137 49010000 		.4byte	0x149
- 320 013b 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 9
+ 264 00b3 0C000000 		.4byte	.LFE0-.LFB0
+ 265 00b7 01       		.uleb128 0x1
+ 266 00b8 9C       		.byte	0x9c
+ 267 00b9 07       		.uleb128 0x7
+ 268 00ba 1E010000 		.4byte	.LASF15
+ 269 00be 01       		.byte	0x1
+ 270 00bf 39       		.byte	0x39
+ 271 00c0 00000000 		.4byte	.LFB1
+ 272 00c4 1C000000 		.4byte	.LFE1-.LFB1
+ 273 00c8 01       		.uleb128 0x1
+ 274 00c9 9C       		.byte	0x9c
+ 275 00ca F0000000 		.4byte	0xf0
+ 276 00ce 08       		.uleb128 0x8
+ 277 00cf 1D020000 		.4byte	.LASF17
+ 278 00d3 01       		.byte	0x1
+ 279 00d4 3B       		.byte	0x3b
+ 280 00d5 6B000000 		.4byte	0x6b
+ 281 00d9 00000000 		.4byte	.LLST0
+ 282 00dd 09       		.uleb128 0x9
+ 283 00de 06000000 		.4byte	.LVL0
+ 284 00e2 5F010000 		.4byte	0x15f
+ 285 00e6 09       		.uleb128 0x9
+ 286 00e7 14000000 		.4byte	.LVL1
+ 287 00eb 6A010000 		.4byte	0x16a
+ 288 00ef 00       		.byte	0
+ 289 00f0 07       		.uleb128 0x7
+ 290 00f1 06010000 		.4byte	.LASF16
+ 291 00f5 01       		.byte	0x1
+ 292 00f6 50       		.byte	0x50
+ 293 00f7 00000000 		.4byte	.LFB2
+ 294 00fb 1C000000 		.4byte	.LFE2-.LFB2
+ 295 00ff 01       		.uleb128 0x1
+ 296 0100 9C       		.byte	0x9c
+ 297 0101 27010000 		.4byte	0x127
+ 298 0105 08       		.uleb128 0x8
+ 299 0106 1D020000 		.4byte	.LASF17
+ 300 010a 01       		.byte	0x1
+ 301 010b 52       		.byte	0x52
+ 302 010c 6B000000 		.4byte	0x6b
+ 303 0110 13000000 		.4byte	.LLST1
+ 304 0114 09       		.uleb128 0x9
+ 305 0115 06000000 		.4byte	.LVL2
+ 306 0119 5F010000 		.4byte	0x15f
+ 307 011d 09       		.uleb128 0x9
+ 308 011e 14000000 		.4byte	.LVL3
+ 309 0122 6A010000 		.4byte	0x16a
+ 310 0126 00       		.byte	0
+ 311 0127 07       		.uleb128 0x7
+ 312 0128 21000000 		.4byte	.LASF18
+ 313 012c 01       		.byte	0x1
+ 314 012d 67       		.byte	0x67
+ 315 012e 00000000 		.4byte	.LFB3
+ 316 0132 0C000000 		.4byte	.LFE3-.LFB3
+ 317 0136 01       		.uleb128 0x1
+ 318 0137 9C       		.byte	0x9c
+ 319 0138 4A010000 		.4byte	0x14a
+ 320 013c 0A       		.uleb128 0xa
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccSOMbpc.s 			page 9
 
 
- 321 013c 8C010000 		.4byte	.LASF24
- 322 0140 01       		.byte	0x1
- 323 0141 67       		.byte	0x67
- 324 0142 6B000000 		.4byte	0x6b
- 325 0146 01       		.uleb128 0x1
- 326 0147 50       		.byte	0x50
- 327 0148 00       		.byte	0
- 328 0149 07       		.uleb128 0x7
- 329 014a 3F000000 		.4byte	.LASF20
- 330 014e 01       		.byte	0x1
- 331 014f 7E       		.byte	0x7e
- 332 0150 6B000000 		.4byte	0x6b
- 333 0154 00000000 		.4byte	.LFB4
- 334 0158 0C000000 		.4byte	.LFE4-.LFB4
- 335 015c 01       		.uleb128 0x1
- 336 015d 9C       		.byte	0x9c
- 337 015e 0C       		.uleb128 0xc
- 338 015f FD010000 		.4byte	.LASF25
- 339 0163 03       		.byte	0x3
- 340 0164 5E       		.byte	0x5e
- 341 0165 6B000000 		.4byte	0x6b
- 342 0169 0D       		.uleb128 0xd
- 343 016a D2010000 		.4byte	.LASF26
- 344 016e 03       		.byte	0x3
- 345 016f 5F       		.byte	0x5f
- 346 0170 0E       		.uleb128 0xe
- 347 0171 6B000000 		.4byte	0x6b
- 348 0175 00       		.byte	0
- 349 0176 00       		.byte	0
+ 321 013d 8C010000 		.4byte	.LASF24
+ 322 0141 01       		.byte	0x1
+ 323 0142 67       		.byte	0x67
+ 324 0143 6B000000 		.4byte	0x6b
+ 325 0147 01       		.uleb128 0x1
+ 326 0148 50       		.byte	0x50
+ 327 0149 00       		.byte	0
+ 328 014a 06       		.uleb128 0x6
+ 329 014b 3F000000 		.4byte	.LASF20
+ 330 014f 01       		.byte	0x1
+ 331 0150 7E       		.byte	0x7e
+ 332 0151 6B000000 		.4byte	0x6b
+ 333 0155 00000000 		.4byte	.LFB4
+ 334 0159 0C000000 		.4byte	.LFE4-.LFB4
+ 335 015d 01       		.uleb128 0x1
+ 336 015e 9C       		.byte	0x9c
+ 337 015f 0B       		.uleb128 0xb
+ 338 0160 FD010000 		.4byte	.LASF25
+ 339 0164 03       		.byte	0x3
+ 340 0165 61       		.byte	0x61
+ 341 0166 6B000000 		.4byte	0x6b
+ 342 016a 0C       		.uleb128 0xc
+ 343 016b D2010000 		.4byte	.LASF26
+ 344 016f 03       		.byte	0x3
+ 345 0170 62       		.byte	0x62
+ 346 0171 0D       		.uleb128 0xd
+ 347 0172 6B000000 		.4byte	0x6b
+ 348 0176 00       		.byte	0
+ 349 0177 00       		.byte	0
  350              		.section	.debug_abbrev,"",%progbits
  351              	.Ldebug_abbrev0:
  352 0000 01       		.uleb128 0x1
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 1
  375 0017 0B       		.uleb128 0xb
  376 0018 3E       		.uleb128 0x3e
  377 0019 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 10
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccSOMbpc.s 			page 10
 
 
  378 001a 03       		.uleb128 0x3
@@ -564,378 +564,365 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 1
  398 002e 3A       		.uleb128 0x3a
  399 002f 0B       		.uleb128 0xb
  400 0030 3B       		.uleb128 0x3b
- 401 0031 0B       		.uleb128 0xb
+ 401 0031 05       		.uleb128 0x5
  402 0032 49       		.uleb128 0x49
  403 0033 13       		.uleb128 0x13
  404 0034 00       		.byte	0
  405 0035 00       		.byte	0
  406 0036 05       		.uleb128 0x5
- 407 0037 16       		.uleb128 0x16
+ 407 0037 35       		.uleb128 0x35
  408 0038 00       		.byte	0
- 409 0039 03       		.uleb128 0x3
- 410 003a 0E       		.uleb128 0xe
- 411 003b 3A       		.uleb128 0x3a
- 412 003c 0B       		.uleb128 0xb
- 413 003d 3B       		.uleb128 0x3b
- 414 003e 05       		.uleb128 0x5
- 415 003f 49       		.uleb128 0x49
- 416 0040 13       		.uleb128 0x13
- 417 0041 00       		.byte	0
- 418 0042 00       		.byte	0
- 419 0043 06       		.uleb128 0x6
- 420 0044 35       		.uleb128 0x35
- 421 0045 00       		.byte	0
- 422 0046 49       		.uleb128 0x49
- 423 0047 13       		.uleb128 0x13
- 424 0048 00       		.byte	0
- 425 0049 00       		.byte	0
- 426 004a 07       		.uleb128 0x7
- 427 004b 2E       		.uleb128 0x2e
- 428 004c 00       		.byte	0
- 429 004d 3F       		.uleb128 0x3f
- 430 004e 19       		.uleb128 0x19
- 431 004f 03       		.uleb128 0x3
- 432 0050 0E       		.uleb128 0xe
- 433 0051 3A       		.uleb128 0x3a
- 434 0052 0B       		.uleb128 0xb
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 11
+ 409 0039 49       		.uleb128 0x49
+ 410 003a 13       		.uleb128 0x13
+ 411 003b 00       		.byte	0
+ 412 003c 00       		.byte	0
+ 413 003d 06       		.uleb128 0x6
+ 414 003e 2E       		.uleb128 0x2e
+ 415 003f 00       		.byte	0
+ 416 0040 3F       		.uleb128 0x3f
+ 417 0041 19       		.uleb128 0x19
+ 418 0042 03       		.uleb128 0x3
+ 419 0043 0E       		.uleb128 0xe
+ 420 0044 3A       		.uleb128 0x3a
+ 421 0045 0B       		.uleb128 0xb
+ 422 0046 3B       		.uleb128 0x3b
+ 423 0047 0B       		.uleb128 0xb
+ 424 0048 27       		.uleb128 0x27
+ 425 0049 19       		.uleb128 0x19
+ 426 004a 49       		.uleb128 0x49
+ 427 004b 13       		.uleb128 0x13
+ 428 004c 11       		.uleb128 0x11
+ 429 004d 01       		.uleb128 0x1
+ 430 004e 12       		.uleb128 0x12
+ 431 004f 06       		.uleb128 0x6
+ 432 0050 40       		.uleb128 0x40
+ 433 0051 18       		.uleb128 0x18
+ 434 0052 9742     		.uleb128 0x2117
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccSOMbpc.s 			page 11
 
 
- 435 0053 3B       		.uleb128 0x3b
- 436 0054 0B       		.uleb128 0xb
- 437 0055 27       		.uleb128 0x27
- 438 0056 19       		.uleb128 0x19
- 439 0057 49       		.uleb128 0x49
- 440 0058 13       		.uleb128 0x13
- 441 0059 11       		.uleb128 0x11
- 442 005a 01       		.uleb128 0x1
- 443 005b 12       		.uleb128 0x12
- 444 005c 06       		.uleb128 0x6
- 445 005d 40       		.uleb128 0x40
- 446 005e 18       		.uleb128 0x18
- 447 005f 9742     		.uleb128 0x2117
- 448 0061 19       		.uleb128 0x19
- 449 0062 00       		.byte	0
- 450 0063 00       		.byte	0
- 451 0064 08       		.uleb128 0x8
- 452 0065 2E       		.uleb128 0x2e
- 453 0066 01       		.byte	0x1
- 454 0067 3F       		.uleb128 0x3f
- 455 0068 19       		.uleb128 0x19
- 456 0069 03       		.uleb128 0x3
- 457 006a 0E       		.uleb128 0xe
- 458 006b 3A       		.uleb128 0x3a
- 459 006c 0B       		.uleb128 0xb
- 460 006d 3B       		.uleb128 0x3b
- 461 006e 0B       		.uleb128 0xb
- 462 006f 27       		.uleb128 0x27
- 463 0070 19       		.uleb128 0x19
- 464 0071 11       		.uleb128 0x11
- 465 0072 01       		.uleb128 0x1
- 466 0073 12       		.uleb128 0x12
- 467 0074 06       		.uleb128 0x6
- 468 0075 40       		.uleb128 0x40
- 469 0076 18       		.uleb128 0x18
- 470 0077 9742     		.uleb128 0x2117
- 471 0079 19       		.uleb128 0x19
- 472 007a 01       		.uleb128 0x1
+ 435 0054 19       		.uleb128 0x19
+ 436 0055 00       		.byte	0
+ 437 0056 00       		.byte	0
+ 438 0057 07       		.uleb128 0x7
+ 439 0058 2E       		.uleb128 0x2e
+ 440 0059 01       		.byte	0x1
+ 441 005a 3F       		.uleb128 0x3f
+ 442 005b 19       		.uleb128 0x19
+ 443 005c 03       		.uleb128 0x3
+ 444 005d 0E       		.uleb128 0xe
+ 445 005e 3A       		.uleb128 0x3a
+ 446 005f 0B       		.uleb128 0xb
+ 447 0060 3B       		.uleb128 0x3b
+ 448 0061 0B       		.uleb128 0xb
+ 449 0062 27       		.uleb128 0x27
+ 450 0063 19       		.uleb128 0x19
+ 451 0064 11       		.uleb128 0x11
+ 452 0065 01       		.uleb128 0x1
+ 453 0066 12       		.uleb128 0x12
+ 454 0067 06       		.uleb128 0x6
+ 455 0068 40       		.uleb128 0x40
+ 456 0069 18       		.uleb128 0x18
+ 457 006a 9742     		.uleb128 0x2117
+ 458 006c 19       		.uleb128 0x19
+ 459 006d 01       		.uleb128 0x1
+ 460 006e 13       		.uleb128 0x13
+ 461 006f 00       		.byte	0
+ 462 0070 00       		.byte	0
+ 463 0071 08       		.uleb128 0x8
+ 464 0072 34       		.uleb128 0x34
+ 465 0073 00       		.byte	0
+ 466 0074 03       		.uleb128 0x3
+ 467 0075 0E       		.uleb128 0xe
+ 468 0076 3A       		.uleb128 0x3a
+ 469 0077 0B       		.uleb128 0xb
+ 470 0078 3B       		.uleb128 0x3b
+ 471 0079 0B       		.uleb128 0xb
+ 472 007a 49       		.uleb128 0x49
  473 007b 13       		.uleb128 0x13
- 474 007c 00       		.byte	0
- 475 007d 00       		.byte	0
- 476 007e 09       		.uleb128 0x9
- 477 007f 34       		.uleb128 0x34
- 478 0080 00       		.byte	0
- 479 0081 03       		.uleb128 0x3
- 480 0082 0E       		.uleb128 0xe
- 481 0083 3A       		.uleb128 0x3a
- 482 0084 0B       		.uleb128 0xb
- 483 0085 3B       		.uleb128 0x3b
- 484 0086 0B       		.uleb128 0xb
- 485 0087 49       		.uleb128 0x49
- 486 0088 13       		.uleb128 0x13
- 487 0089 02       		.uleb128 0x2
- 488 008a 17       		.uleb128 0x17
- 489 008b 00       		.byte	0
- 490 008c 00       		.byte	0
- 491 008d 0A       		.uleb128 0xa
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 12
+ 474 007c 02       		.uleb128 0x2
+ 475 007d 17       		.uleb128 0x17
+ 476 007e 00       		.byte	0
+ 477 007f 00       		.byte	0
+ 478 0080 09       		.uleb128 0x9
+ 479 0081 898201   		.uleb128 0x4109
+ 480 0084 00       		.byte	0
+ 481 0085 11       		.uleb128 0x11
+ 482 0086 01       		.uleb128 0x1
+ 483 0087 31       		.uleb128 0x31
+ 484 0088 13       		.uleb128 0x13
+ 485 0089 00       		.byte	0
+ 486 008a 00       		.byte	0
+ 487 008b 0A       		.uleb128 0xa
+ 488 008c 05       		.uleb128 0x5
+ 489 008d 00       		.byte	0
+ 490 008e 03       		.uleb128 0x3
+ 491 008f 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccSOMbpc.s 			page 12
 
 
- 492 008e 898201   		.uleb128 0x4109
- 493 0091 00       		.byte	0
- 494 0092 11       		.uleb128 0x11
- 495 0093 01       		.uleb128 0x1
- 496 0094 31       		.uleb128 0x31
+ 492 0090 3A       		.uleb128 0x3a
+ 493 0091 0B       		.uleb128 0xb
+ 494 0092 3B       		.uleb128 0x3b
+ 495 0093 0B       		.uleb128 0xb
+ 496 0094 49       		.uleb128 0x49
  497 0095 13       		.uleb128 0x13
- 498 0096 00       		.byte	0
- 499 0097 00       		.byte	0
- 500 0098 0B       		.uleb128 0xb
- 501 0099 05       		.uleb128 0x5
- 502 009a 00       		.byte	0
- 503 009b 03       		.uleb128 0x3
- 504 009c 0E       		.uleb128 0xe
- 505 009d 3A       		.uleb128 0x3a
- 506 009e 0B       		.uleb128 0xb
- 507 009f 3B       		.uleb128 0x3b
- 508 00a0 0B       		.uleb128 0xb
- 509 00a1 49       		.uleb128 0x49
- 510 00a2 13       		.uleb128 0x13
- 511 00a3 02       		.uleb128 0x2
- 512 00a4 18       		.uleb128 0x18
- 513 00a5 00       		.byte	0
- 514 00a6 00       		.byte	0
- 515 00a7 0C       		.uleb128 0xc
- 516 00a8 2E       		.uleb128 0x2e
- 517 00a9 00       		.byte	0
- 518 00aa 3F       		.uleb128 0x3f
- 519 00ab 19       		.uleb128 0x19
- 520 00ac 03       		.uleb128 0x3
- 521 00ad 0E       		.uleb128 0xe
- 522 00ae 3A       		.uleb128 0x3a
- 523 00af 0B       		.uleb128 0xb
- 524 00b0 3B       		.uleb128 0x3b
- 525 00b1 0B       		.uleb128 0xb
- 526 00b2 27       		.uleb128 0x27
- 527 00b3 19       		.uleb128 0x19
- 528 00b4 49       		.uleb128 0x49
- 529 00b5 13       		.uleb128 0x13
- 530 00b6 3C       		.uleb128 0x3c
- 531 00b7 19       		.uleb128 0x19
- 532 00b8 00       		.byte	0
- 533 00b9 00       		.byte	0
- 534 00ba 0D       		.uleb128 0xd
- 535 00bb 2E       		.uleb128 0x2e
- 536 00bc 01       		.byte	0x1
- 537 00bd 3F       		.uleb128 0x3f
- 538 00be 19       		.uleb128 0x19
- 539 00bf 03       		.uleb128 0x3
- 540 00c0 0E       		.uleb128 0xe
- 541 00c1 3A       		.uleb128 0x3a
- 542 00c2 0B       		.uleb128 0xb
- 543 00c3 3B       		.uleb128 0x3b
- 544 00c4 0B       		.uleb128 0xb
- 545 00c5 27       		.uleb128 0x27
- 546 00c6 19       		.uleb128 0x19
- 547 00c7 3C       		.uleb128 0x3c
- 548 00c8 19       		.uleb128 0x19
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 13
+ 498 0096 02       		.uleb128 0x2
+ 499 0097 18       		.uleb128 0x18
+ 500 0098 00       		.byte	0
+ 501 0099 00       		.byte	0
+ 502 009a 0B       		.uleb128 0xb
+ 503 009b 2E       		.uleb128 0x2e
+ 504 009c 00       		.byte	0
+ 505 009d 3F       		.uleb128 0x3f
+ 506 009e 19       		.uleb128 0x19
+ 507 009f 03       		.uleb128 0x3
+ 508 00a0 0E       		.uleb128 0xe
+ 509 00a1 3A       		.uleb128 0x3a
+ 510 00a2 0B       		.uleb128 0xb
+ 511 00a3 3B       		.uleb128 0x3b
+ 512 00a4 0B       		.uleb128 0xb
+ 513 00a5 27       		.uleb128 0x27
+ 514 00a6 19       		.uleb128 0x19
+ 515 00a7 49       		.uleb128 0x49
+ 516 00a8 13       		.uleb128 0x13
+ 517 00a9 3C       		.uleb128 0x3c
+ 518 00aa 19       		.uleb128 0x19
+ 519 00ab 00       		.byte	0
+ 520 00ac 00       		.byte	0
+ 521 00ad 0C       		.uleb128 0xc
+ 522 00ae 2E       		.uleb128 0x2e
+ 523 00af 01       		.byte	0x1
+ 524 00b0 3F       		.uleb128 0x3f
+ 525 00b1 19       		.uleb128 0x19
+ 526 00b2 03       		.uleb128 0x3
+ 527 00b3 0E       		.uleb128 0xe
+ 528 00b4 3A       		.uleb128 0x3a
+ 529 00b5 0B       		.uleb128 0xb
+ 530 00b6 3B       		.uleb128 0x3b
+ 531 00b7 0B       		.uleb128 0xb
+ 532 00b8 27       		.uleb128 0x27
+ 533 00b9 19       		.uleb128 0x19
+ 534 00ba 3C       		.uleb128 0x3c
+ 535 00bb 19       		.uleb128 0x19
+ 536 00bc 00       		.byte	0
+ 537 00bd 00       		.byte	0
+ 538 00be 0D       		.uleb128 0xd
+ 539 00bf 05       		.uleb128 0x5
+ 540 00c0 00       		.byte	0
+ 541 00c1 49       		.uleb128 0x49
+ 542 00c2 13       		.uleb128 0x13
+ 543 00c3 00       		.byte	0
+ 544 00c4 00       		.byte	0
+ 545 00c5 00       		.byte	0
+ 546              		.section	.debug_loc,"",%progbits
+ 547              	.Ldebug_loc0:
+ 548              	.LLST0:
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccSOMbpc.s 			page 13
 
 
- 549 00c9 00       		.byte	0
- 550 00ca 00       		.byte	0
- 551 00cb 0E       		.uleb128 0xe
- 552 00cc 05       		.uleb128 0x5
- 553 00cd 00       		.byte	0
- 554 00ce 49       		.uleb128 0x49
- 555 00cf 13       		.uleb128 0x13
- 556 00d0 00       		.byte	0
- 557 00d1 00       		.byte	0
- 558 00d2 00       		.byte	0
- 559              		.section	.debug_loc,"",%progbits
- 560              	.Ldebug_loc0:
- 561              	.LLST0:
- 562 0000 06000000 		.4byte	.LVL0
- 563 0004 13000000 		.4byte	.LVL1-1
- 564 0008 0100     		.2byte	0x1
- 565 000a 50       		.byte	0x50
- 566 000b 00000000 		.4byte	0
- 567 000f 00000000 		.4byte	0
- 568              	.LLST1:
- 569 0013 06000000 		.4byte	.LVL2
- 570 0017 13000000 		.4byte	.LVL3-1
- 571 001b 0100     		.2byte	0x1
- 572 001d 50       		.byte	0x50
- 573 001e 00000000 		.4byte	0
- 574 0022 00000000 		.4byte	0
- 575              		.section	.debug_aranges,"",%progbits
- 576 0000 3C000000 		.4byte	0x3c
- 577 0004 0200     		.2byte	0x2
- 578 0006 00000000 		.4byte	.Ldebug_info0
- 579 000a 04       		.byte	0x4
- 580 000b 00       		.byte	0
- 581 000c 0000     		.2byte	0
- 582 000e 0000     		.2byte	0
- 583 0010 00000000 		.4byte	.LFB0
- 584 0014 0C000000 		.4byte	.LFE0-.LFB0
- 585 0018 00000000 		.4byte	.LFB1
- 586 001c 1C000000 		.4byte	.LFE1-.LFB1
- 587 0020 00000000 		.4byte	.LFB2
- 588 0024 1C000000 		.4byte	.LFE2-.LFB2
- 589 0028 00000000 		.4byte	.LFB3
- 590 002c 0C000000 		.4byte	.LFE3-.LFB3
- 591 0030 00000000 		.4byte	.LFB4
- 592 0034 0C000000 		.4byte	.LFE4-.LFB4
- 593 0038 00000000 		.4byte	0
- 594 003c 00000000 		.4byte	0
- 595              		.section	.debug_ranges,"",%progbits
- 596              	.Ldebug_ranges0:
- 597 0000 00000000 		.4byte	.LFB0
- 598 0004 0C000000 		.4byte	.LFE0
- 599 0008 00000000 		.4byte	.LFB1
- 600 000c 1C000000 		.4byte	.LFE1
- 601 0010 00000000 		.4byte	.LFB2
- 602 0014 1C000000 		.4byte	.LFE2
- 603 0018 00000000 		.4byte	.LFB3
- 604 001c 0C000000 		.4byte	.LFE3
- 605 0020 00000000 		.4byte	.LFB4
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 14
+ 549 0000 06000000 		.4byte	.LVL0
+ 550 0004 13000000 		.4byte	.LVL1-1
+ 551 0008 0100     		.2byte	0x1
+ 552 000a 50       		.byte	0x50
+ 553 000b 00000000 		.4byte	0
+ 554 000f 00000000 		.4byte	0
+ 555              	.LLST1:
+ 556 0013 06000000 		.4byte	.LVL2
+ 557 0017 13000000 		.4byte	.LVL3-1
+ 558 001b 0100     		.2byte	0x1
+ 559 001d 50       		.byte	0x50
+ 560 001e 00000000 		.4byte	0
+ 561 0022 00000000 		.4byte	0
+ 562              		.section	.debug_aranges,"",%progbits
+ 563 0000 3C000000 		.4byte	0x3c
+ 564 0004 0200     		.2byte	0x2
+ 565 0006 00000000 		.4byte	.Ldebug_info0
+ 566 000a 04       		.byte	0x4
+ 567 000b 00       		.byte	0
+ 568 000c 0000     		.2byte	0
+ 569 000e 0000     		.2byte	0
+ 570 0010 00000000 		.4byte	.LFB0
+ 571 0014 0C000000 		.4byte	.LFE0-.LFB0
+ 572 0018 00000000 		.4byte	.LFB1
+ 573 001c 1C000000 		.4byte	.LFE1-.LFB1
+ 574 0020 00000000 		.4byte	.LFB2
+ 575 0024 1C000000 		.4byte	.LFE2-.LFB2
+ 576 0028 00000000 		.4byte	.LFB3
+ 577 002c 0C000000 		.4byte	.LFE3-.LFB3
+ 578 0030 00000000 		.4byte	.LFB4
+ 579 0034 0C000000 		.4byte	.LFE4-.LFB4
+ 580 0038 00000000 		.4byte	0
+ 581 003c 00000000 		.4byte	0
+ 582              		.section	.debug_ranges,"",%progbits
+ 583              	.Ldebug_ranges0:
+ 584 0000 00000000 		.4byte	.LFB0
+ 585 0004 0C000000 		.4byte	.LFE0
+ 586 0008 00000000 		.4byte	.LFB1
+ 587 000c 1C000000 		.4byte	.LFE1
+ 588 0010 00000000 		.4byte	.LFB2
+ 589 0014 1C000000 		.4byte	.LFE2
+ 590 0018 00000000 		.4byte	.LFB3
+ 591 001c 0C000000 		.4byte	.LFE3
+ 592 0020 00000000 		.4byte	.LFB4
+ 593 0024 0C000000 		.4byte	.LFE4
+ 594 0028 00000000 		.4byte	0
+ 595 002c 00000000 		.4byte	0
+ 596              		.section	.debug_line,"",%progbits
+ 597              	.Ldebug_line0:
+ 598 0000 BC000000 		.section	.debug_str,"MS",%progbits,1
+ 598      02005000 
+ 598      00000201 
+ 598      FB0E0D00 
+ 598      01010101 
+ 599              	.LASF6:
+ 600 0000 6C6F6E67 		.ascii	"long long int\000"
+ 600      206C6F6E 
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccSOMbpc.s 			page 14
 
 
- 606 0024 0C000000 		.4byte	.LFE4
- 607 0028 00000000 		.4byte	0
- 608 002c 00000000 		.4byte	0
- 609              		.section	.debug_line,"",%progbits
- 610              	.Ldebug_line0:
- 611 0000 BC000000 		.section	.debug_str,"MS",%progbits,1
- 611      02005000 
- 611      00000201 
- 611      FB0E0D00 
- 611      01010101 
- 612              	.LASF6:
- 613 0000 6C6F6E67 		.ascii	"long long int\000"
- 613      206C6F6E 
- 613      6720696E 
- 613      7400
- 614              	.LASF3:
- 615 000e 73686F72 		.ascii	"short unsigned int\000"
- 615      7420756E 
- 615      7369676E 
- 615      65642069 
- 615      6E7400
- 616              	.LASF18:
- 617 0021 41485F72 		.ascii	"AH_reg_WriteMask\000"
- 617      65675F57 
- 617      72697465 
- 617      4D61736B 
- 617      00
- 618              	.LASF8:
- 619 0032 756E7369 		.ascii	"unsigned int\000"
- 619      676E6564 
- 619      20696E74 
- 619      00
- 620              	.LASF20:
- 621 003f 41485F72 		.ascii	"AH_reg_ReadMask\000"
- 621      65675F52 
- 621      6561644D 
- 621      61736B00 
- 622              	.LASF21:
- 623 004f 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
- 623      4320342E 
- 623      392E3320 
- 623      32303135 
- 623      30333033 
- 624 0082 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
- 624      20726576 
- 624      6973696F 
- 624      6E203232 
- 624      31323230 
- 625 00b5 73202D66 		.ascii	"s -ffunction-sections -ffat-lto-objects\000"
- 625      66756E63 
- 625      74696F6E 
- 625      2D736563 
- 625      74696F6E 
- 626              	.LASF5:
- 627 00dd 6C6F6E67 		.ascii	"long unsigned int\000"
- 627      20756E73 
- 627      69676E65 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 15
+ 600      6720696E 
+ 600      7400
+ 601              	.LASF3:
+ 602 000e 73686F72 		.ascii	"short unsigned int\000"
+ 602      7420756E 
+ 602      7369676E 
+ 602      65642069 
+ 602      6E7400
+ 603              	.LASF18:
+ 604 0021 41485F72 		.ascii	"AH_reg_WriteMask\000"
+ 604      65675F57 
+ 604      72697465 
+ 604      4D61736B 
+ 604      00
+ 605              	.LASF8:
+ 606 0032 756E7369 		.ascii	"unsigned int\000"
+ 606      676E6564 
+ 606      20696E74 
+ 606      00
+ 607              	.LASF20:
+ 608 003f 41485F72 		.ascii	"AH_reg_ReadMask\000"
+ 608      65675F52 
+ 608      6561644D 
+ 608      61736B00 
+ 609              	.LASF21:
+ 610 004f 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
+ 610      4320342E 
+ 610      392E3320 
+ 610      32303135 
+ 610      30333033 
+ 611 0082 616E6368 		.ascii	"anch revision 221220] -mcpu=cortex-m0 -mthumb -g -O"
+ 611      20726576 
+ 611      6973696F 
+ 611      6E203232 
+ 611      31323230 
+ 612 00b5 73202D66 		.ascii	"s -ffunction-sections -ffat-lto-objects\000"
+ 612      66756E63 
+ 612      74696F6E 
+ 612      2D736563 
+ 612      74696F6E 
+ 613              	.LASF5:
+ 614 00dd 6C6F6E67 		.ascii	"long unsigned int\000"
+ 614      20756E73 
+ 614      69676E65 
+ 614      6420696E 
+ 614      7400
+ 615              	.LASF7:
+ 616 00ef 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 616      206C6F6E 
+ 616      6720756E 
+ 616      7369676E 
+ 616      65642069 
+ 617              	.LASF16:
+ 618 0106 41485F72 		.ascii	"AH_reg_InterruptDisable\000"
+ 618      65675F49 
+ 618      6E746572 
+ 618      72757074 
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccSOMbpc.s 			page 15
 
 
- 627      6420696E 
- 627      7400
- 628              	.LASF7:
- 629 00ef 6C6F6E67 		.ascii	"long long unsigned int\000"
- 629      206C6F6E 
- 629      6720756E 
- 629      7369676E 
- 629      65642069 
- 630              	.LASF16:
- 631 0106 41485F72 		.ascii	"AH_reg_InterruptDisable\000"
- 631      65675F49 
- 631      6E746572 
- 631      72757074 
- 631      44697361 
- 632              	.LASF15:
- 633 011e 41485F72 		.ascii	"AH_reg_InterruptEnable\000"
- 633      65675F49 
- 633      6E746572 
- 633      72757074 
- 633      456E6162 
- 634              	.LASF22:
- 635 0135 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\AH_reg.c\000"
- 635      6E657261 
- 635      7465645F 
- 635      536F7572 
- 635      63655C50 
- 636              	.LASF23:
- 637 0157 453A5C68 		.ascii	"E:\\home\\jarik\\src\\psoc\\mpi_rom_emu\\mpi_rom_em"
- 637      6F6D655C 
- 637      6A617269 
- 637      6B5C7372 
- 637      635C7073 
- 638 0184 752E6379 		.ascii	"u.cydsn\000"
- 638      64736E00 
- 639              	.LASF24:
- 640 018c 6D61736B 		.ascii	"mask\000"
- 640      00
- 641              	.LASF1:
- 642 0191 756E7369 		.ascii	"unsigned char\000"
- 642      676E6564 
- 642      20636861 
- 642      7200
- 643              	.LASF19:
- 644 019f 41485F72 		.ascii	"AH_reg_Read\000"
- 644      65675F52 
- 644      65616400 
- 645              	.LASF11:
- 646 01ab 63686172 		.ascii	"char\000"
- 646      00
- 647              	.LASF4:
- 648 01b0 6C6F6E67 		.ascii	"long int\000"
- 648      20696E74 
- 648      00
- 649              	.LASF10:
- 650 01b9 646F7562 		.ascii	"double\000"
- 650      6C6500
- 651              	.LASF12:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccw4m7yc.s 			page 16
+ 618      44697361 
+ 619              	.LASF15:
+ 620 011e 41485F72 		.ascii	"AH_reg_InterruptEnable\000"
+ 620      65675F49 
+ 620      6E746572 
+ 620      72757074 
+ 620      456E6162 
+ 621              	.LASF22:
+ 622 0135 2E5C4765 		.ascii	".\\Generated_Source\\PSoC4\\AH_reg.c\000"
+ 622      6E657261 
+ 622      7465645F 
+ 622      536F7572 
+ 622      63655C50 
+ 623              	.LASF23:
+ 624 0157 453A5C68 		.ascii	"E:\\home\\jarik\\src\\psoc\\mpi_rom_emu\\mpi_rom_em"
+ 624      6F6D655C 
+ 624      6A617269 
+ 624      6B5C7372 
+ 624      635C7073 
+ 625 0184 752E6379 		.ascii	"u.cydsn\000"
+ 625      64736E00 
+ 626              	.LASF24:
+ 627 018c 6D61736B 		.ascii	"mask\000"
+ 627      00
+ 628              	.LASF1:
+ 629 0191 756E7369 		.ascii	"unsigned char\000"
+ 629      676E6564 
+ 629      20636861 
+ 629      7200
+ 630              	.LASF19:
+ 631 019f 41485F72 		.ascii	"AH_reg_Read\000"
+ 631      65675F52 
+ 631      65616400 
+ 632              	.LASF11:
+ 633 01ab 63686172 		.ascii	"char\000"
+ 633      00
+ 634              	.LASF4:
+ 635 01b0 6C6F6E67 		.ascii	"long int\000"
+ 635      20696E74 
+ 635      00
+ 636              	.LASF10:
+ 637 01b9 646F7562 		.ascii	"double\000"
+ 637      6C6500
+ 638              	.LASF12:
+ 639 01c0 75696E74 		.ascii	"uint8\000"
+ 639      3800
+ 640              	.LASF0:
+ 641 01c6 7369676E 		.ascii	"signed char\000"
+ 641      65642063 
+ 641      68617200 
+ 642              	.LASF26:
+ 643 01d2 43794578 		.ascii	"CyExitCriticalSection\000"
+ 643      69744372 
+ 643      69746963 
+ 643      616C5365 
+ 643      6374696F 
+ 644              	.LASF9:
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccSOMbpc.s 			page 16
 
 
- 652 01c0 75696E74 		.ascii	"uint8\000"
- 652      3800
- 653              	.LASF0:
- 654 01c6 7369676E 		.ascii	"signed char\000"
- 654      65642063 
- 654      68617200 
- 655              	.LASF26:
- 656 01d2 43794578 		.ascii	"CyExitCriticalSection\000"
- 656      69744372 
- 656      69746963 
- 656      616C5365 
- 656      6374696F 
- 657              	.LASF9:
- 658 01e8 666C6F61 		.ascii	"float\000"
- 658      7400
- 659              	.LASF2:
- 660 01ee 73686F72 		.ascii	"short int\000"
- 660      7420696E 
- 660      7400
- 661              	.LASF13:
- 662 01f8 72656738 		.ascii	"reg8\000"
- 662      00
- 663              	.LASF25:
- 664 01fd 4379456E 		.ascii	"CyEnterCriticalSection\000"
- 664      74657243 
- 664      72697469 
- 664      63616C53 
- 664      65637469 
- 665              	.LASF14:
- 666 0214 73697A65 		.ascii	"sizetype\000"
- 666      74797065 
- 666      00
- 667              	.LASF17:
- 668 021d 696E7465 		.ascii	"interruptState\000"
- 668      72727570 
- 668      74537461 
- 668      746500
- 669              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br
+ 645 01e8 666C6F61 		.ascii	"float\000"
+ 645      7400
+ 646              	.LASF2:
+ 647 01ee 73686F72 		.ascii	"short int\000"
+ 647      7420696E 
+ 647      7400
+ 648              	.LASF13:
+ 649 01f8 72656738 		.ascii	"reg8\000"
+ 649      00
+ 650              	.LASF25:
+ 651 01fd 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 651      74657243 
+ 651      72697469 
+ 651      63616C53 
+ 651      65637469 
+ 652              	.LASF14:
+ 653 0214 73697A65 		.ascii	"sizetype\000"
+ 653      74797065 
+ 653      00
+ 654              	.LASF17:
+ 655 021d 696E7465 		.ascii	"interruptState\000"
+ 655      72727570 
+ 655      74537461 
+ 655      746500
+ 656              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.9.3 20150303 (release) [ARM/embedded-4_9-br

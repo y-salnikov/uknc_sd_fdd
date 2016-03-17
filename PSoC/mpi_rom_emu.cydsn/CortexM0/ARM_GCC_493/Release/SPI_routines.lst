@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 1
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cct9VC8e.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -24,7 +24,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 1
   21              		.thumb_func
   22              		.type	spi_init, %function
   23              	spi_init:
-  24              	.LFB33:
+  24              	.LFB34:
   25              		.file 1 ".\\sd\\SPI_routines.c"
    1:.\sd/SPI_routines.c **** //**************************************************************
    2:.\sd/SPI_routines.c **** // ****** FUNCTIONS FOR SPI COMMUNICATION *******
@@ -55,10 +55,10 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 1
   36              		@ sp needed
   37 0006 08BD     		pop	{r3, pc}
   38              		.cfi_endproc
-  39              	.LFE33:
+  39              	.LFE34:
   40              		.size	spi_init, .-spi_init
   41              		.section	.text.SPI_transmit,"ax",%progbits
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 2
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cct9VC8e.s 			page 2
 
 
   42              		.align	1
@@ -67,7 +67,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 1
   45              		.thumb_func
   46              		.type	SPI_transmit, %function
   47              	SPI_transmit:
-  48              	.LFB34:
+  48              	.LFB35:
   17:.\sd/SPI_routines.c **** 
   18:.\sd/SPI_routines.c **** unsigned char SPI_transmit(unsigned char data)
   19:.\sd/SPI_routines.c **** {
@@ -109,7 +109,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 1
   78              		.loc 1 24 0
   79 001c 08BD     		pop	{r3, pc}
   80              		.cfi_endproc
-  81              	.LFE34:
+  81              	.LFE35:
   82              		.size	SPI_transmit, .-SPI_transmit
   83              		.section	.text.SPI_receive,"ax",%progbits
   84              		.align	1
@@ -118,10 +118,10 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 1
   87              		.thumb_func
   88              		.type	SPI_receive, %function
   89              	SPI_receive:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 3
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cct9VC8e.s 			page 3
 
 
-  90              	.LFB35:
+  90              	.LFB36:
   25:.\sd/SPI_routines.c **** 
   26:.\sd/SPI_routines.c **** unsigned char SPI_receive(void)
   27:.\sd/SPI_routines.c **** {
@@ -141,7 +141,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 1
  102              		@ sp needed
  103 0008 08BD     		pop	{r3, pc}
  104              		.cfi_endproc
- 105              	.LFE35:
+ 105              	.LFE36:
  106              		.size	SPI_receive, .-SPI_receive
  107              		.text
  108              	.Letext0:
@@ -150,7 +150,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 1
  111              		.file 4 "Generated_Source\\PSoC4/SPI_1.h"
  112              		.section	.debug_info,"",%progbits
  113              	.Ldebug_info0:
- 114 0000 62010000 		.4byte	0x162
+ 114 0000 63010000 		.4byte	0x163
  115 0004 0400     		.2byte	0x4
  116 0006 00000000 		.4byte	.Ldebug_abbrev0
  117 000a 04       		.byte	0x4
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 1
  139 003b 02       		.byte	0x2
  140 003c 07       		.byte	0x7
  141 003d B1010000 		.4byte	.LASF3
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 4
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cct9VC8e.s 			page 4
 
 
  142 0041 02       		.uleb128 0x2
@@ -208,121 +208,121 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 1
  166 006b 04       		.uleb128 0x4
  167 006c 0E000000 		.4byte	.LASF21
  168 0070 03       		.byte	0x3
- 169 0071 C4       		.byte	0xc4
- 170 0072 48000000 		.4byte	0x48
- 171 0076 02       		.uleb128 0x2
- 172 0077 04       		.byte	0x4
- 173 0078 04       		.byte	0x4
- 174 0079 D9010000 		.4byte	.LASF9
- 175 007d 02       		.uleb128 0x2
- 176 007e 08       		.byte	0x8
- 177 007f 04       		.byte	0x4
- 178 0080 9D010000 		.4byte	.LASF10
- 179 0084 02       		.uleb128 0x2
- 180 0085 01       		.byte	0x1
- 181 0086 08       		.byte	0x8
- 182 0087 7C010000 		.4byte	.LASF11
- 183 008b 02       		.uleb128 0x2
- 184 008c 04       		.byte	0x4
- 185 008d 07       		.byte	0x7
- 186 008e E9010000 		.4byte	.LASF12
- 187 0092 05       		.uleb128 0x5
- 188 0093 D0010000 		.4byte	.LASF22
- 189 0097 01       		.byte	0x1
- 190 0098 0C       		.byte	0xc
- 191 0099 00000000 		.4byte	.LFB33
- 192 009d 08000000 		.4byte	.LFE33-.LFB33
- 193 00a1 01       		.uleb128 0x1
- 194 00a2 9C       		.byte	0x9c
- 195 00a3 B1000000 		.4byte	0xb1
- 196 00a7 06       		.uleb128 0x6
- 197 00a8 06000000 		.4byte	.LVL0
- 198 00ac 28010000 		.4byte	0x128
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 5
+ 169 0071 3A01     		.2byte	0x13a
+ 170 0073 48000000 		.4byte	0x48
+ 171 0077 02       		.uleb128 0x2
+ 172 0078 04       		.byte	0x4
+ 173 0079 04       		.byte	0x4
+ 174 007a D9010000 		.4byte	.LASF9
+ 175 007e 02       		.uleb128 0x2
+ 176 007f 08       		.byte	0x8
+ 177 0080 04       		.byte	0x4
+ 178 0081 9D010000 		.4byte	.LASF10
+ 179 0085 02       		.uleb128 0x2
+ 180 0086 01       		.byte	0x1
+ 181 0087 08       		.byte	0x8
+ 182 0088 7C010000 		.4byte	.LASF11
+ 183 008c 02       		.uleb128 0x2
+ 184 008d 04       		.byte	0x4
+ 185 008e 07       		.byte	0x7
+ 186 008f E9010000 		.4byte	.LASF12
+ 187 0093 05       		.uleb128 0x5
+ 188 0094 D0010000 		.4byte	.LASF22
+ 189 0098 01       		.byte	0x1
+ 190 0099 0C       		.byte	0xc
+ 191 009a 00000000 		.4byte	.LFB34
+ 192 009e 08000000 		.4byte	.LFE34-.LFB34
+ 193 00a2 01       		.uleb128 0x1
+ 194 00a3 9C       		.byte	0x9c
+ 195 00a4 B2000000 		.4byte	0xb2
+ 196 00a8 06       		.uleb128 0x6
+ 197 00a9 06000000 		.4byte	.LVL0
+ 198 00ad 29010000 		.4byte	0x129
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cct9VC8e.s 			page 5
 
 
- 199 00b0 00       		.byte	0
- 200 00b1 07       		.uleb128 0x7
- 201 00b2 A4010000 		.4byte	.LASF13
- 202 00b6 01       		.byte	0x1
- 203 00b7 12       		.byte	0x12
- 204 00b8 2C000000 		.4byte	0x2c
- 205 00bc 00000000 		.4byte	.LFB34
- 206 00c0 1E000000 		.4byte	.LFE34-.LFB34
- 207 00c4 01       		.uleb128 0x1
- 208 00c5 9C       		.byte	0x9c
- 209 00c6 FE000000 		.4byte	0xfe
- 210 00ca 08       		.uleb128 0x8
- 211 00cb 8F010000 		.4byte	.LASF23
- 212 00cf 01       		.byte	0x1
- 213 00d0 12       		.byte	0x12
- 214 00d1 2C000000 		.4byte	0x2c
- 215 00d5 00000000 		.4byte	.LLST0
- 216 00d9 06       		.uleb128 0x6
- 217 00da 06000000 		.4byte	.LVL2
- 218 00de 2F010000 		.4byte	0x12f
- 219 00e2 06       		.uleb128 0x6
- 220 00e3 0A000000 		.4byte	.LVL3
- 221 00e7 41010000 		.4byte	0x141
- 222 00eb 06       		.uleb128 0x6
- 223 00ec 12000000 		.4byte	.LVL4
- 224 00f0 4D010000 		.4byte	0x14d
- 225 00f4 06       		.uleb128 0x6
- 226 00f5 1A000000 		.4byte	.LVL5
- 227 00f9 59010000 		.4byte	0x159
- 228 00fd 00       		.byte	0
- 229 00fe 07       		.uleb128 0x7
- 230 00ff 0F020000 		.4byte	.LASF14
- 231 0103 01       		.byte	0x1
- 232 0104 1A       		.byte	0x1a
- 233 0105 2C000000 		.4byte	0x2c
- 234 0109 00000000 		.4byte	.LFB35
- 235 010d 0A000000 		.4byte	.LFE35-.LFB35
- 236 0111 01       		.uleb128 0x1
- 237 0112 9C       		.byte	0x9c
- 238 0113 28010000 		.4byte	0x128
- 239 0117 09       		.uleb128 0x9
- 240 0118 08000000 		.4byte	.LVL6
- 241 011c B1000000 		.4byte	0xb1
- 242 0120 0A       		.uleb128 0xa
- 243 0121 01       		.uleb128 0x1
- 244 0122 50       		.byte	0x50
- 245 0123 02       		.uleb128 0x2
- 246 0124 09       		.byte	0x9
- 247 0125 FF       		.byte	0xff
- 248 0126 00       		.byte	0
- 249 0127 00       		.byte	0
- 250 0128 0B       		.uleb128 0xb
- 251 0129 3F000000 		.4byte	.LASF24
- 252 012d 04       		.byte	0x4
- 253 012e 68       		.byte	0x68
- 254 012f 0C       		.uleb128 0xc
- 255 0130 2E010000 		.4byte	.LASF25
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 6
+ 199 00b1 00       		.byte	0
+ 200 00b2 07       		.uleb128 0x7
+ 201 00b3 A4010000 		.4byte	.LASF13
+ 202 00b7 01       		.byte	0x1
+ 203 00b8 12       		.byte	0x12
+ 204 00b9 2C000000 		.4byte	0x2c
+ 205 00bd 00000000 		.4byte	.LFB35
+ 206 00c1 1E000000 		.4byte	.LFE35-.LFB35
+ 207 00c5 01       		.uleb128 0x1
+ 208 00c6 9C       		.byte	0x9c
+ 209 00c7 FF000000 		.4byte	0xff
+ 210 00cb 08       		.uleb128 0x8
+ 211 00cc 8F010000 		.4byte	.LASF23
+ 212 00d0 01       		.byte	0x1
+ 213 00d1 12       		.byte	0x12
+ 214 00d2 2C000000 		.4byte	0x2c
+ 215 00d6 00000000 		.4byte	.LLST0
+ 216 00da 06       		.uleb128 0x6
+ 217 00db 06000000 		.4byte	.LVL2
+ 218 00df 30010000 		.4byte	0x130
+ 219 00e3 06       		.uleb128 0x6
+ 220 00e4 0A000000 		.4byte	.LVL3
+ 221 00e8 42010000 		.4byte	0x142
+ 222 00ec 06       		.uleb128 0x6
+ 223 00ed 12000000 		.4byte	.LVL4
+ 224 00f1 4E010000 		.4byte	0x14e
+ 225 00f5 06       		.uleb128 0x6
+ 226 00f6 1A000000 		.4byte	.LVL5
+ 227 00fa 5A010000 		.4byte	0x15a
+ 228 00fe 00       		.byte	0
+ 229 00ff 07       		.uleb128 0x7
+ 230 0100 0F020000 		.4byte	.LASF14
+ 231 0104 01       		.byte	0x1
+ 232 0105 1A       		.byte	0x1a
+ 233 0106 2C000000 		.4byte	0x2c
+ 234 010a 00000000 		.4byte	.LFB36
+ 235 010e 0A000000 		.4byte	.LFE36-.LFB36
+ 236 0112 01       		.uleb128 0x1
+ 237 0113 9C       		.byte	0x9c
+ 238 0114 29010000 		.4byte	0x129
+ 239 0118 09       		.uleb128 0x9
+ 240 0119 08000000 		.4byte	.LVL6
+ 241 011d B2000000 		.4byte	0xb2
+ 242 0121 0A       		.uleb128 0xa
+ 243 0122 01       		.uleb128 0x1
+ 244 0123 50       		.byte	0x50
+ 245 0124 02       		.uleb128 0x2
+ 246 0125 09       		.byte	0x9
+ 247 0126 FF       		.byte	0xff
+ 248 0127 00       		.byte	0
+ 249 0128 00       		.byte	0
+ 250 0129 0B       		.uleb128 0xb
+ 251 012a 3F000000 		.4byte	.LASF24
+ 252 012e 04       		.byte	0x4
+ 253 012f 68       		.byte	0x68
+ 254 0130 0C       		.uleb128 0xc
+ 255 0131 2E010000 		.4byte	.LASF25
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cct9VC8e.s 			page 6
 
 
- 256 0134 02       		.byte	0x2
- 257 0135 8C01     		.2byte	0x18c
- 258 0137 41010000 		.4byte	0x141
- 259 013b 0D       		.uleb128 0xd
- 260 013c 6B000000 		.4byte	0x6b
- 261 0140 00       		.byte	0
- 262 0141 0E       		.uleb128 0xe
- 263 0142 22000000 		.4byte	.LASF15
- 264 0146 02       		.byte	0x2
- 265 0147 8E01     		.2byte	0x18e
- 266 0149 6B000000 		.4byte	0x6b
- 267 014d 0E       		.uleb128 0xe
- 268 014e F2010000 		.4byte	.LASF16
- 269 0152 02       		.byte	0x2
- 270 0153 8601     		.2byte	0x186
- 271 0155 6B000000 		.4byte	0x6b
- 272 0159 0E       		.uleb128 0xe
- 273 015a 16010000 		.4byte	.LASF17
- 274 015e 02       		.byte	0x2
- 275 015f 8501     		.2byte	0x185
- 276 0161 6B000000 		.4byte	0x6b
- 277 0165 00       		.byte	0
+ 256 0135 02       		.byte	0x2
+ 257 0136 8C01     		.2byte	0x18c
+ 258 0138 42010000 		.4byte	0x142
+ 259 013c 0D       		.uleb128 0xd
+ 260 013d 6B000000 		.4byte	0x6b
+ 261 0141 00       		.byte	0
+ 262 0142 0E       		.uleb128 0xe
+ 263 0143 22000000 		.4byte	.LASF15
+ 264 0147 02       		.byte	0x2
+ 265 0148 8E01     		.2byte	0x18e
+ 266 014a 6B000000 		.4byte	0x6b
+ 267 014e 0E       		.uleb128 0xe
+ 268 014f F2010000 		.4byte	.LASF16
+ 269 0153 02       		.byte	0x2
+ 270 0154 8601     		.2byte	0x186
+ 271 0156 6B000000 		.4byte	0x6b
+ 272 015a 0E       		.uleb128 0xe
+ 273 015b 16010000 		.4byte	.LASF17
+ 274 015f 02       		.byte	0x2
+ 275 0160 8501     		.2byte	0x185
+ 276 0162 6B000000 		.4byte	0x6b
+ 277 0166 00       		.byte	0
  278              		.section	.debug_abbrev,"",%progbits
  279              	.Ldebug_abbrev0:
  280 0000 01       		.uleb128 0x1
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 1
  310 001e 03       		.uleb128 0x3
  311 001f 24       		.uleb128 0x24
  312 0020 00       		.byte	0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 7
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cct9VC8e.s 			page 7
 
 
  313 0021 0B       		.uleb128 0xb
@@ -377,7 +377,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 1
  326 002e 3A       		.uleb128 0x3a
  327 002f 0B       		.uleb128 0xb
  328 0030 3B       		.uleb128 0x3b
- 329 0031 0B       		.uleb128 0xb
+ 329 0031 05       		.uleb128 0x5
  330 0032 49       		.uleb128 0x49
  331 0033 13       		.uleb128 0x13
  332 0034 00       		.byte	0
@@ -418,7 +418,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 1
  367 005a 00       		.byte	0
  368 005b 07       		.uleb128 0x7
  369 005c 2E       		.uleb128 0x2e
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 8
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cct9VC8e.s 			page 8
 
 
  370 005d 01       		.byte	0x1
@@ -478,7 +478,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 1
  424 0098 9142     		.uleb128 0x2111
  425 009a 18       		.uleb128 0x18
  426 009b 00       		.byte	0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 9
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cct9VC8e.s 			page 9
 
 
  427 009c 00       		.byte	0
@@ -538,7 +538,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 1
  481 00d2 05       		.uleb128 0x5
  482 00d3 27       		.uleb128 0x27
  483 00d4 19       		.uleb128 0x19
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 10
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cct9VC8e.s 			page 10
 
 
  484 00d5 49       		.uleb128 0x49
@@ -556,7 +556,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 1
  496 0008 0100     		.2byte	0x1
  497 000a 50       		.byte	0x50
  498 000b 05000000 		.4byte	.LVL2-1
- 499 000f 1E000000 		.4byte	.LFE34
+ 499 000f 1E000000 		.4byte	.LFE35
  500 0013 0400     		.2byte	0x4
  501 0015 F3       		.byte	0xf3
  502 0016 01       		.uleb128 0x1
@@ -572,22 +572,22 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 1
  512 000b 00       		.byte	0
  513 000c 0000     		.2byte	0
  514 000e 0000     		.2byte	0
- 515 0010 00000000 		.4byte	.LFB33
- 516 0014 08000000 		.4byte	.LFE33-.LFB33
- 517 0018 00000000 		.4byte	.LFB34
- 518 001c 1E000000 		.4byte	.LFE34-.LFB34
- 519 0020 00000000 		.4byte	.LFB35
- 520 0024 0A000000 		.4byte	.LFE35-.LFB35
+ 515 0010 00000000 		.4byte	.LFB34
+ 516 0014 08000000 		.4byte	.LFE34-.LFB34
+ 517 0018 00000000 		.4byte	.LFB35
+ 518 001c 1E000000 		.4byte	.LFE35-.LFB35
+ 519 0020 00000000 		.4byte	.LFB36
+ 520 0024 0A000000 		.4byte	.LFE36-.LFB36
  521 0028 00000000 		.4byte	0
  522 002c 00000000 		.4byte	0
  523              		.section	.debug_ranges,"",%progbits
  524              	.Ldebug_ranges0:
- 525 0000 00000000 		.4byte	.LFB33
- 526 0004 08000000 		.4byte	.LFE33
- 527 0008 00000000 		.4byte	.LFB34
- 528 000c 1E000000 		.4byte	.LFE34
- 529 0010 00000000 		.4byte	.LFB35
- 530 0014 0A000000 		.4byte	.LFE35
+ 525 0000 00000000 		.4byte	.LFB34
+ 526 0004 08000000 		.4byte	.LFE34
+ 527 0008 00000000 		.4byte	.LFB35
+ 528 000c 1E000000 		.4byte	.LFE35
+ 529 0010 00000000 		.4byte	.LFB36
+ 530 0014 0A000000 		.4byte	.LFE36
  531 0018 00000000 		.4byte	0
  532 001c 00000000 		.4byte	0
  533              		.section	.debug_line,"",%progbits
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 1
  535      FB0E0D00 
  535      01010101 
  536              	.LASF6:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 11
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cct9VC8e.s 			page 11
 
 
  537 0000 6C6F6E67 		.ascii	"long long int\000"
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 1
  555      74696E65 
  555      732E6300 
  556              	.LASF17:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 12
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cct9VC8e.s 			page 12
 
 
  557 0116 5350495F 		.ascii	"SPI_1_SpiUartReadRxData\000"
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 1
  580      696E6974 
  580      00
  581              	.LASF9:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccHp260f.s 			page 13
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cct9VC8e.s 			page 13
 
 
  582 01d9 666C6F61 		.ascii	"float\000"

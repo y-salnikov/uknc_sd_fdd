@@ -3,27 +3,22 @@ equ("tmp_buf=020000")
 equ("dsk_buf=0116000")
 		org(0)
 		240
+		12700
+		int4_err_msg
+		240
 		137
 		start_
+		org(024)
+		dummy_int
 		0
+		org(060)
+		dummy_int
 		0
-		0
-		0
-		0
+		dummy_int
 		0
 		org(0100)
 		dummy_int
 		0
-		org(0360)
-		dummy_int
-		0
-		dummy_int
-		0
-		dummy_int
-		0
-		dummy_int
-		0
-
 start_:		12706
 		stk_l
 		12701
@@ -45,8 +40,6 @@ start_:		12706
 		0
 ld1_ok:		137
 		b1_adr
-		
-
 ##################################
 cout:		10146
 		12701
@@ -59,7 +52,6 @@ cout_l1:	132711
 		110011
 		12601
 		207
-
 #################################
 mp_out:		10146
 		12701
@@ -72,7 +64,6 @@ mp_l1:		132711
 		110011
 		12601
 		207
-
 load:		12703
 		mp
 		5000
@@ -94,6 +85,11 @@ ld1_wait:	32737
 		176674
 		beq(ld1_wait)
 		207
+int4_err_msg:	12701
+		int4_err
+		4737
+		print_msg
+		0
 #################################
 print_msg:	5000
 print_l1:	112100
@@ -102,6 +98,36 @@ print_l1:	112100
 		5700
 		bne(print_l1)
 		207
+dummy_int:	2
+#################################
+nm_buf:		0
+		0
+		0
+		0
+
+		org(0360)
+		dummy_int
+		0
+		dummy_int
+		0
+		dummy_int
+		0
+		dummy_int
+		0
+		org(0460)
+		dummy_int
+		0
+		dummy_int
+		0
+		dummy_int
+		0
+		dummy_int
+		0
+
+		
+
+
+
 print_number:	12700    # R1 - number
 		nm_buf+6
 p_n_l:		10102
@@ -122,15 +148,11 @@ p_n_l:		10102
 		print_msg
 		207
 
-dummy_int:	2
-#################################
-nm_buf:		0
-		0
-		0
-		0
 msg0:		'BOOT0 Загружен\n\r'
 		0
 msg_err:	'BOOT1 Ошибка загрузки \n\r'
+		0
+int4_err:	'Прерывание 4\n\r'
 		0
 mp:		4000
 mp_n_kas:	21
@@ -365,6 +387,10 @@ cont_map:	240
 wait2:		sob(R0,wait2)
 		4767
 		rel67(load2)
+#		106700
+#		42700
+#		200
+#		106400 # разрешение прерываний
 		12700         
 		0
 		22737

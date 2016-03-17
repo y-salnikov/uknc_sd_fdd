@@ -3,7 +3,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
 
    1              	/*******************************************************************************
    2              	* File Name: CyBootAsmGnu.s
-   3              	* Version 5.20
+   3              	* Version 5.30
    4              	*
    5              	*  Description:
    6              	*   Assembly routines for GNU as.
@@ -25,7 +25,7 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
    1              	/*******************************************************************************
    2              	* File Name: cydevicegnu_trm.inc
    3              	* 
-   4              	* PSoC Creator  3.3 CP1
+   4              	* PSoC Creator  3.3 SP1
    5              	*
    6              	* Description:
    7              	* This file provides all of the address values for the entire PSoC device.
@@ -8608,13 +8608,13 @@ ARM GAS  .\Generated_Source\PSoC4\CyBootAsmGnu.s 			page 1
   42 0000 0230     	    ADDS r0, r0, #2         /*    1    2    Round to nearest multiple of 4 */
   43 0002 8008     	    LSRS r0, r0, #2         /*    1    2    Divide by 4 and set flags */
   44 0004 04D0     	    BEQ CyDelayCycles_done  /*    2    2    Skip if 0 */
-  45              	.IF ((CYIPBLOCK_m0s8cpussv2_VERSION == 1) && (CYIPBLOCK_m0s8srssv2_VERSION == 1))
+  45              	.IF ((CYIPBLOCK_m0s8cpussv2_VERSION == 1) && ((CYIPBLOCK_m0s8srssv2_VERSION == 1) || (CYIPBLOCK_m0s
   46              	    /* If device is using CPUSSv2 and SRSSv2 leave loop unaligned */
   47              	.ELSE
   48 0006 C046     	    NOP                     /*    1    2    Loop alignment padding */
   49              	.ENDIF
   50              	CyDelayCycles_loop:
-  51 0008 0138     	    SUBS r0, r0, #1         /*    1    2   Decrement counter */ 
+  51 0008 0138     	    SUBS r0, r0, #1         /*    1    2   Decrement counter */
   52 000a FDD1     	    BNE CyDelayCycles_loop  /*    3    2   3 CPU cycles (if branche is taken)*/
   53 000c C046     	    NOP                     /*    1    2    Loop alignment padding */
   54 000e C046     	    NOP                     /*    1    2    Loop alignment padding */

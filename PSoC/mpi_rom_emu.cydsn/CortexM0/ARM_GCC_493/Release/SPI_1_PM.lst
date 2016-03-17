@@ -1,4 +1,4 @@
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 1
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccyeKemv.s 			page 1
 
 
    1              		.cpu cortex-m0
@@ -28,7 +28,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 1
   25              		.file 1 ".\\Generated_Source\\PSoC4\\SPI_1_PM.c"
    1:.\Generated_Source\PSoC4/SPI_1_PM.c **** /*******************************************************************************
    2:.\Generated_Source\PSoC4/SPI_1_PM.c **** * File Name: SPI_1_PM.c
-   3:.\Generated_Source\PSoC4/SPI_1_PM.c **** * Version 3.0
+   3:.\Generated_Source\PSoC4/SPI_1_PM.c **** * Version 3.10
    4:.\Generated_Source\PSoC4/SPI_1_PM.c **** *
    5:.\Generated_Source\PSoC4/SPI_1_PM.c **** * Description:
    6:.\Generated_Source\PSoC4/SPI_1_PM.c **** *  This file provides the source code to the Power Management support for
@@ -58,7 +58,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 1
   30:.\Generated_Source\PSoC4/SPI_1_PM.c ****     #include "SPI_1_SPI_UART_PVT.h"
   31:.\Generated_Source\PSoC4/SPI_1_PM.c **** #endif /* (SPI_1_SCB_MODE_SPI_INC || SPI_1_SCB_MODE_UART_INC) */
   32:.\Generated_Source\PSoC4/SPI_1_PM.c **** 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 2
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccyeKemv.s 			page 2
 
 
   33:.\Generated_Source\PSoC4/SPI_1_PM.c **** 
@@ -118,7 +118,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 1
   81:.\Generated_Source\PSoC4/SPI_1_PM.c ****     #if(!SPI_1_CY_SCBIP_V1)
   82:.\Generated_Source\PSoC4/SPI_1_PM.c ****         else if(SPI_1_SCB_MODE_SPI_RUNTM_CFG)
   83:.\Generated_Source\PSoC4/SPI_1_PM.c ****         {
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 3
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccyeKemv.s 			page 3
 
 
   84:.\Generated_Source\PSoC4/SPI_1_PM.c ****             SPI_1_SpiSaveConfig();
@@ -178,7 +178,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 1
   43              	.L1:
  127:.\Generated_Source\PSoC4/SPI_1_PM.c ****         }
  128:.\Generated_Source\PSoC4/SPI_1_PM.c **** 
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 4
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccyeKemv.s 			page 4
 
 
  129:.\Generated_Source\PSoC4/SPI_1_PM.c ****     #endif /* defined (SPI_1_SCB_MODE_I2C_CONST_CFG) && (SPI_1_I2C_WAKE_ENABLE_CONST) */
@@ -238,7 +238,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 1
  158:.\Generated_Source\PSoC4/SPI_1_PM.c ****         if(SPI_1_SCB_MODE_I2C_RUNTM_CFG)
  159:.\Generated_Source\PSoC4/SPI_1_PM.c ****         {
  160:.\Generated_Source\PSoC4/SPI_1_PM.c ****             SPI_1_I2CRestoreConfig();
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 5
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccyeKemv.s 			page 5
 
 
  161:.\Generated_Source\PSoC4/SPI_1_PM.c ****         }
@@ -298,7 +298,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 1
   76              	.LVL1:
   77              	.L9:
  208:.\Generated_Source\PSoC4/SPI_1_PM.c ****         }
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 6
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccyeKemv.s 			page 6
 
 
  209:.\Generated_Source\PSoC4/SPI_1_PM.c **** 
@@ -329,7 +329,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 1
   98              		.file 3 ".\\Generated_Source\\PSoC4\\SPI_1.h"
   99              		.section	.debug_info,"",%progbits
  100              	.Ldebug_info0:
- 101 0000 28010000 		.4byte	0x128
+ 101 0000 2A010000 		.4byte	0x12a
  102 0004 0400     		.2byte	0x4
  103 0006 00000000 		.4byte	.Ldebug_abbrev0
  104 000a 04       		.byte	0x4
@@ -358,7 +358,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 1
  127 003c 07       		.byte	0x7
  128 003d F2000000 		.4byte	.LASF3
  129 0041 02       		.uleb128 0x2
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 7
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccyeKemv.s 			page 7
 
 
  130 0042 04       		.byte	0x4
@@ -387,102 +387,102 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 1
  153 006b 04       		.uleb128 0x4
  154 006c 91010000 		.4byte	.LASF9
  155 0070 02       		.byte	0x2
- 156 0071 C2       		.byte	0xc2
- 157 0072 2C000000 		.4byte	0x2c
- 158 0076 04       		.uleb128 0x4
- 159 0077 0E000000 		.4byte	.LASF10
- 160 007b 02       		.byte	0x2
- 161 007c C4       		.byte	0xc4
- 162 007d 48000000 		.4byte	0x48
- 163 0081 02       		.uleb128 0x2
- 164 0082 04       		.byte	0x4
- 165 0083 04       		.byte	0x4
- 166 0084 BE010000 		.4byte	.LASF11
- 167 0088 02       		.uleb128 0x2
- 168 0089 08       		.byte	0x8
- 169 008a 04       		.byte	0x4
- 170 008b 60010000 		.4byte	.LASF12
- 171 008f 02       		.uleb128 0x2
- 172 0090 01       		.byte	0x1
- 173 0091 08       		.byte	0x8
- 174 0092 52010000 		.4byte	.LASF13
- 175 0096 05       		.uleb128 0x5
- 176 0097 67010000 		.4byte	.LASF14
- 177 009b 02       		.byte	0x2
- 178 009c 6E01     		.2byte	0x16e
- 179 009e A2000000 		.4byte	0xa2
- 180 00a2 06       		.uleb128 0x6
- 181 00a3 76000000 		.4byte	0x76
- 182 00a7 02       		.uleb128 0x2
- 183 00a8 04       		.byte	0x4
- 184 00a9 07       		.byte	0x7
- 185 00aa EE010000 		.4byte	.LASF15
- 186 00ae 07       		.uleb128 0x7
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 8
+ 156 0071 3801     		.2byte	0x138
+ 157 0073 2C000000 		.4byte	0x2c
+ 158 0077 04       		.uleb128 0x4
+ 159 0078 0E000000 		.4byte	.LASF10
+ 160 007c 02       		.byte	0x2
+ 161 007d 3A01     		.2byte	0x13a
+ 162 007f 48000000 		.4byte	0x48
+ 163 0083 02       		.uleb128 0x2
+ 164 0084 04       		.byte	0x4
+ 165 0085 04       		.byte	0x4
+ 166 0086 BE010000 		.4byte	.LASF11
+ 167 008a 02       		.uleb128 0x2
+ 168 008b 08       		.byte	0x8
+ 169 008c 04       		.byte	0x4
+ 170 008d 60010000 		.4byte	.LASF12
+ 171 0091 02       		.uleb128 0x2
+ 172 0092 01       		.byte	0x1
+ 173 0093 08       		.byte	0x8
+ 174 0094 52010000 		.4byte	.LASF13
+ 175 0098 04       		.uleb128 0x4
+ 176 0099 67010000 		.4byte	.LASF14
+ 177 009d 02       		.byte	0x2
+ 178 009e E401     		.2byte	0x1e4
+ 179 00a0 A4000000 		.4byte	0xa4
+ 180 00a4 05       		.uleb128 0x5
+ 181 00a5 77000000 		.4byte	0x77
+ 182 00a9 02       		.uleb128 0x2
+ 183 00aa 04       		.byte	0x4
+ 184 00ab 07       		.byte	0x7
+ 185 00ac EE010000 		.4byte	.LASF15
+ 186 00b0 06       		.uleb128 0x6
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccyeKemv.s 			page 8
 
 
- 187 00af 01       		.byte	0x1
- 188 00b0 03       		.byte	0x3
- 189 00b1 5B       		.byte	0x5b
- 190 00b2 C3000000 		.4byte	0xc3
- 191 00b6 08       		.uleb128 0x8
- 192 00b7 15000000 		.4byte	.LASF24
- 193 00bb 03       		.byte	0x3
- 194 00bc 5D       		.byte	0x5d
- 195 00bd 6B000000 		.4byte	0x6b
- 196 00c1 00       		.byte	0
- 197 00c2 00       		.byte	0
- 198 00c3 04       		.uleb128 0x4
- 199 00c4 CE010000 		.4byte	.LASF16
- 200 00c8 03       		.byte	0x3
- 201 00c9 5E       		.byte	0x5e
- 202 00ca AE000000 		.4byte	0xae
- 203 00ce 09       		.uleb128 0x9
- 204 00cf E2010000 		.4byte	.LASF17
- 205 00d3 01       		.byte	0x1
- 206 00d4 43       		.byte	0x43
- 207 00d5 00000000 		.4byte	.LFB0
- 208 00d9 1C000000 		.4byte	.LFE0-.LFB0
- 209 00dd 01       		.uleb128 0x1
- 210 00de 9C       		.byte	0x9c
- 211 00df ED000000 		.4byte	0xed
- 212 00e3 0A       		.uleb128 0xa
- 213 00e4 12000000 		.4byte	.LVL0
- 214 00e8 1D010000 		.4byte	0x11d
- 215 00ec 00       		.byte	0
- 216 00ed 09       		.uleb128 0x9
- 217 00ee 45010000 		.4byte	.LASF18
- 218 00f2 01       		.byte	0x1
- 219 00f3 98       		.byte	0x98
- 220 00f4 00000000 		.4byte	.LFB1
- 221 00f8 14000000 		.4byte	.LFE1-.LFB1
- 222 00fc 01       		.uleb128 0x1
- 223 00fd 9C       		.byte	0x9c
- 224 00fe 0C010000 		.4byte	0x10c
- 225 0102 0A       		.uleb128 0xa
- 226 0103 0E000000 		.4byte	.LVL1
- 227 0107 24010000 		.4byte	0x124
- 228 010b 00       		.byte	0
- 229 010c 0B       		.uleb128 0xb
- 230 010d 2E000000 		.4byte	.LASF25
- 231 0111 01       		.byte	0x1
- 232 0112 2C       		.byte	0x2c
- 233 0113 C3000000 		.4byte	0xc3
- 234 0117 05       		.uleb128 0x5
- 235 0118 03       		.byte	0x3
- 236 0119 00000000 		.4byte	SPI_1_backup
- 237 011d 0C       		.uleb128 0xc
- 238 011e 05010000 		.4byte	.LASF19
- 239 0122 03       		.byte	0x3
- 240 0123 69       		.byte	0x69
- 241 0124 0C       		.uleb128 0xc
- 242 0125 B1010000 		.4byte	.LASF20
- 243 0129 03       		.byte	0x3
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 9
+ 187 00b1 01       		.byte	0x1
+ 188 00b2 03       		.byte	0x3
+ 189 00b3 5B       		.byte	0x5b
+ 190 00b4 C5000000 		.4byte	0xc5
+ 191 00b8 07       		.uleb128 0x7
+ 192 00b9 15000000 		.4byte	.LASF24
+ 193 00bd 03       		.byte	0x3
+ 194 00be 5D       		.byte	0x5d
+ 195 00bf 6B000000 		.4byte	0x6b
+ 196 00c3 00       		.byte	0
+ 197 00c4 00       		.byte	0
+ 198 00c5 08       		.uleb128 0x8
+ 199 00c6 CE010000 		.4byte	.LASF16
+ 200 00ca 03       		.byte	0x3
+ 201 00cb 5E       		.byte	0x5e
+ 202 00cc B0000000 		.4byte	0xb0
+ 203 00d0 09       		.uleb128 0x9
+ 204 00d1 E2010000 		.4byte	.LASF17
+ 205 00d5 01       		.byte	0x1
+ 206 00d6 43       		.byte	0x43
+ 207 00d7 00000000 		.4byte	.LFB0
+ 208 00db 1C000000 		.4byte	.LFE0-.LFB0
+ 209 00df 01       		.uleb128 0x1
+ 210 00e0 9C       		.byte	0x9c
+ 211 00e1 EF000000 		.4byte	0xef
+ 212 00e5 0A       		.uleb128 0xa
+ 213 00e6 12000000 		.4byte	.LVL0
+ 214 00ea 1F010000 		.4byte	0x11f
+ 215 00ee 00       		.byte	0
+ 216 00ef 09       		.uleb128 0x9
+ 217 00f0 45010000 		.4byte	.LASF18
+ 218 00f4 01       		.byte	0x1
+ 219 00f5 98       		.byte	0x98
+ 220 00f6 00000000 		.4byte	.LFB1
+ 221 00fa 14000000 		.4byte	.LFE1-.LFB1
+ 222 00fe 01       		.uleb128 0x1
+ 223 00ff 9C       		.byte	0x9c
+ 224 0100 0E010000 		.4byte	0x10e
+ 225 0104 0A       		.uleb128 0xa
+ 226 0105 0E000000 		.4byte	.LVL1
+ 227 0109 26010000 		.4byte	0x126
+ 228 010d 00       		.byte	0
+ 229 010e 0B       		.uleb128 0xb
+ 230 010f 2E000000 		.4byte	.LASF25
+ 231 0113 01       		.byte	0x1
+ 232 0114 2C       		.byte	0x2c
+ 233 0115 C5000000 		.4byte	0xc5
+ 234 0119 05       		.uleb128 0x5
+ 235 011a 03       		.byte	0x3
+ 236 011b 00000000 		.4byte	SPI_1_backup
+ 237 011f 0C       		.uleb128 0xc
+ 238 0120 05010000 		.4byte	.LASF19
+ 239 0124 03       		.byte	0x3
+ 240 0125 69       		.byte	0x69
+ 241 0126 0C       		.uleb128 0xc
+ 242 0127 B1010000 		.4byte	.LASF20
+ 243 012b 03       		.byte	0x3
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccyeKemv.s 			page 9
 
 
- 244 012a 67       		.byte	0x67
- 245 012b 00       		.byte	0
+ 244 012c 67       		.byte	0x67
+ 245 012d 00       		.byte	0
  246              		.section	.debug_abbrev,"",%progbits
  247              	.Ldebug_abbrev0:
  248 0000 01       		.uleb128 0x1
@@ -534,60 +534,60 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 1
  294 002e 3A       		.uleb128 0x3a
  295 002f 0B       		.uleb128 0xb
  296 0030 3B       		.uleb128 0x3b
- 297 0031 0B       		.uleb128 0xb
+ 297 0031 05       		.uleb128 0x5
  298 0032 49       		.uleb128 0x49
  299 0033 13       		.uleb128 0x13
  300 0034 00       		.byte	0
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 10
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccyeKemv.s 			page 10
 
 
  301 0035 00       		.byte	0
  302 0036 05       		.uleb128 0x5
- 303 0037 16       		.uleb128 0x16
+ 303 0037 35       		.uleb128 0x35
  304 0038 00       		.byte	0
- 305 0039 03       		.uleb128 0x3
- 306 003a 0E       		.uleb128 0xe
- 307 003b 3A       		.uleb128 0x3a
- 308 003c 0B       		.uleb128 0xb
- 309 003d 3B       		.uleb128 0x3b
- 310 003e 05       		.uleb128 0x5
- 311 003f 49       		.uleb128 0x49
- 312 0040 13       		.uleb128 0x13
- 313 0041 00       		.byte	0
- 314 0042 00       		.byte	0
- 315 0043 06       		.uleb128 0x6
- 316 0044 35       		.uleb128 0x35
- 317 0045 00       		.byte	0
- 318 0046 49       		.uleb128 0x49
+ 305 0039 49       		.uleb128 0x49
+ 306 003a 13       		.uleb128 0x13
+ 307 003b 00       		.byte	0
+ 308 003c 00       		.byte	0
+ 309 003d 06       		.uleb128 0x6
+ 310 003e 13       		.uleb128 0x13
+ 311 003f 01       		.byte	0x1
+ 312 0040 0B       		.uleb128 0xb
+ 313 0041 0B       		.uleb128 0xb
+ 314 0042 3A       		.uleb128 0x3a
+ 315 0043 0B       		.uleb128 0xb
+ 316 0044 3B       		.uleb128 0x3b
+ 317 0045 0B       		.uleb128 0xb
+ 318 0046 01       		.uleb128 0x1
  319 0047 13       		.uleb128 0x13
  320 0048 00       		.byte	0
  321 0049 00       		.byte	0
  322 004a 07       		.uleb128 0x7
- 323 004b 13       		.uleb128 0x13
- 324 004c 01       		.byte	0x1
- 325 004d 0B       		.uleb128 0xb
- 326 004e 0B       		.uleb128 0xb
+ 323 004b 0D       		.uleb128 0xd
+ 324 004c 00       		.byte	0
+ 325 004d 03       		.uleb128 0x3
+ 326 004e 0E       		.uleb128 0xe
  327 004f 3A       		.uleb128 0x3a
  328 0050 0B       		.uleb128 0xb
  329 0051 3B       		.uleb128 0x3b
  330 0052 0B       		.uleb128 0xb
- 331 0053 01       		.uleb128 0x1
+ 331 0053 49       		.uleb128 0x49
  332 0054 13       		.uleb128 0x13
- 333 0055 00       		.byte	0
- 334 0056 00       		.byte	0
- 335 0057 08       		.uleb128 0x8
- 336 0058 0D       		.uleb128 0xd
- 337 0059 00       		.byte	0
- 338 005a 03       		.uleb128 0x3
- 339 005b 0E       		.uleb128 0xe
- 340 005c 3A       		.uleb128 0x3a
- 341 005d 0B       		.uleb128 0xb
- 342 005e 3B       		.uleb128 0x3b
+ 333 0055 38       		.uleb128 0x38
+ 334 0056 0B       		.uleb128 0xb
+ 335 0057 00       		.byte	0
+ 336 0058 00       		.byte	0
+ 337 0059 08       		.uleb128 0x8
+ 338 005a 16       		.uleb128 0x16
+ 339 005b 00       		.byte	0
+ 340 005c 03       		.uleb128 0x3
+ 341 005d 0E       		.uleb128 0xe
+ 342 005e 3A       		.uleb128 0x3a
  343 005f 0B       		.uleb128 0xb
- 344 0060 49       		.uleb128 0x49
- 345 0061 13       		.uleb128 0x13
- 346 0062 38       		.uleb128 0x38
- 347 0063 0B       		.uleb128 0xb
+ 344 0060 3B       		.uleb128 0x3b
+ 345 0061 0B       		.uleb128 0xb
+ 346 0062 49       		.uleb128 0x49
+ 347 0063 13       		.uleb128 0x13
  348 0064 00       		.byte	0
  349 0065 00       		.byte	0
  350 0066 09       		.uleb128 0x9
@@ -598,7 +598,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 1
  355 006b 03       		.uleb128 0x3
  356 006c 0E       		.uleb128 0xe
  357 006d 3A       		.uleb128 0x3a
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 11
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccyeKemv.s 			page 11
 
 
  358 006e 0B       		.uleb128 0xb
@@ -658,7 +658,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 1
  412 00a7 27       		.uleb128 0x27
  413 00a8 19       		.uleb128 0x19
  414 00a9 3C       		.uleb128 0x3c
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 12
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccyeKemv.s 			page 12
 
 
  415 00aa 19       		.uleb128 0x19
@@ -718,7 +718,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 1
  453      00
  454              	.LASF21:
  455 003b 474E5520 		.ascii	"GNU C 4.9.3 20150303 (release) [ARM/embedded-4_9-br"
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 13
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccyeKemv.s 			page 13
 
 
  455      4320342E 
@@ -778,7 +778,7 @@ ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 1
  474      20696E74 
  474      00
  475              	.LASF12:
-ARM GAS  C:\Users\Jarik\AppData\Local\Temp\cclUQoRe.s 			page 14
+ARM GAS  C:\Users\Jarik\AppData\Local\Temp\ccyeKemv.s 			page 14
 
 
  476 0160 646F7562 		.ascii	"double\000"
