@@ -387,10 +387,9 @@ cont_map:	240
 wait2:		sob(R0,wait2)
 		4767
 		rel67(load2)
-#		106700
-#		42700
-#		200
-#		106400 # разрешение прерываний
+		105737
+		mp2-boot1+b1_adr
+		bne(bs_err)
 		12700         
 		0
 		22737
@@ -401,6 +400,11 @@ wait2:		sob(R0,wait2)
 		0
 cp_end:		12701
 		boot_sector_err-boot1+b1_adr
+		4767
+		rel67(print_msg2)
+		0		# <-- end
+bs_err:		12701
+		boot_sec_rd_err-boot1+b1_adr
 		4767
 		rel67(print_msg2)
 		0		# <-- end
@@ -497,7 +501,7 @@ b1_msg_map_err: 'Ошибка чтения map.txt с SD-карты\n\r'
 		0
 b1_msg_map_ok:	'sd/map.txt :\n\r'
 		0
-b1_msg1:	'BOOT1 Зугружен\n\r'
+b1_msg1:	'BOOT1 Загружен\n\r'
 		0
 b1_msg2:	'Память ПП выделена  @ '
 		0
@@ -514,6 +518,8 @@ b1_b2_tr_err:	'Ошибка загрузки BOOT2 в память ПП \n\r'
 b1_b2_run_err:	'Ошибка запуска BOOT2\n\r'
 		0
 boot_sector_err: 'Ошибка. Некорректный загрузочный сектор.\n\r'
+		0
+boot_sec_rd_err: 'Ошибка чтения загрузочного сектора. \n\r'
 		0
 boot2:		240
 		167
