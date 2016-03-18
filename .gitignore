@@ -1,1 +1,5 @@
 _site
+*.o
+*.lst
+*.deps
+*.map
