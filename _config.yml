@@ -1,7 +1,7 @@
 # Jekyll configuration
 
-name: УКНЦ контроллер SD-карты
-description: Контроллер дисковода для УКНЦ(МС0511), который использует образы дисков на SD-карте.
+name: УКНЦ контроллер microSD-карты
+description: Контроллер дисковода для УКНЦ(МС0511), который использует образы дисков на microSD-карте.
 author: y.salnikov
 # url is currently only used only for the RSS feed in feed.xml
 url: http://y-salnikov.github.io/uknc_sd_fdd
